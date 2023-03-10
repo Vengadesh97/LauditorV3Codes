@@ -204,7 +204,6 @@ public class ViewGroups extends Reusable {
 
 	}
 
-	
 	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[3]")
 	WebElement updategroupheadBtn;
 
@@ -227,7 +226,7 @@ public class ViewGroups extends Reusable {
 	// Ok button
 	@FindBy(xpath = "(//button[@class='btn btn-primary'])[2]")
 	WebElement okButton;
-	
+
 	// UpdateGroupHead Scenario
 	public void updateGroupHead(String groupheadname) throws InterruptedException {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -266,6 +265,75 @@ public class ViewGroups extends Reusable {
 		// ok
 		okButton.click();
 
+	}
+
+	
+	
+	@FindBy(xpath="(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[4]")
+	WebElement deleteBtn;
+	
+	// Assign to another groupName text
+	@FindBy(xpath="//label[@class='callselect float-left']")
+	List<WebElement> assignGroupNameText;
+	
+	// Select button
+	@FindBy(xpath="//div[@class='multicheck form-control textbox']")
+	List<WebElement> selectBtnAssignGroup;
+
+	//Delete
+	@FindBy(xpath="//button[@data-bs-target='#confirmModal']")
+	WebElement assigndeleteBtn;
+	
+	@FindBy(xpath="(//button[@aria-label='Close'])[3]")
+	WebElement assignAlertYesBtn;
+	
+	@FindBy(xpath="(//button[@class='btn btn-primary'])[1]")
+	WebElement successOkbtn;
+	
+	
+	
+	// DeleteComplete Group
+	public void deleteAssigntoAnotherGroup(String assignGroupname) throws InterruptedException {
+
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+
+		Thread.sleep(5000);
+		Actions action = new Actions(driver);
+
+		action.moveToElement(actionAllBoxSize).build().perform();
+		Thread.sleep(5000);
+		action.moveToElement(deleteBtn).click().perform();
+
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		
+		Thread.sleep(5000);
+		for (int i = 0; i < assignGroupNameText.size(); i++) {
+			
+			String selectAssignGroup = assignGroupNameText.get(i).getText();
+			if (assignGroupname.contains(selectAssignGroup)) {
+				Thread.sleep(2000);
+
+				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
+
+				executor.executeScript("arguments[0].click();", selectedAssignGroup);
+			}
+		}
+		
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		
+		Thread.sleep(2000);
+		// Delete
+		assigndeleteBtn.click();
+
+		// Yes
+		Thread.sleep(1000);
+		assignAlertYesBtn.click();
+
+		//ok
+		Thread.sleep(1000);
+		successOkbtn.click();
+		
 	}
 
 }

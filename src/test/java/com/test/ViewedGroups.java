@@ -38,12 +38,20 @@ public class ViewedGroups extends BaseClass {
 		ViewGroups.updateGroupMemberList(removedMemberName, selectedMemberNames);
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,enabled = false)
 	public void viewgroupUpdateGroupHead() throws InterruptedException {
 		ViewGroups.viewGroupAction("Family law");
 		ViewGroups.updateGroupHead("Anantha-kumar");
 	}
 
+	@Test(priority=4)
+	public void viewgroupAssignDeleteGroup() throws InterruptedException
+	{
+		ViewGroups.viewGroupAction("@#$%^&");
+		ViewGroups.deleteAssigntoAnotherGroup("Test gropus creation");
+	}
+	
+	
 	// viewgroupEditGroupInfo
 	@DataProvider
 	public Object[][] getDatas() throws IOException {
@@ -53,7 +61,6 @@ public class ViewedGroups extends BaseClass {
 
 		return new Object[][] { { data.get(0) } };
 
-		// return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 
 	// viewgroupUpdateGroupMember

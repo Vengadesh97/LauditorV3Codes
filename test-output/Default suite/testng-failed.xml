@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.ViewedGroups">
         <methods>
-          <include name="viewgroupUpdateGroupHead"/>
+          <include name="viewgroupAssignDeleteGroup"/>
         </methods>
       </class> <!-- com.test.ViewedGroups -->
     </classes>
