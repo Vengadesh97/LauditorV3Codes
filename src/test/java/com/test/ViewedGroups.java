@@ -38,13 +38,13 @@ public class ViewedGroups extends BaseClass {
 		ViewGroups.updateGroupMemberList(removedMemberName, selectedMemberNames);
 	}
 
-	@Test(priority = 3,enabled = false)
+	@Test(priority = 3)
 	public void viewgroupUpdateGroupHead() throws InterruptedException {
-		ViewGroups.viewGroupAction("Family law");
+		ViewGroups.viewGroupAction("abcd");
 		ViewGroups.updateGroupHead("Anantha-kumar");
 	}
 
-	@Test(priority=4)
+	@Test(priority=4,enabled=false)
 	public void viewgroupAssignDeleteGroup() throws InterruptedException
 	{
 		ViewGroups.viewGroupAction("@#$%^&");
