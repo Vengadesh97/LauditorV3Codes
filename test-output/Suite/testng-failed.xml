@@ -6,11 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.ViewedGroups">
+      <class name="com.test.RegressionTest">
         <methods>
-          <include name="viewgroupUpdateGroupHead"/>
+          <include name="loginCheck" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.test.ViewedGroups -->
+      </class> <!-- com.test.RegressionTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

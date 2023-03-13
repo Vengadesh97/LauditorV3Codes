@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.ViewedGroups">
+      <class name="com.test.RegressionTest">
         <methods>
-          <include name="viewgroupAssignDeleteGroup"/>
+          <include name="loginCheck" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.ViewedGroups -->
+      </class> <!-- com.test.RegressionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

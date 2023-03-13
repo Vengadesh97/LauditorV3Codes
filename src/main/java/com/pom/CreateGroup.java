@@ -25,7 +25,7 @@ public class CreateGroup extends Reusable {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//button[text()='Create Group']")
+	@FindBy(xpath = "//div[@class='button-class create-group']")
 	WebElement createGroupTab;
 
 	@FindBy(id = "caseTitle")
@@ -78,6 +78,7 @@ public class CreateGroup extends Reusable {
 	public ViewGroups createGroups(String gName, String gDesc, String[] addMembers, String removedMembers, String groupHead)
 			throws InterruptedException {
 		
+		Thread.sleep(5000);
 		createGroupTab.click();
 		groupName.sendKeys(gName);
 		groupDescription.sendKeys(gDesc);

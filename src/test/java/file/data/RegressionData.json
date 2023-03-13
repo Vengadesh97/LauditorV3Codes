@@ -1,0 +1,50 @@
+[
+	{
+		"groupname":"Civil law Custody Case New",
+		"description":"Testing Case",
+		"addMember1":"Rossy",
+		"addMember2":"Vengadesh RSB Associates",
+		"addMember3":"abc",
+		"addMember4":"Miranda Williams",
+		"addMember5":"Susan",
+		"membernameremoved":"abc",
+		"groupHeadNames":"Vengadesh RSB Associates",
+		
+		"GroupNameText":"Civil law Custody Case New",
+		"RenameGroupName":"Criminal Custody Case",
+		"RenameDescriptionChange":"Case Details",
+		
+		"GroupNameText1":"Criminal Custody Case",
+		"RemoveMember1":"Miranda Williams",
+		"AddMember1":"Neela C RSB Associates",
+		"AddMember2":"Anantha-kumar",
+		
+		"GroupHeadChage":"Anantha-kumar",
+		
+		"DeleteAssignAnother":"sasa"
+	},
+		{
+		"groupname":"Criminal law Custody Case New",
+		"description":"Sample",
+		"addMember1":"Martin",
+		"addMember2":"Raksha S",
+		"addMember3":"Liam Rodriguez",
+		"addMember4":"abc",
+		"addMember5":"",
+		"membernameremoved":"abc",
+		"groupHeadNames":"Martin",
+		
+		"GroupNameText":"Criminal law Custody Case New",
+		"RenameGroupName":"Civil law Custody Case New1",
+		"RenameDescriptionChange":"Case Details",
+		
+		"GroupNameText1":"Civil law Custody Case New1",
+		"RemoveMember1":"Raksha S",
+		"AddMember1":"Neela C RSB Associates",
+		"AddMember2":"Vengadesh RSB Associates",
+		
+		"GroupHeadChage":"Vengadesh RSB Associates",
+		
+		"DeleteAssignAnother":"sasa"
+	}
+]

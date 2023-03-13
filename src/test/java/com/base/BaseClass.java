@@ -32,9 +32,11 @@ public class BaseClass {
 
 	public WebDriver driver;
 
+	public Properties prop;
+	
 	public WebDriver initalize() throws IOException {
 
-		Properties prop = new Properties();
+		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\main\\java\\com\\resour\\Data.properties");
 		prop.load(fis);
