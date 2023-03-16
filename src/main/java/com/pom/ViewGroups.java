@@ -202,6 +202,8 @@ public class ViewGroups extends Reusable {
 		Thread.sleep(3000);
 		updateGroupMemberalertOk.click();
 
+		Thread.sleep(5000);
+		action.sendKeys(Keys.PAGE_UP).build().perform();
 	}
 
 	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[3]")
@@ -210,9 +212,9 @@ public class ViewGroups extends Reusable {
 	// GroupheadNameText
 	@FindBy(xpath = "//label[@class='callselect float-left']")
 	List<WebElement> groupheadNameText;
-
+	
 	// GroupheadName Select
-	@FindBy(xpath = "//div[@class=\"multicheck form-control textbox selmember\"]")
+	@FindBy(xpath = "//div[@class='multicheck form-control textbox selmember']")
 	List<WebElement> selectbuttonGroupHead;
 
 	// UpdateGroupHead Save Button
@@ -245,9 +247,8 @@ public class ViewGroups extends Reusable {
 		for (int i = 0; i < groupheadNameText.size(); i++) {
 			String totalGroupheadname = groupheadNameText.get(i).getText();
 
-			Thread.sleep(200);
 			if (groupheadname.contains(totalGroupheadname)) {
-				Thread.sleep(2000);
+				Thread.sleep(4000);
 
 				WebElement selectedGroupHead = selectbuttonGroupHead.get(i);
 
@@ -264,6 +265,8 @@ public class ViewGroups extends Reusable {
 		Thread.sleep(1000);
 		// ok
 		okButton.click();
+		Thread.sleep(5000);
+		action.sendKeys(Keys.PAGE_UP).build().perform();
 
 	}
 
@@ -333,6 +336,9 @@ public class ViewGroups extends Reusable {
 		//ok
 		Thread.sleep(1000);
 		successOkbtn.click();
+		
+		Thread.sleep(5000);
+		action.sendKeys(Keys.PAGE_UP).build().perform();
 		
 	}
 

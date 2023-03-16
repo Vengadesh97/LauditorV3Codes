@@ -15,18 +15,13 @@ import com.pom.ViewGroups;
 
 public class RegressionTest extends BaseClass {
 
-	Dashboard dashboard;
-	CreateGroup createGroup;
-	ViewGroups viewGroups;
-
 	@Test(dataProvider = "getData")
-	public void Retest(HashMap<String, String> input) throws IOException, InterruptedException {
-		LoginPage loginPage = launchApplication();
-		dashboard = loginPage.loginApplication(prop.getProperty("name"),prop.getProperty("password"));
-		createGroup = dashboard.groupsMenuClick();
+	public void regressionCreateGroups(HashMap<String, String> input) throws IOException, InterruptedException {
+
+		dashboard.groupsMenuClick();
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
 				input.get("addMember4"), input.get("addMember5") };
-		viewGroups = createGroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
+		creategroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
 				input.get("membernameremoved"), input.get("groupHeadNames"));
 		// EditGroupInfo
 		viewGroups.viewGroupAction(input.get("GroupNameText"));
@@ -53,7 +48,7 @@ public class RegressionTest extends BaseClass {
 
 		return new Object[][] { { data.get(0) } };
 
-		//return new Object[][] {{data.get(0)},{data.get(1)}};
+		// return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
 
 }

@@ -24,13 +24,11 @@ public class Dashboard extends Reusable {
 	}
 	
 	
-	
-	
 
 	@FindBy(xpath="//span[text()='Groups']")
 	WebElement texts;
 	
-	public CreateGroup groupsMenuClick() throws InterruptedException
+	public void groupsMenuClick() throws InterruptedException
 	{
 		// Scroll Down
 		Thread.sleep(10000);
@@ -45,14 +43,12 @@ public class Dashboard extends Reusable {
 		Actions a = new Actions(driver);
 		a.sendKeys(Keys.PAGE_UP).build().perform();
 		a.sendKeys(Keys.PAGE_UP).build().perform();
-	CreateGroup createGroup = new CreateGroup(driver);
-	return createGroup;
 	
 		
 	}
 	
 	
-	public ViewGroups viewdGroup() throws InterruptedException
+	public void viewdGroup() throws InterruptedException
 	{
 		// Scroll Down
 		Thread.sleep(10000);
@@ -67,8 +63,7 @@ public class Dashboard extends Reusable {
 		Actions a = new Actions(driver);
 		a.sendKeys(Keys.PAGE_UP).build().perform();
 		a.sendKeys(Keys.PAGE_UP).build().perform();
-		ViewGroups viewGroups = new ViewGroups(driver);
-		return viewGroups;
+
 	}
 	
 	

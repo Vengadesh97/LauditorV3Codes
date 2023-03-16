@@ -3,13 +3,13 @@
 	{
 		"groupname" :"Civil Laws Case",
 		"description" : "Data stored client related",
-		"addMember1":"Rossy",
-		"addMember2":"Vengadesh RSB Associates",
+		"addMember1":"Martin",
+		"addMember2":"Vengadesh RSB",
 		"addMember3":"Susan",
-		"addMember4":"Miranda Williams",
+		"addMember4":"Neela C RSB",
 		"addMember5":"Ananth-Admin",
-		"membernameremoved" : "Ananth-Admin",
-		"groupHeadNames" : "Vengadesh RSB Associates"
+		"membernameremoved" : "Martin",
+		"groupHeadNames" : "Vengadesh RSB"
 	},
 		{
 

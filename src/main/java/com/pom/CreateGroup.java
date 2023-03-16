@@ -75,7 +75,7 @@ public class CreateGroup extends Reusable {
 	@FindBy(xpath = "driver.findElements(By.xpath(\"//tr /td[1]\"))")
 	List<WebElement> groupNameCheck;
 
-	public ViewGroups createGroups(String gName, String gDesc, String[] addMembers, String removedMembers, String groupHead)
+	public void createGroups(String gName, String gDesc, String[] addMembers, String removedMembers, String groupHead)
 			throws InterruptedException {
 		
 		Thread.sleep(5000);
@@ -174,8 +174,6 @@ public class CreateGroup extends Reusable {
 
 		// View Changes
 		alertViewChanges.click();
-		ViewGroups viewGroups = new ViewGroups(driver);
-		return viewGroups;
 
 	}
 

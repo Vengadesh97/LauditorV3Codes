@@ -30,13 +30,11 @@ public class LoginPage extends Reusable{
 	WebElement login;
 	
 
-	public Dashboard loginApplication(String emailId,String pass)
+	public void loginApplication(String emailId,String pass)
 	{
 		email.sendKeys(emailId);
 		password.sendKeys(pass);
 		login.click();
-		Dashboard 	dashboard = new Dashboard(driver);
-		return dashboard;
 	}
 	
 	public void goTo()

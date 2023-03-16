@@ -23,8 +23,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pom.CreateGroup;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
+import com.pom.ViewGroups;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -33,7 +35,11 @@ public class BaseClass {
 	public WebDriver driver;
 
 	public Properties prop;
-	
+	public LoginPage loginPage;
+	public Dashboard dashboard;
+	public ViewGroups viewGroups;
+	public CreateGroup creategroup;
+
 	public WebDriver initalize() throws IOException {
 
 		prop = new Properties();
@@ -73,26 +79,26 @@ public class BaseClass {
 		return data;
 	}
 
+	@BeforeTest
 	public LoginPage launchApplication() throws IOException {
 		driver = initalize();
 		// driver.get("https://app.lauditor.com/login");
-		LoginPage loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(driver);
 		loginPage.goTo();
+		loginPage.loginApplication(prop.getProperty("name"), prop.getProperty("password"));
+		dashboard = new Dashboard(driver);
+		creategroup = new CreateGroup(driver);
+		viewGroups = new ViewGroups(driver);
 		return loginPage;
 	}
 
-	
-	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
-	{
-		TakesScreenshot ts =(TakesScreenshot)driver;
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir")+"//reports//"+ testCaseName + ".png");
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+"//reports//"+ testCaseName + ".png";
-		
-		
-		
-		
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+
 	}
-	
+
 }

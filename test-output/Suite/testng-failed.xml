@@ -8,7 +8,7 @@
     <classes>
       <class name="com.test.RegressionTest">
         <methods>
-          <include name="loginCheck" invocation-numbers="1"/>
+          <include name="regressionCreateGroups" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.test.RegressionTest -->
     </classes>
