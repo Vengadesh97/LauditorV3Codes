@@ -24,9 +24,11 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pom.CreateGroup;
+import com.pom.CreateMember;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
 import com.pom.ViewGroups;
+import com.pom.ViewMembers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -39,6 +41,8 @@ public class BaseClass {
 	public Dashboard dashboard;
 	public ViewGroups viewGroups;
 	public CreateGroup creategroup;
+	public CreateMember createmember;
+	public ViewMembers viewmembers;
 
 	public WebDriver initalize() throws IOException {
 
@@ -89,6 +93,8 @@ public class BaseClass {
 		dashboard = new Dashboard(driver);
 		creategroup = new CreateGroup(driver);
 		viewGroups = new ViewGroups(driver);
+		createmember = new CreateMember(driver);
+		viewmembers = new ViewMembers(driver);
 		return loginPage;
 	}
 
