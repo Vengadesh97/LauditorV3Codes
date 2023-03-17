@@ -18,15 +18,15 @@ public class ViewedGroups extends BaseClass {
 		dashboard.viewdGroup();
 	}
 
-	@Test(dataProvider = "getDatas", priority = 1, enabled = false)
+	@Test(dataProvider = "getDatas", priority = 1)
 	public void viewgroupEditGroupInfo(HashMap<String, String> input) throws InterruptedException {
-		viewGroups.viewGroupAction(input.get("GroupNameText"));
+		viewGroups.viewgroupSearchbar(input.get("GroupNameText"));
 		viewGroups.editGroupInfo(input.get("RenameGroupName"), input.get("RenameDescriptionChange"));
 	}
 
-	@Test(dataProvider = "getDatad", priority = 2, enabled = false)
+	@Test(dataProvider = "getDatad", priority = 2)
 	public void viewgroupUpdateGroupMember(HashMap<String, String> input) throws InterruptedException {
-		viewGroups.viewGroupAction(input.get("GroupNameText"));
+		viewGroups.viewgroupSearchbar(input.get("GroupNameText"));
 		String[] removedMemberName = { input.get("RemoveMember1") };
 		String[] selectedMemberNames = { input.get("AddMember1"), input.get("AddMember2") };
 		viewGroups.updateGroupMemberList(removedMemberName, selectedMemberNames);
@@ -34,14 +34,14 @@ public class ViewedGroups extends BaseClass {
 
 	@Test(priority = 3)
 	public void viewgroupUpdateGroupHead() throws InterruptedException {
-		viewGroups.viewGroupAction("abcd");
-		viewGroups.updateGroupHead("Anantha-kumar");
+		viewGroups.viewgroupSearchbar("Civil law 3");
+		viewGroups.updateGroupHead("Ananth Associates");
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4)
 	public void viewgroupAssignDeleteGroup() throws InterruptedException {
-		viewGroups.viewGroupAction("@#$%^&");
-		viewGroups.deleteAssigntoAnotherGroup("Test gropus creation");
+		viewGroups.viewgroupSearchbar("Civil law 3");
+		viewGroups.deleteAssigntoAnotherGroup("Civil Law");
 	}
 
 	// viewgroupEditGroupInfo

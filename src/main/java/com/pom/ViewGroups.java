@@ -65,6 +65,24 @@ public class ViewGroups extends Reusable {
 		}
 	}
 
+	// Main Searchbar
+	@FindBy(xpath = "//input[@placeholder='Search Group']")
+	WebElement viewgroupSearchbar;
+
+	// Action
+	@FindBy(xpath = "//button[@data-bs-toggle='dropdown']")
+	WebElement actionbtn1;
+
+	public void viewgroupSearchbar(String GroupName) throws InterruptedException {
+		Thread.sleep(2000);
+		viewgroupSearchbar.clear();
+		Thread.sleep(2000);
+		viewgroupSearchbar.sendKeys(GroupName);
+		Thread.sleep(2000);
+		actionbtn1.click();
+
+	}
+
 	// EditGroupInfo [Positive]
 
 	@FindBy(xpath = "//ul[@class='dropdown-menu custom-dropdown show']")
@@ -212,7 +230,7 @@ public class ViewGroups extends Reusable {
 	// GroupheadNameText
 	@FindBy(xpath = "//label[@class='callselect float-left']")
 	List<WebElement> groupheadNameText;
-	
+
 	// GroupheadName Select
 	@FindBy(xpath = "//div[@class='multicheck form-control textbox selmember']")
 	List<WebElement> selectbuttonGroupHead;
@@ -270,61 +288,68 @@ public class ViewGroups extends Reusable {
 
 	}
 
-	
-	
-	@FindBy(xpath="(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[4]")
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[4]")
 	WebElement deleteBtn;
-	
+
 	// Assign to another groupName text
-	@FindBy(xpath="//label[@class='callselect float-left']")
+	@FindBy(xpath = "//label[@class='callselect float-left']")
 	List<WebElement> assignGroupNameText;
-	
+
 	// Select button
-	@FindBy(xpath="//div[@class='multicheck form-control textbox']")
+	@FindBy(xpath = "//div[@class='multicheck form-control textbox']")
 	List<WebElement> selectBtnAssignGroup;
 
-	//Delete
-	@FindBy(xpath="//button[@data-bs-target='#confirmModal']")
+	// Delete
+	@FindBy(xpath = "//button[@data-bs-target='#confirmModal']")
 	WebElement assigndeleteBtn;
-	
-	@FindBy(xpath="(//button[@aria-label='Close'])[3]")
+
+	@FindBy(xpath = "(//button[@aria-label='Close'])[3]")
 	WebElement assignAlertYesBtn;
-	
-	@FindBy(xpath="(//button[@class='btn btn-primary'])[1]")
+
+	@FindBy(xpath = "(//button[@class='btn btn-primary'])[1]")
 	WebElement successOkbtn;
-	
-	
-	
+	// SearchBox
+	@FindBy(xpath = "//input[@placeholder='Search group']")
+	WebElement searchboxName;
+
+	// Single Name Select Button
+	@FindBy(xpath = "//div[@class='multicheck form-control textbox']")
+	WebElement assignGroupBtn;
+
 	// DeleteComplete Group
 	public void deleteAssigntoAnotherGroup(String assignGroupname) throws InterruptedException {
 
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		// JavascriptExecutor executor = (JavascriptExecutor) driver;
 
 		Thread.sleep(5000);
 		Actions action = new Actions(driver);
-
+		Thread.sleep(5000);
 		action.moveToElement(actionAllBoxSize).build().perform();
 		Thread.sleep(5000);
 		action.moveToElement(deleteBtn).click().perform();
 
 		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		
+
 		Thread.sleep(5000);
-		for (int i = 0; i < assignGroupNameText.size(); i++) {
-			
-			String selectAssignGroup = assignGroupNameText.get(i).getText();
-			if (assignGroupname.contains(selectAssignGroup)) {
-				Thread.sleep(2000);
+//		for (int i = 0; i < assignGroupNameText.size(); i++) {
+//			
+//			String selectAssignGroup = assignGroupNameText.get(i).getText();
+//			if (assignGroupname.contains(selectAssignGroup)) {
+//				Thread.sleep(2000);
+//
+//				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
+//
+//				executor.executeScript("arguments[0].click();", selectedAssignGroup);
+//			}
+//		}
 
-				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
+		searchboxName.sendKeys(assignGroupname);
 
-				executor.executeScript("arguments[0].click();", selectedAssignGroup);
-			}
-		}
-		
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		
+		assignGroupBtn.click();
+
+		// action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		// action.sendKeys(Keys.PAGE_DOWN).build().perform();
+
 		Thread.sleep(2000);
 		// Delete
 		assigndeleteBtn.click();
@@ -333,13 +358,13 @@ public class ViewGroups extends Reusable {
 		Thread.sleep(1000);
 		assignAlertYesBtn.click();
 
-		//ok
+		// ok
 		Thread.sleep(1000);
 		successOkbtn.click();
-		
+
 		Thread.sleep(5000);
 		action.sendKeys(Keys.PAGE_UP).build().perform();
-		
+
 	}
 
 }

@@ -17,7 +17,7 @@ import com.pom.ViewGroups;
 
 public class LoginPageTest extends BaseClass {
 
-	@Test(dataProvider = "getData", priority = 1)
+	@Test(dataProvider = "getData")
 	public void createdGroup(HashMap<String, String> input) throws InterruptedException {
 		dashboard.groupsMenuClick();
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
