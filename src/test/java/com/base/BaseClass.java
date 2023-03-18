@@ -17,6 +17,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -38,11 +39,11 @@ public class BaseClass {
 
 	public Properties prop;
 	public LoginPage loginPage;
-	public Dashboard dashboard;
+	public Dashboard dashBoard;
 	public ViewGroups viewGroups;
-	public CreateGroup creategroup;
-	public CreateMember createmember;
-	public ViewMembers viewmembers;
+	public CreateGroup createGroup;
+	public CreateMember createMember;
+	public ViewMembers viewMembers;
 
 	public WebDriver initalize() throws IOException {
 
@@ -90,11 +91,11 @@ public class BaseClass {
 		loginPage = new LoginPage(driver);
 		loginPage.goTo();
 		loginPage.loginApplication(prop.getProperty("name"), prop.getProperty("password"));
-		dashboard = new Dashboard(driver);
-		creategroup = new CreateGroup(driver);
+		dashBoard = new Dashboard(driver);
+		createGroup = new CreateGroup(driver);
 		viewGroups = new ViewGroups(driver);
-		createmember = new CreateMember(driver);
-		viewmembers = new ViewMembers(driver);
+		createMember = new CreateMember(driver);
+		viewMembers = new ViewMembers(driver);
 		return loginPage;
 	}
 

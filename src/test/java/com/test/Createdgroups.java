@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,15 +16,15 @@ import com.pom.Dashboard;
 import com.pom.LoginPage;
 import com.pom.ViewGroups;
 
-public class LoginPageTest extends BaseClass {
+public class Createdgroups extends BaseClass {
 
 	@Test(dataProvider = "getData")
 	public void createdGroup(HashMap<String, String> input) throws InterruptedException {
-		dashboard.groupsMenuClick();
+		dashBoard.groupsMenuClick();
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
 				input.get("addMember4"), input.get("addMember5") };
-		creategroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
-				input.get("membernameremoved"), input.get("groupHeadNames"));
+		createGroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
+				input.get("membernameremoved"), input.get("groupHeadNames"));	
 	}
 
 	@DataProvider
@@ -32,9 +33,9 @@ public class LoginPageTest extends BaseClass {
 		List<HashMap<String, String>> data = getJsonDataToMap(
 				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Createsgroup.json");
 
-		return new Object[][] {{data.get(0)}};
+		return new Object[][] { { data.get(0) } };
 
-		//return new Object[][] { { data.get(0) }, { data.get(1) } };
+		// return new Object[][] { { data.get(0) }, { data.get(1) } };
 	}
 
 }

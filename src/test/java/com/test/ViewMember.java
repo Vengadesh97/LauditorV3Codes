@@ -12,9 +12,9 @@ public class ViewMember extends BaseClass {
 	@Test(dataProvider = "getData")
 	public void viewMemberEditGroup(HashMap<String, String> input) throws InterruptedException {
 
-		dashboard.groupsMenuClick();
-		viewmembers.viewMemberTab(input.get("memberEmailId"));
-		viewmembers.renameeditmemberinfo(input.get("changedName"), input.get("changedDesignation"), input.get("changedDefaultRate"), input.get("changedEmail"), input.get("changedConfirmEmail"), input.get("currencyNames"));
+		dashBoard.groupsMenuClick();
+		viewMembers.viewMemberTab(input.get("memberEmailId"));
+		viewMembers.renameeditmemberinfo(input.get("changedName"), input.get("changedDesignation"), input.get("changedDefaultRate"), input.get("changedEmail"), input.get("changedConfirmEmail"), input.get("currencyNames"));
 	}
 
 	@DataProvider

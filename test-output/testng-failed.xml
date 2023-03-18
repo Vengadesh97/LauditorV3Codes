@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.ViewedGroups">
+      <class name="com.test.Creategroupsed">
         <methods>
-          <include name="viewgroupUpdateGroupMember" invocation-numbers="0"/>
-          <include name="viewgroupUpdateGroupHead"/>
+          <include name="createdGroup" invocation-numbers="0"/>
           <include name="launchApplication"/>
-          <include name="viewgroupAssignDeleteGroup"/>
         </methods>
-      </class> <!-- com.test.ViewedGroups -->
+      </class> <!-- com.test.Creategroupsed -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

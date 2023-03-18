@@ -15,7 +15,7 @@ public class ViewedGroups extends BaseClass {
 
 	@Test(priority = 0)
 	public void viewGroupTabMenu() throws IOException, InterruptedException {
-		dashboard.viewdGroup();
+		dashBoard.viewdGroup();
 	}
 
 	@Test(dataProvider = "getDatas", priority = 1)
@@ -35,7 +35,7 @@ public class ViewedGroups extends BaseClass {
 	@Test(priority = 3)
 	public void viewgroupUpdateGroupHead() throws InterruptedException {
 		viewGroups.viewgroupSearchbar("Civil law 3");
-		viewGroups.updateGroupHead("Ananth Associates");
+		viewGroups.updateGroupHead("Karthick RSB TM");
 	}
 
 	@Test(priority = 4)

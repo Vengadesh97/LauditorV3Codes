@@ -18,10 +18,10 @@ public class RegressionTest extends BaseClass {
 	@Test(dataProvider = "getData")
 	public void regressionCreateGroups(HashMap<String, String> input) throws IOException, InterruptedException {
 
-		dashboard.groupsMenuClick();
+		dashBoard.groupsMenuClick();
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
 				input.get("addMember4"), input.get("addMember5") };
-		creategroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
+		createGroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
 				input.get("membernameremoved"), input.get("groupHeadNames"));
 		// EditGroupInfo
 		viewGroups.viewGroupAction(input.get("GroupNameText"));
