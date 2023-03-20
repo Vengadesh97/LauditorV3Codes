@@ -1,8 +1,10 @@
 package com.pom;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -109,6 +111,94 @@ public class ViewMembers extends Reusable {
 		Thread.sleep(2000);
 		successCloseBtn.click();
 
+	}
+
+	// UpdateGroupAccessButton
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[2]")
+	WebElement updateGroupAccessBtn;
+	// ListofGroupNameText
+	@FindBy(xpath = "//*[@class='multicheck form-control textbox']//div")
+	List<WebElement> ListofGroupNameText;
+	// CheckboxSelect
+	@FindBy(xpath = "//input[@class='form-check-inpu calimg calitem input-group-app end checkboxitem']")
+	List<WebElement> checkboxSelect;
+
+	@FindBy(xpath = "//button[@class='btn btn-default btncancel']")
+	WebElement cancelBtnUpdateGroup;
+
+	@FindBy(xpath = "//button[@class='btn btn-default btnsave']")
+	WebElement saveBtnUpdateGroup;
+
+	public void updateGroupAccess(String[] updategroupsnamedAdd) throws InterruptedException {
+		Thread.sleep(4000);
+		updateGroupAccessBtn.click();
+		// String[] updategroupsnamedAdd = { "Matters Group", "Teams", "Test New group",
+		// "Example group" };
+		Thread.sleep(4000);
+		List<String> updategroupNames = Arrays.asList(updategroupsnamedAdd);
+		for (int i = 0; i < ListofGroupNameText.size(); i++) {
+			String groupNameText = ListofGroupNameText.get(i).getText();
+			if (updategroupNames.contains(groupNameText)) {
+
+				Thread.sleep(3000);
+				WebElement checkboxSelectedGroupName = checkboxSelect.get(i);
+
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+
+			}
+		}
+		Actions action = new Actions(driver);
+
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+
+		Thread.sleep(2000);
+		saveBtnUpdateGroup.click();
+	}
+
+	// Reset Password
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[3]")
+	WebElement resetPasswordBtn;
+
+	// Alert No
+	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn alertbtnno'])[2]")
+	WebElement alertpopupResetPasswordNo;
+
+	// Alert Yes
+	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn alertbtnyes'])[2]")
+	WebElement alertpopupResetPasswordYes;
+
+	// Close button
+	@FindBy(xpath = "(//button[@class='btn-close'])[2]")
+	WebElement alertpopupResetPasswordClosebtn;
+
+	public void resetPassword() throws InterruptedException {
+		Thread.sleep(2000);
+		resetPasswordBtn.click();
+		alertpopupResetPasswordYes.click();
+	}
+
+	// Delete Button
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[4]")
+	WebElement deleteButton;
+
+	// Alert No
+	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn alertbtnno'])[1]")
+	WebElement alertpopupDeleteNo;
+
+	// Alert Yes
+	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn alertbtnyes'])[1]")
+	WebElement alertpopupDeleteYes;
+
+	// Close button
+	@FindBy(xpath = "(//button[@class='btn-close'])[1]")
+	WebElement alertpopupDeleteClosebtn;
+
+	public void deleteMember() throws InterruptedException {
+		Thread.sleep(2000);
+		deleteButton.click();
+		alertpopupDeleteYes.click();
 	}
 
 }

@@ -44,7 +44,8 @@ public class BaseClass {
 	public CreateGroup createGroup;
 	public CreateMember createMember;
 	public ViewMembers viewMembers;
-
+	
+	
 	public WebDriver initalize() throws IOException {
 
 		prop = new Properties();

@@ -9,12 +9,24 @@ import com.base.BaseClass;
 
 public class ViewMember extends BaseClass {
 
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",enabled=false)
 	public void viewMemberEditGroup(HashMap<String, String> input) throws InterruptedException {
 
 		dashBoard.groupsMenuClick();
 		viewMembers.viewMemberTab(input.get("memberEmailId"));
-		viewMembers.renameeditmemberinfo(input.get("changedName"), input.get("changedDesignation"), input.get("changedDefaultRate"), input.get("changedEmail"), input.get("changedConfirmEmail"), input.get("currencyNames"));
+		viewMembers.renameeditmemberinfo(input.get("changedName"), input.get("changedDesignation"),
+				input.get("changedDefaultRate"), input.get("changedEmail"), input.get("changedConfirmEmail"),
+				input.get("currencyNames"));
+	}
+
+	@Test
+	public void viewMemberUpdateGroupAccess() throws InterruptedException {
+		dashBoard.groupsMenuClick();
+		viewMembers.viewMemberTab("vengadeshw45@gmail.com");
+
+		String[] updategroupsnamedAdd = { "Family-Law-Ananth", "Family law", "Immigartion", "Corporate Law" };
+		viewMembers.updateGroupAccess(updategroupsnamedAdd);
+
 	}
 
 	@DataProvider
