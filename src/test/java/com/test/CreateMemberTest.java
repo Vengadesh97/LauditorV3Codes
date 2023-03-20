@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.base.BaseClass;
 
-public class CreateMemberAccount extends BaseClass {
+public class CreateMemberTest extends BaseClass {
 
 	@Test(dataProvider = "getData")
 	public void createMemberAccountCreate(HashMap<String, String> input) throws InterruptedException {
@@ -24,7 +24,7 @@ public class CreateMemberAccount extends BaseClass {
 	public Object[][] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\createdMemberData.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\CreateMemberData.json");
 
 		return new Object[][] { { data.get(0) } };
 

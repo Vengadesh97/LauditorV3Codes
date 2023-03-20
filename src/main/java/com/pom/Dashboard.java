@@ -12,60 +12,33 @@ import org.openqa.selenium.support.PageFactory;
 import com.abst.Reusable;
 
 public class Dashboard extends Reusable {
-	
-	 WebDriver driver;
 
-	
-	public Dashboard(WebDriver driver)
-	{	
-	super(driver);
-	this.driver=driver;
-	PageFactory.initElements(driver,this);
+	WebDriver driver;
+
+	public Dashboard(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	
-	
 
-	@FindBy(xpath="//span[text()='Groups']")
+	@FindBy(xpath = "//span[text()='Groups']")
 	WebElement texts;
-	
-	public void groupsMenuClick() throws InterruptedException
-	{
+
+	public void groupsMenuClick() throws InterruptedException {
 		// Scroll Down
 		Thread.sleep(10000);
 		WebElement scol = driver.findElement(By.cssSelector("html"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,350)", scol);
-	
+
 		// Group Select on Left Side
 		Thread.sleep(10000);
 		texts.click();
-		
-		Actions a = new Actions(driver);
-		a.sendKeys(Keys.PAGE_UP).build().perform();
-		a.sendKeys(Keys.PAGE_UP).build().perform();
-	
-		
-	}
-	
-	
-	public void viewdGroup() throws InterruptedException
-	{
-		// Scroll Down
-		Thread.sleep(10000);
-		WebElement scol = driver.findElement(By.cssSelector("html"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,350)", scol);
-	
-		// Group Select on Left Side
-		Thread.sleep(10000);
-		texts.click();
-		
+
 		Actions a = new Actions(driver);
 		a.sendKeys(Keys.PAGE_UP).build().perform();
 		a.sendKeys(Keys.PAGE_UP).build().perform();
 
 	}
-	
-	
 
 }

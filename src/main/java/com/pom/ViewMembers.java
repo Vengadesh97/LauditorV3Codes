@@ -38,6 +38,8 @@ public class ViewMembers extends Reusable {
 		Thread.sleep(2000);
 		viewMember.click();
 		Thread.sleep(2000);
+		searchbarTeamMember.clear();
+		Thread.sleep(5000);
 		searchbarTeamMember.sendKeys(memberEmailId);
 		Thread.sleep(2000);
 		actionbtnTM.click();
@@ -174,8 +176,9 @@ public class ViewMembers extends Reusable {
 	WebElement alertpopupResetPasswordClosebtn;
 
 	public void resetPassword() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		resetPasswordBtn.click();
+		Thread.sleep(5000);
 		alertpopupResetPasswordYes.click();
 	}
 
@@ -188,7 +191,7 @@ public class ViewMembers extends Reusable {
 	WebElement alertpopupDeleteNo;
 
 	// Alert Yes
-	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn alertbtnyes'])[1]")
+	@FindBy(xpath = "(//*[@class='btn btn-default alertbtn alertbtnyes'])[1]")
 	WebElement alertpopupDeleteYes;
 
 	// Close button
@@ -196,8 +199,9 @@ public class ViewMembers extends Reusable {
 	WebElement alertpopupDeleteClosebtn;
 
 	public void deleteMember() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		deleteButton.click();
+		Thread.sleep(5000);
 		alertpopupDeleteYes.click();
 	}
 

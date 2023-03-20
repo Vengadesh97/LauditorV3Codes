@@ -24,6 +24,7 @@ public class ViewGroups extends Reusable {
 		PageFactory.initElements(driver, this);
 	}
 
+	
 	@FindBy(xpath = "//tr /td[1]")
 	List<WebElement> groupNameText;
 
@@ -232,7 +233,7 @@ public class ViewGroups extends Reusable {
 	List<WebElement> groupheadNameText;
 
 	// GroupheadName Select
-	@FindBy(xpath = "//div[@class='multicheck form-control textbox selmember']")
+	@FindBy(xpath = "(//div[@class='multicheck form-control textbox selmember'])//label")
 	List<WebElement> selectbuttonGroupHead;
 
 	// UpdateGroupHead Save Button

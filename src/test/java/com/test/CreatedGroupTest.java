@@ -16,7 +16,7 @@ import com.pom.Dashboard;
 import com.pom.LoginPage;
 import com.pom.ViewGroups;
 
-public class Createdgroups extends BaseClass {
+public class CreatedGroupTest extends BaseClass {
 
 	@Test(dataProvider = "getData")
 	public void createdGroup(HashMap<String, String> input) throws InterruptedException {
@@ -31,7 +31,7 @@ public class Createdgroups extends BaseClass {
 	public Object[][] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Createsgroup.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\CreateGroupData.json");
 
 		return new Object[][] { { data.get(0) } };
 

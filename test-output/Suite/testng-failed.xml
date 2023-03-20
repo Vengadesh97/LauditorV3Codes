@@ -3,28 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.ViewedGroups">
+      <class name="com.test.ViewMembersTest">
         <methods>
-          <include name="viewGroupTabMenu"/>
-          <include name="viewgroupUpdateGroupMember" invocation-numbers="0"/>
-          <include name="viewgroupUpdateGroupHead"/>
-          <include name="viewgroupEditGroupInfo" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-          <include name="viewgroupAssignDeleteGroup"/>
-        </methods>
-      </class> <!-- com.test.ViewedGroups -->
-      <class name="com.test.CreateMemberAccount">
-        <methods>
-          <include name="createMemberAccountCreate" invocation-numbers="0"/>
+          <include name="deleteMemberAccount"/>
+          <include name="restPasswords"/>
+          <include name="down"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.CreateMemberAccount -->
-      <class name="com.test.ViewMember">
-        <methods>
-          <include name="viewMemberEditGroup" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- com.test.ViewMember -->
+      </class> <!-- com.test.ViewMembersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
