@@ -13,6 +13,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -55,8 +56,10 @@ public class BaseClass {
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
+			ChromeOptions ops = new ChromeOptions();
+			ops.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(ops);
 		} else if (browserName.equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -86,7 +89,7 @@ public class BaseClass {
 		return data;
 	}
 
-	@BeforeTest
+	@BeforeClass
 	public LoginPage launchApplication() throws IOException {
 		driver = initalize();
 		// driver.get("https://app.lauditor.com/login");

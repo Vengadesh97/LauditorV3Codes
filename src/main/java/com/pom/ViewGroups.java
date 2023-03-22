@@ -225,9 +225,14 @@ public class ViewGroups extends Reusable {
 		action.sendKeys(Keys.PAGE_UP).build().perform();
 	}
 
+	//UpdateGroupHead
 	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[3]")
 	WebElement updategroupheadBtn;
 
+	//Searchbox
+	@FindBy(xpath="//input[@placeholder='Search member']")
+	WebElement searchBoxGH;
+	
 	// GroupheadNameText
 	@FindBy(xpath = "//label[@class='callselect float-left']")
 	List<WebElement> groupheadNameText;
@@ -259,9 +264,11 @@ public class ViewGroups extends Reusable {
 		Thread.sleep(5000);
 		action.moveToElement(updategroupheadBtn).click().perform();
 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		action.sendKeys(Keys.PAGE_UP).build().perform();
-
+		Thread.sleep(1000);
+		searchBoxGH.sendKeys(groupheadname);
+		
 		Thread.sleep(5000);
 		for (int i = 0; i < groupheadNameText.size(); i++) {
 			String totalGroupheadname = groupheadNameText.get(i).getText();
@@ -320,7 +327,7 @@ public class ViewGroups extends Reusable {
 	// DeleteComplete Group
 	public void deleteAssigntoAnotherGroup(String assignGroupname) throws InterruptedException {
 
-		// JavascriptExecutor executor = (JavascriptExecutor) driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 
 		Thread.sleep(5000);
 		Actions action = new Actions(driver);
@@ -332,24 +339,29 @@ public class ViewGroups extends Reusable {
 		action.sendKeys(Keys.PAGE_DOWN).build().perform();
 
 		Thread.sleep(5000);
-//		for (int i = 0; i < assignGroupNameText.size(); i++) {
-//			
-//			String selectAssignGroup = assignGroupNameText.get(i).getText();
-//			if (assignGroupname.contains(selectAssignGroup)) {
-//				Thread.sleep(2000);
-//
-//				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
-//
-//				executor.executeScript("arguments[0].click();", selectedAssignGroup);
-//			}
-//		}
-
+		
 		searchboxName.sendKeys(assignGroupname);
+		
+		Thread.sleep(5000);
+		
+		for (int i = 0; i < assignGroupNameText.size(); i++) {
+			
+			String selectAssignGroup = assignGroupNameText.get(i).getText();
+			if (assignGroupname.contains(selectAssignGroup)) {
+				Thread.sleep(2000);
 
-		assignGroupBtn.click();
+				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
 
-		// action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		// action.sendKeys(Keys.PAGE_DOWN).build().perform();
+				executor.executeScript("arguments[0].click();", selectedAssignGroup);
+			}
+		}
+
+		
+
+		//assignGroupBtn.click();
+
+		 action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
 
 		Thread.sleep(2000);
 		// Delete
@@ -364,7 +376,7 @@ public class ViewGroups extends Reusable {
 		successOkbtn.click();
 
 		Thread.sleep(5000);
-		action.sendKeys(Keys.PAGE_UP).build().perform();
+		//action.sendKeys(Keys.PAGE_UP).build().perform();
 
 	}
 

@@ -1,29 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-20T17:09:47 IST" name="Default suite" finished-at="2023-03-20T17:11:03 IST" duration-ms="76699">
+  <suite started-at="2023-03-22T15:41:08 IST" name="Suite" finished-at="2023-03-22T15:50:52 IST" duration-ms="583556">
     <groups>
     </groups>
-    <test started-at="2023-03-20T17:09:47 IST" name="Default test" finished-at="2023-03-20T17:11:03 IST" duration-ms="76699">
-      <class name="com.test.ViewGroupsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewGroupsTest@815b41f]" started-at="2023-03-20T17:09:47 IST" name="launchApplication" finished-at="2023-03-20T17:10:05 IST" duration-ms="18377" status="PASS">
+    <test started-at="2023-03-22T15:41:08 IST" name="Test" finished-at="2023-03-22T15:50:52 IST" duration-ms="583556">
+      <class name="com.test.CreateMemberTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreateMemberTest@1a5a4e19]" started-at="2023-03-22T15:46:26 IST" name="launchApplication" finished-at="2023-03-22T15:46:35 IST" duration-ms="8406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="viewGroupTabMenu()[pri:0, instance:com.test.ViewGroupsTest@815b41f]" started-at="2023-03-20T17:10:05 IST" name="viewGroupTabMenu" finished-at="2023-03-20T17:10:26 IST" duration-ms="20727" status="PASS">
+        <test-method signature="createMemberAccountCreate(java.util.HashMap)[pri:0, instance:com.test.CreateMemberTest@1a5a4e19]" started-at="2023-03-22T15:46:35 IST" name="createMemberAccountCreate" data-provider="getData" finished-at="2023-03-22T15:48:22 IST" duration-ms="107136" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ConfirmEmail=Vengadesh@yj.com, Designation=Member, Email=Vengadesh@yj.com, addGroups3=Demo team, addGroups1=Family law, addGroups2=Immigartion, DefaultRate=100, Name=Digi, CurrencyName=Pound(GBP)}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMemberAccountCreate -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreateMemberTest@1a5a4e19]" started-at="2023-03-22T15:48:23 IST" name="down" finished-at="2023-03-22T15:48:23 IST" duration-ms="804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.CreateMemberTest -->
+      <class name="com.test.ViewGroupsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:42:33 IST" name="launchApplication" finished-at="2023-03-22T15:42:42 IST" duration-ms="8346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="viewGroupTabMenu()[pri:0, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:42:42 IST" name="viewGroupTabMenu" finished-at="2023-03-22T15:43:03 IST" duration-ms="21188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewGroupTabMenu -->
-        <test-method signature="viewgroupUpdateGroupHead()[pri:3, instance:com.test.ViewGroupsTest@815b41f]" started-at="2023-03-20T17:10:26 IST" name="viewgroupUpdateGroupHead" finished-at="2023-03-20T17:11:02 IST" duration-ms="36411" status="PASS">
+        <test-method signature="viewgroupEditGroupInfo(java.util.HashMap)[pri:1, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:43:04 IST" name="viewgroupEditGroupInfo" data-provider="getData" finished-at="2023-03-22T15:43:24 IST" duration-ms="19839" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{GroupNameText=Civil Laws Case, RenameDescriptionChange=VerifyText, RenameGroupName=Civil law 34}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewgroupEditGroupInfo -->
+        <test-method signature="viewgroupUpdateGroupMember(java.util.HashMap)[pri:2, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:43:24 IST" name="viewgroupUpdateGroupMember" data-provider="getData1" finished-at="2023-03-22T15:45:03 IST" duration-ms="98532" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{AddMember2=Karthick RSB TM, GroupNameText=Civil law 34, AddMember1=A-Team Member, RemoveMember1=Ananth Associates}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewgroupUpdateGroupMember -->
+        <test-method signature="viewgroupUpdateGroupHead(java.util.HashMap)[pri:3, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:45:03 IST" name="viewgroupUpdateGroupHead" data-provider="getData2" finished-at="2023-03-22T15:45:40 IST" duration-ms="36523" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{UpdateGroupHead1=Karthick RSB TM, GroupNameText1=Civil law 34}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewgroupUpdateGroupHead -->
-        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewGroupsTest@815b41f]" started-at="2023-03-20T17:11:02 IST" name="down" finished-at="2023-03-20T17:11:03 IST" duration-ms="920" status="PASS">
+        <test-method signature="viewgroupAssignDeleteGroup(java.util.HashMap)[pri:4, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:45:40 IST" name="viewgroupAssignDeleteGroup" data-provider="getData3" finished-at="2023-03-22T15:46:25 IST" duration-ms="44769" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{DeleteGroupName=Civil law 34, AssginAnotherGroupName=Civil Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewgroupAssignDeleteGroup -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewGroupsTest@4ee203eb]" started-at="2023-03-22T15:46:25 IST" name="down" finished-at="2023-03-22T15:46:26 IST" duration-ms="844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- down -->
       </class> <!-- com.test.ViewGroupsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.test.ViewMembersTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:48:23 IST" name="launchApplication" finished-at="2023-03-22T15:48:32 IST" duration-ms="8208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="viewMemberEditGroup(java.util.HashMap)[pri:0, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:48:32 IST" name="viewMemberEditGroup" data-provider="getData" finished-at="2023-03-22T15:49:22 IST" duration-ms="50482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{changedDesignation=Member, changedEmail=vengades19@gm.com, currencyNames=BahrainiDinar(BHD), memberEmailId=Vengadesh@yj.com, changedConfirmEmail=vengades19@gm.com, changedDefaultRate=991, changedName=Vengadesh TM New}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewMemberEditGroup -->
+        <test-method signature="viewMemberUpdateGroupAccess(java.util.HashMap)[pri:1, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:49:23 IST" name="viewMemberUpdateGroupAccess" data-provider="getData1" finished-at="2023-03-22T15:49:57 IST" duration-ms="33875" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{UpdateGroup1=test creation, UpdateGroup2=Group Creation test, UpdateGroup3=Constitutional Law, memberEmailId1=vengades19@gm.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewMemberUpdateGroupAccess -->
+        <test-method signature="newRestPasswords(java.util.HashMap)[pri:2, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:49:57 IST" name="newRestPasswords" data-provider="getData2" finished-at="2023-03-22T15:50:24 IST" duration-ms="26480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{memberEmailId2=vengades19@gm.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newRestPasswords -->
+        <test-method signature="newdeleteMemberAccount(java.util.HashMap)[pri:3, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:50:24 IST" name="newdeleteMemberAccount" data-provider="getData3" finished-at="2023-03-22T15:50:50 IST" duration-ms="26266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{memberEmailId3=vengades19@gm.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newdeleteMemberAccount -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewMembersTest@7068e664]" started-at="2023-03-22T15:50:51 IST" name="down" finished-at="2023-03-22T15:50:52 IST" duration-ms="894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.ViewMembersTest -->
+      <class name="com.test.CreatedGroupTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreatedGroupTest@3bcd05cb]" started-at="2023-03-22T15:41:09 IST" name="launchApplication" finished-at="2023-03-22T15:41:23 IST" duration-ms="14542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="createdGroup(java.util.HashMap)[pri:0, instance:com.test.CreatedGroupTest@3bcd05cb]" started-at="2023-03-22T15:41:24 IST" name="createdGroup" data-provider="getData" finished-at="2023-03-22T15:42:32 IST" duration-ms="67538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{addMember3=Susan, addMember4=Neela C RSB, addMember5=Ananth Associates, description=Data stored client related, addMember1=Martin, addMember2=Vengadesh RSB, groupHeadNames=Vengadesh RSB, membernameremoved=Martin, groupname=Civil Laws Case}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createdGroup -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreatedGroupTest@3bcd05cb]" started-at="2023-03-22T15:42:32 IST" name="down" finished-at="2023-03-22T15:42:33 IST" duration-ms="792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.CreatedGroupTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

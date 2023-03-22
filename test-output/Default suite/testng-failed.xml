@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.ViewMembersTest">
+      <class name="com.test.CreatedGroupTest">
         <methods>
-          <include name="deleteMemberAccount"/>
           <include name="down"/>
           <include name="launchApplication"/>
+          <include name="createdGroup" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.ViewMembersTest -->
+      </class> <!-- com.test.CreatedGroupTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

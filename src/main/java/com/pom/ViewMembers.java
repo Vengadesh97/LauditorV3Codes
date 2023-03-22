@@ -35,6 +35,9 @@ public class ViewMembers extends Reusable {
 	WebElement actionbtnTM;
 
 	public void viewMemberTab(String memberEmailId) throws InterruptedException {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.PAGE_UP).build().perform();
+
 		Thread.sleep(2000);
 		viewMember.click();
 		Thread.sleep(2000);
@@ -176,9 +179,9 @@ public class ViewMembers extends Reusable {
 	WebElement alertpopupResetPasswordClosebtn;
 
 	public void resetPassword() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		resetPasswordBtn.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		alertpopupResetPasswordYes.click();
 	}
 
@@ -199,9 +202,9 @@ public class ViewMembers extends Reusable {
 	WebElement alertpopupDeleteClosebtn;
 
 	public void deleteMember() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		deleteButton.click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		alertpopupDeleteYes.click();
 	}
 

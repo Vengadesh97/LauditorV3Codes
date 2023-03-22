@@ -31,14 +31,14 @@ public class ViewMembersTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData2", priority = 2)
-	public void restPasswords(HashMap<String, String> input) throws InterruptedException {
+	public void newRestPasswords(HashMap<String, String> input) throws InterruptedException {
 		viewMembers.viewMemberTab(input.get("memberEmailId2"));
 		viewMembers.resetPassword();
 
 	}
 
 	@Test(dataProvider = "getData3", priority = 3)
-	public void deleteMemberAccount(HashMap<String, String> input) throws InterruptedException {
+	public void newdeleteMemberAccount(HashMap<String, String> input) throws InterruptedException {
 		viewMembers.viewMemberTab(input.get("memberEmailId3"));
 		viewMembers.deleteMember();
 	}
