@@ -27,7 +27,13 @@ public class Listeners extends BaseClass implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		test.log(Status.PASS, "Test Passed");
+	}
 
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+		test.fail(result.getThrowable());
+		
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e1) {
@@ -42,12 +48,7 @@ public class Listeners extends BaseClass implements ITestListener {
 			e.printStackTrace();
 		}
 		test.addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-	}
-
-	@Override
-	public void onTestFailure(ITestResult result) {
-		// Error message display
-		test.fail(result.getThrowable());
+		
 	}
 
 	@Override

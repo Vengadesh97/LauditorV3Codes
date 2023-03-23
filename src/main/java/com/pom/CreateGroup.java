@@ -176,11 +176,7 @@ public class CreateGroup extends Reusable {
 		alertViewChanges.click();
 
 	}
-
-	public boolean viewScreen(String groupsName) {
-		return groupNameCheck.stream()
-				.anyMatch(groupNameCheck -> groupNameCheck.getText().equalsIgnoreCase(groupsName));
-
-	}
+	
+	
 
 }

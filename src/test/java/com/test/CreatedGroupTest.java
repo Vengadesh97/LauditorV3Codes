@@ -24,7 +24,12 @@ public class CreatedGroupTest extends BaseClass {
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
 				input.get("addMember4"), input.get("addMember5") };
 		createGroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
-				input.get("membernameremoved"), input.get("groupHeadNames"));	
+				input.get("membernameremoved"), input.get("groupHeadNames"));
+		Boolean match = viewGroups.textVerifyGroupName(input.get("groupname"));
+		Assert.assertTrue(match);
+	
+		//Boolean match1 = viewGroups.textVerifyGroupHeadName(input.get("groupHeadNames"));
+		//Assert.assertTrue(match1);
 	}
 
 	@DataProvider

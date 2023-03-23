@@ -24,7 +24,6 @@ public class ViewGroups extends Reusable {
 		PageFactory.initElements(driver, this);
 	}
 
-	
 	@FindBy(xpath = "//tr /td[1]")
 	List<WebElement> groupNameText;
 
@@ -84,6 +83,31 @@ public class ViewGroups extends Reusable {
 
 	}
 
+	// Group name verify
+	@FindBy(xpath = "//tr//td[1]")
+	private List<WebElement> groupNamesTextVerify;
+
+	public boolean textVerifyGroupName(String groupsName) throws InterruptedException {
+		Thread.sleep(5000);
+		Boolean match = groupNamesTextVerify.stream()
+				.anyMatch(groupNameCheck -> groupNameCheck.getText().equalsIgnoreCase(groupsName));
+		return match;
+	}
+
+	
+	//Group head verify 
+	@FindBy(xpath="//tr//td[3]")
+	private List<WebElement> groupHeadNameTextVerify;
+	
+	public boolean textVerifyGroupHeadName(String groupHeadName) throws InterruptedException {
+		Thread.sleep(5000);
+		Boolean match1 = groupHeadNameTextVerify.stream()
+				.anyMatch(groupHeadNameCheck -> groupHeadNameCheck.getText().equalsIgnoreCase(groupHeadName));
+		return match1;
+	}
+	
+	
+	
 	// EditGroupInfo [Positive]
 
 	@FindBy(xpath = "//ul[@class='dropdown-menu custom-dropdown show']")
@@ -225,14 +249,14 @@ public class ViewGroups extends Reusable {
 		action.sendKeys(Keys.PAGE_UP).build().perform();
 	}
 
-	//UpdateGroupHead
+	// UpdateGroupHead
 	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[3]")
 	WebElement updategroupheadBtn;
 
-	//Searchbox
-	@FindBy(xpath="//input[@placeholder='Search member']")
+	// Searchbox
+	@FindBy(xpath = "//input[@placeholder='Search member']")
 	WebElement searchBoxGH;
-	
+
 	// GroupheadNameText
 	@FindBy(xpath = "//label[@class='callselect float-left']")
 	List<WebElement> groupheadNameText;
@@ -268,7 +292,7 @@ public class ViewGroups extends Reusable {
 		action.sendKeys(Keys.PAGE_UP).build().perform();
 		Thread.sleep(1000);
 		searchBoxGH.sendKeys(groupheadname);
-		
+
 		Thread.sleep(5000);
 		for (int i = 0; i < groupheadNameText.size(); i++) {
 			String totalGroupheadname = groupheadNameText.get(i).getText();
@@ -339,13 +363,13 @@ public class ViewGroups extends Reusable {
 		action.sendKeys(Keys.PAGE_DOWN).build().perform();
 
 		Thread.sleep(5000);
-		
+
 		searchboxName.sendKeys(assignGroupname);
-		
+
 		Thread.sleep(5000);
-		
+
 		for (int i = 0; i < assignGroupNameText.size(); i++) {
-			
+
 			String selectAssignGroup = assignGroupNameText.get(i).getText();
 			if (assignGroupname.contains(selectAssignGroup)) {
 				Thread.sleep(2000);
@@ -356,11 +380,9 @@ public class ViewGroups extends Reusable {
 			}
 		}
 
-		
+		// assignGroupBtn.click();
 
-		//assignGroupBtn.click();
-
-		 action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
 		action.sendKeys(Keys.PAGE_DOWN).build().perform();
 
 		Thread.sleep(2000);
@@ -376,7 +398,7 @@ public class ViewGroups extends Reusable {
 		successOkbtn.click();
 
 		Thread.sleep(5000);
-		//action.sendKeys(Keys.PAGE_UP).build().perform();
+		// action.sendKeys(Keys.PAGE_UP).build().perform();
 
 	}
 
