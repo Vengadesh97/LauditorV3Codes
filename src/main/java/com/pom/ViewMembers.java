@@ -35,9 +35,10 @@ public class ViewMembers extends Reusable {
 	WebElement actionbtnTM;
 
 	public void viewMemberTab(String memberEmailId) throws InterruptedException {
+		Thread.sleep(5000);
 		Actions action = new Actions(driver);
 		action.sendKeys(Keys.PAGE_UP).build().perform();
-
+		action.sendKeys(Keys.PAGE_UP).build().perform();
 		Thread.sleep(2000);
 		viewMember.click();
 		Thread.sleep(2000);

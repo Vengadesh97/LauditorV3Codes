@@ -6,13 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.ViewGroupsTest">
-        <methods>
-          <include name="down"/>
-          <include name="launchApplication"/>
-          <include name="viewgroupAssignDeleteGroup" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.test.ViewGroupsTest -->
       <class name="com.test.ViewMembersTest">
         <methods>
           <include name="viewMemberEditGroup"/>
@@ -30,6 +23,15 @@
           <include name="launchApplication"/>
         </methods>
       </class> <!-- com.test.CreateMemberTest -->
+      <class name="com.test.ViewGroupsTest">
+        <methods>
+          <include name="viewgroupUpdateGroupMember" invocation-numbers="0"/>
+          <include name="down"/>
+          <include name="viewgroupUpdateGroupHead" invocation-numbers="0"/>
+          <include name="viewgroupEditGroupInfo" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.test.ViewGroupsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
