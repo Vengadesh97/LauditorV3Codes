@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.CreatedGroupTest">
+      <class name="com.test.CreateMatterTest">
         <methods>
+          <include name="MandatoryFieldSelectNames" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
-          <include name="createdGroup" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.CreatedGroupTest -->
+      </class> <!-- com.test.CreateMatterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

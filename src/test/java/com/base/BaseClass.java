@@ -27,6 +27,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pom.CreateGroup;
+import com.pom.CreateMatter;
 import com.pom.CreateMember;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
@@ -46,7 +47,7 @@ public class BaseClass {
 	public CreateGroup createGroup;
 	public CreateMember createMember;
 	public ViewMembers viewMembers;
-	
+	public CreateMatter createMatter;
 	
 	public WebDriver initalize() throws IOException {
 
@@ -101,6 +102,7 @@ public class BaseClass {
 		viewGroups = new ViewGroups(driver);
 		createMember = new CreateMember(driver);
 		viewMembers = new ViewMembers(driver);
+		createMatter = new CreateMatter(driver);
 		return loginPage;
 	}
 	
