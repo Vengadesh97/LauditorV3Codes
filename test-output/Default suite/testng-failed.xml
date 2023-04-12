@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.CreateMatterTest">
         <methods>
-          <include name="MandatoryFieldSelectNames" invocation-numbers="0"/>
+          <include name="allFieldsWithoutTeamMemberandDocument" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
         </methods>

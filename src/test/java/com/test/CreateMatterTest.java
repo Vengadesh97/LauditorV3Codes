@@ -11,59 +11,248 @@ import com.base.BaseClass;
 
 public class CreateMatterTest extends BaseClass {
 
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData", priority = 0,enabled=false)
 	public void MandatoryFieldSelectNames(HashMap<String, String> input) throws InterruptedException {
 		createMatter.leftMatterTab();
 		createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
 		Thread.sleep(2000);
-		String[] groupNames = {input.get("groupName1"), input.get("groupName2"), input.get("groupName3")};
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
 		Thread.sleep(2000);
 		createMatter.selecting(groupNames);
-		String[] clientNames = {input.get("clientName1"), input.get("clientName2"), input.get("clientName3")};
-		createMatter.selecting1(clientNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
 		Thread.sleep(2000);
-		String[] memberNames = {input.get("memberName1"), input.get("memberName2")};
+		String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
 		createMatter.selecting(memberNames);
-		String[] documentNames = {input.get("documentName1"), input.get("documentName2"), input.get("documentName3")};
-		createMatter.selecting1(documentNames);
+		String[] documentNames = { input.get("documentName1"), input.get("documentName2"), input.get("documentName3") };
+		createMatter.selecting(documentNames);
 		Thread.sleep(2000);
 		createMatter.documentPageSaveandSuccessPopup();
-		//createMatter.documentPageSave();
-//		Thread.sleep(2000);
-//		createMatter.alertPopupYes();
-//		Thread.sleep(2000);
-//		createMatter.viewMatterListSuccess();
 	}
 
-	
-	@Test(enabled=false)
-	public void MandatoryFieldSelectNames() throws InterruptedException {
-		createMatter.leftMatterTab();
-		createMatter.createMatterAllFieldEnter("Custody Case","F342","Individuals","Madras High Court","Mukesh"," 7 ", "Medium", "Legal Summary Case New", "Rajesh","Rajesh@yh.com","7474141411");
-	//	createMatter.createMatter("Criminal Custody Case Filling 1","N987");
-		String[] groupNames = {"Group Modules Test","Corporative Law","Common Law"};
+	@Test(dataProvider = "getData1", priority = 1,enabled=false)
+	public void withoutTeamMemberandDocument(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
 		createMatter.selecting(groupNames);
-		String[] clientNames = {"Mani R","Vengadesh R","Vengadesh RSB Firm"};
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2") };
 		createMatter.selecting(clientNames);
-		String[] memberNames = {"Susan","Karthick RSB TM"};
-		createMatter.selecting(memberNames);
-		String[] documentNames = {"DevOps_running-containerized-microservices-on-aws","Spell check the hint name (1) fgr","TM Firm PnG Files"};
+		// Team Member Page
+		createMatter.nextPage();
+		// Document Page
+		createMatter.nextPage();
+		createMatter.documentPageSaveandSuccessPopup();
+
+	}
+
+	@Test(dataProvider = "getData2", priority = 2,enabled=false)
+	public void withoutTeamMember(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
+		// Team Member Page
+		createMatter.nextPage();
+		Thread.sleep(2000);
+		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
 		createMatter.selecting(documentNames);
 		createMatter.documentPageSaveandSuccessPopup();
 	}
 
-	
-	
-	//
+	@Test(dataProvider = "getData3", priority = 3,enabled=false)
+	public void withoutDocument(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
+		Thread.sleep(2000);
+		String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
+		createMatter.selecting(memberNames);
+		// Document Page
+		createMatter.nextPage();
+		createMatter.documentPageSaveandSuccessPopup();
+
+	}
+
+	// All Fields are entry
+
+	@Test(dataProvider = "getData4", priority = 4)
+	public void allFieldsEnteredandSelectNames(HashMap<String, String> input) throws InterruptedException {
+		createMatter.leftMatterTab();
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"),
+				input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"),
+				input.get("description"), input.get("advocateName"), input.get("advocateEmail"),
+				input.get("advocatePhone"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
+		Thread.sleep(2000);
+		String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
+		createMatter.selecting(memberNames);
+		String[] documentNames = { input.get("documentName1"), input.get("documentName2"), input.get("documentName3") };
+		createMatter.selecting(documentNames);
+		Thread.sleep(2000);
+		createMatter.documentPageSaveandSuccessPopup();
+	}
+
+	@Test(dataProvider = "getData5", priority = 5)
+	public void allFieldsWithoutTeamMemberandDocument(HashMap<String, String> input) throws InterruptedException {
+		
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"),
+				input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"),
+				input.get("description"), input.get("advocateName"), input.get("advocateEmail"),
+				input.get("advocatePhone"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2") };
+		createMatter.selecting(clientNames);
+		// Team Member Page
+		createMatter.nextPage();
+		// Document Page
+		createMatter.nextPage();
+		createMatter.documentPageSaveandSuccessPopup();
+
+	}
+
+	@Test(dataProvider = "getData6", priority = 6)
+	public void allFieldsWithoutTeamMember(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"),
+				input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"),
+				input.get("description"), input.get("advocateName"), input.get("advocateEmail"),
+				input.get("advocatePhone"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
+		// Team Member Page
+		createMatter.nextPage();
+		Thread.sleep(2000);
+		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+		createMatter.selecting(documentNames);
+		createMatter.documentPageSaveandSuccessPopup();
+	}
+
+	@Test(dataProvider = "getData7", priority = 7)
+	public void allFieldsWithoutDocument(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"),
+				input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"),
+				input.get("description"), input.get("advocateName"), input.get("advocateEmail"),
+				input.get("advocatePhone"));
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2"), input.get("groupName3") };
+		Thread.sleep(2000);
+		createMatter.selecting(groupNames);
+		String[] clientNames = { input.get("clientName1"), input.get("clientName2"), input.get("clientName3") };
+		createMatter.selecting(clientNames);
+		Thread.sleep(2000);
+		String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
+		createMatter.selecting(memberNames);
+		// Document Page
+		createMatter.nextPage();
+		createMatter.documentPageSaveandSuccessPopup();
+
+	}
+
+	// MandatoryFieldSelectNames
 	@DataProvider
 	public Object[][] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\CreateMatterData.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\CreateMatterData.json");
 
 		return new Object[][] { { data.get(0) } };
 
-		// return new Object[][] { { data.get(0) }, { data.get(1) } };
+	}
+
+	// withoutTeamMemberandDocument
+	@DataProvider
+	public Object[][] getData1() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\WithoutTeamMemberandDocument.json");
+
+		return new Object[][] { { data.get(0) } };
+
+	}
+
+	// withoutTeamMember
+	@DataProvider
+	public Object[][] getData2() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\WithoutTeamMember.json");
+
+		return new Object[][] { { data.get(0) } };
+	}
+
+	// withoutDocument
+	@DataProvider
+	public Object[][] getData3() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\WithoutDocument.json");
+
+		return new Object[][] { { data.get(0) } };
+	}
+
+	// All Fields scenario
+	// allFieldsEnteredandSelectNames
+	@DataProvider
+	public Object[][] getData4() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\allFieldsEnteredandSelectNames.json");
+
+		return new Object[][] { { data.get(0) } };
+
+	}
+
+	// AllFieldsWithoutTeamMemberandDocument
+	@DataProvider
+	public Object[][] getData5() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\AllFieldsWithoutTeamMemberandDocument.json");
+
+		return new Object[][] { { data.get(0) } };
+
+	}
+
+	// AllFieldsWithoutTeamMember
+	@DataProvider
+	public Object[][] getData6() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\AllFieldsWithoutTeamMember.json");
+
+		return new Object[][] { { data.get(0) } };
+
+	}
+
+	// AllFieldsWithoutDocument
+	@DataProvider
+	public Object[][] getData7() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\AllFieldsWithoutDocument.json");
+
+		return new Object[][] { { data.get(0) } };
+
 	}
 
 }

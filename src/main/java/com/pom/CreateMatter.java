@@ -92,7 +92,7 @@ public class CreateMatter extends Reusable {
 	WebElement matterInfoCancel;
 
 	public void leftMatterTab() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		matterTab.click();
 	}
 
@@ -119,12 +119,14 @@ public class CreateMatter extends Reusable {
 		caseTypeField.sendKeys(caseType);
 		courtNameField.sendKeys(courtName);
 		judgesField.sendKeys(judges);
+		Thread.sleep(3000);
 		dateOfFillingClick.click();
 		Thread.sleep(4000);
 		// String date = " 5 ";
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
 		Thread.sleep(5000);
-		pageDown();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		Thread.sleep(5000);
 		// Prioirty
 		// String select = "Low";
@@ -137,7 +139,7 @@ public class CreateMatter extends Reusable {
 		opponentAdvocatesEmail.sendKeys(advocateEmail);
 		opponentAdvocatesPhone.sendKeys(advocatePhone);
 		Thread.sleep(3000);
-		pageDown();
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		opponentAdvocatesSavebtn.click();
 		Thread.sleep(3000);
 		matterInfoNext.click();
@@ -201,51 +203,7 @@ public class CreateMatter extends Reusable {
 
 	}
 	
-	public void selecting1(String[] NameList) throws InterruptedException {
-		Thread.sleep(5000);
-
-		// String[] groupNameList = {"Group Modules Test","Corporative
-		// Law","Administration Group"};
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,500)");
-
-		int j = 0;
-		List<String> groupNames = Arrays.asList(NameList);
-	//	List<String> groupNames = new ArrayList<>(Arrays.asList(NameList));
-
-		for (int i = 0; i <listOfGroupsName.size(); i++) {
-			
-			String textGroup = listOfGroupsName.get(i).getText();
-			Thread.sleep(1000);
-			
-			if (groupNames.contains(textGroup)) {
-				j++;
-				Thread.sleep(2000);
-				WebElement checkboxSelectedGroupName = checkboxSelectGroup.get(i);
-				JavascriptExecutor executor = (JavascriptExecutor) driver;
-				executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
-				
-				if (j == groupNames.size()) {
-					break;
-
-				}
-
-			}
-
-		}
-
-		Thread.sleep(2000);
-
-		// Scroll down till the bottom of the page
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-
-		Thread.sleep(3000);
-		// Next
-		driver.findElement(By.className("btnsave")).click();
-
-	}
+	
 
 	// Document Page Save / Alert Popup
 
@@ -268,13 +226,20 @@ public class CreateMatter extends Reusable {
 		alertYes.click();
 		Thread.sleep(5000);
 		viewMatterListSuccessPopup.click();
-
+		Thread.sleep(8000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,50)");
 	}
 	
-	public void documentPageSave() throws InterruptedException
+	public void nextPage() throws InterruptedException
 	{	
-		matterInfoNext.click();
 		Thread.sleep(3000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// Scroll down till the bottom of the page
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		Thread.sleep(3000);
+		matterInfoNext.click();
 	}
 	
 	public void alertPopupYes()
