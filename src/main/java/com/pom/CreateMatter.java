@@ -1,8 +1,11 @@
 package com.pom;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.swing.JComboBox;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,8 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.abst.Reusable;
+import com.aventstack.extentreports.util.Assert;
 
 public class CreateMatter extends Reusable {
 
@@ -148,15 +155,16 @@ public class CreateMatter extends Reusable {
 	// Groups Selecting
 
 	// All Name Text Group
-	@FindBy(xpath = "//div[@class='callselect']")
+	@FindBy(xpath = "//div //div[@class='callselect']")
 	List<WebElement> listOfGroupsName;
+	
 
 	// CheckBox Select
 	@FindBy(xpath = "//*[@id='flexCheckDefault']")
 	List<WebElement> checkboxSelectGroup;
 
 	public void selecting(String[] NameList) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		// String[] groupNameList = {"Group Modules Test","Corporative
 		// Law","Administration Group"};
@@ -164,33 +172,44 @@ public class CreateMatter extends Reusable {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,500)");
 
+	try
+	{
+		
 		int j = 0;
+		
 		List<String> groupNames = Arrays.asList(NameList);
-	//	List<String> groupNames = new ArrayList<>(Arrays.asList(NameList));
-
-		for (int i = 0; i <listOfGroupsName.size(); i++) {
-			
-			String textGroup = listOfGroupsName.get(i).getText();
-			Thread.sleep(1000);
-			
-			if (groupNames.contains(textGroup)) {
-				j++;
-				Thread.sleep(2000);
-				WebElement checkboxSelectedGroupName = checkboxSelectGroup.get(i);
-				Thread.sleep(2000);
-				JavascriptExecutor executor = (JavascriptExecutor) driver;
-				Thread.sleep(2000);
-				executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
-				
-				if (j == groupNames.size()) {
-					break;
-
-				}
-
-			}
-
+		System.out.println("Selected Groups Name "+groupNames);
+		String textGroup=new String();
+	//	WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(5000); 
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		WebElement checkboxSelectedGroupName;
+		for (int i = 0; i <listOfGroupsName.size(); i++) 
+		{
+			textGroup = listOfGroupsName.get(i).getText();
+			System.out.println("All Group Name Text "+textGroup);
+			  if (groupNames.contains(textGroup)) { 
+				  j++; 
+				  Thread.sleep(3000); 
+				  checkboxSelectedGroupName = checkboxSelectGroup.get(i); 
+				  executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+				  i--;
+				  }	
+			  if (j == groupNames.size())
+			  { 
+				  break;
+				  }
+		}		
+	}
+		catch (Exception e)
+		{
+			System.out.println(e);
+	
 		}
 
+		
+	
+	
 		Thread.sleep(2000);
 
 		// Scroll down till the bottom of the page
@@ -202,7 +221,6 @@ public class CreateMatter extends Reusable {
 		driver.findElement(By.className("btnsave")).click();
 
 	}
-	
 	
 
 	// Document Page Save / Alert Popup
@@ -242,13 +260,15 @@ public class CreateMatter extends Reusable {
 		matterInfoNext.click();
 	}
 	
-	public void alertPopupYes()
+	public void alertPopupYes() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		alertYes.click();		
 	}
 	
-	public void viewMatterListSuccess()
+	public void viewMatterListSuccess() throws InterruptedException
 	{
+		Thread.sleep(3000);
 		viewMatterListSuccessPopup.click();
 	}
 

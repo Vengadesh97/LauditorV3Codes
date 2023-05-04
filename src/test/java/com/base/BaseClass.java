@@ -9,6 +9,11 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +26,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -31,6 +37,7 @@ import com.pom.CreateMatter;
 import com.pom.CreateMember;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
+import com.pom.UploadDocumentPom;
 import com.pom.ViewGroups;
 import com.pom.ViewMembers;
 
@@ -48,6 +55,7 @@ public class BaseClass {
 	public CreateMember createMember;
 	public ViewMembers viewMembers;
 	public CreateMatter createMatter;
+	public UploadDocumentPom uploadDocuments;
 	
 	public WebDriver initalize() throws IOException {
 
@@ -103,6 +111,7 @@ public class BaseClass {
 		createMember = new CreateMember(driver);
 		viewMembers = new ViewMembers(driver);
 		createMatter = new CreateMatter(driver);
+		uploadDocuments = new UploadDocumentPom(driver);
 		return loginPage;
 	}
 	
@@ -121,5 +130,39 @@ public class BaseClass {
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 
 	}
-
+	
+	
+	DataFormatter formatter = new DataFormatter();
+	
+	@DataProvider(name="driveTest")
+	public Object[][] getData() throws IOException
+	{
+		FileInputStream fis = new FileInputStream("C:\\users.xlsx");
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sheet = wb.getSheetAt(0);
+		int rowCount =sheet.getPhysicalNumberOfRows();
+		XSSFRow row = sheet.getRow(0);
+		int colCount = row.getLastCellNum();
+		Object data[][] = new Object[rowCount-1][colCount];
+		for(int i=0;i<rowCount-1;i++)
+		{
+			row = sheet.getRow(i+1);
+			for(int j=0;j<colCount;j++)
+			{
+				XSSFCell cell = row.getCell(j);
+				data[i][j] =formatter.formatCellValue(cell); 
+			}
+		}
+		
+		return data;		
+	
+	}
+	
+	
+	
+	
 }
+
+	
+
+
