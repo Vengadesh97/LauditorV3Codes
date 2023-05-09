@@ -39,7 +39,7 @@ public class LoginPage extends Reusable{
 	
 	public void goTo()
 	{
-		driver.get("https://app.lauditor.com/login");
+		driver.get("https://staging.lauditor.com/login");
 	}
 	
 

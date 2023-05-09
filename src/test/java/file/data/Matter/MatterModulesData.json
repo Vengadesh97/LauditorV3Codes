@@ -1,0 +1,56 @@
+[
+	
+	{
+		"caseTitle":"Test1",
+		"caseNumber":"B78",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"Ananth kumar"
+	},
+		{
+		"caseTitle":"Test2",
+		"caseNumber":"FGE3",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"Ananth kumar",
+		"memberName1":"PrakashTM",
+		"memberName2":"Pramod"
+	},
+	
+	{
+		"caseTitle":"Test3",
+		"caseNumber":"MGH78",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"shabarish v",
+		"documentName1":"Excel67",
+		"documentName2":"Firm Documents New"
+	},
+	{
+		"caseTitle":"Test4",
+		"caseNumber":"LKJ09",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"shabarish v",
+		"memberName1":"PrakashTM",
+		"memberName2":"Kowayo",
+		"documentName1":"Firm TM",
+		"documentName2":"SC2"
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+]

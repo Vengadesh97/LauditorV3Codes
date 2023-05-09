@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.CreateMatterTest">
         <methods>
-          <include name="MandatoryFieldswithGroupsandClientsIndividuals"/>
+          <include name="clientsIndividualsWithTeamMembers" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
         </methods>

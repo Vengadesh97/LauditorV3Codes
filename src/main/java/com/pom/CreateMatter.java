@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JComboBox;
 
@@ -103,8 +104,14 @@ public class CreateMatter extends Reusable {
 		matterTab.click();
 	}
 
+	
+	
+	
 	public void createMatter(String caseTitle, String caseNumber) throws InterruptedException {
 		Thread.sleep(5000);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,0)");
 		createMatterTab.click();
 		caseTitleField.sendKeys(caseTitle);
 		caseNumberField.sendKeys(caseNumber);
@@ -187,7 +194,7 @@ public class CreateMatter extends Reusable {
 		for (int i = 0; i <listOfGroupsName.size(); i++) 
 		{
 			textGroup = listOfGroupsName.get(i).getText();
-			System.out.println("All Group Name Text "+textGroup);
+		//	System.out.println("All Group Name Text "+textGroup);
 			  if (groupNames.contains(textGroup)) { 
 				  j++; 
 				  Thread.sleep(3000); 
