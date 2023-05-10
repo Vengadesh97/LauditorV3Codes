@@ -6,7 +6,24 @@
 		"groupName1":"Relationship Files Check2",
 		"groupName2":"Relationship Files Check",
 		"clientName1":"Neela Chinnappa",
-		"clientName2":"Ananth kumar"
+		"clientName2":"Ananth kumar",
+		"searchTextIndividuals":"MukilKumar",
+		"firstName":"kumar",
+		"lastName":"V",
+		"email":"mukil@fkms.com",
+		"confirmEmail":"mukil@fkms.com",
+		"country":"Brazil",
+		"phoneNumber":"9898989696",
+		"searchTextEntity":"hajaMaheed",
+		"firmName":"hajaMaheed",
+		"contactPerson":"hajaMaheed",
+		"emailId":"hajaMaheed@gm.com",
+		"confirmEmailId":"hajaMaheed@gm.com",
+		"countryEntity":"Brazil",
+		"mobileNumber":"9898989696"
+		
+		
+		
 	},
 		{
 		"caseTitle":"Test2",
@@ -40,7 +57,90 @@
 		"memberName2":"Kowayo",
 		"documentName1":"Firm TM",
 		"documentName2":"SC2"
+	},
+	{
+		"caseTitle":"Test5",
+		"caseNumber":"B78",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Apollo Healthcare",
+		"clientName2":"General Firm CofferConnect"
+	},
+		{
+		"caseTitle":"Test6",
+		"caseNumber":"FGE38",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"General Firm CofferConnect",
+		"clientName2":"Tester Firm",
+		"memberName1":"PrakashTM",
+		"memberName2":"Pramod"
+	},
+	
+	{
+		"caseTitle":"Test7",
+		"caseNumber":"MGH7805",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"General Firm CofferConnect",
+		"clientName2":"Apollo Healthcare",
+		"documentName1":"Excel67",
+		"documentName2":"Firm Documents New"
+	},
+	{
+		"caseTitle":"Test8",
+		"caseNumber":"LKJ09",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"General Firm CofferConnect",
+		"clientName2":"Apollo Healthcare",
+		"memberName1":"PrakashTM",
+		"memberName2":"Kowayo",
+		"documentName1":"Firm TM",
+		"documentName2":"SC2"
+	},
+		{
+		"caseTitle":"Test9",
+		"caseNumber":"B78457",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Apollo Healthcare",
+		"clientName2":"Ananth kumar"
+	},
+		{
+		"caseTitle":"Test10",
+		"caseNumber":"FOI387",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"Tester Firm",
+		"memberName1":"PrakashTM",
+		"memberName2":"Pramod"
+	},
+	
+	{
+		"caseTitle":"Test11",
+		"caseNumber":"MG8050",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"shabarish v",
+		"clientName2":"Apollo Healthcare",
+		"documentName1":"Excel67",
+		"documentName2":"Firm Documents New"
+	},
+	{
+		"caseTitle":"Test12",
+		"caseNumber":"LKGJ090",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"General Firm CofferConnect",
+		"clientName2":"Neela Chinnappa",
+		"memberName1":"PrakashTM",
+		"memberName2":"Kowayo",
+		"documentName1":"Firm TM",
+		"documentName2":"SC2"
 	}
+	
 	
 	
 	

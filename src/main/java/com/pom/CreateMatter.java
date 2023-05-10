@@ -171,7 +171,7 @@ public class CreateMatter extends Reusable {
 	List<WebElement> checkboxSelectGroup;
 
 	public void selecting(String[] NameList) throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 
 		// String[] groupNameList = {"Group Modules Test","Corporative
 		// Law","Administration Group"};
@@ -185,7 +185,7 @@ public class CreateMatter extends Reusable {
 		int j = 0;
 		
 		List<String> groupNames = Arrays.asList(NameList);
-		System.out.println("Selected Groups Name "+groupNames);
+	//	System.out.println("Selected Groups Name "+groupNames);
 		String textGroup=new String();
 	//	WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10));
 		Thread.sleep(5000); 
@@ -279,4 +279,116 @@ public class CreateMatter extends Reusable {
 		viewMatterListSuccessPopup.click();
 	}
 
+	
+	//Temp Client - Individuals
+	
+	@FindBy(xpath="//input[@placeholder='SearchClient']")
+	WebElement inputTempClientSearchBox;
+	
+	@FindBy(id="name")
+	WebElement firstNameTempClient;
+	
+	@FindBy(id="lastName")
+	WebElement lastNameTempClient;
+	
+	@FindBy(id="email")
+	WebElement emailTempClient;
+	
+	@FindBy(id="confirmemail")
+	WebElement confirmemailTempClient;
+	
+	@FindBy(id="phonenumber")
+	WebElement phonenumberTempClient;
+	
+	@FindBy(xpath="//select[@class='form-control textbox ng-untouched ng-pristine ng-invalid']")
+	WebElement countryTempClient;
+	//Cancel
+	@FindBy(xpath="(//button[@class='btn btn-default btncancel btnrightitem'])[1]")
+	WebElement cancelTempClient;
+
+	//Add Temporary Button
+	@FindBy(xpath="(//button[@class='btn btn-primary savecls'])[1]")
+	WebElement addTemporaryBtn;
+	
+	//
+	@FindBy(xpath="//button[@class='btn btn-default alertbtn']")
+	WebElement addTeamMembersBtnTempClients;
+	
+	
+	public void tempClientIndividuals(String searchTempClient,String firstName,String lastName,String emailAddress,String confirmEmailAddress,String country,String phoneNumber) throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,500)");
+		Thread.sleep(3000);
+		inputTempClientSearchBox.sendKeys(searchTempClient);
+		Thread.sleep(3000);
+		firstNameTempClient.sendKeys(firstName);
+		lastNameTempClient.sendKeys(lastName);
+		emailTempClient.sendKeys(emailAddress);
+		Thread.sleep(2000);
+		// Scroll down till the bottom of the page
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		confirmemailTempClient.sendKeys(confirmEmailAddress);
+		Thread.sleep(2000);
+		countryTempClient.click();
+		Select objSelect =new Select(driver.findElement(By.xpath("//select[@class='form-control textbox ng-untouched ng-pristine ng-invalid']")));
+		Thread.sleep(2000);
+		objSelect.selectByVisibleText(country);
+		phonenumberTempClient.sendKeys(phoneNumber);
+		Thread.sleep(4000);
+		addTemporaryBtn.click();
+		js.executeScript("window.scrollTo(0,50)");
+		Thread.sleep(4000);
+		addTeamMembersBtnTempClients.click();
+	}
+	
+	
+	//Temp Client - Entity
+	
+	@FindBy(id="pills-home-tab")
+	WebElement entityTab;
+	
+	@FindBy(id="fullname")
+	WebElement firmNameEntity;
+
+	@FindBy(id="contact_person")
+	WebElement contactPersonEntity;
+	
+	@FindBy(xpath="//select[@class='form-control textbox ng-pristine ng-invalid ng-touched']")
+	WebElement countryEntity;
+	
+	public void tempClientEntity(String searchTempEntity,String firmName,String contactPerson,String emailId,String confirmEmailId,String country,String phoneNumber) throws InterruptedException
+	{
+		Thread.sleep(3000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,500)");
+		Thread.sleep(3000);
+		inputTempClientSearchBox.sendKeys(searchTempEntity);
+		Thread.sleep(3000);
+		entityTab.click();
+		Thread.sleep(3000);
+		firmNameEntity.sendKeys(firmName);
+		contactPersonEntity.sendKeys(contactPerson);
+		emailTempClient.sendKeys(emailId);
+		Thread.sleep(2000);
+		// Scroll down till the bottom of the page
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		confirmemailTempClient.sendKeys(confirmEmailId);
+		Thread.sleep(2000);
+		countryEntity.click();
+		Select objSelect =new Select(driver.findElement(By.xpath("//select[@class='form-control textbox ng-pristine ng-invalid ng-touched']")));
+		Thread.sleep(2000);
+		objSelect.selectByVisibleText(country);
+		phonenumberTempClient.sendKeys(phoneNumber);
+		Thread.sleep(4000);
+		addTemporaryBtn.click();
+		js.executeScript("window.scrollTo(0,50)");
+		Thread.sleep(4000);
+		addTeamMembersBtnTempClients.click();
+	}
+	
+	
+	
+	
 }
