@@ -100,6 +100,10 @@ public class Reusable {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(xpath));
 	}
 
+	public void webDriverWaitelementToBeSelected(WebElement element) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeSelected(element));
+	}
 	public void elementtoBeClickableWait() {
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div //img[@class='mattersicon'])[1]")));

@@ -1,0 +1,31 @@
+[
+	
+	{
+		"caseTitle":"Test163",
+		"caseNumber":"B78",
+		"groupName1":"Relationship Files Check2",
+		"groupName2":"Relationship Files Check",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"Ananth kumar",
+		"searchTextIndividuals":"Mithuran",
+		"firstName":"Mithuran",
+		"lastName":"M",
+		"email":"Mithuran@fkms.com",
+		"confirmEmail":"Mithuran@fkms.com",
+		"country":"Brazil",
+		"phoneNumber":"7878787895",
+		"searchTextEntity":"varalakshmi",
+		"firmName":"varalakshmi",
+		"contactPerson":"varalakshmi",
+		"emailId":"varalakshmi@gm.com",
+		"confirmEmailId":"varalakshmi@gm.com",
+		"countryEntitys":"Bosnia",
+		"mobileNumber":"9898989776"
+		
+		
+	}
+	
+	
+	
+	
+]

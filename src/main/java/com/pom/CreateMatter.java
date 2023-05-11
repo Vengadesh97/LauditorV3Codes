@@ -263,19 +263,19 @@ public class CreateMatter extends Reusable {
 		// Scroll down till the bottom of the page
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		matterInfoNext.click();
 	}
 	
 	public void alertPopupYes() throws InterruptedException
 	{
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		alertYes.click();		
 	}
 	
 	public void viewMatterListSuccess() throws InterruptedException
 	{
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		viewMatterListSuccessPopup.click();
 	}
 
@@ -307,7 +307,7 @@ public class CreateMatter extends Reusable {
 	WebElement cancelTempClient;
 
 	//Add Temporary Button
-	@FindBy(xpath="(//button[@class='btn btn-primary savecls'])[1]")
+	@FindBy(xpath="//button[@class='btn btn-primary savecls']")
 	WebElement addTemporaryBtn;
 	
 	//
@@ -329,6 +329,7 @@ public class CreateMatter extends Reusable {
 		Thread.sleep(2000);
 		// Scroll down till the bottom of the page
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		Thread.sleep(2000);
 		confirmemailTempClient.sendKeys(confirmEmailAddress);
 		Thread.sleep(2000);
 		countryTempClient.click();
@@ -336,9 +337,8 @@ public class CreateMatter extends Reusable {
 		Thread.sleep(2000);
 		objSelect.selectByVisibleText(country);
 		phonenumberTempClient.sendKeys(phoneNumber);
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		addTemporaryBtn.click();
-		js.executeScript("window.scrollTo(0,50)");
 		Thread.sleep(4000);
 		addTeamMembersBtnTempClients.click();
 	}
@@ -346,7 +346,7 @@ public class CreateMatter extends Reusable {
 	
 	//Temp Client - Entity
 	
-	@FindBy(id="pills-home-tab")
+	@FindBy(name="entity")
 	WebElement entityTab;
 	
 	@FindBy(id="fullname")
@@ -355,17 +355,14 @@ public class CreateMatter extends Reusable {
 	@FindBy(id="contact_person")
 	WebElement contactPersonEntity;
 	
-	@FindBy(xpath="//select[@class='form-control textbox ng-pristine ng-invalid ng-touched']")
-	WebElement countryEntity;
-	
-	public void tempClientEntity(String searchTempEntity,String firmName,String contactPerson,String emailId,String confirmEmailId,String country,String phoneNumber) throws InterruptedException
+	public void tempClientEntity(String searchTempEntity,String firmName,String contactPerson,String emailId,String confirmEmailId,String countryEntitys,String phoneNumber) throws InterruptedException
 	{
 		Thread.sleep(3000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,500)");
 		Thread.sleep(3000);
 		inputTempClientSearchBox.sendKeys(searchTempEntity);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		entityTab.click();
 		Thread.sleep(3000);
 		firmNameEntity.sendKeys(firmName);
@@ -374,18 +371,19 @@ public class CreateMatter extends Reusable {
 		Thread.sleep(2000);
 		// Scroll down till the bottom of the page
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		Thread.sleep(2000);
 		confirmemailTempClient.sendKeys(confirmEmailId);
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//div//select")).click();
+		Select objSelect1 =new Select(driver.findElement(By.xpath("//div//select")));
 		Thread.sleep(2000);
-		countryEntity.click();
-		Select objSelect =new Select(driver.findElement(By.xpath("//select[@class='form-control textbox ng-pristine ng-invalid ng-touched']")));
-		Thread.sleep(2000);
-		objSelect.selectByVisibleText(country);
+		objSelect1.selectByVisibleText(countryEntitys);
 		phonenumberTempClient.sendKeys(phoneNumber);
 		Thread.sleep(4000);
 		addTemporaryBtn.click();
-		js.executeScript("window.scrollTo(0,50)");
 		Thread.sleep(4000);
 		addTeamMembersBtnTempClients.click();
+		
 	}
 	
 	
