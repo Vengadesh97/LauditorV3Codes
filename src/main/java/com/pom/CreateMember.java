@@ -126,7 +126,7 @@ public class CreateMember extends Reusable {
 		Thread.sleep(2000);
 		// View Changes
 		viewChangesPopupBtn.click();
-
+		
 	}
 
 }
