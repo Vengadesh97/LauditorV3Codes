@@ -102,21 +102,17 @@ public class CreateMatter extends Reusable {
 	public void leftMatterTab() throws InterruptedException {
 		Thread.sleep(4000);
 		matterTab.click();
+		Thread.sleep(4000);
+		createMatterTab.click();
 	}
 
 	
 	
-	
 	public void createMatter(String caseTitle, String caseNumber) throws InterruptedException {
 		Thread.sleep(5000);
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,0)");
-		createMatterTab.click();
 		caseTitleField.sendKeys(caseTitle);
 		caseNumberField.sendKeys(caseNumber);
 		Thread.sleep(1000);
-
 		pageDown();
 		Thread.sleep(3000);
 		matterInfoNext.click();
@@ -279,6 +275,15 @@ public class CreateMatter extends Reusable {
 		viewMatterListSuccessPopup.click();
 	}
 
+	@FindBy(xpath="//button[@class='btn btn-default alertbtn ng-star-inserted']")
+	WebElement addMatterSuccess;
+	
+	public void addMatterSuccess() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		addMatterSuccess.click();
+	}
+	
 	
 	//Temp Client - Individuals
 	
