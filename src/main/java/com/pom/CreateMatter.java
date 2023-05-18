@@ -122,8 +122,10 @@ public class CreateMatter extends Reusable {
 	public void createMatterAllFieldEnter(String caseTitle, String caseNumber, String caseType, String courtName,
 			String judges, String date, String prioritySelect, String description, String advocateName,
 			String advocateEmail, String advocatePhone) throws InterruptedException {
-		Thread.sleep(5000);
-		createMatterTab.click();
+		//Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,400)");
+		Thread.sleep(3000);
 		caseTitleField.sendKeys(caseTitle);
 		caseNumberField.sendKeys(caseNumber);
 		caseTypeField.sendKeys(caseType);
@@ -135,9 +137,8 @@ public class CreateMatter extends Reusable {
 		// String date = " 5 ";
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
 		Thread.sleep(5000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		Thread.sleep(5000);
+		//js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	//	Thread.sleep(5000);
 		// Prioirty
 		// String select = "Low";
 		driver.findElement(By.xpath("//button[text()='" + prioritySelect + "']")).click();

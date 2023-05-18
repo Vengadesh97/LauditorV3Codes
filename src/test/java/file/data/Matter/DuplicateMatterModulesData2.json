@@ -1,30 +1,40 @@
 [
 	
 	{
-		"caseTitle":"Test163",
-		"caseNumber":"B78",
-		"groupName1":"Relationship Files Check2",
-		"groupName2":"Relationship Files Check",
+		"caseTitle":"Sample File",
+		"caseNumber":"B782",
+		"caseType":"Individuals",
+		"courtName":"High Court",
+		"judges":"Mukesh",
+		"date":" 25 ",
+		"prioritySelect":"Medium",
+		"description":"Hello World",
+		"advocateName":"Venkatesh",
+		"advocateEmail":"vem@gm.com",
+		"advocatePhone":"9876543210",
+		"groupName1":"Immigration Law",
+		"groupName2":"Family Law",
 		"clientName1":"Neela Chinnappa",
-		"clientName2":"Ananth kumar",
-		"searchTextIndividuals":"Mithuran",
-		"firstName":"Mithuran",
-		"lastName":"M",
-		"email":"Mithuran@fkms.com",
-		"confirmEmail":"Mithuran@fkms.com",
-		"country":"Brazil",
-		"phoneNumber":"7878787895",
-		"searchTextEntity":"varalakshmi",
-		"firmName":"varalakshmi",
-		"contactPerson":"varalakshmi",
-		"emailId":"varalakshmi@gm.com",
-		"confirmEmailId":"varalakshmi@gm.com",
-		"countryEntitys":"Bosnia",
-		"mobileNumber":"9898989776"
-		
-		
-	}
+		"clientName2":"Ananth kumar"
+	},
 	
+		{
+		"caseTitle":"Sample File18",
+		"caseNumber":"MKI45",
+		"caseType":"Criminal Lawyer",
+		"courtName":"Madras Court",
+		"judges":"Raj",
+		"date":" 28 ",
+		"prioritySelect":"Low",
+		"description":"Second data verify",
+		"advocateName":"harish",
+		"advocateEmail":"harish@gm.com",
+		"advocatePhone":"9876543210",
+		"groupName1":"Immigration Law",
+		"groupName2":"Family Law",
+		"clientName1":"Neela Chinnappa",
+		"clientName2":"Ananth kumar"
+	}
 	
 	
 	

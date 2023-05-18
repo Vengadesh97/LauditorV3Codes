@@ -14,6 +14,8 @@ import com.base.Retry;
 
 public class DuplicateCreateMatterTest2 extends BaseClass {
 
+	
+	/*
 	@Test(dataProvider = "getData1", priority = 0)
 	public void clientsIndividuals(HashMap<String, String> input) throws InterruptedException {
 		createMatter.leftMatterTab();
@@ -40,7 +42,48 @@ public class DuplicateCreateMatterTest2 extends BaseClass {
 		createMatter.alertPopupYes();
 		createMatter.viewMatterListSuccess();
 	}
+	
+	*/
+	
+	
+	@Test(dataProvider = "getData1", priority = 0)
+	public void allFieldsClientsIndividuals(HashMap<String, String> input) throws InterruptedException {
+		createMatter.leftMatterTab();
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
+		// Select Groups
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+		createMatter.selecting(groupNames);
+		// Select Clients Individuals
+		String[] clientNamesIndividuals = { input.get("clientName1"), input.get("clientName2") };
+		createMatter.selecting(clientNamesIndividuals);
+		createMatter.nextPage();
+		createMatter.nextPage();
+		createMatter.alertPopupYes();
+		createMatter.addMatterSuccess();
+	}
 
+	@Test(dataProvider = "getData2", priority = 1)
+	public void fieldsClientsIndividuals(HashMap<String, String> input) throws InterruptedException {
+		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
+		// Select Groups
+		Thread.sleep(2000);
+		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+		createMatter.selecting(groupNames);
+		// Select Clients Individuals
+		String[] clientNamesIndividuals = { input.get("clientName1"), input.get("clientName2") };
+		createMatter.selecting(clientNamesIndividuals);
+		createMatter.nextPage();
+		createMatter.nextPage();
+		createMatter.alertPopupYes();
+		createMatter.addMatterSuccess();
+	}
+
+	
+	
+	
+	
+	
 	@DataProvider
 	public Object[][] getData1() throws IOException {
 
@@ -51,4 +94,14 @@ public class DuplicateCreateMatterTest2 extends BaseClass {
 
 	}
 
+	@DataProvider
+	public Object[][] getData2() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\DuplicateMatterModulesData2.json");
+
+		return new Object[][] { { data.get(1) } };
+	}
+	
+	
 }
