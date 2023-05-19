@@ -1,285 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-15T17:00:37 IST" name="Suite" finished-at="2023-05-15T17:51:14 IST" duration-ms="3036877">
+  <suite started-at="2023-05-18T16:50:52 IST" name="Default suite" finished-at="2023-05-18T16:54:49 IST" duration-ms="237667">
     <groups>
     </groups>
-    <test started-at="2023-05-15T17:00:37 IST" name="Test" finished-at="2023-05-15T17:51:14 IST" duration-ms="3036877">
-      <class name="com.test.CreateMatterTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:00:37 IST" name="launchApplication" finished-at="2023-05-15T17:00:47 IST" duration-ms="9913" status="PASS">
+    <test started-at="2023-05-18T16:50:52 IST" name="Default test" finished-at="2023-05-18T16:54:49 IST" duration-ms="237667">
+      <class name="com.test.DuplicateCreateMatterTest2">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.DuplicateCreateMatterTest2@5e5d171f]" started-at="2023-05-18T16:50:52 IST" name="launchApplication" finished-at="2023-05-18T16:51:08 IST" duration-ms="16232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="clientsIndividuals(java.util.HashMap)[pri:0, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:00:48 IST" name="clientsIndividuals" data-provider="getData1" finished-at="2023-05-15T17:02:15 IST" duration-ms="87499" status="PASS">
+        <test-method signature="allFieldsClientsIndividuals(java.util.HashMap)[pri:0, instance:com.test.DuplicateCreateMatterTest2@5e5d171f]" started-at="2023-05-18T16:51:09 IST" name="allFieldsClientsIndividuals" data-provider="getData1" finished-at="2023-05-18T16:53:04 IST" duration-ms="115351" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB01, caseTitle=Legal Case 1, individualsClientName2=Ananth kumar, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
+                <![CDATA[{date= 25 , caseTitle=Sample File, description=Hello World, prioritySelect=Medium, caseType=Individuals, advocateEmail=vem@gm.com, groupName2=Family Law, clientName2=Ananth kumar, courtName=High Court, advocateName=Venkatesh, caseNumber=B782, clientName1=Neela Chinnappa, advocatePhone=9876543210, judges=Mukesh, groupName1=Immigration Law}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clientsIndividuals -->
-        <test-method signature="clientsIndividualsWithTeamMembers(java.util.HashMap)[pri:1, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:02:16 IST" name="clientsIndividualsWithTeamMembers" data-provider="getData2" finished-at="2023-05-15T17:03:45 IST" duration-ms="89628" status="PASS">
+        </test-method> <!-- allFieldsClientsIndividuals -->
+        <test-method signature="fieldsClientsIndividuals(java.util.HashMap)[pri:1, instance:com.test.DuplicateCreateMatterTest2@5e5d171f]" started-at="2023-05-18T16:53:04 IST" name="fieldsClientsIndividuals" data-provider="getData2" finished-at="2023-05-18T16:54:49 IST" duration-ms="104606" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB02, caseTitle=Legal Case 2, memberName1=Donald Carpenter, memberName2=Jason Gifford, individualsClientName2=Ananth kumar, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
+                <![CDATA[{date= 28 , caseTitle=Sample File18, description=Second data verify, prioritySelect=Low, caseType=Criminal Lawyer, advocateEmail=harish@gm.com, groupName2=Family Law, clientName2=Ananth kumar, courtName=Madras Court, advocateName=harish, caseNumber=MKI45, clientName1=Neela Chinnappa, advocatePhone=9876543210, judges=Raj, groupName1=Immigration Law}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clientsIndividualsWithTeamMembers -->
-        <test-method signature="clientsIndividualsWithDocuments(java.util.HashMap)[pri:2, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:03:45 IST" name="clientsIndividualsWithDocuments" data-provider="getData3" finished-at="2023-05-15T17:05:15 IST" duration-ms="89751" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Vengadesh GH 1, documentName2=AnathKumar GH 1, caseNumber=AB03, caseTitle=Legal Case 3, individualsClientName2=Ananth kumar, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsWithDocuments -->
-        <test-method signature="clientsIndividualsWithTMandDocuments(java.util.HashMap)[pri:3, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:05:15 IST" name="clientsIndividualsWithTMandDocuments" data-provider="getData4" finished-at="2023-05-15T17:06:57 IST" duration-ms="101736" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Vengadesh GH 1, documentName2=AnathKumar GH 1, caseNumber=AB04, caseTitle=Legal Case 4, memberName1=Donald Carpenter, memberName2=Jason Gifford, individualsClientName2=Ananth kumar, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsWithTMandDocuments -->
-        <test-method signature="clientsEntity(java.util.HashMap)[pri:4, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:06:57 IST" name="clientsEntity" data-provider="getData5" finished-at="2023-05-15T17:08:14 IST" duration-ms="77309" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB05, caseTitle=Legal Case 5, entityClientName2=Apollo Healthcare, entityClientName1=Alliance Law Group, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntity -->
-        <test-method signature="clientsEntityWithTeamMembers(java.util.HashMap)[pri:5, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:08:14 IST" name="clientsEntityWithTeamMembers" data-provider="getData6" finished-at="2023-05-15T17:09:44 IST" duration-ms="89732" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB06, caseTitle=Legal Case 6, entityClientName2=Apollo Healthcare, memberName1=Donald Carpenter, entityClientName1=Alliance Law Group, memberName2=Jason Gifford, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityWithTeamMembers -->
-        <test-method signature="clientsEntityWithDocuments(java.util.HashMap)[pri:6, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:09:44 IST" name="clientsEntityWithDocuments" data-provider="getData7" finished-at="2023-05-15T17:11:14 IST" duration-ms="90088" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseNumber=AB07, caseTitle=Legal Case 7, entityClientName2=Apollo Healthcare, entityClientName1=Alliance Law Group, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityWithDocuments -->
-        <test-method signature="clientsEntityWithTMandDocuments(java.util.HashMap)[pri:7, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:11:14 IST" name="clientsEntityWithTMandDocuments" data-provider="getData8" finished-at="2023-05-15T17:12:56 IST" duration-ms="102211" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseNumber=AB08, caseTitle=Legal Case 8, entityClientName2=Apollo Healthcare, memberName1=Donald Carpenter, entityClientName1=Alliance Law Group, memberName2=Jason Gifford, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityWithTMandDocuments -->
-        <test-method signature="clientsIndividualsandEntity(java.util.HashMap)[pri:8, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:12:56 IST" name="clientsIndividualsandEntity" data-provider="getData9" finished-at="2023-05-15T17:14:14 IST" duration-ms="77335" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB09, caseTitle=Legal Case 9, entityClientName1=Alliance Law Group, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntity -->
-        <test-method signature="clientsIndividualsandEntityWithTeamMembers(java.util.HashMap)[pri:9, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:14:14 IST" name="clientsIndividualsandEntityWithTeamMembers" data-provider="getData10" finished-at="2023-05-15T17:15:43 IST" duration-ms="89556" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, caseNumber=AB010, caseTitle=Legal Case 10, memberName1=Donald Carpenter, entityClientName1=Alliance Law Group, memberName2=Jason Gifford, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityWithTeamMembers -->
-        <test-method signature="clientsIndividualsandEntityWithDocuments(java.util.HashMap)[pri:10, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:15:43 IST" name="clientsIndividualsandEntityWithDocuments" data-provider="getData11" finished-at="2023-05-15T17:17:13 IST" duration-ms="89920" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Vengadesh GH 1, documentName2=Alliance TM 2, caseNumber=AB011, caseTitle=Legal Case 11, entityClientName1=Alliance Law Group, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityWithDocuments -->
-        <test-method signature="clientsIndividualsandEntityWithTMandDocuments(java.util.HashMap)[pri:11, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:17:13 IST" name="clientsIndividualsandEntityWithTMandDocuments" data-provider="getData12" finished-at="2023-05-15T17:18:55 IST" duration-ms="102205" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{groupName2=Immigration Law, documentName1=Vengadesh GH 1, documentName2=Alliance TM 2, caseNumber=AB012, caseTitle=Legal Case 12, memberName1=Donald Carpenter, entityClientName1=Alliance Law Group, memberName2=Jason Gifford, groupName1=Family Law, individualsClientName1=Vengadeshwaran Ramamoorthy}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityWithTMandDocuments -->
-        <test-method signature="clientsIndividualsandTempClients(java.util.HashMap)[pri:12, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:18:55 IST" name="clientsIndividualsandTempClients" data-provider="getData13" finished-at="2023-05-15T17:21:23 IST" duration-ms="147951" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=j, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=Emma, contactPerson=Emma, emailId=emma@gm.com, countryEntitys=Belgium, individualsClientName2=Ananth kumar, confirmEmail=james@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=emma@gm.com, groupName2=Immigration Law, firstName=James, phoneNumber=9696969693, caseNumber=AB013, searchTextIndividuals=James, firmName=Emma Firm, groupName1=Family Law, email=james@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClients -->
-        <test-method signature="clientsIndividualsandTempClientsWithTeamMembers(java.util.HashMap)[pri:13, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:21:23 IST" name="clientsIndividualsandTempClientsWithTeamMembers" data-provider="getData14" finished-at="2023-05-15T17:24:03 IST" duration-ms="159863" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=M, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=WilliamM, contactPerson=WilliamM, emailId=WilliamM@gk.com, countryEntitys=Belgium, memberName1=Donald Carpenter, memberName2=Jason Gifford, individualsClientName2=Ananth kumar, confirmEmail=Michael@fm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=WilliamM@gk.com, groupName2=Immigration Law, firstName=Michael, phoneNumber=7878989896, caseNumber=AB014, searchTextIndividuals=Michaels, firmName=William Firm, groupName1=Family Law, email=Michael@fm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClientsWithTeamMembers -->
-        <test-method signature="clientsIndividualsandTempClientsWithDocuments(java.util.HashMap)[pri:14, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:24:03 IST" name="clientsIndividualsandTempClientsWithDocuments" data-provider="getData15" finished-at="2023-05-15T17:26:43 IST" duration-ms="160036" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=B, country=Belgium, documentName1=Vengadesh GH 1, documentName2=AnathKumar GH 1, mobileNumber=7878454540, caseTitle=Legal Case 15, searchTextEntity=Daniel, contactPerson=Daniel, emailId=Daniel@gmc.com, countryEntitys=Belgium, individualsClientName2=Ananth kumar, confirmEmail=Benjamin@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Daniel@gmc.com, groupName2=Immigration Law, firstName=Benjamin, phoneNumber=7878454545, caseNumber=AB015, searchTextIndividuals=Benjamin, firmName=Daniel Firm, groupName1=Family Law, email=Benjamin@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClientsWithDocuments -->
-        <test-method signature="clientsIndividualsandTempClientsWithTMandDocuments(java.util.HashMap)[pri:15, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:26:43 IST" name="clientsIndividualsandTempClientsWithTMandDocuments" data-provider="getData16" finished-at="2023-05-15T17:29:35 IST" duration-ms="172235" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=G, country=Belgium, mobileNumber=9693939696, contactPerson=Noah, emailId=Noah@gm.com, memberName1=Donald Carpenter, memberName2=Jason Gifford, caseNumber=AB016, searchTextIndividuals=Henry, email=Henry@gm.com, documentName1=Vengadesh GH 1, documentName2=AnathKumar GH 1, caseTitle=Legal Case 16, searchTextEntity=Noah, countryEntitys=Belgium, individualsClientName2=Ananth kumar, confirmEmail=Henry@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Noah@gm.com, groupName2=Immigration Law, firstName=Henry, phoneNumber=7878454544, firmName=Noah Firm, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClientsWithTMandDocuments -->
-        <test-method signature="clientsEntityandTempClients(java.util.HashMap)[pri:16, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:29:36 IST" name="clientsEntityandTempClients" data-provider="getData17" finished-at="2023-05-15T17:32:04 IST" duration-ms="148418" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=G, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 17, searchTextEntity=Liam, contactPerson=Liam, emailId=Liam@gm.com, countryEntitys=Belgium, confirmEmail=Grace@gm.com, confirmEmailId=Liam@gm.com, groupName2=Immigration Law, firstName=Grace, phoneNumber=9696969693, caseNumber=AB017, searchTextIndividuals=Grace, entityClientName2=Apollo Healthcare, firmName=Liam Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Grace@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityandTempClients -->
-        <test-method signature="clientsEntityandTempClientsWithTeamMembers(java.util.HashMap)[pri:17, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:32:04 IST" name="clientsEntityandTempClientsWithTeamMembers" data-provider="getData18" finished-at="2023-05-15T17:34:45 IST" duration-ms="160804" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=s, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 18, searchTextEntity=Harper, contactPerson=Harper, emailId=Harper@gm.com, countryEntitys=Belgium, memberName1=Donald Carpenter, memberName2=Jason Gifford, confirmEmail=Sophia@gm.com, confirmEmailId=Harper@gm.com, groupName2=Immigration Law, firstName=Sophia, phoneNumber=7878989896, caseNumber=AB018, searchTextIndividuals=Sophia, entityClientName2=Apollo Healthcare, firmName=Harper Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Sophia@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityandTempClientsWithTeamMembers -->
-        <test-method signature="clientsEntityandTempClientsWithDocuments(java.util.HashMap)[pri:18, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:34:45 IST" name="clientsEntityandTempClientsWithDocuments" data-provider="getData19" finished-at="2023-05-15T17:37:26 IST" duration-ms="161044" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=F, country=Belgium, documentName1=Alliance TM 2, documentName2=Apollo TM 2, mobileNumber=7878454540, caseTitle=Legal Case 19, searchTextEntity=Evelyn, contactPerson=Evelyn, emailId=Evelyn@gm.com, countryEntitys=Belgium, confirmEmail=Alice@gm.com, confirmEmailId=Evelyn@gm.com, groupName2=Immigration Law, firstName=Alice, phoneNumber=7878454545, caseNumber=AB019, searchTextIndividuals=Alice, entityClientName2=Apollo Healthcare, firmName=Evelyn Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Alice@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityandTempClientsWithDocuments -->
-        <test-method signature="clientsEntityandTempClientsWithTMandDocuments(java.util.HashMap)[pri:19, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:37:26 IST" name="clientsEntityandTempClientsWithTMandDocuments" data-provider="getData20" finished-at="2023-05-15T17:40:19 IST" duration-ms="173460" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=V, country=Belgium, mobileNumber=9693939696, contactPerson=Elijah, emailId=Elijah@gm.com, memberName1=Donald Carpenter, memberName2=Jason Gifford, caseNumber=AB020, searchTextIndividuals=Oliver, entityClientName2=Apollo Healthcare, entityClientName1=Alliance Law Group, email=Oliver@gm.com, documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Legal Case 20, searchTextEntity=Elijah, countryEntitys=Belgium, confirmEmail=Oliver@gm.com, confirmEmailId=Elijah@gm.com, groupName2=Immigration Law, firstName=Oliver, phoneNumber=7878454544, firmName=Elijah Firm, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsEntityandTempClientsWithTMandDocuments -->
-        <test-method signature="clientsIndividualsandEntityandTempClients(java.util.HashMap)[pri:20, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:40:19 IST" name="clientsIndividualsandEntityandTempClients" data-provider="getData21" finished-at="2023-05-15T17:42:48 IST" duration-ms="148285" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=S, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 21, searchTextEntity=Madison , contactPerson=Madison, emailId=Madison@gm.com, countryEntitys=Belgium, confirmEmail=Layla@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Madison@gm.com, groupName2=Immigration Law, firstName=Layla, phoneNumber=9696969693, caseNumber=AB021, searchTextIndividuals=Layla, firmName=Madison Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Layla@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityandTempClients -->
-        <test-method signature="clientsIndividualsandEntityandTempClientsWithTeamMembers(java.util.HashMap)[pri:21, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:42:48 IST" name="clientsIndividualsandEntityandTempClientsWithTeamMembers" data-provider="getData22" finished-at="2023-05-15T17:45:33 IST" duration-ms="165290" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=W, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 22, searchTextEntity=Hazel, contactPerson=Hazel, emailId=Hazel@gm.com, countryEntitys=Belgium, memberName1=Donald Carpenter, memberName2=Jason Gifford, confirmEmail=Lily@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Hazel@gm.com, groupName2=Immigration Law, firstName=Lily, phoneNumber=7878989896, caseNumber=AB022, searchTextIndividuals=Lily, firmName=Hazel Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Lily@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityandTempClientsWithTeamMembers -->
-        <test-method signature="clientsIndividualsandEntityandTempClientsWithDocuments(java.util.HashMap)[pri:22, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:45:33 IST" name="clientsIndividualsandEntityandTempClientsWithDocuments" data-provider="getData23" finished-at="2023-05-15T17:48:17 IST" duration-ms="163894" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=F, country=Belgium, documentName1=Vengadesh GH 1, documentName2=Alliance TM 2, mobileNumber=7878454540, caseTitle=Legal Case 23, searchTextEntity=Stella, contactPerson=Stella, emailId=Stella@gm.com, countryEntitys=Belgium, confirmEmail=Riley@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Stella@gm.com, groupName2=Immigration Law, firstName=Riley, phoneNumber=7878454545, caseNumber=AB023, searchTextIndividuals=Riley, firmName=Stella Firm, entityClientName1=Alliance Law Group, groupName1=Family Law, email=Riley@gm.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityandTempClientsWithDocuments -->
-        <test-method signature="clientsIndividualsandEntityandTempClientsWithTMandDocuments(java.util.HashMap)[pri:23, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:48:17 IST" name="clientsIndividualsandEntityandTempClientsWithTMandDocuments" data-provider="getData24" finished-at="2023-05-15T17:51:13 IST" duration-ms="176314" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lastName=B, country=Belgium, mobileNumber=9693939696, contactPerson=Theodore, emailId=Theodore@gm.com, memberName1=Donald Carpenter, memberName2=Jason Gifford, caseNumber=AB024, searchTextIndividuals=Amelia, entityClientName1=Alliance Law Group, email=Amelia@gm.com, documentName1=Vengadesh GH 1, documentName2=Alliance TM 2, caseTitle=Legal Case 24, searchTextEntity=Theodore, countryEntitys=Belgium, confirmEmail=Amelia@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Theodore@gm.com, groupName2=Immigration Law, firstName=Amelia, phoneNumber=7878454544, firmName=Theodore Firm, groupName1=Family Law}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clientsIndividualsandEntityandTempClientsWithTMandDocuments -->
-        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreateMatterTest@72d6b3ba]" started-at="2023-05-15T17:51:13 IST" name="down" finished-at="2023-05-15T17:51:14 IST" duration-ms="428" status="PASS">
+        </test-method> <!-- fieldsClientsIndividuals -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.DuplicateCreateMatterTest2@5e5d171f]" started-at="2023-05-18T16:54:49 IST" name="down" finished-at="2023-05-18T16:54:49 IST" duration-ms="265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- down -->
-      </class> <!-- com.test.CreateMatterTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.test.DuplicateCreateMatterTest2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

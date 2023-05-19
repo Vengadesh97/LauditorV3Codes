@@ -5,7 +5,8 @@
     <classes>
       <class name="com.test.DuplicateCreateMatterTest2">
         <methods>
-          <include name="clientsIndividuals" invocation-numbers="0"/>
+          <include name="fieldsClientsIndividuals" invocation-numbers="0"/>
+          <include name="allFieldsClientsIndividuals" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
         </methods>
