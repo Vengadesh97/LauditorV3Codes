@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.DuplicateCreateMatterTest2">
+      <class name="com.test.ViewMatterTest">
         <methods>
-          <include name="fieldsClientsIndividuals" invocation-numbers="0"/>
-          <include name="allFieldsClientsIndividuals" invocation-numbers="0"/>
+          <include name="editMatterInfoWithDOF" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
+          <include name="editMatterInfoWithDescription" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.DuplicateCreateMatterTest2 -->
+      </class> <!-- com.test.ViewMatterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
