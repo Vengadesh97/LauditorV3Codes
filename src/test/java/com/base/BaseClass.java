@@ -41,6 +41,7 @@ import com.pom.LoginPage;
 import com.pom.UploadDocumentPom;
 import com.pom.ViewGroups;
 import com.pom.ViewMatterPOM;
+import com.pom.ViewMatterUpdateGroupsPOM;
 import com.pom.ViewMembers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -59,6 +60,7 @@ public class BaseClass {
 	public CreateMatter createMatter;
 	public UploadDocumentPom uploadDocuments;
 	public ViewMatterPOM viewMatters;
+	public ViewMatterUpdateGroupsPOM viewMatterUpdateGroups;
 	
 	public WebDriver initalize() throws IOException {
 
@@ -117,6 +119,7 @@ public class BaseClass {
 		createMatter = new CreateMatter(driver);
 		uploadDocuments = new UploadDocumentPom(driver);
 		viewMatters = new ViewMatterPOM(driver);
+		viewMatterUpdateGroups = new ViewMatterUpdateGroupsPOM(driver);
 		return loginPage;
 	}
 	

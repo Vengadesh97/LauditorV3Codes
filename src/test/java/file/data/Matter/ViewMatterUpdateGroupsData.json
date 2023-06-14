@@ -1,0 +1,36 @@
+[
+	{
+		"CaseName": "Legal Consumer Matter",
+		"selectgroupName1": "Case 1",
+		"selectgroupName2": "Test123",
+		"selectgroupName3": "Group Checking",
+		"unSelectgroupName1": "Case 1",
+		"unSelectgroupName2": "Test123",
+		"unSelectgroupName3": "Group Checking"
+	},
+	{
+		"CaseName": "Legal Consumer Matter",
+		"selectgroupName1": "Case 1",
+		"selectgroupName2": "Test123",
+		"selectgroupName3": "Group Checking"
+	},
+	{
+		"CaseName": "Legal Consumer Matter",
+		"unSelectgroupName1": "Case 1",
+		"unSelectgroupName2": "Test123",
+		"unSelectgroupName3": "Group Checking",
+		"selectgroupName1": "Case 1",
+		"selectgroupName2": "Test123",
+		"selectgroupName3": "Group Checking"
+	},
+	{
+		"CaseName": "Legal Consumer Matter",
+		"unSelectgroupName1": "Case 1",
+		"unSelectgroupName2": "Test123",
+		"unSelectgroupName3": "Group Checking"
+	},
+		{
+		"CaseName": "Legal Consumer Matter",
+		"groupName":"Matter Team Case"
+	}
+]

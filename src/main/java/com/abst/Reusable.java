@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +18,8 @@ public class Reusable {
 
 	WebDriver driver;
 	WebDriverWait wait;
-
+	Actions action;
+	
 	public Reusable(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -95,9 +97,10 @@ public class Reusable {
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
-	public void visibilityOfElementWait(By xpath) {
+	public void visibilityOfElementWait(WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(xpath));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(submitBtn));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public void webDriverWaitelementToBeSelected(WebElement element) {
@@ -109,5 +112,4 @@ public class Reusable {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div //img[@class='mattersicon'])[1]")));
 
 	}
-
 }
