@@ -1,5 +1,7 @@
 package com.pom;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +27,7 @@ public class ViewMatterPOM extends Reusable {
 	WebElement matterTab;
 
 	public void leftMatterTab() throws InterruptedException {
-		Thread.sleep(4000);
+		visibilityOfElementWait(matterTab);
 		matterTab.click();
 
 	}
@@ -38,33 +40,24 @@ public class ViewMatterPOM extends Reusable {
 
 	@FindBy(xpath = "//ul[@class='dropdown-menu show'] //li[2]")
 	WebElement editMatterInfoPage;
-
-	public void searchInputandEditMatterInfo(String searchCaseName) throws InterruptedException {
-		Thread.sleep(5000);
-		searchInputFields.clear();
-		Thread.sleep(1000);
-		searchInputFields.sendKeys(searchCaseName);
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,500)");
-
-		Thread.sleep(5000);
-		// action button
-		actionBtnViewLegal.click();
-
-		Thread.sleep(2000);
+	
+	
+	public void editMatterInfoPageBtn()
+	{
+		visibilityOfElementWait(editMatterInfoPage);
 		Actions action = new Actions(driver);
 		action.moveToElement(editMatterInfoPage).click().perform();
 	}
+	
 
 	// Case Title
 	@FindBy(id = "title")
 	WebElement reEditCaseTitleField;
 
 	public void editCaseTitle(String caseTitle) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditCaseTitleField);
 		reEditCaseTitleField.clear();
-		Thread.sleep(1000);
 		reEditCaseTitleField.sendKeys(caseTitle);
 	}
 
@@ -73,9 +66,9 @@ public class ViewMatterPOM extends Reusable {
 	WebElement reEditCaseNumberField;
 
 	public void editCaseNumber(String caseNumber) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditCaseNumberField);
 		reEditCaseNumberField.clear();
-		Thread.sleep(1000);
 		reEditCaseNumberField.sendKeys(caseNumber);
 	}
 
@@ -84,9 +77,9 @@ public class ViewMatterPOM extends Reusable {
 	WebElement reEditDescriptionField;
 
 	public void editDescription(String editDescription) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditDescriptionField);
 		reEditDescriptionField.clear();
-		Thread.sleep(1000);
 		reEditDescriptionField.sendKeys(editDescription);
 	}
 
@@ -95,9 +88,9 @@ public class ViewMatterPOM extends Reusable {
 	WebElement reEditCaseTypeField;
 
 	public void editCaseType(String editCaseType) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditCaseTypeField);
 		reEditCaseTypeField.clear();
-		Thread.sleep(1000);
 		reEditCaseTypeField.sendKeys(editCaseType);
 	}
 
@@ -106,9 +99,9 @@ public class ViewMatterPOM extends Reusable {
 	WebElement reEditCourtNameField;
 
 	public void editCourtName(String editCourtName) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditCourtNameField);
 		reEditCourtNameField.clear();
-		Thread.sleep(1000);
 		reEditCourtNameField.sendKeys(editCourtName);
 	}
 
@@ -117,9 +110,9 @@ public class ViewMatterPOM extends Reusable {
 	WebElement reEditJudgesField;
 
 	public void editJudges(String editJudges) throws InterruptedException {
-		Thread.sleep(1000);
+		
+		visibilityOfElementWait(reEditJudgesField);
 		reEditJudgesField.clear();
-		Thread.sleep(1000);
 		reEditJudgesField.sendKeys(editJudges);
 	}
 
@@ -144,13 +137,20 @@ public class ViewMatterPOM extends Reusable {
 	WebElement opponentAdvocatesSavebtn;
 
 	public void addOpponentAdv(String names, String emails, String phone) throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1000);
+		visibilityOfElementWait(addOpponentAdvocates);
 		addOpponentAdvocates.click();
-		Thread.sleep(3000);
+		visibilityOfElementWait(addOpponentAdvocatesName);
 		addOpponentAdvocatesName.sendKeys(names);
+		visibilityOfElementWait(addOpponentAdvocatesEmail);
 		addOpponentAdvocatesEmail.sendKeys(emails);
+		Thread.sleep(1000);
+		scrollDown();
+		visibilityOfElementWait(addOpponentAdvocatesPhone);
 		addOpponentAdvocatesPhone.sendKeys(phone);
-	}
+		visibilityOfAllElements(opponentAdvocatesSavebtn);
+		opponentAdvocatesSavebtn.click();
+		}
 
 	// Date of Filling
 	@FindBy(xpath = "//*[@class='mat-mdc-button-touch-target']")
@@ -158,7 +158,8 @@ public class ViewMatterPOM extends Reusable {
 
 	// DateofFilling
 	public void dateOfFilling(String date) throws InterruptedException {
-		Thread.sleep(2000);
+		
+		visibilityOfElementWait(addDateOfFillingClick);
 		addDateOfFillingClick.click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
@@ -176,6 +177,7 @@ public class ViewMatterPOM extends Reusable {
 
 	// Status - Active
 	public void statusActive() throws InterruptedException {
+		visibilityOfElementWait(statusActiveBtn);
 		statusActiveBtn.click();
 	}
 
@@ -185,11 +187,12 @@ public class ViewMatterPOM extends Reusable {
 
 	// Status - Pending
 	public void statusPending() throws InterruptedException {
+		visibilityOfElementWait(statusSelect);
 		statusSelect.click();
 	}
 
 	// Next
-	@FindBy(xpath = "//button[@type='submit']")
+	@FindBy(xpath = "//button[@class='btn btn-primary btnsave savecls']")
 	WebElement editMatterInfoSave;
 
 	// Cancel
@@ -197,7 +200,7 @@ public class ViewMatterPOM extends Reusable {
 	WebElement matterInfoCancel;
 
 	public void editMatterSave() throws InterruptedException {
-		Thread.sleep(5000);
+		visibilityOfElementWait(editMatterInfoSave);
 		editMatterInfoSave.click();
 	}
 
@@ -206,12 +209,12 @@ public class ViewMatterPOM extends Reusable {
 
 	// Success Popup
 	public void successPopupEditMatterInfo() throws InterruptedException {
-		Thread.sleep(5000);
+		visibilityOfElementWait(successPopupOk);
 		successPopupOk.click();
 	}
 
 	public void scrollUp() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,100)");
 	}
@@ -223,4 +226,63 @@ public class ViewMatterPOM extends Reusable {
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
+	
+	@FindBy(xpath="//tr//td[1]")
+	List<WebElement> allMatterNamesText;
+	
+	// Action Button Click
+	@FindBy(xpath="//tr//td[6]")
+	List<WebElement> actionBtnClicked; 
+	
+	// Action Button
+	@FindBy(xpath = "//div //button[@data-bs-toggle='dropdown']")
+	WebElement actionBtn;
+	
+	
+	public void searchBarFieldsandActionBtn(String MatterName) throws InterruptedException
+	{
+		visibilityOfElementWait(searchInputFields);
+		searchInputFields.clear();
+		searchInputFields.sendKeys(MatterName);
+		
+		Thread.sleep(2000);
+		pageDown();
+		
+		Actions action = new Actions(driver);
+		
+		for(int i=0;i<allMatterNamesText.size();i++)
+		{
+			String textNames = allMatterNamesText.get(i).getText();
+			
+			if(MatterName.contains(textNames))
+			{
+				visibilityOfAllElements(actionBtn);
+				WebElement actionClicked = actionBtnClicked.get(i);
+				visibilityOfAllElements(actionBtn);
+			action.moveToElement(actionClicked).click().perform();
+				
+			}
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

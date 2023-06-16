@@ -92,7 +92,8 @@ public class Reusable {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 	}
 
-	public void pageDown() {
+	public void pageDown() throws InterruptedException {
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
@@ -107,6 +108,17 @@ public class Reusable {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeSelected(element));
 	}
+	
+	
+	public void visibilityOfAllElements(WebElement actionBtn) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(
+				ExpectedConditions.visibilityOfAllElements(actionBtn));
+	}
+	
+	
+	
+	
 	public void elementtoBeClickableWait() {
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div //img[@class='mattersicon'])[1]")));

@@ -40,6 +40,8 @@ import com.pom.Dashboard;
 import com.pom.LoginPage;
 import com.pom.UploadDocumentPom;
 import com.pom.ViewGroups;
+import com.pom.ViewMatterDeleteMatterPOM;
+import com.pom.ViewMatterOpenCloseMatterPOM;
 import com.pom.ViewMatterPOM;
 import com.pom.ViewMatterUpdateGroupsPOM;
 import com.pom.ViewMembers;
@@ -61,6 +63,11 @@ public class BaseClass {
 	public UploadDocumentPom uploadDocuments;
 	public ViewMatterPOM viewMatters;
 	public ViewMatterUpdateGroupsPOM viewMatterUpdateGroups;
+	public ViewMatterOpenCloseMatterPOM viewMatterOpenCloseMatter;
+	public ViewMatterDeleteMatterPOM viewMatterDeleteMatter;
+	
+	
+	
 	
 	public WebDriver initalize() throws IOException {
 
@@ -120,6 +127,8 @@ public class BaseClass {
 		uploadDocuments = new UploadDocumentPom(driver);
 		viewMatters = new ViewMatterPOM(driver);
 		viewMatterUpdateGroups = new ViewMatterUpdateGroupsPOM(driver);
+		viewMatterOpenCloseMatter = new ViewMatterOpenCloseMatterPOM(driver);
+		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
 		return loginPage;
 	}
 	

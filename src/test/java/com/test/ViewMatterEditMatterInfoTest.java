@@ -7,14 +7,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
 
-public class ViewMatterTest extends BaseClass {
+public class ViewMatterEditMatterInfoTest extends BaseClass {
 
 	// Mandatory Fields with Date of Filling
 
 	@Test(dataProvider = "getData0", priority = 0)
 	public void editMatterInfoMandatoryWithDOF(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -28,7 +29,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData1", priority = 1)
 	public void editMatterInfoMandatoryWithDescription(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.scrollDown();
@@ -42,7 +44,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData2", priority = 2)
 	public void editMatterInfoMandatoryWithCaseType(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -56,7 +59,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData3", priority = 3)
 	public void editMatterInfoMandatoryWithCourt(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
@@ -70,7 +74,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData4", priority = 4)
 	public void editMatterInfoMandatoryWithJudge(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editJudges(input.get("judges"));
@@ -84,7 +89,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData5", priority = 5)
 	public void editMatterInfoMandatoryWithPriority(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -98,7 +104,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData6", priority = 6)
 	public void editMatterInfoMandatoryWithStatus(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.statusPending();
@@ -112,11 +119,13 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData7", priority = 7)
 	public void editMatterInfoMandatoryWithOpponentAdvocate(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.scrollDown();
 		viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
+		viewMatters.scrollDown();
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -126,8 +135,9 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData8", priority = 8)
 	public void editMatterInfoMandatoryWithDOFandDescription(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -142,7 +152,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData9", priority = 9)
 	public void editMatterInfoMandatoryWithDOFandCasetype(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -156,8 +167,9 @@ public class ViewMatterTest extends BaseClass {
 
 	@Test(dataProvider = "getData10", priority = 10)
 	public void editMatterInfoMandatoryWithDOFandCourt(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -172,7 +184,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData11", priority = 11)
 	public void editMatterInfoMandatoryWithDOFandJudge(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -186,8 +199,9 @@ public class ViewMatterTest extends BaseClass {
 
 	@Test(dataProvider = "getData12", priority = 12)
 	public void editMatterInfoMandatoryWithDOFandPriority(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -202,7 +216,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData13", priority = 13)
 	public void editMatterInfoMandatoryWithDOFandStatus(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -217,13 +232,15 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData14", priority = 14)
 	public void editMatterInfoMandatoryWithDOFandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
 		viewMatters.scrollDown();
 		viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
+		viewMatters.scrollDown();
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -234,7 +251,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionandCaseType(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -249,8 +267,9 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData16", priority = 16)
 	public void editMatterInfoMandatoryWithDescriptionandCourt(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
@@ -266,7 +285,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editJudges(input.get("judges"));
@@ -281,8 +301,9 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData18", priority = 18)
 	public void editMatterInfoMandatoryWithDescriptionandPriority(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -298,12 +319,13 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.statusActive();
-		viewMatters.editDescription(input.get("description"));
 		viewMatters.scrollDown();
+		viewMatters.editDescription(input.get("description"));
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -313,13 +335,15 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData20", priority = 20)
 	public void editMatterInfoMandatoryWithDescriptionandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.scrollDown();
 		viewMatters.editDescription(input.get("description"));
 		viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
+		viewMatters.scrollDown();
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -329,7 +353,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData21", priority = 21)
 	public void editMatterInfoMandatoryWithCaseTypeandCourt(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -343,8 +368,9 @@ public class ViewMatterTest extends BaseClass {
 
 	@Test(dataProvider = "getData22", priority = 22)
 	public void editMatterInfoMandatoryWithCaseTypeandJudge(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -360,7 +386,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithCaseTypeandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -375,8 +402,9 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData24", priority = 24)
 	public void editMatterInfoMandatoryWithCaseTypeandStatus(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -392,12 +420,14 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
 		viewMatters.scrollDown();
 		viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
+		viewMatters.scrollDown();	
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -406,8 +436,9 @@ public class ViewMatterTest extends BaseClass {
 
 	@Test(dataProvider = "getData26", priority = 26)
 	public void editMatterInfoMandatoryWithCourtandJudge(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
@@ -422,7 +453,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData27", priority = 27)
 	public void editMatterInfoMandatoryWithCourtandPriority(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
@@ -436,8 +468,9 @@ public class ViewMatterTest extends BaseClass {
 
 	@Test(dataProvider = "getData28", priority = 28)
 	public void editMatterInfoMandatoryWithCourtandStatus(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
@@ -453,12 +486,14 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithCourtandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCourtName(input.get("courtName"));
 		viewMatters.scrollDown();
 		viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
+		viewMatters.scrollDown();
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
@@ -468,7 +503,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData30", priority = 30)
 	public void editMatterInfoMandatoryWithJudgeandPriority(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editJudges(input.get("judges"));
@@ -477,13 +513,14 @@ public class ViewMatterTest extends BaseClass {
 		viewMatters.editMatterSave();
 		viewMatters.successPopupEditMatterInfo();
 	}
-
+/*
 	// Mandatory Fields , Judge with Status
 
 	@Test(dataProvider = "getData31", priority = 31)
 	public void editMatterInfoMandatoryWithJudgeandStatus(HashMap<String, String> input) throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editJudges(input.get("judges"));
@@ -499,7 +536,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithJudgeandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editJudges(input.get("judges"));
@@ -515,7 +553,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithPriorityandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -531,7 +570,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithPriorityandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -547,7 +587,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithStatusandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.statusPending();
@@ -563,7 +604,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionandCaseType(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -579,8 +621,9 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData37", priority = 37)
 	public void editMatterInfoMandatoryWithDOFDescriptionandCourt(HashMap<String, String> input)
 			throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.scrollUp();
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -597,7 +640,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -614,7 +658,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -632,7 +677,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -649,7 +695,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -666,7 +713,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -684,7 +732,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -702,7 +751,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -720,7 +770,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -739,7 +790,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -757,7 +809,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -777,7 +830,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -796,7 +850,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -816,7 +871,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.priorityChange(input.get("priority"));
@@ -836,7 +892,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -857,7 +914,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -878,7 +936,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.dateOfFilling(input.get("dateofFilling"));
@@ -898,7 +957,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeandCourt(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -915,7 +975,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -932,7 +993,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -948,7 +1010,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -965,7 +1028,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -982,7 +1046,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1000,7 +1065,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1018,7 +1084,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1035,7 +1102,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1053,7 +1121,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandPriority(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1072,7 +1141,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.leftMatterTab();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1091,7 +1161,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent(HashMap<String, String> input)
 			throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1110,7 +1181,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus(
 			HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1130,7 +1202,8 @@ public class ViewMatterTest extends BaseClass {
 	public void editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent(
 			HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1149,7 +1222,8 @@ public class ViewMatterTest extends BaseClass {
 	@Test(dataProvider = "getData68", priority = 68)
 	public void editMatterInfoAllFieldsEntered(HashMap<String, String> input) throws InterruptedException {
 		viewMatters.scrollUp();
-		viewMatters.searchInputandEditMatterInfo(input.get("matterName"));
+		viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+		viewMatters.editMatterInfoPageBtn();
 		viewMatters.editCaseTitle(input.get("caseTitle"));
 		viewMatters.editCaseNumber(input.get("caseNumber"));
 		viewMatters.editCaseType(input.get("caseType"));
@@ -1165,6 +1239,7 @@ public class ViewMatterTest extends BaseClass {
 		viewMatters.successPopupEditMatterInfo();
 	}
 
+*/
 	// Mandatory Fields with Date of Filling
 	@DataProvider
 	public Object[][] getData0() throws IOException {

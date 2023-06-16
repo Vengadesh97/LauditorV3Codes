@@ -35,23 +35,46 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 	@FindBy(xpath = "//ul[@class='dropdown-menu show'] //li[3]")
 	WebElement updateGroupsMatter;
 
-	public void searchInputandUpdateGroupsMatter(String searchCaseName) throws InterruptedException {
-		Thread.sleep(5000);
-		searchInputFields.clear();
-		Thread.sleep(1000);
-		searchInputFields.sendKeys(searchCaseName);
+	@FindBy(xpath = "//tr//td[1]")
+	List<WebElement> allMatterNamesText;
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,500)");
+	// Action Button Click
+	@FindBy(xpath = "//tr//td[6]")
+	List<WebElement> actionBtnClicked;
+
+	// Action Button
+	@FindBy(xpath = "//div //button[@data-bs-toggle='dropdown']")
+	WebElement actionBtn;
+
+	public void searchInputandUpdateGroupsMatter(String searchCaseName) throws InterruptedException {
 
 		Thread.sleep(3000);
-		// action button
-		actionBtnViewLegal.click();
+		searchInputFields.clear();
+		searchInputFields.sendKeys(searchCaseName);
 
 		Thread.sleep(2000);
+		pageDown();
+
 		Actions action = new Actions(driver);
-		action.moveToElement(updateGroupsMatter).click().perform();
+
+		for (int i = 0; i < allMatterNamesText.size(); i++) {
+			String textNames = allMatterNamesText.get(i).getText();
+
+			if (searchCaseName.contains(textNames)) {
+				visibilityOfAllElements(actionBtn);
+				WebElement actionClicked = actionBtnClicked.get(i);
+				visibilityOfAllElements(actionBtn);
+				action.moveToElement(actionClicked).click().perform();
+
+				Thread.sleep(2000);
+				action.moveToElement(updateGroupsMatter).click().perform();
+
+			}
+
+		}
 	}
+
+	
 
 	// Left Side Unselected Group
 
@@ -79,7 +102,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 			if (selectedGroupNames.contains(allGroupNameText)) {
 				WebElement selectGroup = checkBoxSelect.get(i);
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
-				Thread.sleep(3000);
+				visibilityOfElementWait(selectGroup);
 				executor.executeScript("arguments[0].click();", selectGroup);
 				i--;
 			}
@@ -104,7 +127,6 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 		Actions action = new Actions(driver);
 		action.moveToElement(rightSideUnSelectedGroup).perform();
 
-		Thread.sleep(2000);
 		List<String> groupNameSelected = Arrays.asList(selectMultipleGroup);
 
 		for (int i = 0; i < listOfGroupNames.size(); i++) {
@@ -113,7 +135,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 			if (groupNameSelected.contains(allGroupNameText)) {
 				WebElement selectGroup = checkBoxSelect1.get(i);
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
-				Thread.sleep(3000);
+				visibilityOfElementWait(selectGroup);
 				executor.executeScript("arguments[0].click();", selectGroup);
 				i--;
 			}
@@ -121,159 +143,125 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 		}
 
 	}
-	
-	
+
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement submitBtn;
-	//Submit
+
+	// Submit
 	public void submitUpdateGroup()
 	{
 		visibilityOfElementWait(submitBtn);
 		submitBtn.click();
 	}
 
-	@FindBy(xpath="//button[@type='reset']")
+	@FindBy(xpath = "//button[@type='reset']")
 	WebElement cancelBtn;
-	//Cancel
-	public void cancelBtnUpdateGroup()
-	{
+
+	// Cancel
+	public void cancelBtnUpdateGroup() {
 		visibilityOfElementWait(cancelBtn);
 		cancelBtn.click();
 	}
 
-	@FindBy(xpath="//button[@class='btn btn-default alertbtn alertbtnyes']")
+	@FindBy(xpath = "//button[@class='btn btn-default alertbtn alertbtnyes']")
 	WebElement alertYesbtn;
-	//AlertYes
-	public void alertYesButton()
-	{
+
+	// AlertYes
+	public void alertYesButton() {
 		visibilityOfElementWait(alertYesbtn);
 		alertYesbtn.click();
 	}
 
-	@FindBy(xpath="//button[@class='btn btn-default alertbtn alertbtnno']")
+	@FindBy(xpath = "//button[@class='btn btn-default alertbtn alertbtnno']")
 	WebElement alertNobtn;
-	//AlertNo
-	public void alertNoButton()
-	{
+
+	// AlertNo
+	public void alertNoButton() {
 		visibilityOfElementWait(alertNobtn);
 		alertNobtn.click();
 	}
 
-	@FindBy(xpath="//button[@class='btn btn-default alertbtn']")
+	@FindBy(xpath = "//button[@class='btn btn-default alertbtn']")
 	WebElement viewMatter;
-	//View Matter [Success Popup]
-	public void viewMatterSuccessPopup()
-	{
+
+	// View Matter [Success Popup]
+	public void viewMatterSuccessPopup() {
 		visibilityOfElementWait(viewMatter);
 		viewMatter.click();
 	}
 
 	// PageDown
-	public void pageDown() {
+	public void pageDown1() throws InterruptedException {
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
-	
 	// PageUp
-	public void pageUp()
-	{
+	public void pageUp() throws InterruptedException {
+		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,250)");
+		js.executeScript("window.scrollTo(0,150)");
 	}
 
-	
-	public void selectedGroupNameIsDisplay(String[]  groupNames) throws InterruptedException
-	{
+	public void selectedGroupNameIsDisplay(String[] groupNames) throws InterruptedException {
 		Thread.sleep(3000);
-		
-		//String[]  groupNames = {"Meeting Group","Case 1","case2"};
+
+		// String[] groupNames = {"Meeting Group","Case 1","case2"};
 		Actions action = new Actions(driver);
 		action.moveToElement(leftSideUnSelectedGroup).perform();
-		
-		for(String groupNameCheckDisplay:groupNames)
-		{
+
+		for (String groupNameCheckDisplay : groupNames) {
 			try {
 				driver.findElement(By.xpath("//*[contains(text(),'" + groupNameCheckDisplay + "')]"));
-                System.out.println("'" + groupNameCheckDisplay + "' is displayed");
+				System.out.println("'" + groupNameCheckDisplay + "' is displayed");
+			} catch (NoSuchElementException e) {
+				System.out.println("'" + groupNameCheckDisplay + "' is not displayed");
 			}
-			 catch (NoSuchElementException e) {
-	                System.out.println("'" + groupNameCheckDisplay + "' is not displayed");
-	            }
 		}
-		
+
 	}
-	
-	
-	//Alert Text
-	@FindBy(xpath="//p[@class='alertparatxt']")
+
+	// Alert Text
+	@FindBy(xpath = "//p[@class='alertparatxt']")
 	WebElement alertText;
-	
-	//Alert Ok
-	@FindBy(xpath="//button[@class='btn btn-default alertbtn']")
+
+	// Alert Ok
+	@FindBy(xpath = "//button[@class='btn btn-default alertbtn']")
 	WebElement alertOKbtn;
-	
-	//Check alert is present or not 
-	
-	public void alertIspresent(String selectedName ) throws InterruptedException
-	{
+
+	// Check alert is present or not
+
+	public void alertIspresent(String selectedName) throws InterruptedException {
 		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.moveToElement(leftSideUnSelectedGroup).perform();
-		
-		Thread.sleep(2000);
-		for(int i=0;i<listOfSelectedGroupNames.size();i++)
-		{
+
+		for (int i = 0; i < listOfSelectedGroupNames.size(); i++) {
 			String textGroupNames = listOfSelectedGroupNames.get(i).getText();
-		
-			if(selectedName.equals(textGroupNames))
-			{
-				Thread.sleep(2000);
+
+			if (selectedName.equals(textGroupNames)) {
+
 				WebElement removeClicked = checkBoxSelect.get(i);
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				visibilityOfElementWait(removeClicked);
 				executor.executeScript("arguments[0].click();", removeClicked);
-				
-				Thread.sleep(3000);
+				visibilityOfElementWait(alertText);
+				//Thread.sleep(3000);
 				String text = alertText.getText();
-				
-				String values ="Alert";
-				
-		        // Check if the alert is displayed
-		        if (text.contains(values)) {
-		            System.out.println("Alert is displayed.");
-		            alertOKbtn.click();
-		        } 
-		        else {
-		            System.out.println("Alert is not displayed.");
-		        }
+
+				String values = "Alert";
+
+				// Check if the alert is displayed
+				if (text.contains(values)) {
+					System.out.println("Alert is displayed.");
+					alertOKbtn.click();
+				} else {
+					System.out.println("Alert is not displayed.");
+				}
 			}
-			}
-			
+		}
+
 	}
-	
-	
-	
-	
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

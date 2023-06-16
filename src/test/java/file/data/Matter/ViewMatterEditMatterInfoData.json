@@ -1,52 +1,258 @@
 [
 	{
-		"matterName":"Law Custody Legal",
-		"caseTitle":"LG Case 1",
-		"caseNumber":"MNH5478",
-		"dateofFilling":" 26 "
+		"_comment":"0.editMatterInfoMandatoryWithDOF",
+		"matterName":"Corporate Custody",
+		"caseTitle":"Register of Sessions cases",
+		"caseNumber":"AGHW11",
+		"dateofFilling":" 2 "
+	},
+	{	
+		"_comment":"1.editMatterInfoMandatoryWithDescription",
+		"matterName":"Register of Sessions cases",
+		"caseTitle":"Register of Appeal Cases received",
+		"caseNumber":"AGHW12",
+		"description":"At the time of acceptance the surety the signature/Thumb Impression"
 	},
 	{
-		"matterName":"LG Case 1",
-		"caseTitle":"General Custody 15",
-		"caseNumber":"RT8526",
-		"description":"Hello everybody text added in description"
-	},
-		{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":"",
-		"caseType":""
+		"_comment":"2.editMatterInfoMandatoryWithCaseType",
+		"matterName":"Register of Appeal Cases received",
+		"caseTitle":"Register of Revision Cases Entertained",
+		"caseNumber":"AGHW13",
+		"caseType":"Individuals"
 	},
 	{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":"",
-		"courtName":""
-	},
-		{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":"",
-		"judges":""
+		"_comment":"3.editMatterInfoMandatoryWithCourt",
+		"matterName":"Register of Revision Cases Entertained",
+		"caseTitle":"Register of calender and Preliminary",
+		"caseNumber":"AGHW14",
+		"courtName":"High Court"
 	},
 	{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":"",
-		"priority":""
-	},
-		{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":""
+		"_comment":"4.editMatterInfoMandatoryWithJudge",
+		"matterName":"Register of calender and Preliminary",
+		"caseTitle":"Register cases received",
+		"caseNumber":"AGHW15",
+		"judges":"Vimal"
 	},
 	{
-		"matterName":"",
-		"caseTitle":"",
-		"caseNumber":"",
-		"name":"",
-		"email":"",
-		"number":""
+		"_comment":"5.editMatterInfoMandatoryWithPriority",
+		"matterName":"Register cases received",
+		"caseTitle":"Register of Miscellaneous and Maintenance",
+		"caseNumber":"AGHW16",
+		"priority":"Medium"
+	},
+	{
+		"_comment":"6.editMatterInfoMandatoryWithStatus",
+		"matterName":"Register of Miscellaneous and Maintenance",
+		"caseTitle":"Register of applications under Section",
+		"caseNumber":"AGHW17"
+	},
+	{
+		"_comment":"7.editMatterInfoMandatoryWithOpponentAdvocate",
+		"matterName":"Register of applications under Section",
+		"caseTitle":"Register Results of Inquiries and Trials",
+		"caseNumber":"AGHW18",
+		"name":"Scott",
+		"email":"scott@gm.com",
+		"number":"7878454578"
+	},
+	{
+		"_comment":"8.editMatterInfoMandatoryWithDOFandDescription",
+		"matterName":"Register Results of Inquiries and Trials",
+		"caseTitle":"Register of Punishments",
+		"caseNumber":"AGHW19",
+		"dateofFilling":" 12 ",
+		"description":"The sureties shall produce Bank Pass Books or Ration Cards or some"
+	},
+	
+	{
+		"_comment":"9.editMatterInfoMandatoryWithDOFandCasetype",
+		"matterName":"Register of Punishments",
+		"caseTitle":"Register of Appeal Cases disposed",
+		"caseNumber":"AGHW20",
+		"dateofFilling":" 15 ",
+		"caseType":"Criminal Case"
+	},
+	{
+		"_comment":"10.editMatterInfoMandatoryWithDOFandCourt",
+		"matterName":"Register of Appeal Cases disposed",
+		"caseTitle":"Register of Revision Cases disposed",
+		"caseNumber":"AGHW21",
+		"dateofFilling":" 8 ",
+		"courtName":"Madras high Court"
+	},
+	{
+		"_comment":"11.editMatterInfoMandatoryWithDOFandJudge",
+		"matterName":"Register of Revision Cases disposed",
+		"caseTitle":"Diary Register",
+		"caseNumber":"AGHW22",
+		"dateofFilling":" 18 ",
+		"judges":"Suresh"
+	},
+	{
+		"_comment":"12.editMatterInfoMandatoryWithDOFandPriority",
+		"matterName":"Diary Register",
+		"caseTitle":"The Various types of child custody",
+		"caseNumber":"AGHW23",
+		"dateofFilling":" 25 ",
+		"priority":"Low"
+	},
+	{
+		"_comment":"13.editMatterInfoMandatoryWithDOFandStatus",
+		"matterName":"The Various types of child custody",
+		"caseTitle":"Legal Custody",
+		"caseNumber":"AGHW24",
+		"dateofFilling":" 16 "
+	},
+	{
+		"_comment":"14.editMatterInfoMandatoryWithDOFandOpponentAdvocates",
+		"matterName":"Legal Custody",
+		"caseTitle":"Physical Custody",
+		"caseNumber":"AGHW25",
+		"dateofFilling":" 18 ",
+		"name":"vamsi",
+		"email":"vamsi@gm.com",
+		"number":"8585857474"
+	},
+	{
+		"_comment":"15.editMatterInfoMandatoryWithDescriptionandCaseType",
+		"matterName":"Physical Custody",
+		"caseTitle":"Sole Custody",
+		"caseNumber":"AGHW26",
+		"caseType":"Criminal Case",
+		"description":"Overview of joint custody, a relatively common arrangement"
+	},
+	{
+		"_comment":"16.editMatterInfoMandatoryWithDescriptionandCourt",
+		"matterName":"Sole Custody",
+		"caseTitle":"Joint Custody",
+		"caseNumber":"AGHW27",
+		"description":"Basics of what a court considers when grandparents seek",
+		"courtName":"Supreme Court"
+	},
+	{
+		"_comment":"17.editMatterInfoMandatoryWithDescriptionandJudge",
+		"matterName":"Joint Custody",
+		"caseTitle":"Legal Custody in Joint Custody Arrangements",
+		"caseNumber":"AGHW28",
+		"description":"Distinctions between joint custody and sole custody",
+		"judges":"Ram"
+	},
+	{
+		"_comment":"18.editMatterInfoMandatoryWithDescriptionandPriority",
+		"matterName":"Legal Custody in Joint Custody Arrangements",
+		"caseTitle":"Official Terminology with Child",
+		"caseNumber":"AGHW29",
+		"priority":"High",
+		"description":"In joint custody arrangements, parents share rights to make the major decisions"
+	},
+	{
+		"_comment":"19.editMatterInfoMandatoryWithDescriptionandStatus",
+		"matterName":"Official Terminology with Child",
+		"caseTitle":"One Common Custody Arrangement",
+		"caseNumber":"AGHW30",
+		"description":"Definition and explanation of physical custody, "
+	},
+	{
+		"_comment":"20.editMatterInfoMandatoryWithDescriptionandOpponentAdvocates",
+		"matterName":"One Common Custody Arrangement",
+		"caseTitle":"Other Forms of Joint Custody",
+		"caseNumber":"AGHW31",
+		"description":"There are also other joint-custody arrangements ",
+		"name":"Ashok",
+		"email":"Ashok@gm.com",
+		"number":"8585857444"
+		
+	},
+	{
+		"_comment":"21.editMatterInfoMandatoryWithCaseTypeandCourt",
+		"matterName":"Other Forms of Joint Custody",
+		"caseTitle":"Get Professional Legal Help",
+		"caseNumber":"AGHW32",
+		"caseType":"Child custody",
+		"courtName":"Delhi high Court"
+	},
+	{
+		"_comment":"22.editMatterInfoMandatoryWithCaseTypeandJudge",
+		"matterName":"Get Professional Legal Help",
+		"caseTitle":"The child's relationship with each parent",
+		"caseNumber":"AGHW33",
+		"caseType":"Criminal",
+		"judges":"Rocky"
+	},
+	{
+		"_comment":"23.editMatterInfoMandatoryWithCaseTypeandPriority",
+		"matterName":"The child's relationship with each parent",
+		"caseTitle":"The child's preference",
+		"caseNumber":"AGHW34",
+		"caseType":"Civil",
+		"priority":"Medium"
+	},
+	{
+		"_comment":"24.editMatterInfoMandatoryWithCaseTypeandStatus",
+		"matterName":"The child's preference",
+		"caseTitle":"A history of substance abuse",
+		"caseNumber":"AGHW35",
+		"caseType":"Lawyer"
+	},
+	{
+		"_comment":"25.editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates",
+		"matterName":"A history of substance abuse",
+		"caseTitle":"The child's well-being",
+		"caseNumber":"AGHW36",
+		"caseType":"Bike Case",
+		"name":"Arvind",
+		"email":"Arvind@gm.com",
+		"number":"8585857466"
+	},
+	{
+		"_comment":"26.editMatterInfoMandatoryWithCourtandJudge",
+		"matterName":"The child's well-being",
+		"caseTitle":"The child's school location",
+		"caseNumber":"AGHW37",
+		"courtName":"High Court",
+		"judges":"Madesh"
+	},
+	{
+		"_comment":"27.editMatterInfoMandatoryWithCourtandPriority",
+		"matterName":"The child's school location",
+		"caseTitle":"The Best Interest of the Child Standard",
+		"caseNumber":"AGHW38",
+		"courtName":"High Court",
+		"priority":"Low"
+	},
+	{
+		"_comment":"28.editMatterInfoMandatoryWithCourtandStatus",
+		"matterName":"The Best Interest of the Child Standard",
+		"caseTitle":"Visitation Rights",
+		"caseNumber":"AGHW39",
+		"courtName":"Child Custody Court"
+	},
+	{
+		"_comment":"29.editMatterInfoMandatoryWithCourtandOpponentAdvocates",
+		"matterName":"Visitation Rights",
+		"caseTitle":"Sole Custody",
+		"caseNumber":"AGHW40",
+		"courtName":"High Court",
+		"name":"harish",
+		"email":"harish@gm.com",
+		"number":"8585857411"
+	},
+	{
+		"_comment":"30.editMatterInfoMandatoryWithJudgeandPriority",
+		"matterName":"Sole Custody",
+		"caseTitle":"Criminal Custody Case",
+		"caseNumber":"AGHW41",
+		"judges":"Deepan",
+		"priority":"High"
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 ]
