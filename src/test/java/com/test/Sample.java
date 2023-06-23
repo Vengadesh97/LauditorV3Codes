@@ -1,91 +1,86 @@
 package com.test;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.base.BaseClass;
 
-public class Sample {
+
+public class Sample extends BaseClass {
 	
 	
-	@BeforeSuite
-	public void beforesuite()
-	{
-		System.out.println("Hello Before Suite");
+	@Test(dataProvider = "getData0", priority = 0)
+	public void clientsIndividuals(HashMap<String, String> input) throws InterruptedException {
+		
+			
+				
+					try {
+						createMatter.leftMatterTab();
+						createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
+						// Select Groups
+						Thread.sleep(1000);
+						String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+						createMatter.selecting(groupNames);
+						String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+								input.get("individualsClientName2") };
+						createMatter.selecting(clientNamesIndividuals);
+						createMatter.nextPage();
+						createMatter.nextPage();
+						createMatter.alertPopupYes();
+						createMatter.addMatterSuccess();
+					} finally {
+						createMatter.leftMatterTab();
+					}
+				
+				
+	
 	}
 	
-	@BeforeTest
-	public void beforetest()
-	{
-		System.out.println("Hai Before Test");
+	@Test(dataProvider = "getData1", priority = 1)
+	public void clientsIndividualsWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
+
+		
+			try {
+				createMatter.createMatter(input.get("caseTitle"), input.get("caseNumber"));
+				String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+				Thread.sleep(1000);
+				createMatter.selecting(groupNames);
+				String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+						input.get("individualsClientName2") };
+				createMatter.selecting(clientNamesIndividuals);
+				String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+				createMatter.selecting(teamMemberNames);
+				createMatter.nextPage();
+				createMatter.alertPopupYes();
+				createMatter.addMatterSuccess();
+			} finally {
+				createMatter.leftMatterTab();
+			}
+			
+	}
+
+	// MandatoryFieldswithGroupsandClientsIndividualsWithTMandDocuments
+	@DataProvider
+	public Object[][] getData0() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\MatterModulesData.json");
+
+		return new Object[][] { { data.get(0) } };
+
 	}
 	
-	@BeforeClass
-	public void beforeclass()
-	{
-		System.out.println("Welcome Before Class");
+	// MandatoryFieldswithGroupsandClientsIndividualsWithTMandDocuments
+	@DataProvider
+	public Object[][] getData1() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\MatterModulesData.json");
+
+		return new Object[][] { { data.get(1) } };
+
 	}
-	
-	@BeforeMethod
-	public void beforemethod()
-	{
-		System.out.println("Begin Before Method");
-	}
-	
-	
-	@Test
-	public void test1()
-	{
-		System.out.println("Start Program running1");
-	}
-	
-	
-	@Test
-	public void test2()
-	{
-		System.out.println("Inprogress2");
-	}
-	
-	
-	@Test
-	public void test3()
-	{
-		System.out.println("Finished3");
-	}
-	
-	
-	@AfterMethod
-	public void aftermethod()
-	{
-		System.out.println("Final after method");
-	}
-	
-	
-	@AfterClass
-	public void afterclass()
-	{
-		System.out.println("End after Class");
-	}
-	
-	@AfterTest
-	public void aftertest()
-	{
-		System.out.println("Exist after Test");
-	}
-	
-	@AfterSuite
-	public void aftersuite()
-	{
-		System.out.println("Quite after Suite");
-	}
-	
-	
-	
-	
 	
 }

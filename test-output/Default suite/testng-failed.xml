@@ -3,43 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.ViewMatterEditMatterInfoTest">
+      <class name="com.test.CreateMatterTest">
         <methods>
-          <include name="editMatterInfoMandatoryWithCourt"/>
-          <include name="editMatterInfoMandatoryWithDOFandDescription"/>
-          <include name="editMatterInfoMandatoryWithDOFandCourt"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandJudge"/>
-          <include name="editMatterInfoMandatoryWithCourtandStatus"/>
-          <include name="editMatterInfoMandatoryWithCaseType"/>
-          <include name="editMatterInfoMandatoryWithDOFandPriority"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandCaseType"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescription"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithOpponentAdvocate"/>
-          <include name="editMatterInfoMandatoryWithJudgeandPriority"/>
-          <include name="editMatterInfoMandatoryWithCourtandJudge"/>
+          <include name="clientsIndividualsandTempClients" invocation-numbers="0"/>
           <include name="down"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandJudge"/>
-          <include name="editMatterInfoMandatoryWithDOFandCasetype"/>
-          <include name="editMatterInfoMandatoryWithCourtandPriority"/>
-          <include name="editMatterInfoMandatoryWithPriority"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDOF"/>
-          <include name="editMatterInfoMandatoryWithDOFandJudge"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandCourt"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandPriority"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandCourt"/>
           <include name="launchApplication"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandPriority"/>
-          <include name="editMatterInfoMandatoryWithStatus"/>
-          <include name="editMatterInfoMandatoryWithDOFandStatus"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithJudge"/>
-          <include name="editMatterInfoMandatoryWithDOFandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithCourtandOpponentAdvocates"/>
         </methods>
-      </class> <!-- com.test.ViewMatterEditMatterInfoTest -->
+      </class> <!-- com.test.CreateMatterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

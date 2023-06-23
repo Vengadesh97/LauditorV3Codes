@@ -241,22 +241,13 @@
 		"advocatePhone":"9876543210",
 		"groupName1": "Family Law",
 		"groupName2": "Immigration Law",
-		"individualsClientName1": "Vengadeshwaran Ramamoorthy",
-		"individualsClientName2": "Ananth kumar",
 		"searchTextIndividuals": "Justin",
 		"firstName": "Justin",
 		"lastName": "j",
 		"email": "Justin@gm.com",
 		"confirmEmail": "Justin@gm.com",
 		"country": "Belgium",
-		"phoneNumber": "9696969693",
-		"searchTextEntity": "Joseph",
-		"firmName": "Joseph Firm",
-		"contactPerson": "Joseph",
-		"emailId": "Joseph@gm.com",
-		"confirmEmailId": "Joseph@gm.com",
-		"countryEntitys": "Belgium",
-		"mobileNumber": "8989868696"
+		"phoneNumber": "9696969693"
 	},
 	{
 		"caseTitle":"Criminal Case 14",

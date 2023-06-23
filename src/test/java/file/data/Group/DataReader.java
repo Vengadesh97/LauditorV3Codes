@@ -1,4 +1,4 @@
-package file.data;
+package file.data.Group;
 
 import java.io.File;
 import java.io.IOException;

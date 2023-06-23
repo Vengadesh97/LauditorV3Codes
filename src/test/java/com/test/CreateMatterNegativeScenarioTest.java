@@ -15,70 +15,110 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 
 	@Test(dataProvider = "getData1", priority = 0)
 	public void clientsIndividuals(HashMap<String, String> input) throws InterruptedException {
-		createMatter.leftMatterTab();
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.leftMatterTab();
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData2", priority = 1)
 	public void clientsIndividualsWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData3", priority = 2)
 	public void clientsIndividualsWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData4", priority = 3)
 	public void clientsIndividualsWithTMandDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields with Groups and Clients [Entity]
@@ -86,70 +126,105 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData5", priority = 4)
 	public void clientsEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData6", priority = 5)
 	public void clientsEntityWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData7", priority = 6)
 	public void clientsEntityWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData8", priority = 7)
 	public void clientsEntityWithTMandDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields with Groups and Clients [Individuals and Entity]
@@ -157,71 +232,106 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData9", priority = 8)
 	public void clientsIndividualsandEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData10", priority = 9)
 	public void clientsIndividualsandEntityWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData11", priority = 10)
 	public void clientsIndividualsandEntityWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData12", priority = 11)
 	public void clientsIndividualsandEntityWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals] and
@@ -230,119 +340,151 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData13", priority = 12)
 	public void clientsIndividualsandTempClients(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Individuals
-		Thread.sleep(1000);
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData14", priority = 13)
 	public void clientsIndividualsandTempClientsWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Individuals
-		Thread.sleep(1000);
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData15", priority = 14)
 	public void clientsIndividualsandTempClientsWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	@Test(dataProvider = "getData16", priority = 15)
 	public void clientsIndividualsandTempClientsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and
@@ -351,29 +493,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData17", priority = 16)
 	public void clientsEntityandTempClients(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Individuals
-		Thread.sleep(1000);
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients with TM
@@ -381,30 +529,37 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData18", priority = 17)
 	public void clientsEntityandTempClientsWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients with Document
@@ -412,30 +567,37 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData19", priority = 18)
 	public void clientsEntityandTempClientsWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients with TM and
@@ -445,31 +607,39 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [IndividualsandEntity] and
@@ -478,29 +648,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData21", priority = 20)
 	public void clientsIndividualsandEntityandTempClients(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals and Entity] and Temp Clients
@@ -510,30 +686,37 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals and Entity] and Temp Clients
@@ -543,30 +726,37 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals and Entity] and Temp Clients
@@ -576,31 +766,39 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Individuals] and Temp Clients
@@ -609,24 +807,31 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData25", priority = 24)
 	public void clientsIndividualsandTempClientsIndividuals(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Individuals] and Temp Clients
@@ -636,25 +841,33 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsIndividualsWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Individuals] and Temp Clients
@@ -664,24 +877,33 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsIndividualsWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Individuals] and Temp Clients
@@ -691,25 +913,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsIndividualsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Entity] and Temp Clients [Individuals]
@@ -717,24 +949,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData29", priority = 28)
 	public void clientsEntityandTempClientsIndividuals(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Entity] and Temp Clients [Individuals]
@@ -744,25 +982,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsIndividualsWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Entity] and Temp Clients [Individuals]
@@ -772,24 +1017,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsIndividualsWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Entity] and Temp Clients [Individuals]
@@ -799,25 +1052,34 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsIndividualsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Both] and Temp Clients [Individuals]
@@ -826,24 +1088,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsIndividuals(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups , Clients[Both] and Temp Clients [Individuals] With
@@ -853,25 +1121,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsIndividualsWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Both] and Temp Clients [Individuals] With
@@ -881,24 +1156,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsIndividualsWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Both] and Temp Clients [Individuals] With
@@ -908,25 +1191,34 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsIndividualsWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Individuals] and Temp Clients [Entity]
@@ -934,24 +1226,31 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData37", priority = 36)
 	public void clientsIndividualsandTempClientsEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals] and Temp Clients [Entity]
@@ -961,25 +1260,33 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsEntityWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals] and Temp Clients [Entity]
@@ -989,25 +1296,33 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsEntityWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Individuals] and Temp Clients [Entity]
@@ -1017,26 +1332,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandTempClientsEntityWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("individualsClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"),
+					input.get("individualsClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Entity] and Temp Clients [Entity]
@@ -1044,24 +1368,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData41", priority = 40)
 	public void clientsEntitysandTempClientsEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients [Entity] With TM
@@ -1070,25 +1400,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsEntityWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients [Entity] With
@@ -1098,25 +1435,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsEntityWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Entity] and Temp Clients [Entity] With TM
@@ -1126,26 +1470,34 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsEntityandTempClientsEntityWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("entityClientName1"), input.get("entityClientName2") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients[Both] and Temp Clients [Entity]
@@ -1154,24 +1506,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsEntity(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Both] and Temp Clients [Entity] With TM
@@ -1180,25 +1538,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsEntityWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Both] and Temp Clients [Entity] With
@@ -1208,25 +1573,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsEntityWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups, Clients [Both] and Temp Clients [Entity] With TM
@@ -1236,26 +1608,34 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void clientsIndividualsandEntityandTempClientsEntityWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		// Select Clients Individuals
-		String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
-		createMatter.selecting(clientNamesIndividuals);
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			String[] clientNamesIndividuals = { input.get("individualsClientName1"), input.get("entityClientName1") };
+			createMatter.selecting(clientNamesIndividuals);
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Individuals]
@@ -1263,22 +1643,28 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData49", priority = 48)
 	public void tempClientsIndividuals(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Individuals] With TM
@@ -1286,23 +1672,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData50", priority = 49)
 	public void tempClientsIndividualsWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Individuals] With Document
@@ -1310,22 +1703,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData51", priority = 50)
 	public void tempClientsIndividualsWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Individuals] With TM and Document
@@ -1333,23 +1734,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData52", priority = 51)
 	public void tempClientsIndividualsWithTMandDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Entity]
@@ -1357,22 +1767,28 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData53", priority = 52)
 	public void tempClientsEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Entity] With TM
@@ -1380,23 +1796,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData54", priority = 53)
 	public void tempClientsEntityWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Entity] With Document
@@ -1404,23 +1827,30 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData55", priority = 54)
 	public void tempClientsEntityWithDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients [Entity] With TM and Document
@@ -1428,24 +1858,32 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData56", priority = 55)
 	public void tempClientsEntityWithTMandDocuments(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients
@@ -1453,27 +1891,33 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	@Test(dataProvider = "getData57", priority = 56)
 	public void tempClientsIndividualsandEntity(HashMap<String, String> input) throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients With TM
@@ -1482,28 +1926,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void tempClientsIndividualsandEntityWithTeamMembers(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		createMatter.nextPage();
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients With Document
@@ -1512,28 +1963,35 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void tempClientsIndividualsandEntityWithDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		createMatter.nextPage();
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
 
 	// Mandatory Fields , Groups and Temp Clients With TM and Document
@@ -1542,38 +2000,38 @@ public class CreateMatterNegativeScenarioTest extends BaseClass {
 	public void tempClientsIndividualsandEntityWithTMandDocuments(HashMap<String, String> input)
 			throws InterruptedException {
 
-		createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"), input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"), input.get("prioritySelect"), input.get("description"), input.get("advocateName"), input.get("advocateEmail"), input.get("advocatePhone"));
-		// Select Groups
-		Thread.sleep(2000);
-		String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
-		createMatter.selecting(groupNames);
-		Thread.sleep(1000);
-		// Temp Client Individuals
-		createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
-				input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
-				input.get("phoneNumber"));
-		// Temp Client Entity
-		Thread.sleep(3000);
-		createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"), input.get("contactPerson"),
-				input.get("emailId"), input.get("confirmEmailId"), input.get("countryEntitys"),
-				input.get("mobileNumber"));
-		Thread.sleep(3000);
-		createMatter.nextPage();
-		String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
-		createMatter.selecting(teamMemberNames);
-		String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
-		createMatter.selecting(documentNames);
-		createMatter.alertPopupYes();
-		createMatter.addMatterSuccess();
+		try {
+			createMatter.createMatterAllFieldEnter(input.get("caseTitle"), input.get("caseNumber"),
+					input.get("caseType"), input.get("courtName"), input.get("judges"), input.get("date"),
+					input.get("prioritySelect"), input.get("description"), input.get("advocateName"),
+					input.get("advocateEmail"), input.get("advocatePhone"));
+			createMatter.nextPage();
+			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
+			createMatter.selecting(groupNames);
+			createMatter.nextPage();
+			createMatter.tempClientIndividuals(input.get("searchTextIndividuals"), input.get("firstName"),
+					input.get("lastName"), input.get("email"), input.get("confirmEmail"), input.get("country"),
+					input.get("phoneNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.tempClientEntity(input.get("searchTextEntity"), input.get("firmName"),
+					input.get("contactPerson"), input.get("emailId"), input.get("confirmEmailId"),
+					input.get("countryEntitys"), input.get("mobileNumber"));
+			createMatter.addTemporaryButton();
+			createMatter.addTeamMembersTempClientsBtn();
+			createMatter.nextPage();
+			String[] teamMemberNames = { input.get("memberName1"), input.get("memberName2") };
+			createMatter.selecting(teamMemberNames);
+			createMatter.nextPage();
+			String[] documentNames = { input.get("documentName1"), input.get("documentName2") };
+			createMatter.selecting(documentNames);
+			createMatter.nextPage();
+			createMatter.alertPopupYes();
+			createMatter.addMatterSuccess();
+		} finally {
+			createMatter.leftMatterTab();
+		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 	// MandatoryFieldswithGroupsandClientsIndividuals
 	@DataProvider

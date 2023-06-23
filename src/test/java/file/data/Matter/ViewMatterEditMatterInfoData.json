@@ -11,7 +11,7 @@
 		"matterName":"Register of Sessions cases",
 		"caseTitle":"Register of Appeal Cases received",
 		"caseNumber":"AGHW12",
-		"description":"At the time of acceptance the surety the signature/Thumb Impression"
+		"description":"At the time of acceptance the surety the signature"
 	},
 	{
 		"_comment":"2.editMatterInfoMandatoryWithCaseType",
@@ -207,7 +207,7 @@
 	},
 	{
 		"_comment":"26.editMatterInfoMandatoryWithCourtandJudge",
-		"matterName":"The child's well-being",
+		"matterName":"Child Case",
 		"caseTitle":"The child's school location",
 		"caseNumber":"AGHW37",
 		"courtName":"High Court",
@@ -233,7 +233,7 @@
 		"matterName":"Visitation Rights",
 		"caseTitle":"Sole Custody",
 		"caseNumber":"AGHW40",
-		"courtName":"High Court",
+		"courtName":"Delhi high Court",
 		"name":"harish",
 		"email":"harish@gm.com",
 		"number":"8585857411"
@@ -241,11 +241,428 @@
 	{
 		"_comment":"30.editMatterInfoMandatoryWithJudgeandPriority",
 		"matterName":"Sole Custody",
-		"caseTitle":"Criminal Custody Case",
+		"caseTitle":"Legal Consumer Matter",
 		"caseNumber":"AGHW41",
 		"judges":"Deepan",
 		"priority":"High"
+	},
+	{
+		"_comment":"31.editMatterInfoMandatoryWithJudgeandStatus",
+		"matterName":"Legal Consumer Matter",
+		"caseTitle":"Administrative Law Reports",
+		"caseNumber":"AGHW42",
+		"judges":"Micheal"
+	},
+	{
+		"_comment":"32.editMatterInfoMandatoryWithJudgeandOpponentAdvocates",
+		"matterName":"Administrative Law Reports",
+		"caseTitle":"Alberta Reports",
+		"caseNumber":"AGHW43",
+		"judges":"Vamsi",
+		"name":"Sathish",
+		"email":"sathish@gm.com",
+		"number":"8585857666"
+	},
+	
+	{
+		"_comment":"33.editMatterInfoMandatoryWithPriorityandStatus",
+		"matterName":"Alberta Reports",
+		"caseTitle":"Legality of Use of Force",
+		"caseNumber":"AGHW44",
+		"priority":"Medium"
+	},
+	{
+		"_comment":"34.editMatterInfoMandatoryWithPriorityandOpponentAdvocates",
+		"matterName":"Legality of Use of Force",
+		"caseTitle":"Certain Property",
+		"caseNumber":"AGHW45",
+		"priority":"Low",
+		"name":"Anand",
+		"email":"Anand@gm.com",
+		"number":"8585851111"
+	},
+	{
+		"_comment":"35.editMatterInfoMandatoryWithStatusandOpponentAdvocates",
+		"matterName":"Certain Property",
+		"caseTitle":"Frontier Dispute",
+		"caseNumber":"AGHW46",
+		"name":"Rocky",
+		"email":"rocky@gm.com",
+		"number":"8585852222"
+	},
+	{
+		"_comment":"36.editMatterInfoMandatoryWithDOFDescriptionandCaseType",
+		"matterName":"Frontier Dispute",
+		"caseTitle":"Federal Court Reports",
+		"caseNumber":"AGHW47",
+		"dateofFilling":" 28 ",
+		"caseType":"Lawyer",
+		"description":"Distinctions between joint custody and sole custody"
+	},
+	{
+		"_comment":"37.editMatterInfoMandatoryWithDOFDescriptionandCourt",
+		"matterName":"Federal Court Reports",
+		"caseTitle":"Criminal Cases",
+		"caseNumber":"AGHW48",
+		"dateofFilling":" 15 ",
+		"courtName":"Madras high Court",
+		"description":"There are also other joint-custody arrangements"
+	},
+	{
+		"_comment":"38.editMatterInfoMandatoryWithDOFDescriptionandJudge",
+		"matterName":"Criminal Cases",
+		"caseTitle":"Civil cases",
+		"caseNumber":"AGHW49",
+		"dateofFilling":" 7 ",
+		"judges":"Kasi",
+		"description":"Hello sample documents"
+	},
+	{
+		"_comment":"39.editMatterInfoMandatoryWithDOFDescriptionandPriority",
+		"matterName":"Civil cases",
+		"caseTitle":"Personal Injury Tort Claims",
+		"caseNumber":"AGHW50",
+		"dateofFilling":" 10 ",
+		"priority":"Low",
+		"description":"The sureties shall produce Bank Pass Books or Ration Cards or some"
+	},
+	{
+		"_comment":"40.editMatterInfoMandatoryWithDOFDescriptionandStatus",
+		"matterName":"Personal Injury Tort Claims",
+		"caseTitle":"Contract Disputes",
+		"caseNumber":"AGHW51",
+		"dateofFilling":" 22 ",
+		"description":"Distinctions between joint custody and sole custody"
+	},
+	{
+		"_comment":"41.editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates",
+		"matterName":"Contract Disputes",
+		"caseTitle":"Equitable Claims",
+		"caseNumber":"AGHW52",
+		"dateofFilling":" 27 ",
+		"description":"Hello sample documents",
+		"name":"Dhruv",
+		"email":"Dhruv@gm.com",
+		"number":"9585852222"
+		
+	},
+	{
+		"_comment":"42.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt",
+		"matterName":"Equitable Claims",
+		"caseTitle":"Class Action Suits",
+		"caseNumber":"AGHW53",
+		"dateofFilling":" 26 ",
+		"caseType":"Individuals",
+		"courtName":"Delhi high Court",
+		"description":"Definition and explanation of physical custody"
+	},
+	{
+		"_comment":"43.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge",
+		"matterName":"Class Action Suits",
+		"caseTitle":"Divorce and Family Law Disputes",
+		"caseNumber":"AGHW54",
+		"dateofFilling":" 24 ",
+		"caseType":"Child",
+		"judges":"Vijaya",
+		"description":"Distinctions between joint custody and sole custody"
+	},
+	{
+		"_comment":"44.editMatterInfoMandatoryWithCaseTypeandPriority",
+		"matterName":"Divorce and Family Law Disputes",
+		"caseTitle":"Property Disputes",
+		"caseNumber":"AGHW55",
+		"dateofFilling":" 29 ",
+		"caseType":"Criminal Case",
+		"priority":"High",
+		"description":"There are also other joint-custody arrangements"
+	},
+	{
+		"_comment":"45.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus",
+		"matterName":"Property Disputes",
+		"caseTitle":"Tort Claims",
+		"caseNumber":"AGHW56",
+		"dateofFilling":" 21 ",
+		"caseType":"Child custody Case",
+		"description":"A breach of contract case"
+	},
+	{
+		"_comment":"46.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent",
+		"matterName":"Tort Claims",
+		"caseTitle":"Breach of Contract Claims",
+		"caseNumber":"AGHW57",
+		"dateofFilling":" 19 ",
+		"caseType":"Bike Case",
+		"description":"Civil courts handle disputes",
+		"name":"Surya",
+		"email":"surya@gm.com",
+		"number":"9685852222"
+	},
+	{
+		"_comment":"47.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge",
+		"matterName":"Breach of Contract Claims",
+		"caseTitle":"Tenant issues",
+		"caseNumber":"AGHW58",
+		"dateofFilling":" 17 ",
+		"caseType":"Bike accident",
+		"courtName":"Mumbai Court",
+		"judges":"pramod",
+		"description":"Document attached"
+	},
+	{
+		"_comment":"48.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority",
+		"matterName":"Tenant issues",
+		"caseTitle":"Civil Litigation",
+		"caseNumber":"AGHW59",
+		"dateofFilling":" 13 ",
+		"caseType":"Criminal",
+		"courtName":"Delhi high Court",
+		"priority":"Medium",
+		"description":"Definition and explanation of physical custody"
+	},
+	{
+		"_comment":"49.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus",
+		"matterName":"Civil Litigation",
+		"caseTitle":"Employment Law",
+		"caseNumber":"AGHW60",
+		"dateofFilling":" 14 ",
+		"caseType":"Child custody Case",
+		"courtName":"Delhi high Court",
+		"description":"Civil courts handle disputes"
+	},
+	{
+		"_comment":"50.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent",
+		"matterName":"Employment Law",
+		"caseTitle":"Medical Malpractice",
+		"caseNumber":"AGHW61",
+		"dateofFilling":" 7 ",
+		"caseType":"Criminal Case",
+		"courtName":"Child Custody Court",
+		"description":" A personal injury lawyer specializing in medical malpractice",
+		"name":"Arya",
+		"email":"Arya@gm.com",
+		"number":"9584852222"
+	},
+	{
+		"_comment":"51.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority",
+		"matterName":"Criminal case",
+		"caseTitle":"Accelerated Rehabilitation",
+		"caseNumber":"AGHW62",
+		"dateofFilling":" 12 ",
+		"caseType":"Car accident",
+		"courtName":"Supreme Court",
+		"description":"Overview of joint custody, a relatively common arrangement",
+		"judges":"Lakshmanan",
+		"priority":"Low"
+	},
+		{
+		"_comment":"52.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus",
+		"matterName":"Accelerated Rehabilitation",
+		"caseTitle":"Adjudicatory Hearing",
+		"caseNumber":"AGHW63",
+		"dateofFilling":" 16 ",
+		"caseType":"Corporate Case",
+		"courtName":"Madras high Court",
+		"description":"Document attached",
+		"judges":"Sekar"
+	},
+		{
+		"_comment":"53.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent",
+		"matterName":"Adjudicatory Hearing",
+		"caseTitle":"Adult Court Transfer",
+		"caseNumber":"AGHW64",
+		"dateofFilling":" 17 ",
+		"caseType":"Individuals",
+		"courtName":"Mumbai Court",
+		"description":"There are also other joint-custody arrangements",
+		"judges":"harish",
+		"name":"kishore",
+		"email":"kishore@gm.com",
+		"number":"9584852211"
+	},
+		{
+		"_comment":"54.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt",
+		"matterName":"Adult Court Transfer",
+		"caseTitle":"Alcohol Education Program",
+		"caseNumber":"AGHW65",
+		"caseType":"Custody case",
+		"courtName":"Supreme Court",
+		"description":"Definition and explanation of physical custody"
+	},
+		{
+		"_comment":"55.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge",
+		"matterName":"Alcohol Education Program",
+		"caseTitle":"Alternative Detention Program",
+		"caseNumber":"AGHW66",
+		"caseType":"crime case",
+		"judges":"Thirumalai",
+		"description":"Document attached"
+	},
+		{
+		"_comment":"56.editMatterInfoMandatoryWithDescriptionCaseTypeandPriority",
+		"matterName":"Alternative Detention Program",
+		"caseTitle":"Alternative Dispute Resolution",
+		"caseNumber":"AGHW67",
+		"caseType":"Individuals",
+		"priority":"High",
+		"description":"Definition and explanation of physical custody"
+	},
+		{
+		"_comment":"57.editMatterInfoMandatoryWithDescriptionCaseTypeandStatus",
+		"matterName":"Alternative Dispute Resolution",
+		"caseTitle":"Alternative Incarceration Center",
+		"caseNumber":"AGHW68",
+		"caseType":"Lawyer",
+		"description":"Document attached"
+	},
+		{
+		"_comment":"58.editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent",
+		"matterName":"Alternative Incarceration Center",
+		"caseTitle":"Amicus Curiae brief",
+		"caseNumber":"AGHW69",
+		"caseType":"Lawyer handle cases",
+		"description":"Civil courts handle disputes",
+		"name":"kannan",
+		"email":"kannan@gm.com",
+		"number":"9584852229"
+	},
+		{
+		"_comment":"59.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge",
+		"matterName":"Amicus Curiae brief",
+		"caseTitle":"Assistant Attorney General",
+		"caseNumber":"AGHW70",
+		"caseType":"Senior Lawyer cases",
+		"courtName":"High Court",
+		"description":"Definition and explanation of physical custody",
+		"judges":"Hari"
+	},
+	{
+		"_comment":"60.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority",
+		"matterName":"Assistant Attorney General",
+		"caseTitle":"Bail Bondsperson",
+		"caseNumber":"AGHW71",
+		"caseType":"Individuals",
+		"courtName":"Madras high Court",
+		"description":"Distinctions between joint custody and sole custody",
+		"priority":"Medium"
+	},
+	{
+		"_comment":"61.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus",
+		"matterName":"Bail Bondsperson",
+		"caseTitle":"Best Interest of the Child",
+		"caseNumber":"AGHW72",
+		"caseType":"Senior Lawyer cases",
+		"courtName":"Madurai High court",
+		"description":"A breach of contract case"
+	},
+		{
+		"_comment":"62.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent",
+		"matterName":"Best Interest of the Child",
+		"caseTitle":"Bail Commissioner",
+		"caseNumber":"AGHW73",
+		"caseType":"Child custody Case",
+		"courtName":"Madurai Supreme court",
+		"description":"Document attached",
+		"name":"Vasanth",
+		"email":"Vasanth@gm.com",
+		"number":"9582852229"
+		
+	},
+		{
+		"_comment":"63.editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandPriority",
+		"matterName":"Bail Commissioner",
+		"caseTitle":"Bench Warrant",
+		"caseNumber":"AGHW74",
+		"caseType":"Individuals",
+		"courtName":"Madras Supreme court",
+		"description":"Civil courts handle disputes",
+		"judges":"Deepan",
+		"priority":"Low"
+	},
+		{
+		"_comment":"64.editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus",
+		"matterName":"Bench Warrant",
+		"caseTitle":"Broken Down Irretrievably",
+		"caseNumber":"AGHW75",
+		"caseType":"Child custody",
+		"courtName":"Mumbai High Court",
+		"description":"The sureties shall produce Bank",
+		"judges":"Mukil"
+	},
+		{
+		"_comment":"65.editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent",
+		"matterName":"Broken Down Irretrievably",
+		"caseTitle":"Case Flow Coordinator",
+		"caseNumber":"AGHW76",
+		"caseType":"Car accident",
+		"courtName":"Coimbatore high court",
+		"description":"Distinctions between joint custody and sole custody",
+		"judges":"Samir",
+		"name":"Sheik",
+		"email":"sheik@gm.com",
+		"number":"9582842229"
+	},
+		{
+		"_comment":"66.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus",
+		"matterName":"Case Flow Coordinator",
+		"caseTitle":"Central Transportation Unit",
+		"caseNumber":"AGHW77",
+		"caseType":"Individuals",
+		"courtName":"High Court",
+		"judges":"Kathir",
+		"description":"Civil courts handle disputes",
+		"priority":"High",
+		"dateofFilling":" 10 "
+	},
+		{
+		"_comment":"67.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent",
+		"matterName":"Central Transportation Unit",
+		"caseTitle":"Lisa Child Custody Case",
+		"caseNumber":"AGHW78",
+		"caseType":"Senior Lawyer cases",
+		"courtName":"Supreme Court",
+		"description":"There are also other joint-custody arrangements ",
+		"priority":"Medium",
+		"dateofFilling":" 19 ",
+		"judges":"Rashid",
+		"name":"Khan",
+		"email":"khan@gm.com",
+		"number":"9582842230"
+	},
+		{
+		"_comment":"68.editMatterInfoAllFieldsEntered",
+		"matterName":"Lisa Child Custody Case",
+		"caseTitle":"Contract Breach",
+		"caseNumber":"AGHW79",
+		"caseType":"Individuals",
+		"courtName":"Madras high Court",
+		"description":"Definition and explanation of physical custody",
+		"priority":"Low",
+		"dateofFilling":" 22 ",
+		"judges":"zayn",
+		"name":"warner",
+		"email":"warner@gm.com",
+		"number":"7782842230"
+		
+	},
+			{
+		"_comment":"69.editMatterInfoAllFieldEnteredandCancel",
+		"matterName":"Contract Breach",
+		"caseTitle":"IP Dispute - Copyright",
+		"caseNumber":"AGHW80",
+		"caseType":"Criminal Case",
+		"courtName":"Madras Supreme court",
+		"description":"Document attached",
+		"priority":"High",
+		"dateofFilling":" 26 ",
+		"judges":"Kamalesh",
+		"name":"Steve",
+		"email":"steve@gm.com",
+		"number":"9582842210",
+		"verifyName":"List of Legal Matters"
+		
 	}
+	
+	
 	
 	
 	

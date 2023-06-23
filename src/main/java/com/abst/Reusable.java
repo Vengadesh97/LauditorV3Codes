@@ -96,8 +96,18 @@ public class Reusable {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
+	public void pageUp() throws InterruptedException {
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,0)");
+		Thread.sleep(1000);
+		js.executeScript("window.scrollTo(0,0)");
+	}
+	
+	
 	public void visibilityOfElementWait(WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(submitBtn));
@@ -116,12 +126,11 @@ public class Reusable {
 				ExpectedConditions.visibilityOfAllElements(actionBtn));
 	}
 	
-	
-	
-	
-	public void elementtoBeClickableWait() {
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div //img[@class='mattersicon'])[1]")));
-
+	public void visibilityOfAllElementsList(List<WebElement> elements) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(
+				ExpectedConditions.visibilityOfAllElements(elements));
 	}
+	
+
 }

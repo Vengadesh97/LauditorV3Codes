@@ -44,6 +44,7 @@ import com.pom.ViewMatterDeleteMatterPOM;
 import com.pom.ViewMatterOpenCloseMatterPOM;
 import com.pom.ViewMatterPOM;
 import com.pom.ViewMatterUpdateGroupsPOM;
+import com.pom.ViewMatterViewDetailsPOM;
 import com.pom.ViewMembers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -65,7 +66,7 @@ public class BaseClass {
 	public ViewMatterUpdateGroupsPOM viewMatterUpdateGroups;
 	public ViewMatterOpenCloseMatterPOM viewMatterOpenCloseMatter;
 	public ViewMatterDeleteMatterPOM viewMatterDeleteMatter;
-	
+	public ViewMatterViewDetailsPOM viewMatterViewDetail;
 	
 	
 	
@@ -129,6 +130,7 @@ public class BaseClass {
 		viewMatterUpdateGroups = new ViewMatterUpdateGroupsPOM(driver);
 		viewMatterOpenCloseMatter = new ViewMatterOpenCloseMatterPOM(driver);
 		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
+		viewMatterViewDetail = new ViewMatterViewDetailsPOM(driver);
 		return loginPage;
 	}
 	

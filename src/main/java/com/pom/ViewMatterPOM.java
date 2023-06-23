@@ -1,6 +1,7 @@
 package com.pom;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -27,6 +28,7 @@ public class ViewMatterPOM extends Reusable {
 	WebElement matterTab;
 
 	public void leftMatterTab() throws InterruptedException {
+		pageUp();
 		visibilityOfElementWait(matterTab);
 		matterTab.click();
 
@@ -189,6 +191,7 @@ public class ViewMatterPOM extends Reusable {
 	public void statusPending() throws InterruptedException {
 		visibilityOfElementWait(statusSelect);
 		statusSelect.click();
+		
 	}
 
 	// Next
@@ -204,6 +207,13 @@ public class ViewMatterPOM extends Reusable {
 		editMatterInfoSave.click();
 	}
 
+	public void editMatterCancel() throws InterruptedException {
+		visibilityOfElementWait(matterInfoCancel);
+		matterInfoCancel.click();
+	}
+
+	
+	
 	@FindBy(xpath = "//button[@class='btn btn-default alertbtn']")
 	WebElement successPopupOk;
 
@@ -213,6 +223,13 @@ public class ViewMatterPOM extends Reusable {
 		successPopupOk.click();
 	}
 
+	public void pageUp() throws InterruptedException {
+		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,0)");
+	}
+	
+	
 	public void scrollUp() throws InterruptedException {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -245,7 +262,6 @@ public class ViewMatterPOM extends Reusable {
 		searchInputFields.clear();
 		searchInputFields.sendKeys(MatterName);
 		
-		Thread.sleep(2000);
 		pageDown();
 		
 		Actions action = new Actions(driver);
@@ -266,6 +282,28 @@ public class ViewMatterPOM extends Reusable {
 		}
 	}
 	
+	//String names ="List of Legal Matters";
+	
+	@FindBy(xpath="//div[@class='custusername tab-margin fontweight']")
+	WebElement texts;
+	
+	public void nameIsDisplay(String names) throws InterruptedException {
+
+		scrollUp();
+		
+		visibilityOfAllElements(texts);
+		
+		String text = texts.getText();
+		
+		if(names.contains(text))
+		{
+			System.out.println("Name is displayed");
+		}
+		else
+		{
+			System.out.println("Nmae not displayed");
+		}
+	}
 	
 	
 	

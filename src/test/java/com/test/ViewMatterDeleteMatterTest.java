@@ -15,17 +15,25 @@ public class ViewMatterDeleteMatterTest extends BaseClass {
 	@Test(dataProvider = "getData0", priority = 0)
 	public void deleteMatterCancelTest(HashMap<String, String> input) throws InterruptedException
 	{
-		viewMatters.leftMatterTab();
-		viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
-		viewMatterDeleteMatter.deleteMatterCancelBtn();
+		try {
+			viewMatters.leftMatterTab();
+			viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
+			viewMatterDeleteMatter.deleteMatterCancelBtn();
+		} finally {
+			viewMatters.leftMatterTab();
+		}
 	}
 	
 	// DeleteMatterTest
 	@Test(dataProvider = "getData1", priority = 1)
 	public void deleteMatterTest(HashMap<String, String> input) throws InterruptedException
 	{
-		viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
-		viewMatterDeleteMatter.deleteMatter();
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
+			viewMatterDeleteMatter.deleteMatter();
+		} finally {
+			viewMatters.leftMatterTab();
+		}
 	}
 	
 
