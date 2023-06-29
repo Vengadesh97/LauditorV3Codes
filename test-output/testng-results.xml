@@ -1,43 +1,594 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="27" passed="21" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-23T15:02:54 IST" name="Default suite" finished-at="2023-06-23T15:05:46 IST" duration-ms="172122">
+  <suite started-at="2023-06-29T15:29:39 IST" name="Suite" finished-at="2023-06-29T15:50:28 IST" duration-ms="1248896">
     <groups>
     </groups>
-    <test started-at="2023-06-23T15:02:54 IST" name="Default test" finished-at="2023-06-23T15:05:46 IST" duration-ms="172122">
-      <class name="com.test.CreateMatterTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreateMatterTest@8c3b9d]" started-at="2023-06-23T15:02:54 IST" name="launchApplication" finished-at="2023-06-23T15:03:03 IST" duration-ms="9018" status="PASS">
+    <test started-at="2023-06-29T15:29:39 IST" name="Test" finished-at="2023-06-29T15:50:28 IST" duration-ms="1248896">
+      <class name="com.test.ViewMatterDeleteMatterTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewMatterDeleteMatterTest@4470fbd6]" started-at="2023-06-29T15:49:58 IST" name="launchApplication" finished-at="2023-06-29T15:50:04 IST" duration-ms="6393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="clientsIndividualsandTempClients(java.util.HashMap)[pri:12, instance:com.test.CreateMatterTest@8c3b9d]" started-at="2023-06-23T15:03:04 IST" name="clientsIndividualsandTempClients" data-provider="getData13" finished-at="2023-06-23T15:04:26 IST" duration-ms="82138" status="PASS">
+        <test-method signature="deleteMatterCancelTest(java.util.HashMap)[pri:0, instance:com.test.ViewMatterDeleteMatterTest@4470fbd6]" started-at="2023-06-29T15:50:04 IST" name="deleteMatterCancelTest" data-provider="getData0" finished-at="2023-06-29T15:50:18 IST" duration-ms="13283" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=Medical Firm, contactPerson=vanthiyan, emailId=vanthiyan@gm.com, countryEntitys=Belgium, individualsClientName2=Ananth kumar, confirmEmail=Aathi@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=vanthiyan@gm.com, groupName2=Immigration Law, firstName=Aathi, phoneNumber=9696969693, caseNumber=AB013, searchTextIndividuals=Aathiraj, firmName=vanthiyan Firm, groupName1=Family Law, email=Aathi@gm.com}]]>
+                <![CDATA[{_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClients -->
-        <test-method signature="clientsIndividualsandTempClientsWithTeamMembers(java.util.HashMap)[pri:13, instance:com.test.CreateMatterTest@8c3b9d]" started-at="2023-06-23T15:04:26 IST" name="clientsIndividualsandTempClientsWithTeamMembers" data-provider="getData14" finished-at="2023-06-23T15:05:46 IST" duration-ms="79272" status="PASS">
+        </test-method> <!-- deleteMatterCancelTest -->
+        <test-method signature="deleteMatterTest(java.util.HashMap)[pri:1, instance:com.test.ViewMatterDeleteMatterTest@4470fbd6]" started-at="2023-06-29T15:50:18 IST" name="deleteMatterTest" data-provider="getData1" finished-at="2023-06-29T15:50:28 IST" duration-ms="10251" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=SuperMarket Firm, contactPerson=Raj, emailId=Invert@gnm.com, countryEntitys=Belgium, memberName1=Donald Carpenter, memberName2=Jason Gifford, individualsClientName2=Ananth kumar, confirmEmail=Sonali@fm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Invert@gnm.com, groupName2=Immigration Law, firstName=Sonali, phoneNumber=7878989896, caseNumber=AB014, searchTextIndividuals=Sonali, firmName=SuperMarket Firm, groupName1=Family Law, email=Sonali@fm.com}]]>
+                <![CDATA[{_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clientsIndividualsandTempClientsWithTeamMembers -->
-        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreateMatterTest@8c3b9d]" started-at="2023-06-23T15:05:46 IST" name="down" finished-at="2023-06-23T15:05:46 IST" duration-ms="364" status="PASS">
+        </test-method> <!-- deleteMatterTest -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewMatterDeleteMatterTest@4470fbd6]" started-at="2023-06-29T15:50:28 IST" name="down" finished-at="2023-06-29T15:50:28 IST" duration-ms="509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- down -->
-      </class> <!-- com.test.CreateMatterTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.test.ViewMatterDeleteMatterTest -->
+      <class name="com.test.ViewMatterOpenCloseMatter">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:48:58 IST" name="launchApplication" finished-at="2023-06-29T15:49:06 IST" duration-ms="7277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="closeMatterwithCancelTest(java.util.HashMap)[pri:0, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:49:06 IST" name="closeMatterwithCancelTest" data-provider="getData0" finished-at="2023-06-29T15:49:19 IST" duration-ms="13389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MatterName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeMatterwithCancelTest -->
+        <test-method signature="closeMattersTest(java.util.HashMap)[pri:1, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:49:19 IST" name="closeMattersTest" data-provider="getData0" finished-at="2023-06-29T15:49:34 IST" duration-ms="15567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MatterName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeMattersTest -->
+        <test-method signature="reOpenMatterwithCancelTest(java.util.HashMap)[pri:2, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:49:35 IST" name="reOpenMatterwithCancelTest" data-provider="getData0" finished-at="2023-06-29T15:49:43 IST" duration-ms="8450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MatterName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reOpenMatterwithCancelTest -->
+        <test-method signature="reOpenMatterTest(java.util.HashMap)[pri:3, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:49:43 IST" name="reOpenMatterTest" data-provider="getData0" finished-at="2023-06-29T15:49:57 IST" duration-ms="14402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{MatterName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reOpenMatterTest -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewMatterOpenCloseMatter@448c8166]" started-at="2023-06-29T15:49:57 IST" name="down" finished-at="2023-06-29T15:49:58 IST" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.ViewMatterOpenCloseMatter -->
+      <class name="com.test.CreateMatterNegative2Test">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:29:40 IST" name="launchApplication" finished-at="2023-06-29T15:29:49 IST" duration-ms="9476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="enterDetailsandClickCancel(java.util.HashMap)[pri:0, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:29:50 IST" name="enterDetailsandClickCancel" data-provider="getData0" finished-at="2023-06-29T15:30:33 IST" duration-ms="42747" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the company they work for or those of other organizations., prioritySelect=Medium, caseType=Individuals, advocateEmail=vimal@gm.com, courtName=High Court, advocateName=Vimal, _comment=0.Enter the All Details and Click on Cancel button, caseNumber=MN01, advocatePhone=9876543210, judges=Kannan}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkAllFieldsareEmptyinMatterinfoPage(CreateMatter.java:551)
+at com.test.CreateMatterNegative2Test.enterDetailsandClickCancel(CreateMatterNegative2Test.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterDetailsandClickCancel -->
+        <test-method signature="selectGroupsandClickCancel(java.util.HashMap)[pri:1, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:30:33 IST" name="selectGroupsandClickCancel" data-provider="getData1" finished-at="2023-06-29T15:31:18 IST" duration-ms="44697" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control systems., prioritySelect=Low, caseType=Crime Case, advocateEmail=Rajkumar@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Raj, _comment=1.Select the Groups and Click on Cancel , caseNumber=KM15, advocatePhone=7744774411, judges=Vasanth, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkLeftSidegroupsSelectedNameareEmpty(CreateMatter.java:433)
+at com.test.CreateMatterNegative2Test.selectGroupsandClickCancel(CreateMatterNegative2Test.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectGroupsandClickCancel -->
+        <test-method signature="selectGroupSeletAllandClickCancel(java.util.HashMap)[pri:2, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:31:18 IST" name="selectGroupSeletAllandClickCancel" data-provider="getData2" finished-at="2023-06-29T15:31:59 IST" duration-ms="40332" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items to documentation, prioritySelect=High, caseType=Case, advocateEmail=AshokK@gm.com, courtName=Madras Court, advocateName=Ashok, _comment=2.Select the Groups and Select All Click on Cancel , caseNumber=FG012, advocatePhone=9696858555, judges=RajKumar}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkLeftSideSelectedNameareEmpty(CreateMatter.java:422)
+at com.test.CreateMatterNegative2Test.selectGroupSeletAllandClickCancel(CreateMatterNegative2Test.java:62)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectGroupSeletAllandClickCancel -->
+        <test-method signature="selectClientsandClickCancel(java.util.HashMap)[pri:3, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:31:59 IST" name="selectClientsandClickCancel" data-provider="getData3" finished-at="2023-06-29T15:32:54 IST" duration-ms="55133" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit tests and findings., prioritySelect=Medium, individualsClientName2=Ananth kumar, caseType=Individuals, individualsClientName1=Vengadeshwaran Ramamoorthy, advocateEmail=RamLaksh@gm.com, groupName2=Immigration Law, courtName=Mumbai High Court, advocateName=Ram, _comment=3.Select the Clients and Click on Cancel  , caseNumber=LKW21, advocatePhone=7744885522, judges=Deepan, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectClientsandClickCancel -->
+        <test-method signature="selectClientsSeletAllandClickCancel(java.util.HashMap)[pri:4, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:32:54 IST" name="selectClientsSeletAllandClickCancel" data-provider="getData4" finished-at="2023-06-29T15:33:50 IST" duration-ms="55257" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities that help., prioritySelect=Low, caseType=Civil law Case, advocateEmail=Gopi98@gm.com, groupName2=Immigration Law, courtName=Madurai Court, advocateName=Gopi, _comment=4.Select the Clients and Select All Click on Cancel , caseNumber=ABV21, advocatePhone=9629139447, judges=Pradeep, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+at com.test.CreateMatterNegative2Test.selectClientsSeletAllandClickCancel(CreateMatterNegative2Test.java:112)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectClientsSeletAllandClickCancel -->
+        <test-method signature="selectTeamMemberandClickCancel(java.util.HashMap)[pri:5, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:33:50 IST" name="selectTeamMemberandClickCancel" data-provider="getData5" finished-at="2023-06-29T15:35:00 IST" duration-ms="69677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in accounting or business, memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Corporate law , individualsClientName1=Alliance Law Group, advocateEmail=Kevin@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Kevin, _comment=5.selectTeamMemberandClickCancel , caseNumber=MN156, advocatePhone=9876543210, judges=Kavin, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectTeamMemberandClickCancel -->
+        <test-method signature="selectTeamMeberSeletAllandClickCancel(java.util.HashMap)[pri:6, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:35:00 IST" name="selectTeamMeberSeletAllandClickCancel" data-provider="getData6" finished-at="2023-06-29T15:36:14 IST" duration-ms="73969" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise in the field., prioritySelect=Medium, individualsClientName2=Apollo Healthcare, caseType=Criminal cases, individualsClientName1=Alliance Law Group, advocateEmail=Rithish@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=Rithish, _comment=6.selectTeamMeberSeletAllandClickCancel, caseNumber=PLW12, advocatePhone=6868787822, judges=Rishi, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+at com.test.CreateMatterNegative2Test.selectTeamMeberSeletAllandClickCancel(CreateMatterNegative2Test.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectTeamMeberSeletAllandClickCancel -->
+        <test-method signature="selectDocumentandClickCancel(java.util.HashMap)[pri:7, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:36:14 IST" name="selectDocumentandClickCancel" data-provider="getData7" finished-at="2023-06-29T15:37:33 IST" duration-ms="79145" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, description=Audit is the examination or inspection of various books of accounts, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Cases, individualsClientName1=Alliance Law Group, advocateEmail=vickyks@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Vicky, _comment=7.selectDocumentandClickCancel, caseNumber=LWK13, advocatePhone=8877887755, judges=Venkatesh, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDocumentandClickCancel -->
+        <test-method signature="selectDocumentsSeletAllandClickCancel(java.util.HashMap)[pri:8, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:37:33 IST" name="selectDocumentsSeletAllandClickCancel" data-provider="getData8" finished-at="2023-06-29T15:38:52 IST" duration-ms="79167" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following documented system of recording transactions., memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Crime Case, individualsClientName1=Alliance Law Group, advocateEmail=sivakumar@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Sivakumar, _comment=8.selectDocumentsSeletAllandClickCancel, caseNumber=KS231, advocatePhone=9966996633, judges=Arvind, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+at com.test.CreateMatterNegative2Test.selectDocumentsSeletAllandClickCancel(CreateMatterNegative2Test.java:234)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDocumentsSeletAllandClickCancel -->
+        <test-method signature="enterAllDetailsandConfirmPopupClickNO(java.util.HashMap)[pri:9, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:38:52 IST" name="enterAllDetailsandConfirmPopupClickNO" data-provider="getData9" finished-at="2023-06-29T15:40:13 IST" duration-ms="80271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, description= validating the integrity of an organization's processes, systems and information, both financial and non-financial. , memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Lawyer, individualsClientName1=Alliance Law Group, advocateEmail=Ranjith@gm.com, groupName2=Immigration Law, courtName=Madras Court, advocateName=Ranjith, _comment=9.enterAllDetailsandConfirmPopupClickNO, caseNumber=TRK2134, advocatePhone=6858487822, judges=Rajesh, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsandConfirmPopupClickNO -->
+        <test-method signature="enterAllDetailsandViewMatterPopup(java.util.HashMap)[pri:10, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:40:13 IST" name="enterAllDetailsandViewMatterPopup" data-provider="getData10" finished-at="2023-06-29T15:41:29 IST" duration-ms="75776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, description=Professional auditors also provide advice and consultation to business leaders, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Criminal case, individualsClientName1=Alliance Law Group, advocateEmail=kishore12@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=kishore, _comment=10.enterAllDetailsandViewMatterPopup, caseNumber=VFD23, advocatePhone=9524281515, judges=Madhan, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsandViewMatterPopup -->
+        <test-method signature="enterAllDetailsWithoutTeamMemberandViewMatterPopup(java.util.HashMap)[pri:11, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:41:29 IST" name="enterAllDetailsWithoutTeamMemberandViewMatterPopup" data-provider="getData11" finished-at="2023-06-29T15:42:37 IST" duration-ms="68643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, description=how to better manage and control risks within an organization., prioritySelect=High, individualsClientName2=Apollo Healthcare, caseType=Individuals, individualsClientName1=Alliance Law Group, advocateEmail=madesh921@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Madesh, _comment=11.enterAllDetailsWithoutTeamMemberandViewMatterPopup, caseNumber=FD231, advocatePhone=9876543210, judges=Mani, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsWithoutTeamMemberandViewMatterPopup -->
+        <test-method signature="enterAllDetailsWithoutDocumentandViewMatterPopup(java.util.HashMap)[pri:12, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:42:37 IST" name="enterAllDetailsWithoutDocumentandViewMatterPopup" data-provider="getData12" finished-at="2023-06-29T15:43:46 IST" duration-ms="68583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and verify the accuracy, memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Civil law Case, individualsClientName1=Alliance Law Group, advocateEmail=Arunkumar@gm.com, groupName2=Immigration Law, courtName=Madurai Supreme Court, advocateName=Arun, _comment=12.enterAllDetailsWithoutDocumentandViewMatterPopup, caseNumber=MN0155, advocatePhone=7711223355, judges=dheena, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsWithoutDocumentandViewMatterPopup -->
+        <test-method signature="enterAllDetailsWithoutTMandDocumentandViewMatterPopup(java.util.HashMap)[pri:13, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:43:46 IST" name="enterAllDetailsWithoutTMandDocumentandViewMatterPopup" data-provider="getData13" finished-at="2023-06-29T15:44:48 IST" duration-ms="62234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized field, such as accounting or business administration, prioritySelect=Low, individualsClientName2=Apollo Healthcare, caseType=Lawyer case, individualsClientName1=Alliance Law Group, advocateEmail=prakash22@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=prakash, _comment=13.enterAllDetailsWithoutTMandDocumentandViewMatterPopup, caseNumber=TRE32, advocatePhone=9891919566, judges=Surya, groupName1=Family Law}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsWithoutTMandDocumentandViewMatterPopup -->
+        <test-method signature="enterAllDetailsandSelectAllNames(java.util.HashMap)[pri:14, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:44:48 IST" name="enterAllDetailsandSelectAllNames" data-provider="getData14" finished-at="2023-06-29T15:45:47 IST" duration-ms="59358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financial statements audited by them and presented to the company., prioritySelect=High, caseType=Custody case, advocateEmail=sekaran@gm.com, courtName=Kumbakonam High Court, advocateName=Sekaran, _comment=14.enterAllDetailsandSelectAllNames, caseNumber=MN631, advocatePhone=8838785522, judges=Guna}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterAllDetailsandSelectAllNames -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreateMatterNegative2Test@5be1d0a4]" started-at="2023-06-29T15:45:47 IST" name="down" finished-at="2023-06-29T15:45:48 IST" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.CreateMatterNegative2Test -->
+      <class name="com.test.ViewMatterUpdateGroupsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:45:48 IST" name="launchApplication" finished-at="2023-06-29T15:45:55 IST" duration-ms="6575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="selectGroupandUnSelectGroups(java.util.HashMap)[pri:0, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:45:55 IST" name="selectGroupandUnSelectGroups" data-provider="getData0" finished-at="2023-06-29T15:46:32 IST" duration-ms="37795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Groups and UnSelect Group and Save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectGroupandUnSelectGroups -->
+        <test-method signature="selectMultipleGroups(java.util.HashMap)[pri:1, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:46:32 IST" name="selectMultipleGroups" data-provider="getData1" finished-at="2023-06-29T15:47:07 IST" duration-ms="34951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Groups and Save, CaseName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMultipleGroups -->
+        <test-method signature="unSelectGroupandSelectGroups(java.util.HashMap)[pri:2, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:47:07 IST" name="unSelectGroupandSelectGroups" data-provider="getData2" finished-at="2023-06-29T15:47:43 IST" duration-ms="36080" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect Groups and Select another save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unSelectGroupandSelectGroups -->
+        <test-method signature="unSelectMultipleGroups(java.util.HashMap)[pri:3, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:47:43 IST" name="unSelectMultipleGroups" data-provider="getData3" finished-at="2023-06-29T15:48:08 IST" duration-ms="24991" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSelect Groups and Save, CaseName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unSelectMultipleGroups -->
+        <test-method signature="alertMessageDisplayForClients(java.util.HashMap)[pri:4, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:48:08 IST" name="alertMessageDisplayForClients" data-provider="getData4" finished-at="2023-06-29T15:48:34 IST" duration-ms="25213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertMessageDisplayForClients -->
+        <test-method signature="selectedGroupNamesareDisplay(java.util.HashMap)[pri:5, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:48:34 IST" name="selectedGroupNamesareDisplay" data-provider="getData5" finished-at="2023-06-29T15:48:58 IST" duration-ms="24141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Display Correct or not , CaseName=Legal Consumer Matter}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectedGroupNamesareDisplay -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.ViewMatterUpdateGroupsTest@147e2ae7]" started-at="2023-06-29T15:48:58 IST" name="down" finished-at="2023-06-29T15:48:58 IST" duration-ms="503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- com.test.ViewMatterUpdateGroupsTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

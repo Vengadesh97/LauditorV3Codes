@@ -2,7 +2,6 @@ package com.pom;
 
 import java.util.Arrays;
 import java.util.List;
-import static org.junit.Assert.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.junit.Assert;
+import org.testng.Assert;
 
 import com.abst.Reusable;
 
@@ -207,9 +206,6 @@ public class CreateMatter extends Reusable {
 
 	// Temp Client - Individuals
 
-	@FindBy(xpath = "//input[@placeholder='SearchClient']")
-	WebElement inputTempClientSearchBox;
-
 	@FindBy(id = "name")
 	WebElement firstNameTempClient;
 
@@ -344,6 +340,12 @@ public class CreateMatter extends Reusable {
 		alertYes.click();
 	}
 
+	public void alertPopupNo() throws InterruptedException {
+		Thread.sleep(1000);
+		visibilityOfAllElements(alertNo);
+		alertNo.click();
+	}
+
 	public void viewMatterListSuccess() throws InterruptedException {
 		visibilityOfAllElements(viewMatterListSuccessPopup);
 		viewMatterListSuccessPopup.click();
@@ -415,27 +417,114 @@ public class CreateMatter extends Reusable {
 	WebElement names;
 
 	public void checkLeftSideSelectedNameareEmpty() throws InterruptedException {
+		scrollUpnearbySearchbox();
+		Thread.sleep(2000);
+		Assert.assertTrue(names.getText().isEmpty());
 
-		Thread.sleep(3000);
-		Assert.assertTrue("Fields is not empty", names.getText().isEmpty());
+	}
+	
+	
+	@FindBy(xpath="(//div[@class='col-6 matterpadding'])[1]")
+	WebElement clientEmptyname;
+	
+	public void checkLeftSidegroupsSelectedNameareEmpty() throws InterruptedException {
+		scrollUpnearbySearchbox();
+		Thread.sleep(2000);
+		Assert.assertTrue(clientEmptyname.getText().isEmpty());
 
+	}
+
+	public void scrollUpnearbySearchbox() throws InterruptedException {
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,500)");
 	}
 
 	// Select All Button
 	@FindBy(id = "selectAll")
 	WebElement selectAll;
 
-	public void selectAllBtn() {
+	public void selectAllBtn() throws InterruptedException {
+		Thread.sleep(2000);
 		visibilityOfAllElements(selectAll);
 		selectAll.click();
 	}
 
-	public void checkSelectAllCheckboxIsUnSelected() {
+	public void checkSelectAllCheckboxIsUnSelected() throws InterruptedException {
+		scrollUpnearbySearchbox();
+		Thread.sleep(2000);
 		visibilityOfAllElements(selectAll);
 		boolean isNameUnselected = !selectAll.isSelected();
-		Assert.assertTrue("The name checkbox should be unselected.", isNameUnselected);
+		Assert.assertTrue(isNameUnselected);
 
 	}
+
+	// Client - TEmp Client - Search box
+	@FindBy(xpath = "//input[@type='text']")
+	WebElement inputTempClientSearchBox;
+
+	public void InputSearchBox(String text) throws InterruptedException {
+		pageUp();
+		Thread.sleep(2000);
+		visibilityOfAllElements(inputTempClientSearchBox);
+		inputTempClientSearchBox.sendKeys(text);
+
+	}
+	
+	public void InputSearchBoxTempClients(String searchText) throws InterruptedException {
+		Thread.sleep(3000);
+		inputTempClientSearchBox.sendKeys(searchText);
+
+	}
+
+	public void oneNameSelect(String NameList) throws InterruptedException {
+		Thread.sleep(2000);
+
+		try {
+			String textGroup = new String();
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			WebElement checkboxSelectedGroupName;
+			for (int i = 0; i < listOfGroupsName.size(); i++) {
+				textGroup = listOfGroupsName.get(i).getText();
+				// System.out.println("All Group Name Text "+textGroup);
+				if (NameList.contains(textGroup)) {
+					Thread.sleep(2000);
+					checkboxSelectedGroupName = checkboxSelectGroup.get(i);
+					visibilityOfAllElements(checkboxSelectedGroupName);
+					executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+					i--;
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+
+		}
+
+	}
+
+	// Module heading Name
+
+	// MatterInfo
+	@FindBy(xpath = "(//img[@class='stepimg'])[1]")
+	WebElement matterInfoTabCreateMatter;
+
+	// Groups
+	@FindBy(xpath = "(//img[@class='stepimg'])[1]")
+	WebElement groupTabCreateMatter;
+
+	// Clients
+	@FindBy(xpath = "(//img[@class='stepimg'])[1]")
+	WebElement clientTabCreateMatter;
+
+	// Team Member
+	@FindBy(xpath = "(//img[@class='stepimg'])[1]")
+	WebElement teamMemberTabCreateMatter;
+
+	// Documents
+	@FindBy(xpath = "(//img[@class='stepimg'])[1]")
+	WebElement documentTabCreateMatter;
+
+	// Assert Checking scenario
 
 	@FindBy(xpath = "//input[@name='date_of_filling']")
 	WebElement dofTextCheck;
@@ -452,14 +541,14 @@ public class CreateMatter extends Reusable {
 	public void checkAllFieldsareEmptyinMatterinfoPage() throws InterruptedException {
 
 		Thread.sleep(2000);
-		Assert.assertTrue("CaseTitle is not empty", caseTitleField.getText().isEmpty());
-		Assert.assertTrue("CaseNumber is not empty", caseNumberField.getText().isEmpty());
-		Assert.assertTrue("CaseType is not empty", caseTypeField.getText().isEmpty());
-		Assert.assertTrue("Court is not empty", courtNameField.getText().isEmpty());
-		Assert.assertTrue("Judge is not empty", judgesField.getText().isEmpty());
-		Assert.assertTrue("DOF is not empty", dofTextCheck.getText().isEmpty());
-		Assert.assertTrue("Description is not empty", descriptionField.getText().isEmpty());
-		Assert.assertTrue("Opponent is not empty", opponenttext.getText().isEmpty());
+		Assert.assertTrue(caseTitleField.getText().isEmpty());
+		Assert.assertTrue(caseNumberField.getText().isEmpty());
+		Assert.assertTrue(caseTypeField.getText().isEmpty());
+		Assert.assertTrue(courtNameField.getText().isEmpty());
+		Assert.assertTrue(judgesField.getText().isEmpty());
+		Assert.assertTrue(dofTextCheck.getText().isEmpty());
+		Assert.assertTrue(descriptionField.getText().isEmpty());
+		Assert.assertTrue(opponenttext.getText().isEmpty());
 		// Assert.assertTrue("Check Priority is High",priorityHigh.isSelected());
 		// Assert.assertTrue("Check Status is active", statusActive.isSelected());
 	}
@@ -467,35 +556,45 @@ public class CreateMatter extends Reusable {
 	// Temp Clients
 
 	public void checkAllFieldsareEmptyinTempClients() throws InterruptedException {
-
-		pageUp();
-		Thread.sleep(2000);
-		Assert.assertTrue("inputTempClientSearchBox is not empty", inputTempClientSearchBox.getText().isEmpty());
-		Assert.assertTrue("firstNameTempClient is not empty", firstNameTempClient.getText().isEmpty());
-		Assert.assertTrue("lastNameTempClient is not empty", lastNameTempClient.getText().isEmpty());
+		Thread.sleep(3000);
+		visibilityOfAllElements(firstNameTempClient);
+		Assert.assertTrue(firstNameTempClient.getText().isEmpty());
+		Assert.assertTrue(lastNameTempClient.getText().isEmpty());
 		pageDown();
 		Thread.sleep(1000);
-		Assert.assertTrue("emailTempClient is not empty", emailTempClient.getText().isEmpty());
-		Assert.assertTrue("confirmemailTempClient is not empty", confirmemailTempClient.getText().isEmpty());
-		Assert.assertTrue("phonenumberTempClient is not empty", phonenumberTempClient.getText().isEmpty());
+		Assert.assertTrue(emailTempClient.getText().isEmpty());
+		Assert.assertTrue(confirmemailTempClient.getText().isEmpty());
+		Assert.assertTrue(phonenumberTempClient.getText().isEmpty());
 	}
 
 	// Temp Entity
 
 	public void checkAllFieldsareEmptyinTempEntity() throws InterruptedException {
-
-		pageUp();
 		Thread.sleep(2000);
-		Assert.assertTrue("inputTempClientSearchBox is not empty", inputTempClientSearchBox.getText().isEmpty());
-		Assert.assertTrue("firmNameEntity is not empty", firmNameEntity.getText().isEmpty());
-		Assert.assertTrue("contactPersonEntity is not empty", contactPersonEntity.getText().isEmpty());
+		visibilityOfAllElements(entityTab);
+		entityTab.click();
+		Assert.assertTrue(firmNameEntity.getText().isEmpty());
+		Assert.assertTrue(contactPersonEntity.getText().isEmpty());
 		pageDown();
 		Thread.sleep(1000);
-		Assert.assertTrue("emailTempClient is not empty", emailTempClient.getText().isEmpty());
-		Assert.assertTrue("confirmemailTempClient is not empty", confirmemailTempClient.getText().isEmpty());
-		Assert.assertTrue("phonenumberTempClient is not empty", phonenumberTempClient.getText().isEmpty());
+		Assert.assertTrue(emailTempClient.getText().isEmpty());
+		Assert.assertTrue(confirmemailTempClient.getText().isEmpty());
+		Assert.assertTrue(phonenumberTempClient.getText().isEmpty());
 	}
 
+	@FindBy(xpath = "//div //h5[text()='Selected Document(s)']")
+	WebElement selectedDocumentNameText;
+
+	public void selectedDocumentNameTextVerification() throws InterruptedException {
+		scrollUpnearbySearchbox();
+		Thread.sleep(2000);
+		visibilityOfAllElements(selectedDocumentNameText);
+		boolean text = selectedDocumentNameText.isDisplayed();
+		Assert.assertTrue(text);
+	}
+
+	
+	
 }
 
 /*

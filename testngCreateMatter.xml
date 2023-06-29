@@ -6,7 +6,10 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.test.ViewMatterEditMatterInfoTest"/>
+	<class name="com.test.CreateMatterNegative2Test"/>	
+	<class name="com.test.ViewMatterUpdateGroupsTest"/>	
+	<class name="com.test.ViewMatterOpenCloseMatter"/>	
+	<class name="com.test.ViewMatterDeleteMatterTest"/>	
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

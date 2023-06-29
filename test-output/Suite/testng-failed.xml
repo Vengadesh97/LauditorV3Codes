@@ -6,82 +6,18 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.ViewMatterEditMatterInfoTest">
+      <class name="com.test.CreateMatterNegative2Test">
         <methods>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandJudge"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandPriority"/>
-          <include name="editMatterInfoMandatoryWithPriorityandStatus"/>
-          <include name="editMatterInfoMandatoryWithDOFandPriority"/>
-          <include name="editMatterInfoMandatoryWithJudgeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandCaseType"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority"/>
-          <include name="editMatterInfoMandatoryWithOpponentAdvocate"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge"/>
-          <include name="editMatterInfoMandatoryWithCourtandJudge"/>
+          <include name="selectGroupsandClickCancel" invocation-numbers="0"/>
+          <include name="selectClientsSeletAllandClickCancel" invocation-numbers="0"/>
+          <include name="selectDocumentsSeletAllandClickCancel" invocation-numbers="0"/>
+          <include name="selectGroupSeletAllandClickCancel" invocation-numbers="0"/>
           <include name="down"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandJudge"/>
-          <include name="editMatterInfoMandatoryWithDOFandCasetype"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent"/>
-          <include name="editMatterInfoMandatoryWithCourtandPriority"/>
-          <include name="editMatterInfoMandatoryWithPriority"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandStatus"/>
-          <include name="editMatterInfoMandatoryWithPriorityandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithJudgeandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandCourt"/>
+          <include name="enterDetailsandClickCancel" invocation-numbers="0"/>
+          <include name="selectTeamMeberSeletAllandClickCancel" invocation-numbers="0"/>
           <include name="launchApplication"/>
-          <include name="editMatterInfoAllFieldEnteredandCancel"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandPriority"/>
-          <include name="editMatterInfoMandatoryWithDOFandStatus"/>
-          <include name="editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithJudge"/>
-          <include name="editMatterInfoMandatoryWithDOFandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandCourt"/>
-          <include name="editMatterInfoMandatoryWithCourtandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithCourt"/>
-          <include name="editMatterInfoMandatoryWithDOFandDescription"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent"/>
-          <include name="editMatterInfoMandatoryWithDOFandCourt"/>
-          <include name="editMatterInfoMandatoryWithCourtandStatus"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeandPriority"/>
-          <include name="editMatterInfoMandatoryWithCaseType"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandJudge"/>
-          <include name="editMatterInfoMandatoryWithDescription"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus"/>
-          <include name="editMatterInfoMandatoryWithJudgeandPriority"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent"/>
-          <include name="editMatterInfoMandatoryWithStatusandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandPriority"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandCourt"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandCaseType"/>
-          <include name="editMatterInfoMandatoryWithDOF"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt"/>
-          <include name="editMatterInfoAllFieldsEntered"/>
-          <include name="editMatterInfoMandatoryWithDOFandJudge"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandCourt"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandPriority"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandPriority"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandStatus"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge"/>
-          <include name="editMatterInfoMandatoryWithStatus"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionandJudge"/>
         </methods>
-      </class> <!-- com.test.ViewMatterEditMatterInfoTest -->
+      </class> <!-- com.test.CreateMatterNegative2Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

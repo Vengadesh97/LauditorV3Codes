@@ -17,13 +17,15 @@ public class ViewMatterOpenCloseMatter extends BaseClass {
 	@Test(dataProvider = "getData0", priority = 0)
 	public void closeMatterwithCancelTest(HashMap<String, String> input) throws InterruptedException {
 
-		try {
-			viewMatters.leftMatterTab();
-			viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
-			viewMatterOpenCloseMatter.closeMatterWithCancel();
-		} finally {
-			viewMatters.leftMatterTab();
-		}
+	
+			try {
+				viewMatters.leftMatterTab();
+				viewMatters.searchBarFieldsandActionBtn(input.get("MatterName"));
+				viewMatterOpenCloseMatter.closeMatterWithCancel();
+			} finally {
+				viewMatters.leftMatterTab();
+			}
+
 	}
 
 	// CloseMattersTest

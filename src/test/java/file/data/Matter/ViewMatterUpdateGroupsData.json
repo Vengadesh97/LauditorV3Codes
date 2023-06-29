@@ -2,47 +2,47 @@
 	{
 		"_comment":"0.Select Groups and UnSelect Group and Save",
 		"CaseName": "Legal Consumer Matter",
-		"selectgroupName1": "Case 1",
-		"selectgroupName2": "Test123",
-		"selectgroupName3": "Group Checking",
-		"unSelectgroupName1": "Case 1",
-		"unSelectgroupName2": "Test123",
-		"unSelectgroupName3": "Group Checking"
+		"selectgroupName1": "Group 1",
+		"selectgroupName2": "Group 2",
+		"selectgroupName3": "Group 3",
+		"unSelectgroupName1": "Group 1",
+		"unSelectgroupName2": "Group 2",
+		"unSelectgroupName3": "Group 3"
 	},
 	{
 		"_comment":"1.Select Groups and Save",
 		"CaseName": "Legal Consumer Matter",
-		"selectgroupName1": "Case 1",
-		"selectgroupName2": "Test123",
-		"selectgroupName3": "Group Checking"
+		"selectgroupName1": "Group 1",
+		"selectgroupName2": "Group 2",
+		"selectgroupName3": "Group 3"
 	},
 	{
 		"_comment":"2.Unselect Groups and Select another save",
 		"CaseName": "Legal Consumer Matter",
-		"unSelectgroupName1": "Case 1",
-		"unSelectgroupName2": "Test123",
-		"unSelectgroupName3": "Group Checking",
-		"selectgroupName1": "Case 1",
-		"selectgroupName2": "Test123",
-		"selectgroupName3": "Group Checking"
+		"unSelectgroupName1": "Group 1",
+		"unSelectgroupName2": "Group 2",
+		"unSelectgroupName3": "Group 3",
+		"selectgroupName1": "Group 1",
+		"selectgroupName2": "Group 2",
+		"selectgroupName3": "Group 3"
 	},
 	{
 		"_comment":"3.UnSelect Groups and Save",
 		"CaseName": "Legal Consumer Matter",
-		"unSelectgroupName1": "Case 1",
-		"unSelectgroupName2": "Test123",
-		"unSelectgroupName3": "Group Checking"
+		"unSelectgroupName1": "Group 1",
+		"unSelectgroupName2": "Group 2",
+		"unSelectgroupName3": "Group 3"
 	},
 	{
 		"_comment":"4.Alert message should display mandatory clients",	
 		"CaseName": "Legal Consumer Matter",
-		"groupName":"Matter Team Case"
+		"groupName":"Immigration Law"
 	},
 	{
 		"_comment":"5.Check GroupNames are Display Correct or not ",
 		"CaseName": "Legal Consumer Matter",
-		"selectgroupName1": "Matter Team Case",
-		"selectgroupName2": "Meeting Group"
+		"selectgroupName1": "Immigration Law",
+		"selectgroupName2": "Family Law"
 	}
 	
 

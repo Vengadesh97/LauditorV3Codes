@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.base.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.CreateMatterTest">
+      <class name="com.test.CreateMatterNegative2Test">
         <methods>
-          <include name="clientsIndividualsandTempClients" invocation-numbers="0"/>
+          <include name="selectGroupsandClickCancel" invocation-numbers="0"/>
+          <include name="selectClientsSeletAllandClickCancel" invocation-numbers="0"/>
+          <include name="selectDocumentsSeletAllandClickCancel" invocation-numbers="0"/>
+          <include name="selectGroupSeletAllandClickCancel" invocation-numbers="0"/>
           <include name="down"/>
+          <include name="enterDetailsandClickCancel" invocation-numbers="0"/>
+          <include name="selectTeamMeberSeletAllandClickCancel" invocation-numbers="0"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.CreateMatterTest -->
+      </class> <!-- com.test.CreateMatterNegative2Test -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

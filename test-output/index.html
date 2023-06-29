@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,11 +21,12 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse--370626033\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\Vengadesh\git\LauditorV3Codes\Lauditor\testngCreateMatter.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,26 +93,160 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">27 methods, 6 failed,   21 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterDetailsandClickCancel({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the compan...)">enterDetailsandClickCancel({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the compan...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectClientsSeletAllandClickCancel({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities ...)">selectClientsSeletAllandClickCancel({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectDocumentsSeletAllandClickCancel({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following docu...)">selectDocumentsSeletAllandClickCancel({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following docu...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectGroupSeletAllandClickCancel({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items...)">selectGroupSeletAllandClickCancel({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectGroupsandClickCancel({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control s...)">selectGroupsandClickCancel({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control s...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectTeamMeberSeletAllandClickCancel({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise i...)">selectTeamMeberSeletAllandClickCancel({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise i...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.test.CreateMatterTest" class="method navigator-link" hash-for-method="clientsIndividualsandTempClients({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=M...)">clientsIndividualsandTempClients({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=M...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="alertMessageDisplayForClients({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Lega...)">alertMessageDisplayForClients({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Lega...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.test.CreateMatterTest" class="method navigator-link" hash-for-method="clientsIndividualsandTempClientsWithTeamMembers({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=Su...)">clientsIndividualsandTempClientsWithTeamMembers({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=Su...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterOpenCloseMatter" class="method navigator-link" hash-for-method="closeMattersTest({MatterName=Legal Consumer Matter})">closeMattersTest({MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterOpenCloseMatter" class="method navigator-link" hash-for-method="closeMatterwithCancelTest({MatterName=Legal Consumer Matter})">closeMatterwithCancelTest({MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterDeleteMatterTest" class="method navigator-link" hash-for-method="deleteMatterCancelTest({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter})">deleteMatterCancelTest({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterDeleteMatterTest" class="method navigator-link" hash-for-method="deleteMatterTest({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter})">deleteMatterTest({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsWithoutDocumentandViewMatterPopup({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and ...)">enterAllDetailsWithoutDocumentandViewMatterPopup({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsWithoutTMandDocumentandViewMatterPopup({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor&#039;s degree in a recognized fie...)">enterAllDetailsWithoutTMandDocumentandViewMatterPopup({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized fie...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsWithoutTeamMemberandViewMatterPopup({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, desc...)">enterAllDetailsWithoutTeamMemberandViewMatterPopup({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, desc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsandConfirmPopupClickNO({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, desc...)">enterAllDetailsandConfirmPopupClickNO({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, desc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsandSelectAllNames({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financia...)">enterAllDetailsandSelectAllNames({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financia...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="enterAllDetailsandViewMatterPopup({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, desc...)">enterAllDetailsandViewMatterPopup({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, desc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterOpenCloseMatter" class="method navigator-link" hash-for-method="reOpenMatterTest({MatterName=Legal Consumer Matter})">reOpenMatterTest({MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterOpenCloseMatter" class="method navigator-link" hash-for-method="reOpenMatterwithCancelTest({MatterName=Legal Consumer Matter})">reOpenMatterwithCancelTest({MatterName=Legal Consumer Matter})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectClientsandClickCancel({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit t...)">selectClientsandClickCancel({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectDocumentandClickCancel({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, descr...)">selectDocumentandClickCancel({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, descr...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="selectGroupandUnSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Gro...)">selectGroupandUnSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Gro...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="selectMultipleGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Gro...)">selectMultipleGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Gro...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.CreateMatterNegative2Test" class="method navigator-link" hash-for-method="selectTeamMemberandClickCancel({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master&#039;s degree in ...)">selectTeamMemberandClickCancel({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="selectedGroupNamesareDisplay({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Disp...)">selectedGroupNamesareDisplay({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Disp...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="unSelectGroupandSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect G...)">unSelectGroupandSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect G...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.test.ViewMatterUpdateGroupsTest" class="method navigator-link" hash-for-method="unSelectMultipleGroups({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSe...)">unSelectMultipleGroups({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSe...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,138 +257,657 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.test.CreateMatterTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.test.CreateMatterNegative2Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clientsIndividualsandTempClients({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=M...)">
-                  </a> <!-- clientsIndividualsandTempClients({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=M...) -->
-                  <span class="method-name">clientsIndividualsandTempClients</span>
-                  <span class="parameters">({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=Medical Firm, contactPerson=vanthiyan, emailId=vanthiyan@gm.com, countryEntitys=Belgium, individualsClientName2=Ananth kumar, confirmEmail=Aathi@gm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=vanthiyan@gm.com, groupName2=Immigration Law, firstName=Aathi, phoneNumber=9696969693, caseNumber=AB013, searchTextIndividuals=Aathiraj, firmName=vanthiyan Firm, groupName1=Family Law, email=Aathi@gm.com})</span>
+                  <a name="enterDetailsandClickCancel({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the compan...)">
+                  </a> <!-- enterDetailsandClickCancel({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the compan...) -->
+                  <span class="method-name">enterDetailsandClickCancel</span>
+                  <span class="parameters">({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the company they work for or those of other organizations., prioritySelect=Medium, caseType=Individuals, advocateEmail=vimal@gm.com, courtName=High Court, advocateName=Vimal, _comment=0.Enter the All Details and Click on Cancel button, caseNumber=MN01, advocatePhone=9876543210, judges=Kannan})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkAllFieldsareEmptyinMatterinfoPage(CreateMatter.java:551)
+	at com.test.CreateMatterNegative2Test.enterDetailsandClickCancel(CreateMatterNegative2Test.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="clientsIndividualsandTempClientsWithTeamMembers({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=Su...)">
-                  </a> <!-- clientsIndividualsandTempClientsWithTeamMembers({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=Su...) -->
-                  <span class="method-name">clientsIndividualsandTempClientsWithTeamMembers</span>
-                  <span class="parameters">({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=SuperMarket Firm, contactPerson=Raj, emailId=Invert@gnm.com, countryEntitys=Belgium, memberName1=Donald Carpenter, memberName2=Jason Gifford, individualsClientName2=Ananth kumar, confirmEmail=Sonali@fm.com, individualsClientName1=Vengadeshwaran Ramamoorthy, confirmEmailId=Invert@gnm.com, groupName2=Immigration Law, firstName=Sonali, phoneNumber=7878989896, caseNumber=AB014, searchTextIndividuals=Sonali, firmName=SuperMarket Firm, groupName1=Family Law, email=Sonali@fm.com})</span>
+                  <a name="selectClientsSeletAllandClickCancel({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities ...)">
+                  </a> <!-- selectClientsSeletAllandClickCancel({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities ...) -->
+                  <span class="method-name">selectClientsSeletAllandClickCancel</span>
+                  <span class="parameters">({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities that help., prioritySelect=Low, caseType=Civil law Case, advocateEmail=Gopi98@gm.com, groupName2=Immigration Law, courtName=Madurai Court, advocateName=Gopi, _comment=4.Select the Clients and Select All Click on Cancel , caseNumber=ABV21, advocatePhone=9629139447, judges=Pradeep, groupName1=Family Law})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectClientsSeletAllandClickCancel(CreateMatterNegative2Test.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectDocumentsSeletAllandClickCancel({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following docu...)">
+                  </a> <!-- selectDocumentsSeletAllandClickCancel({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following docu...) -->
+                  <span class="method-name">selectDocumentsSeletAllandClickCancel</span>
+                  <span class="parameters">({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following documented system of recording transactions., memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Crime Case, individualsClientName1=Alliance Law Group, advocateEmail=sivakumar@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Sivakumar, _comment=8.selectDocumentsSeletAllandClickCancel, caseNumber=KS231, advocatePhone=9966996633, judges=Arvind, groupName1=Family Law})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectDocumentsSeletAllandClickCancel(CreateMatterNegative2Test.java:234)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectGroupSeletAllandClickCancel({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items...)">
+                  </a> <!-- selectGroupSeletAllandClickCancel({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items...) -->
+                  <span class="method-name">selectGroupSeletAllandClickCancel</span>
+                  <span class="parameters">({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items to documentation, prioritySelect=High, caseType=Case, advocateEmail=AshokK@gm.com, courtName=Madras Court, advocateName=Ashok, _comment=2.Select the Groups and Select All Click on Cancel , caseNumber=FG012, advocatePhone=9696858555, judges=RajKumar})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkLeftSideSelectedNameareEmpty(CreateMatter.java:422)
+	at com.test.CreateMatterNegative2Test.selectGroupSeletAllandClickCancel(CreateMatterNegative2Test.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectGroupsandClickCancel({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control s...)">
+                  </a> <!-- selectGroupsandClickCancel({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control s...) -->
+                  <span class="method-name">selectGroupsandClickCancel</span>
+                  <span class="parameters">({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control systems., prioritySelect=Low, caseType=Crime Case, advocateEmail=Rajkumar@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Raj, _comment=1.Select the Groups and Click on Cancel , caseNumber=KM15, advocatePhone=7744774411, judges=Vasanth, groupName1=Family Law})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkLeftSidegroupsSelectedNameareEmpty(CreateMatter.java:433)
+	at com.test.CreateMatterNegative2Test.selectGroupsandClickCancel(CreateMatterNegative2Test.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectTeamMeberSeletAllandClickCancel({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise i...)">
+                  </a> <!-- selectTeamMeberSeletAllandClickCancel({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise i...) -->
+                  <span class="method-name">selectTeamMeberSeletAllandClickCancel</span>
+                  <span class="parameters">({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise in the field., prioritySelect=Medium, individualsClientName2=Apollo Healthcare, caseType=Criminal cases, individualsClientName1=Alliance Law Group, advocateEmail=Rithish@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=Rithish, _comment=6.selectTeamMeberSeletAllandClickCancel, caseNumber=PLW12, advocatePhone=6868787822, judges=Rishi, groupName1=Family Law})</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectTeamMeberSeletAllandClickCancel(CreateMatterNegative2Test.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.test.ViewMatterUpdateGroupsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="alertMessageDisplayForClients({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Lega...)">
+                  </a> <!-- alertMessageDisplayForClients({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Lega...) -->
+                  <span class="method-name">alertMessageDisplayForClients</span>
+                  <span class="parameters">({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectGroupandUnSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Gro...)">
+                  </a> <!-- selectGroupandUnSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Gro...) -->
+                  <span class="method-name">selectGroupandUnSelectGroups</span>
+                  <span class="parameters">({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Groups and UnSelect Group and Save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectMultipleGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Gro...)">
+                  </a> <!-- selectMultipleGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Gro...) -->
+                  <span class="method-name">selectMultipleGroups</span>
+                  <span class="parameters">({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Groups and Save, CaseName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectedGroupNamesareDisplay({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Disp...)">
+                  </a> <!-- selectedGroupNamesareDisplay({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Disp...) -->
+                  <span class="method-name">selectedGroupNamesareDisplay</span>
+                  <span class="parameters">({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Display Correct or not , CaseName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unSelectGroupandSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect G...)">
+                  </a> <!-- unSelectGroupandSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect G...) -->
+                  <span class="method-name">unSelectGroupandSelectGroups</span>
+                  <span class="parameters">({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect Groups and Select another save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unSelectMultipleGroups({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSe...)">
+                  </a> <!-- unSelectMultipleGroups({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSe...) -->
+                  <span class="method-name">unSelectMultipleGroups</span>
+                  <span class="parameters">({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSelect Groups and Save, CaseName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.test.ViewMatterDeleteMatterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteMatterCancelTest({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter})">
+                  </a> <!-- deleteMatterCancelTest({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">deleteMatterCancelTest</span>
+                  <span class="parameters">({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteMatterTest({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter})">
+                  </a> <!-- deleteMatterTest({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">deleteMatterTest</span>
+                  <span class="parameters">({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.test.ViewMatterOpenCloseMatter</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="closeMattersTest({MatterName=Legal Consumer Matter})">
+                  </a> <!-- closeMattersTest({MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">closeMattersTest</span>
+                  <span class="parameters">({MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="closeMatterwithCancelTest({MatterName=Legal Consumer Matter})">
+                  </a> <!-- closeMatterwithCancelTest({MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">closeMatterwithCancelTest</span>
+                  <span class="parameters">({MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reOpenMatterTest({MatterName=Legal Consumer Matter})">
+                  </a> <!-- reOpenMatterTest({MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">reOpenMatterTest</span>
+                  <span class="parameters">({MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reOpenMatterwithCancelTest({MatterName=Legal Consumer Matter})">
+                  </a> <!-- reOpenMatterwithCancelTest({MatterName=Legal Consumer Matter}) -->
+                  <span class="method-name">reOpenMatterwithCancelTest</span>
+                  <span class="parameters">({MatterName=Legal Consumer Matter})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.test.CreateMatterNegative2Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsWithoutDocumentandViewMatterPopup({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and ...)">
+                  </a> <!-- enterAllDetailsWithoutDocumentandViewMatterPopup({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and ...) -->
+                  <span class="method-name">enterAllDetailsWithoutDocumentandViewMatterPopup</span>
+                  <span class="parameters">({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and verify the accuracy, memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Civil law Case, individualsClientName1=Alliance Law Group, advocateEmail=Arunkumar@gm.com, groupName2=Immigration Law, courtName=Madurai Supreme Court, advocateName=Arun, _comment=12.enterAllDetailsWithoutDocumentandViewMatterPopup, caseNumber=MN0155, advocatePhone=7711223355, judges=dheena, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsWithoutTMandDocumentandViewMatterPopup({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor&#039;s degree in a recognized fie...)">
+                  </a> <!-- enterAllDetailsWithoutTMandDocumentandViewMatterPopup({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized fie...) -->
+                  <span class="method-name">enterAllDetailsWithoutTMandDocumentandViewMatterPopup</span>
+                  <span class="parameters">({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized field, such as accounting or business administration, prioritySelect=Low, individualsClientName2=Apollo Healthcare, caseType=Lawyer case, individualsClientName1=Alliance Law Group, advocateEmail=prakash22@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=prakash, _comment=13.enterAllDetailsWithoutTMandDocumentandViewMatterPopup, caseNumber=TRE32, advocatePhone=9891919566, judges=Surya, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsWithoutTeamMemberandViewMatterPopup({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, desc...)">
+                  </a> <!-- enterAllDetailsWithoutTeamMemberandViewMatterPopup({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, desc...) -->
+                  <span class="method-name">enterAllDetailsWithoutTeamMemberandViewMatterPopup</span>
+                  <span class="parameters">({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, description=how to better manage and control risks within an organization., prioritySelect=High, individualsClientName2=Apollo Healthcare, caseType=Individuals, individualsClientName1=Alliance Law Group, advocateEmail=madesh921@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Madesh, _comment=11.enterAllDetailsWithoutTeamMemberandViewMatterPopup, caseNumber=FD231, advocatePhone=9876543210, judges=Mani, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsandConfirmPopupClickNO({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, desc...)">
+                  </a> <!-- enterAllDetailsandConfirmPopupClickNO({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, desc...) -->
+                  <span class="method-name">enterAllDetailsandConfirmPopupClickNO</span>
+                  <span class="parameters">({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, description= validating the integrity of an organization's processes, systems and information, both financial and non-financial. , memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Lawyer, individualsClientName1=Alliance Law Group, advocateEmail=Ranjith@gm.com, groupName2=Immigration Law, courtName=Madras Court, advocateName=Ranjith, _comment=9.enterAllDetailsandConfirmPopupClickNO, caseNumber=TRK2134, advocatePhone=6858487822, judges=Rajesh, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsandSelectAllNames({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financia...)">
+                  </a> <!-- enterAllDetailsandSelectAllNames({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financia...) -->
+                  <span class="method-name">enterAllDetailsandSelectAllNames</span>
+                  <span class="parameters">({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financial statements audited by them and presented to the company., prioritySelect=High, caseType=Custody case, advocateEmail=sekaran@gm.com, courtName=Kumbakonam High Court, advocateName=Sekaran, _comment=14.enterAllDetailsandSelectAllNames, caseNumber=MN631, advocatePhone=8838785522, judges=Guna})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterAllDetailsandViewMatterPopup({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, desc...)">
+                  </a> <!-- enterAllDetailsandViewMatterPopup({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, desc...) -->
+                  <span class="method-name">enterAllDetailsandViewMatterPopup</span>
+                  <span class="parameters">({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, description=Professional auditors also provide advice and consultation to business leaders, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Criminal case, individualsClientName1=Alliance Law Group, advocateEmail=kishore12@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=kishore, _comment=10.enterAllDetailsandViewMatterPopup, caseNumber=VFD23, advocatePhone=9524281515, judges=Madhan, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectClientsandClickCancel({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit t...)">
+                  </a> <!-- selectClientsandClickCancel({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit t...) -->
+                  <span class="method-name">selectClientsandClickCancel</span>
+                  <span class="parameters">({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit tests and findings., prioritySelect=Medium, individualsClientName2=Ananth kumar, caseType=Individuals, individualsClientName1=Vengadeshwaran Ramamoorthy, advocateEmail=RamLaksh@gm.com, groupName2=Immigration Law, courtName=Mumbai High Court, advocateName=Ram, _comment=3.Select the Clients and Click on Cancel  , caseNumber=LKW21, advocatePhone=7744885522, judges=Deepan, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectDocumentandClickCancel({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, descr...)">
+                  </a> <!-- selectDocumentandClickCancel({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, descr...) -->
+                  <span class="method-name">selectDocumentandClickCancel</span>
+                  <span class="parameters">({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, description=Audit is the examination or inspection of various books of accounts, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Cases, individualsClientName1=Alliance Law Group, advocateEmail=vickyks@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Vicky, _comment=7.selectDocumentandClickCancel, caseNumber=LWK13, advocatePhone=8877887755, judges=Venkatesh, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectTeamMemberandClickCancel({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master&#039;s degree in ...)">
+                  </a> <!-- selectTeamMemberandClickCancel({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in ...) -->
+                  <span class="method-name">selectTeamMemberandClickCancel</span>
+                  <span class="parameters">({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in accounting or business, memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Corporate law , individualsClientName1=Alliance Law Group, advocateEmail=Kevin@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Kevin, _comment=5.selectTeamMemberandClickCancel , caseNumber=MN156, advocatePhone=9876543210, judges=Kavin, groupName1=Family Law})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse--370626033\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Vengadesh\git\LauditorV3Codes\Lauditor\testngCreateMatter.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.base.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.CreateMatterTest&quot;/&gt;
+      &lt;class name=&quot;com.test.CreateMatterNegative2Test&quot;/&gt;
+      &lt;class name=&quot;com.test.ViewMatterUpdateGroupsTest&quot;/&gt;
+      &lt;class name=&quot;com.test.ViewMatterOpenCloseMatter&quot;/&gt;
+      &lt;class name=&quot;com.test.ViewMatterDeleteMatterTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(27);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clientsIndividualsandTempClients')
-data.setCell(0, 2, 'com.test.CreateMatterTest')
-data.setCell(0, 3, 82138);
+data.setCell(0, 1, 'enterAllDetailsandConfirmPopupClickNO')
+data.setCell(0, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(0, 3, 80271);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'clientsIndividualsandTempClientsWithTeamMembers')
-data.setCell(1, 2, 'com.test.CreateMatterTest')
-data.setCell(1, 3, 79272);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(1, 1, 'selectDocumentsSeletAllandClickCancel')
+data.setCell(1, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(1, 3, 79167);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'selectDocumentandClickCancel')
+data.setCell(2, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(2, 3, 79145);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'enterAllDetailsandViewMatterPopup')
+data.setCell(3, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(3, 3, 75776);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'selectTeamMeberSeletAllandClickCancel')
+data.setCell(4, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(4, 3, 73969);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'selectTeamMemberandClickCancel')
+data.setCell(5, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(5, 3, 69677);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'enterAllDetailsWithoutTeamMemberandViewMatterPopup')
+data.setCell(6, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(6, 3, 68643);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'enterAllDetailsWithoutDocumentandViewMatterPopup')
+data.setCell(7, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(7, 3, 68583);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'enterAllDetailsWithoutTMandDocumentandViewMatterPopup')
+data.setCell(8, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(8, 3, 62234);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'enterAllDetailsandSelectAllNames')
+data.setCell(9, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(9, 3, 59358);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'selectClientsSeletAllandClickCancel')
+data.setCell(10, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(10, 3, 55257);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'selectClientsandClickCancel')
+data.setCell(11, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(11, 3, 55133);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'selectGroupsandClickCancel')
+data.setCell(12, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(12, 3, 44697);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'enterDetailsandClickCancel')
+data.setCell(13, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(13, 3, 42747);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'selectGroupSeletAllandClickCancel')
+data.setCell(14, 2, 'com.test.CreateMatterNegative2Test')
+data.setCell(14, 3, 40332);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'selectGroupandUnSelectGroups')
+data.setCell(15, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(15, 3, 37795);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'unSelectGroupandSelectGroups')
+data.setCell(16, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(16, 3, 36080);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'selectMultipleGroups')
+data.setCell(17, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(17, 3, 34951);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'alertMessageDisplayForClients')
+data.setCell(18, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(18, 3, 25213);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'unSelectMultipleGroups')
+data.setCell(19, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(19, 3, 24991);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'selectedGroupNamesareDisplay')
+data.setCell(20, 2, 'com.test.ViewMatterUpdateGroupsTest')
+data.setCell(20, 3, 24141);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'closeMattersTest')
+data.setCell(21, 2, 'com.test.ViewMatterOpenCloseMatter')
+data.setCell(21, 3, 15567);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'reOpenMatterTest')
+data.setCell(22, 2, 'com.test.ViewMatterOpenCloseMatter')
+data.setCell(22, 3, 14402);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'closeMatterwithCancelTest')
+data.setCell(23, 2, 'com.test.ViewMatterOpenCloseMatter')
+data.setCell(23, 3, 13389);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'deleteMatterCancelTest')
+data.setCell(24, 2, 'com.test.ViewMatterDeleteMatterTest')
+data.setCell(24, 3, 13283);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'deleteMatterTest')
+data.setCell(25, 2, 'com.test.ViewMatterDeleteMatterTest')
+data.setCell(25, 3, 10251);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'reOpenMatterwithCancelTest')
+data.setCell(26, 2, 'com.test.ViewMatterOpenCloseMatter')
+data.setCell(26, 3, 8450);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 20 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.CreateMatterTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.CreateMatterNegative2Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">clientsIndividualsandTempClients({lastName=raj, country=Belgium, mobileNumber=8989868696, caseTitle=Legal Case 13, searchTextEntity=M...)</span>
-                <span class="method-start">10245 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">enterDetailsandClickCancel({date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the compan...)</span>
+                <span class="method-start">10777 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">clientsIndividualsandTempClientsWithTeamMembers({lastName=MS, country=Belgium, mobileNumber=7878454545, caseTitle=Legal Case 14, searchTextEntity=Su...)</span>
-                <span class="method-start">92424 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectGroupsandClickCancel({date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control s...)</span>
+                <span class="method-start">53964 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectGroupSeletAllandClickCancel({date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items...)</span>
+                <span class="method-start">98985 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectClientsandClickCancel({date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit t...)</span>
+                <span class="method-start">139612 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectClientsSeletAllandClickCancel({date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities ...)</span>
+                <span class="method-start">194773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectTeamMemberandClickCancel({date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in ...)</span>
+                <span class="method-start">250345 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectTeamMeberSeletAllandClickCancel({date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise i...)</span>
+                <span class="method-start">320054 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectDocumentandClickCancel({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, descr...)</span>
+                <span class="method-start">394319 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectDocumentsSeletAllandClickCancel({date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following docu...)</span>
+                <span class="method-start">473481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsandConfirmPopupClickNO({date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, desc...)</span>
+                <span class="method-start">552989 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsandViewMatterPopup({date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, desc...)</span>
+                <span class="method-start">633267 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsWithoutTeamMemberandViewMatterPopup({date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, desc...)</span>
+                <span class="method-start">709060 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsWithoutDocumentandViewMatterPopup({date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and ...)</span>
+                <span class="method-start">777713 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsWithoutTMandDocumentandViewMatterPopup({date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized fie...)</span>
+                <span class="method-start">846310 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterAllDetailsandSelectAllNames({date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financia...)</span>
+                <span class="method-start">908560 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">down</span>
-                <span class="method-start">171701 ms</span>
+                <span class="method-start">967924 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.ViewMatterUpdateGroupsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">968440 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">selectGroupandUnSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Gro...)</span>
+                <span class="method-start">975019 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectMultipleGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Gro...)</span>
+                <span class="method-start">1012825 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">unSelectGroupandSelectGroups({selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect G...)</span>
+                <span class="method-start">1047782 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">unSelectMultipleGroups({unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSe...)</span>
+                <span class="method-start">1083873 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">alertMessageDisplayForClients({groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Lega...)</span>
+                <span class="method-start">1108872 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectedGroupNamesareDisplay({selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Disp...)</span>
+                <span class="method-start">1134091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">down</span>
+                <span class="method-start">1158235 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.ViewMatterOpenCloseMatter</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">1158738 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">closeMatterwithCancelTest({MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1166024 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">closeMattersTest({MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1179421 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">reOpenMatterwithCancelTest({MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1194999 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">reOpenMatterTest({MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1203463 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">down</span>
+                <span class="method-start">1217870 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.ViewMatterDeleteMatterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">1218346 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">deleteMatterCancelTest({_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1224745 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteMatterTest({_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter})</span>
+                <span class="method-start">1238035 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">down</span>
+                <span class="method-start">1248290 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

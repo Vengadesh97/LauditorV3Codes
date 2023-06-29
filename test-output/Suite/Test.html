@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>54/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 20 14:40:28 IST 2023</td>
+<td>Started on:</td><td>Thu Jun 29 15:29:39 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>823 seconds (823977 ms)</td>
+<tr><td>Total time:</td><td>1248 seconds (1248896 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -70,502 +70,381 @@ function toggleAllBoxes() {
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt()'><b>editMatterInfoMandatoryWithDescriptionCaseTypeandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Supreme Court, _comment=54.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt, caseNumber=AGHW65, caseTitle=Alcohol Education Program, description=Definition and explanation of physical custody, matterName=Adult Court Transfer, caseType=Custody case}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@class=&apos;btn btn-default alertbtn&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.abst.Reusable.visibilityOfElementWait(Reusable.java:105)
-	at com.pom.ViewMatterPOM.successPopupEditMatterInfo(ViewMatterPOM.java:220)
-	at com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt(ViewMatterEditMatterInfoTest.java:973)
+<td title='com.test.CreateMatterNegative2Test.selectClientsSeletAllandClickCancel()'><b>selectClientsSeletAllandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 12 , caseTitle=Criminal Case 5, description=Auditing skills are innate or acquired abilities that help., prioritySelect=Low, caseType=Civil law Case, advocateEmail=Gopi98@gm.com, groupName2=Immigration Law, courtName=Madurai Court, advocateName=Gopi, _comment=4.Select the Clients and Select All Click on Cancel , caseNumber=ABV21, advocatePhone=9629139447, judges=Pradeep, groupName1=Family Law}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectClientsSeletAllandClickCancel(CreateMatterNegative2Test.java:112)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class=&apos;btn btn-default alertbtn&apos;]&quot;}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [36d71af7377dc3c5322eb6ff25d19050, findElement {using=xpath, value=//button[@class=&apos;btn btn-default alertbtn&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51111/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36d71af7377dc3c5322eb6ff25d19050
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 29 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1208124611", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1208124611'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@class=&apos;btn btn-default alertbtn&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.abst.Reusable.visibilityOfElementWait(Reusable.java:105)
-	at com.pom.ViewMatterPOM.successPopupEditMatterInfo(ViewMatterPOM.java:220)
-	at com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt(ViewMatterEditMatterInfoTest.java:973)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace320605039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace320605039'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectClientsSeletAllandClickCancel(CreateMatterNegative2Test.java:112)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class=&apos;btn btn-default alertbtn&apos;]&quot;}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [36d71af7377dc3c5322eb6ff25d19050, findElement {using=xpath, value=//button[@class=&apos;btn btn-default alertbtn&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51111/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36d71af7377dc3c5322eb6ff25d19050
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 29 more
 </pre></div></td>
-<td>30</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>55</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge()'><b>editMatterInfoMandatoryWithDescriptionCaseTypeandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=55.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge, caseNumber=AGHW66, caseTitle=Alternative Detention Program, description=Document attached, judges=Thirumalai, matterName=Alcohol Education Program, caseType=crime case}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Search Group&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.abst.Reusable.visibilityOfElementWait(Reusable.java:105)
-	at com.pom.ViewMatterPOM.searchBarFieldsandActionBtn(ViewMatterPOM.java:259)
-	at com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge(ViewMatterEditMatterInfoTest.java:982)
+<td title='com.test.CreateMatterNegative2Test.selectGroupSeletAllandClickCancel()'><b>selectGroupSeletAllandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 2 , caseTitle=Criminal Case 3, description=Verifies assets and liabilities by comparing items to documentation, prioritySelect=High, caseType=Case, advocateEmail=AshokK@gm.com, courtName=Madras Court, advocateName=Ashok, _comment=2.Select the Groups and Select All Click on Cancel , caseNumber=FG012, advocatePhone=9696858555, judges=RajKumar}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkLeftSideSelectedNameareEmpty(CreateMatter.java:422)
+	at com.test.CreateMatterNegative2Test.selectGroupSeletAllandClickCancel(CreateMatterNegative2Test.java:62)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Search Group&apos;]&quot;}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [36d71af7377dc3c5322eb6ff25d19050, findElement {using=xpath, value=//input[@placeholder=&apos;Search Group&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51111/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36d71af7377dc3c5322eb6ff25d19050
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 29 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace800875062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace800875062'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@placeholder=&apos;Search Group&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.abst.Reusable.visibilityOfElementWait(Reusable.java:105)
-	at com.pom.ViewMatterPOM.searchBarFieldsandActionBtn(ViewMatterPOM.java:259)
-	at com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge(ViewMatterEditMatterInfoTest.java:982)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace512934838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace512934838'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkLeftSideSelectedNameareEmpty(CreateMatter.java:422)
+	at com.test.CreateMatterNegative2Test.selectGroupSeletAllandClickCancel(CreateMatterNegative2Test.java:62)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@placeholder=&apos;Search Group&apos;]&quot;}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [36d71af7377dc3c5322eb6ff25d19050, findElement {using=xpath, value=//input[@placeholder=&apos;Search Group&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51111/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36d71af7377dc3c5322eb6ff25d19050
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 29 more
 </pre></div></td>
-<td>22</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>40</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.enterDetailsandClickCancel()'><b>enterDetailsandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 5 , caseTitle=Criminal Case 1, description= Auditors might inspect the accounts of the company they work for or those of other organizations., prioritySelect=Medium, caseType=Individuals, advocateEmail=vimal@gm.com, courtName=High Court, advocateName=Vimal, _comment=0.Enter the All Details and Click on Cancel button, caseNumber=MN01, advocatePhone=9876543210, judges=Kannan}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkAllFieldsareEmptyinMatterinfoPage(CreateMatter.java:551)
+	at com.test.CreateMatterNegative2Test.enterDetailsandClickCancel(CreateMatterNegative2Test.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2126392903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2126392903'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkAllFieldsareEmptyinMatterinfoPage(CreateMatter.java:551)
+	at com.test.CreateMatterNegative2Test.enterDetailsandClickCancel(CreateMatterNegative2Test.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>42</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.selectTeamMeberSeletAllandClickCancel()'><b>selectTeamMeberSeletAllandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 18 , caseTitle=Criminal Case 7, description=Which can enhance their knowledge and expertise in the field., prioritySelect=Medium, individualsClientName2=Apollo Healthcare, caseType=Criminal cases, individualsClientName1=Alliance Law Group, advocateEmail=Rithish@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=Rithish, _comment=6.selectTeamMeberSeletAllandClickCancel, caseNumber=PLW12, advocatePhone=6868787822, judges=Rishi, groupName1=Family Law}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectTeamMeberSeletAllandClickCancel(CreateMatterNegative2Test.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1851455859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1851455859'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectTeamMeberSeletAllandClickCancel(CreateMatterNegative2Test.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>73</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.selectDocumentsSeletAllandClickCancel()'><b>selectDocumentsSeletAllandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 24 , caseTitle=Criminal Case 9, description=Make sure that all departments are following documented system of recording transactions., memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Crime Case, individualsClientName1=Alliance Law Group, advocateEmail=sivakumar@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Sivakumar, _comment=8.selectDocumentsSeletAllandClickCancel, caseNumber=KS231, advocatePhone=9966996633, judges=Arvind, groupName1=Family Law}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectDocumentsSeletAllandClickCancel(CreateMatterNegative2Test.java:234)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace589863377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace589863377'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkSelectAllCheckboxIsUnSelected(CreateMatter.java:458)
+	at com.test.CreateMatterNegative2Test.selectDocumentsSeletAllandClickCancel(CreateMatterNegative2Test.java:234)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>79</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.selectGroupsandClickCancel()'><b>selectGroupsandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 8 , caseTitle=Criminal Case 2, description=Examining company accounts and financial control systems., prioritySelect=Low, caseType=Crime Case, advocateEmail=Rajkumar@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Raj, _comment=1.Select the Groups and Click on Cancel , caseNumber=KM15, advocatePhone=7744774411, judges=Vasanth, groupName1=Family Law}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.pom.CreateMatter.checkLeftSidegroupsSelectedNameareEmpty(CreateMatter.java:433)
+	at com.test.CreateMatterNegative2Test.selectGroupsandClickCancel(CreateMatterNegative2Test.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2009900903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2009900903'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.pom.CreateMatter.checkLeftSidegroupsSelectedNameareEmpty(CreateMatter.java:433)
+	at com.test.CreateMatterNegative2Test.selectGroupsandClickCancel(CreateMatterNegative2Test.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>44</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandDescription()'><b>editMatterInfoMandatoryWithDOFandDescription</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=8.editMatterInfoMandatoryWithDOFandDescription, caseNumber=AGHW19, caseTitle=Register of Punishments, dateofFilling= 12 , description=The sureties shall produce Bank Pass Books or Ration Cards or some, matterName=Register Results of Inquiries and Trials}</td>
+<td title='com.test.CreateMatterNegative2Test.selectDocumentandClickCancel()'><b>selectDocumentandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 8, description=Audit is the examination or inspection of various books of accounts, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Cases, individualsClientName1=Alliance Law Group, advocateEmail=vickyks@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Vicky, _comment=7.selectDocumentandClickCancel, caseNumber=LWK13, advocatePhone=8877887755, judges=Venkatesh, groupName1=Family Law}</td>
 <td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>79</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithJudgeandOpponentAdvocates()'><b>editMatterInfoMandatoryWithJudgeandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585857666, _comment=32.editMatterInfoMandatoryWithJudgeandOpponentAdvocates, caseNumber=AGHW43, caseTitle=Alberta Reports, name=Sathish, judges=Vamsi, email=sathish@gm.com, matterName=Administrative Law Reports}</td>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsandConfirmPopupClickNO()'><b>enterAllDetailsandConfirmPopupClickNO</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 23 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 10, description= validating the integrity of an organization's processes, systems and information, both financial and non-financial. , memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Lawyer, individualsClientName1=Alliance Law Group, advocateEmail=Ranjith@gm.com, groupName2=Immigration Law, courtName=Madras Court, advocateName=Ranjith, _comment=9.enterAllDetailsandConfirmPopupClickNO, caseNumber=TRK2134, advocatePhone=6858487822, judges=Rajesh, groupName1=Family Law}</td>
 <td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>80</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandCaseType()'><b>editMatterInfoMandatoryWithDOFDescriptionandCaseType</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=36.editMatterInfoMandatoryWithDOFDescriptionandCaseType, caseNumber=AGHW47, caseTitle=Federal Court Reports, dateofFilling= 28 , description=Distinctions between joint custody and sole custody, matterName=Frontier Dispute, caseType=Lawyer}</td>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsWithoutTMandDocumentandViewMatterPopup()'><b>enterAllDetailsWithoutTMandDocumentandViewMatterPopup</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 19 , caseTitle=Criminal Case 14, description=Complete a bachelor's degree in a recognized field, such as accounting or business administration, prioritySelect=Low, individualsClientName2=Apollo Healthcare, caseType=Lawyer case, individualsClientName1=Alliance Law Group, advocateEmail=prakash22@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=prakash, _comment=13.enterAllDetailsWithoutTMandDocumentandViewMatterPopup, caseNumber=TRE32, advocatePhone=9891919566, judges=Surya, groupName1=Family Law}</td>
 <td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>62</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescription()'><b>editMatterInfoMandatoryWithDescription</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of Appeal Cases received, description=At the time of acceptance the surety the signature, _comment=1.editMatterInfoMandatoryWithDescription, caseNumber=AGHW12, matterName=Register of Sessions cases}</td>
+<td title='com.test.ViewMatterUpdateGroupsTest.unSelectMultipleGroups()'><b>unSelectMultipleGroups</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3, _comment=3.UnSelect Groups and Save, CaseName=Legal Consumer Matter}</td>
 <td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>24</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseType()'><b>editMatterInfoMandatoryWithCaseType</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of Revision Cases Entertained, _comment=2.editMatterInfoMandatoryWithCaseType, caseNumber=AGHW13, matterName=Register of Appeal Cases received, caseType=Individuals}</td>
+<td title='com.test.ViewMatterOpenCloseMatter.reOpenMatterwithCancelTest()'><b>reOpenMatterwithCancelTest</b><br>Test class: com.test.ViewMatterOpenCloseMatter<br>Parameters: {MatterName=Legal Consumer Matter}</td>
 <td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>8</td>
+<td>com.test.ViewMatterOpenCloseMatter@448c8166</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Madras high Court, _comment=52.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandStatus, caseNumber=AGHW63, caseTitle=Adjudicatory Hearing, dateofFilling= 16 , description=Document attached, judges=Sekar, matterName=Accelerated Rehabilitation, caseType=Corporate Case}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandJudge()'><b>editMatterInfoMandatoryWithDOFDescriptionandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=38.editMatterInfoMandatoryWithDOFDescriptionandJudge, caseNumber=AGHW49, caseTitle=Civil cases, dateofFilling= 7 , description=Hello sample documents, judges=Kasi, matterName=Criminal Cases}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates()'><b>editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585857466, _comment=25.editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates, caseNumber=AGHW36, caseTitle=The child's well-being, name=Arvind, email=Arvind@gm.com, matterName=A history of substance abuse, caseType=Bike Case}</td>
-<td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=9685852222, _comment=46.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent, caseNumber=AGHW57, caseTitle=Breach of Contract Claims, dateofFilling= 19 , name=Surya, description=Civil courts handle disputes, email=surya@gm.com, matterName=Tort Claims, caseType=Bike Case}</td>
-<td></td>
-<td>20</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandPriority()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=44.editMatterInfoMandatoryWithCaseTypeandPriority, caseNumber=AGHW55, caseTitle=Property Disputes, dateofFilling= 29 , description=There are also other joint-custody arrangements, priority=High, matterName=Divorce and Family Law Disputes, caseType=Criminal Case}</td>
-<td></td>
-<td>16</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithPriorityandOpponentAdvocates()'><b>editMatterInfoMandatoryWithPriorityandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585851111, _comment=34.editMatterInfoMandatoryWithPriorityandOpponentAdvocates, caseNumber=AGHW45, caseTitle=Certain Property, name=Anand, priority=Low, email=Anand@gm.com, matterName=Legality of Use of Force}</td>
-<td></td>
-<td>20</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithPriorityandStatus()'><b>editMatterInfoMandatoryWithPriorityandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Legality of Use of Force, priority=Medium, _comment=33.editMatterInfoMandatoryWithPriorityandStatus, caseNumber=AGHW44, matterName=Alberta Reports}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=45.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandStatus, caseNumber=AGHW56, caseTitle=Tort Claims, dateofFilling= 21 , description=A breach of contract case, matterName=Property Disputes, caseType=Child custody Case}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandPriority()'><b>editMatterInfoMandatoryWithDOFDescriptionandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=39.editMatterInfoMandatoryWithDOFDescriptionandPriority, caseNumber=AGHW50, caseTitle=Personal Injury Tort Claims, dateofFilling= 10 , description=The sureties shall produce Bank Pass Books or Ration Cards or some, priority=Low, matterName=Civil cases}</td>
-<td></td>
-<td>16</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=43.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge, caseNumber=AGHW54, caseTitle=Divorce and Family Law Disputes, dateofFilling= 24 , description=Distinctions between joint custody and sole custody, judges=Vijaya, matterName=Class Action Suits, caseType=Child}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates()'><b>editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=9585852222, _comment=41.editMatterInfoMandatoryWithDOFDescriptionandOpponentAdvocates, caseNumber=AGHW52, caseTitle=Equitable Claims, dateofFilling= 27 , name=Dhruv, description=Hello sample documents, email=Dhruv@gm.com, matterName=Contract Disputes}</td>
-<td></td>
-<td>20</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandCourt()'><b>editMatterInfoMandatoryWithDOFandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Madras high Court, _comment=10.editMatterInfoMandatoryWithDOFandCourt, caseNumber=AGHW21, caseTitle=Register of Revision Cases disposed, dateofFilling= 8 , matterName=Register of Appeal Cases disposed}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCourtandJudge()'><b>editMatterInfoMandatoryWithCourtandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=High Court, _comment=26.editMatterInfoMandatoryWithCourtandJudge, caseNumber=AGHW37, caseTitle=The child's school location, judges=Madesh, matterName=Child Case}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandOpponentAdvocates()'><b>editMatterInfoMandatoryWithDOFandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585857474, _comment=14.editMatterInfoMandatoryWithDOFandOpponentAdvocates, caseNumber=AGHW25, caseTitle=Physical Custody, dateofFilling= 18 , name=vamsi, email=vamsi@gm.com, matterName=Legal Custody}</td>
-<td></td>
-<td>19</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCourtandStatus()'><b>editMatterInfoMandatoryWithCourtandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Visitation Rights, courtName=Child Custody Court, _comment=28.editMatterInfoMandatoryWithCourtandStatus, caseNumber=AGHW39, matterName=The Best Interest of the Child Standard}</td>
-<td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandJudge()'><b>editMatterInfoMandatoryWithDescriptionandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=17.editMatterInfoMandatoryWithDescriptionandJudge, caseNumber=AGHW28, caseTitle=Legal Custody in Joint Custody Arrangements, description=Distinctions between joint custody and sole custody, judges=Ram, matterName=Joint Custody}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseTypeandStatus()'><b>editMatterInfoMandatoryWithCaseTypeandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=A history of substance abuse, _comment=24.editMatterInfoMandatoryWithCaseTypeandStatus, caseNumber=AGHW35, matterName=The child's preference, caseType=Lawyer}</td>
-<td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseTypeandJudge()'><b>editMatterInfoMandatoryWithCaseTypeandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=22.editMatterInfoMandatoryWithCaseTypeandJudge, caseNumber=AGHW33, caseTitle=The child's relationship with each parent, judges=Rocky, matterName=Get Professional Legal Help, caseType=Criminal}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithJudgeandPriority()'><b>editMatterInfoMandatoryWithJudgeandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=30.editMatterInfoMandatoryWithJudgeandPriority, caseNumber=AGHW41, caseTitle=Legal Consumer Matter, priority=High, judges=Deepan, matterName=Sole Custody}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandCourt()'><b>editMatterInfoMandatoryWithDOFDescriptionandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Madras high Court, _comment=37.editMatterInfoMandatoryWithDOFDescriptionandCourt, caseNumber=AGHW48, caseTitle=Criminal Cases, dateofFilling= 15 , description=There are also other joint-custody arrangements, matterName=Federal Court Reports}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseTypeandPriority()'><b>editMatterInfoMandatoryWithCaseTypeandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=23.editMatterInfoMandatoryWithCaseTypeandPriority, caseNumber=AGHW34, caseTitle=The child's preference, priority=Medium, matterName=The child's relationship with each parent, caseType=Civil}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandStatus()'><b>editMatterInfoMandatoryWithDescriptionandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=One Common Custody Arrangement, description=Definition and explanation of physical custody, , _comment=19.editMatterInfoMandatoryWithDescriptionandStatus, caseNumber=AGHW30, matterName=Official Terminology with Child}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCaseTypeandCourt()'><b>editMatterInfoMandatoryWithCaseTypeandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Delhi high Court, _comment=21.editMatterInfoMandatoryWithCaseTypeandCourt, caseNumber=AGHW32, caseTitle=Get Professional Legal Help, matterName=Other Forms of Joint Custody, caseType=Child custody}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandJudge()'><b>editMatterInfoMandatoryWithDOFandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=11.editMatterInfoMandatoryWithDOFandJudge, caseNumber=AGHW22, caseTitle=Diary Register, dateofFilling= 18 , judges=Suresh, matterName=Register of Revision Cases disposed}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCourtandOpponentAdvocates()'><b>editMatterInfoMandatoryWithCourtandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585857411, courtName=High Court, _comment=29.editMatterInfoMandatoryWithCourtandOpponentAdvocates, caseNumber=AGHW40, caseTitle=Sole Custody, name=harish, email=harish@gm.com, matterName=Visitation Rights}</td>
-<td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithJudgeandStatus()'><b>editMatterInfoMandatoryWithJudgeandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Administrative Law Reports, _comment=31.editMatterInfoMandatoryWithJudgeandStatus, judges=Micheal, caseNumber=AGHW42, matterName=Legal Consumer Matter}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionandStatus()'><b>editMatterInfoMandatoryWithDOFDescriptionandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=40.editMatterInfoMandatoryWithDOFDescriptionandStatus, caseNumber=AGHW51, caseTitle=Contract Disputes, dateofFilling= 22 , description=Distinctions between joint custody and sole custody, matterName=Personal Injury Tort Claims}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandCasetype()'><b>editMatterInfoMandatoryWithDOFandCasetype</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=9.editMatterInfoMandatoryWithDOFandCasetype, caseNumber=AGHW20, caseTitle=Register of Appeal Cases disposed, dateofFilling= 15 , matterName=Register of Punishments, caseType=Criminal Case}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=9584852222, courtName=Child Custody Court, _comment=50.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent, caseNumber=AGHW61, caseTitle=Medical Malpractice, dateofFilling= 7 , name=Arya, description= A personal injury lawyer specializing in medical malpractice, email=Arya@gm.com, matterName=Employment Law, caseType=Criminal Case}</td>
-<td></td>
-<td>20</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandPriority()'><b>editMatterInfoMandatoryWithDescriptionandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=18.editMatterInfoMandatoryWithDescriptionandPriority, caseNumber=AGHW29, caseTitle=Official Terminology with Child, description=In joint custody arrangements, parents share rights to make the major decisions, priority=High, matterName=Legal Custody in Joint Custody Arrangements}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithStatusandOpponentAdvocates()'><b>editMatterInfoMandatoryWithStatusandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585852222, _comment=35.editMatterInfoMandatoryWithStatusandOpponentAdvocates, caseNumber=AGHW46, caseTitle=Frontier Dispute, name=Rocky, email=rocky@gm.com, matterName=Certain Property}</td>
-<td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithStatus()'><b>editMatterInfoMandatoryWithStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of applications under Section, _comment=6.editMatterInfoMandatoryWithStatus, caseNumber=AGHW17, matterName=Register of Miscellaneous and Maintenance}</td>
-<td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandCourt()'><b>editMatterInfoMandatoryWithDescriptionandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Supreme Court, _comment=16.editMatterInfoMandatoryWithDescriptionandCourt, caseNumber=AGHW27, caseTitle=Joint Custody, description=Basics of what a court considers when grandparents seek, matterName=Sole Custody}</td>
-<td></td>
-<td>10</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandCaseType()'><b>editMatterInfoMandatoryWithDescriptionandCaseType</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=15.editMatterInfoMandatoryWithDescriptionandCaseType, caseNumber=AGHW26, caseTitle=Sole Custody, description=Overview of joint custody, a relatively common arrangement, matterName=Physical Custody, caseType=Criminal Case}</td>
-<td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithOpponentAdvocate()'><b>editMatterInfoMandatoryWithOpponentAdvocate</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=7878454578, _comment=7.editMatterInfoMandatoryWithOpponentAdvocate, caseNumber=AGHW18, caseTitle=Register Results of Inquiries and Trials, name=Scott, email=scott@gm.com, matterName=Register of applications under Section}</td>
-<td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Delhi high Court, _comment=48.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandPriority, caseNumber=AGHW59, caseTitle=Civil Litigation, dateofFilling= 13 , description=Definition and explanation of physical custody, priority=Medium, matterName=Tenant issues, caseType=Criminal}</td>
-<td></td>
-<td>16</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Delhi high Court, _comment=49.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandStatus, caseNumber=AGHW60, caseTitle=Employment Law, dateofFilling= 14 , description=Civil courts handle disputes, matterName=Civil Litigation, caseType=Child custody Case}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDescriptionandOpponentAdvocates()'><b>editMatterInfoMandatoryWithDescriptionandOpponentAdvocates</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {number=8585857444, _comment=20.editMatterInfoMandatoryWithDescriptionandOpponentAdvocates, caseNumber=AGHW31, caseTitle=Other Forms of Joint Custody, name=Ashok, description=There are also other joint-custody arrangements , email=Ashok@gm.com, matterName=One Common Custody Arrangement}</td>
-<td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Mumbai Court, _comment=47.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge, caseNumber=AGHW58, caseTitle=Tenant issues, dateofFilling= 17 , description=Document attached, judges=pramod, matterName=Breach of Contract Claims, caseType=Bike accident}</td>
-<td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandStatus()'><b>editMatterInfoMandatoryWithDOFandStatus</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Legal Custody, dateofFilling= 16 , _comment=13.editMatterInfoMandatoryWithDOFandStatus, caseNumber=AGHW24, matterName=The Various types of child custody}</td>
-<td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
-<tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFandPriority()'><b>editMatterInfoMandatoryWithDOFandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {_comment=12.editMatterInfoMandatoryWithDOFandPriority, caseNumber=AGHW23, caseTitle=The Various types of child custody, dateofFilling= 25 , priority=Low, matterName=Diary Register}</td>
+<td title='com.test.ViewMatterOpenCloseMatter.reOpenMatterTest()'><b>reOpenMatterTest</b><br>Test class: com.test.ViewMatterOpenCloseMatter<br>Parameters: {MatterName=Legal Consumer Matter}</td>
 <td></td>
 <td>14</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>com.test.ViewMatterOpenCloseMatter@448c8166</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCourtandPriority()'><b>editMatterInfoMandatoryWithCourtandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=High Court, _comment=27.editMatterInfoMandatoryWithCourtandPriority, caseNumber=AGHW38, caseTitle=The Best Interest of the Child Standard, priority=Low, matterName=The child's school location}</td>
+<td title='com.test.ViewMatterUpdateGroupsTest.selectGroupandUnSelectGroups()'><b>selectGroupandUnSelectGroups</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=0.Select Groups and UnSelect Group and Save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3}</td>
+<td></td>
+<td>37</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
+<tr>
+<td title='com.test.ViewMatterDeleteMatterTest.deleteMatterCancelTest()'><b>deleteMatterCancelTest</b><br>Test class: com.test.ViewMatterDeleteMatterTest<br>Parameters: {_comment=0.deleteMatterCancelTest, MatterName=Legal Consumer Matter}</td>
 <td></td>
 <td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>com.test.ViewMatterDeleteMatterTest@4470fbd6</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOF()'><b>editMatterInfoMandatoryWithDOF</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of Sessions cases, dateofFilling= 2 , _comment=0.editMatterInfoMandatoryWithDOF, caseNumber=AGHW11, matterName=Corporate Custody}</td>
+<td title='com.test.ViewMatterOpenCloseMatter.closeMatterwithCancelTest()'><b>closeMatterwithCancelTest</b><br>Test class: com.test.ViewMatterOpenCloseMatter<br>Parameters: {MatterName=Legal Consumer Matter}</td>
 <td></td>
 <td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>com.test.ViewMatterOpenCloseMatter@448c8166</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithJudge()'><b>editMatterInfoMandatoryWithJudge</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register cases received, _comment=4.editMatterInfoMandatoryWithJudge, judges=Vimal, caseNumber=AGHW15, matterName=Register of calender and Preliminary}</td>
+<td title='com.test.ViewMatterUpdateGroupsTest.unSelectGroupandSelectGroups()'><b>unSelectGroupandSelectGroups</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=2.Unselect Groups and Select another save, CaseName=Legal Consumer Matter, unSelectgroupName2=Group 2, unSelectgroupName1=Group 1, unSelectgroupName3=Group 3}</td>
 <td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>36</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Delhi high Court, _comment=42.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt, caseNumber=AGHW53, caseTitle=Class Action Suits, dateofFilling= 26 , description=Definition and explanation of physical custody, matterName=Equitable Claims, caseType=Individuals}</td>
+<td title='com.test.ViewMatterDeleteMatterTest.deleteMatterTest()'><b>deleteMatterTest</b><br>Test class: com.test.ViewMatterDeleteMatterTest<br>Parameters: {_comment=1.deleteMatterTest, MatterName=Legal Consumer Matter}</td>
 <td></td>
-<td>13</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>10</td>
+<td>com.test.ViewMatterDeleteMatterTest@4470fbd6</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithCourt()'><b>editMatterInfoMandatoryWithCourt</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of calender and Preliminary, courtName=High Court, _comment=3.editMatterInfoMandatoryWithCourt, caseNumber=AGHW14, matterName=Register of Revision Cases Entertained}</td>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsandViewMatterPopup()'><b>enterAllDetailsandViewMatterPopup</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 21 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 11, description=Professional auditors also provide advice and consultation to business leaders, memberName1=Donald Carpenter, prioritySelect=Low, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Criminal case, individualsClientName1=Alliance Law Group, advocateEmail=kishore12@gm.com, groupName2=Immigration Law, courtName=Madras high Court, advocateName=kishore, _comment=10.enterAllDetailsandViewMatterPopup, caseNumber=VFD23, advocatePhone=9524281515, judges=Madhan, groupName1=Family Law}</td>
 <td></td>
-<td>9</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>75</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Adult Court Transfer, description=There are also other joint-custody arrangements, caseType=Individuals, number=9584852211, courtName=Mumbai Court, _comment=53.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent, caseNumber=AGHW64, dateofFilling= 17 , name=kishore, judges=harish, email=kishore@gm.com, matterName=Adjudicatory Hearing}</td>
+<td title='com.test.CreateMatterNegative2Test.selectTeamMemberandClickCancel()'><b>selectTeamMemberandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 15 , caseTitle=Criminal Case 6, description=Some auditors may also hold a master's degree in accounting or business, memberName1=Donald Carpenter, prioritySelect=High, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Corporate law , individualsClientName1=Alliance Law Group, advocateEmail=Kevin@gm.com, groupName2=Immigration Law, courtName=High Court, advocateName=Kevin, _comment=5.selectTeamMemberandClickCancel , caseNumber=MN156, advocatePhone=9876543210, judges=Kavin, groupName1=Family Law}</td>
 <td></td>
-<td>21</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>69</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority()'><b>editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {courtName=Supreme Court, _comment=51.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority, caseNumber=AGHW62, caseTitle=Accelerated Rehabilitation, dateofFilling= 12 , description=Overview of joint custody, a relatively common arrangement, priority=Low, judges=Lakshmanan, matterName=Criminal case, caseType=Car accident}</td>
+<td title='com.test.ViewMatterUpdateGroupsTest.selectMultipleGroups()'><b>selectMultipleGroups</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {selectgroupName3=Group 3, selectgroupName2=Group 2, selectgroupName1=Group 1, _comment=1.Select Groups and Save, CaseName=Legal Consumer Matter}</td>
 <td></td>
-<td>17</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>34</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
 <tr>
-<td title='com.test.ViewMatterEditMatterInfoTest.editMatterInfoMandatoryWithPriority()'><b>editMatterInfoMandatoryWithPriority</b><br>Test class: com.test.ViewMatterEditMatterInfoTest<br>Parameters: {caseTitle=Register of Miscellaneous and Maintenance, priority=Medium, _comment=5.editMatterInfoMandatoryWithPriority, caseNumber=AGHW16, matterName=Register cases received}</td>
+<td title='com.test.ViewMatterOpenCloseMatter.closeMattersTest()'><b>closeMattersTest</b><br>Test class: com.test.ViewMatterOpenCloseMatter<br>Parameters: {MatterName=Legal Consumer Matter}</td>
 <td></td>
-<td>12</td>
-<td>com.test.ViewMatterEditMatterInfoTest@6aa8e115</td></tr>
+<td>15</td>
+<td>com.test.ViewMatterOpenCloseMatter@448c8166</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsandSelectAllNames()'><b>enterAllDetailsandSelectAllNames</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 25 , caseTitle=Criminal Case 15, description=provide reports of all the accounts and financial statements audited by them and presented to the company., prioritySelect=High, caseType=Custody case, advocateEmail=sekaran@gm.com, courtName=Kumbakonam High Court, advocateName=Sekaran, _comment=14.enterAllDetailsandSelectAllNames, caseNumber=MN631, advocatePhone=8838785522, judges=Guna}</td>
+<td></td>
+<td>59</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.ViewMatterUpdateGroupsTest.selectedGroupNamesareDisplay()'><b>selectedGroupNamesareDisplay</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {selectgroupName2=Family Law, selectgroupName1=Immigration Law, _comment=5.Check GroupNames are Display Correct or not , CaseName=Legal Consumer Matter}</td>
+<td></td>
+<td>24</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsWithoutTeamMemberandViewMatterPopup()'><b>enterAllDetailsWithoutTeamMemberandViewMatterPopup</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 11 , documentName1=Alliance TM 2, documentName2=Apollo TM 2, caseTitle=Criminal Case 12, description=how to better manage and control risks within an organization., prioritySelect=High, individualsClientName2=Apollo Healthcare, caseType=Individuals, individualsClientName1=Alliance Law Group, advocateEmail=madesh921@gm.com, groupName2=Immigration Law, courtName=Supreme Court, advocateName=Madesh, _comment=11.enterAllDetailsWithoutTeamMemberandViewMatterPopup, caseNumber=FD231, advocatePhone=9876543210, judges=Mani, groupName1=Family Law}</td>
+<td></td>
+<td>68</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.enterAllDetailsWithoutDocumentandViewMatterPopup()'><b>enterAllDetailsWithoutDocumentandViewMatterPopup</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 17 , caseTitle=Criminal Case 13, description=An auditor is a person authorized to review and verify the accuracy, memberName1=Donald Carpenter, prioritySelect=Medium, memberName2=Jason Gifford, individualsClientName2=Apollo Healthcare, caseType=Civil law Case, individualsClientName1=Alliance Law Group, advocateEmail=Arunkumar@gm.com, groupName2=Immigration Law, courtName=Madurai Supreme Court, advocateName=Arun, _comment=12.enterAllDetailsWithoutDocumentandViewMatterPopup, caseNumber=MN0155, advocatePhone=7711223355, judges=dheena, groupName1=Family Law}</td>
+<td></td>
+<td>68</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
+<tr>
+<td title='com.test.ViewMatterUpdateGroupsTest.alertMessageDisplayForClients()'><b>alertMessageDisplayForClients</b><br>Test class: com.test.ViewMatterUpdateGroupsTest<br>Parameters: {groupName=Immigration Law, _comment=4.Alert message should display mandatory clients, CaseName=Legal Consumer Matter}</td>
+<td></td>
+<td>25</td>
+<td>com.test.ViewMatterUpdateGroupsTest@147e2ae7</td></tr>
+<tr>
+<td title='com.test.CreateMatterNegative2Test.selectClientsandClickCancel()'><b>selectClientsandClickCancel</b><br>Test class: com.test.CreateMatterNegative2Test<br>Parameters: {date= 8 , caseTitle=Criminal Case 4, description= Completes audit workpapers by documenting audit tests and findings., prioritySelect=Medium, individualsClientName2=Ananth kumar, caseType=Individuals, individualsClientName1=Vengadeshwaran Ramamoorthy, advocateEmail=RamLaksh@gm.com, groupName2=Immigration Law, courtName=Mumbai High Court, advocateName=Ram, _comment=3.Select the Clients and Click on Cancel  , caseNumber=LKW21, advocatePhone=7744885522, judges=Deepan, groupName1=Family Law}</td>
+<td></td>
+<td>55</td>
+<td>com.test.CreateMatterNegative2Test@5be1d0a4</td></tr>
 </table><p>
 </body>
 </html>

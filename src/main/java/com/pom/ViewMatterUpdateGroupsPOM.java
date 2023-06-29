@@ -32,7 +32,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 	@FindBy(xpath = "//div //button[@data-bs-toggle='dropdown']")
 	WebElement actionBtnViewLegal;
 
-	@FindBy(xpath = "//ul[@class='dropdown-menu show'] //li[3]")
+	@FindBy(xpath = "//ul[@class='dropdown-menu custom-dropdown show'] //li[3]")
 	WebElement updateGroupsMatter;
 
 	@FindBy(xpath = "//tr//td[1]")
@@ -48,11 +48,11 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 
 	public void searchInputandUpdateGroupsMatter(String searchCaseName) throws InterruptedException {
 
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		searchInputFields.clear();
 		searchInputFields.sendKeys(searchCaseName);
 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		pageDown();
 
 		Actions action = new Actions(driver);
@@ -88,7 +88,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 	List<WebElement> checkBoxSelect;
 
 	public void unSelectedGroupOnLeftSide(String[] unselectedGroupNames) throws InterruptedException {
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.moveToElement(leftSideUnSelectedGroup).perform();
 
@@ -123,7 +123,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 
 	public void selectGrouponRightSide(String[] selectMultipleGroup) throws InterruptedException {
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Actions action = new Actions(driver);
 		action.moveToElement(rightSideUnSelectedGroup).perform();
 
@@ -203,9 +203,16 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,150)");
 	}
+	
+	// PageDown
+	public void pageDownUpdateGroupSearchbar() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	}
+	
 
 	public void selectedGroupNameIsDisplay(String[] groupNames) throws InterruptedException {
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
 
 		// String[] groupNames = {"Meeting Group","Case 1","case2"};
 		Actions action = new Actions(driver);
@@ -233,7 +240,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 	// Check alert is present or not
 
 	public void alertIspresent(String selectedName) throws InterruptedException {
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
 		Actions action = new Actions(driver);
 		action.moveToElement(leftSideUnSelectedGroup).perform();
 

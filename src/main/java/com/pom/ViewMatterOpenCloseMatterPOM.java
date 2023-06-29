@@ -30,11 +30,11 @@ public class ViewMatterOpenCloseMatterPOM extends Reusable{
 	WebElement actionBtn;
 	
 	//CloseMatterBtn
-	@FindBy(xpath="//ul[@class='dropdown-menu show'] //li[4]")
+	@FindBy(xpath="//ul[@class='dropdown-menu custom-dropdown show'] //li[4]")
 	WebElement closeMatterbtn;
 	
 	//OpenMatterBtn
-	@FindBy(xpath="//ul[@class='dropdown-menu show'] //li[4]")
+	@FindBy(xpath="//ul[@class='dropdown-menu custom-dropdown show'] //li[4]")
 	WebElement openMatterbtn;
 	
 	//alertBtnYes
@@ -69,7 +69,7 @@ public class ViewMatterOpenCloseMatterPOM extends Reusable{
 		
 	}
 	
-	@FindBy(xpath="//ul[@class='dropdown-menu show'] //li[4]")
+	@FindBy(xpath="//ul[@class='dropdown-menu custom-dropdown show'] //li[4]")
 	WebElement reOpenMatterbtn;
 	
 	@FindBy(xpath="//td[text()='Active']")

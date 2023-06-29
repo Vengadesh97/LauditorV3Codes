@@ -16,6 +16,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatters.leftMatterTab();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] selectGroupNames = { input.get("selectgroupName1"), input.get("selectgroupName2"),
 					input.get("selectgroupName3") };
 			viewMatterUpdateGroups.selectGrouponRightSide(selectGroupNames);
@@ -38,6 +39,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] selectGroupNames = { input.get("selectgroupName1"), input.get("selectgroupName2"),
 					input.get("selectgroupName3") };
 			viewMatterUpdateGroups.selectGrouponRightSide(selectGroupNames);
@@ -57,6 +59,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] unSelectgroupNames = { input.get("unSelectgroupName1"), input.get("unSelectgroupName2"),
 					input.get("unSelectgroupName3") };
 			viewMatterUpdateGroups.unSelectedGroupOnLeftSide(unSelectgroupNames);
@@ -79,6 +82,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] unSelectgroupNames = { input.get("unSelectgroupName1"), input.get("unSelectgroupName2"),
 					input.get("unSelectgroupName3") };
 			viewMatterUpdateGroups.unSelectedGroupOnLeftSide(unSelectgroupNames);
@@ -97,6 +101,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			viewMatterUpdateGroups.alertIspresent(input.get("groupName"));
 			viewMatterUpdateGroups.pageDown();
 			viewMatterUpdateGroups.cancelBtnUpdateGroup();
@@ -111,6 +116,7 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 		try {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] selectGroupNames = { input.get("selectgroupName1"), input.get("selectgroupName2") };
 			viewMatterUpdateGroups.selectedGroupNameIsDisplay(selectGroupNames);
 			viewMatterUpdateGroups.pageDown();
