@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.ViewMatterDeleteMatterTest">
+      <class name="com.test.ViewMatterViewDetailsTest">
         <methods>
+          <include name="uploadFilesandEnableWithcombinedDateandDescriptionandSave" invocation-numbers="0"/>
           <include name="down"/>
-          <include name="deleteMatterCancelTest" invocation-numbers="0"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.ViewMatterDeleteMatterTest -->
+      </class> <!-- com.test.ViewMatterViewDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,10 +1,11 @@
 package com.abst;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Reusable {
 
@@ -107,6 +109,11 @@ public class Reusable {
 		js.executeScript("window.scrollTo(0,0)");
 	}
 	
+	public void pageUp1() throws InterruptedException {
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,0)");
+	}
 	
 	public void visibilityOfElementWait(WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -131,6 +138,86 @@ public class Reusable {
 		wait.until(
 				ExpectedConditions.visibilityOfAllElements(elements));
 	}
+	
+	//Document Name or Not
+	
+	public void documentNameDisplayCheck(String groupNames,List<WebElement> nameElements) throws InterruptedException {
+	       // String expectedName = "John Doe";
+			Thread.sleep(2000);
+	        boolean isNamePresent = false;
+	        for (WebElement nameElement : nameElements) {
+	            if (nameElement.getText().equals(groupNames)) {
+	                isNamePresent = true;
+	                break;
+	            }
+	        }
+
+	        Assert.assertTrue(isNamePresent, "The name '" + groupNames + "' is not present in the list.");
+	    }
+	
+	//Name select and Remove			
+	public void selectNameorRemoveName(String[] NameList,List<WebElement> allNamesText,List<WebElement> removeOrSelectBtn) throws InterruptedException {
+		Thread.sleep(2000);
+			List<String> groupNames = Arrays.asList(NameList);
+			String textGroup = new String();
+
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			WebElement checkboxSelectedGroupName;
+			for (int i = 0; i <allNamesText.size(); i++) {
+				textGroup = allNamesText.get(i).getText();
+				// System.out.println("All Group Name Text "+textGroup);
+				if (groupNames.contains(textGroup)) {
+					//Thread.sleep(2000);
+					checkboxSelectedGroupName = removeOrSelectBtn.get(i);
+					visibilityOfAllElements(checkboxSelectedGroupName);
+					Thread.sleep(2000);
+					executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+					i--;
+				}
+		}
+
+	}
+
+	
+	public void mouseClassPerform(WebElement element) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		//Creating object of an Actions class
+		Actions action = new Actions(driver);
+
+		//Performing the mouse hover action on the target element.
+		action.moveToElement(element).perform();
+	}
+	
+	// System Browser File
+		public static void getFile(String path) throws InterruptedException {
+			File directory = new File(path);
+
+			String allimages = "";
+			File[] flist = directory.listFiles();
+
+			for (File file : flist) {
+				if (file.isFile()) {
+					allimages = allimages + "\"" + file.getName() + "\"" + " ";
+				}
+			}
+
+			try {
+				Thread.sleep(2000);
+				Runtime.getRuntime().exec(
+						"C:\\Users\\Vengadesh\\Documents\\FileUpload\\getthefolder.exe" + " " + directory + File.separator);
+				Thread.sleep(5000);
+				Runtime.getRuntime().exec(
+						"C:\\Users\\Vengadesh\\Documents\\FileUpload\\SelectallandClickonOpen1.exe" + " " + allimages);
+
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+	
 	
 
 }

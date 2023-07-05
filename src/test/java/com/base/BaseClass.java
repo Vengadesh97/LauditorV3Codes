@@ -8,7 +8,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -28,7 +27,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -44,6 +42,7 @@ import com.pom.ViewMatterDeleteMatterPOM;
 import com.pom.ViewMatterOpenCloseMatterPOM;
 import com.pom.ViewMatterPOM;
 import com.pom.ViewMatterUpdateGroupsPOM;
+import com.pom.ViewMatterViewDetailsDocumentsPOM;
 import com.pom.ViewMatterViewDetailsPOM;
 import com.pom.ViewMembers;
 
@@ -67,7 +66,7 @@ public class BaseClass {
 	public ViewMatterOpenCloseMatterPOM viewMatterOpenCloseMatter;
 	public ViewMatterDeleteMatterPOM viewMatterDeleteMatter;
 	public ViewMatterViewDetailsPOM viewMatterViewDetail;
-	
+	public ViewMatterViewDetailsDocumentsPOM viewDetailDocuments;
 	
 	
 	public WebDriver initalize() throws IOException {
@@ -131,6 +130,7 @@ public class BaseClass {
 		viewMatterOpenCloseMatter = new ViewMatterOpenCloseMatterPOM(driver);
 		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
 		viewMatterViewDetail = new ViewMatterViewDetailsPOM(driver);
+		viewDetailDocuments = new ViewMatterViewDetailsDocumentsPOM(driver);
 		return loginPage;
 	}
 	

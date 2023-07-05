@@ -454,7 +454,7 @@ public class CreateMatter extends Reusable {
 		scrollUpnearbySearchbox();
 		Thread.sleep(2000);
 		visibilityOfAllElements(selectAll);
-		boolean isNameUnselected = !selectAll.isSelected();
+		boolean isNameUnselected = selectAll.isSelected();
 		Assert.assertTrue(isNameUnselected);
 
 	}
@@ -474,31 +474,6 @@ public class CreateMatter extends Reusable {
 	public void InputSearchBoxTempClients(String searchText) throws InterruptedException {
 		Thread.sleep(3000);
 		inputTempClientSearchBox.sendKeys(searchText);
-
-	}
-
-	public void oneNameSelect(String NameList) throws InterruptedException {
-		Thread.sleep(2000);
-
-		try {
-			String textGroup = new String();
-			JavascriptExecutor executor = (JavascriptExecutor) driver;
-			WebElement checkboxSelectedGroupName;
-			for (int i = 0; i < listOfGroupsName.size(); i++) {
-				textGroup = listOfGroupsName.get(i).getText();
-				// System.out.println("All Group Name Text "+textGroup);
-				if (NameList.contains(textGroup)) {
-					Thread.sleep(2000);
-					checkboxSelectedGroupName = checkboxSelectGroup.get(i);
-					visibilityOfAllElements(checkboxSelectedGroupName);
-					executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
-					i--;
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-
-		}
 
 	}
 

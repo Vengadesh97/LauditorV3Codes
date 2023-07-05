@@ -100,7 +100,7 @@ public class UploadDocumentPom extends Reusable {
 		leftSideDocument.click();
 	}
 
-	Reusable reusable = new Reusable(driver);
+	//Reusable reusable = new Reusable(driver);
 
 	public void uploadDocumentWithNoEdit(String clientName, String filePath) throws InterruptedException, AWTException {
 

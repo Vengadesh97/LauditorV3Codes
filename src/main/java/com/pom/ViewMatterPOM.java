@@ -28,7 +28,8 @@ public class ViewMatterPOM extends Reusable {
 	WebElement matterTab;
 
 	public void leftMatterTab() throws InterruptedException {
-		pageUp();
+		pageUp1();
+		Thread.sleep(1000);
 		visibilityOfElementWait(matterTab);
 		matterTab.click();
 
