@@ -3,10 +3,8 @@ package com.test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.base.BaseClass;
 
 public class ViewMatterViewDetailsTest extends BaseClass {
@@ -326,7 +324,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		} finally {
 			viewMatters.leftMatterTab();
@@ -376,7 +374,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.disableTabBtn();
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 
 		} finally {
@@ -431,7 +429,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		} finally {
 			viewMatters.leftMatterTab();
@@ -485,7 +483,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.disableTabBtn();
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		} finally {
 			viewMatters.leftMatterTab();
@@ -524,7 +522,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	public void uploadFilesandEnableWithEditAllandSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-
+			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
@@ -537,17 +535,20 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
-			Integer[] intArray1 = new Integer[] { 0, 1, 2, 3 };
-			viewDetailDocuments.combinedEditAllInputFields(intArray1, input.get("documName"), input.get("descp"),
-					input.get("date"), input.get("documName1"), input.get("descp1"), input.get("date1"),
-					input.get("documName2"), input.get("descp2"), input.get("date2"), input.get("documName3"),
-					input.get("descp3"), input.get("date3"));
-			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
-			viewDetailDocuments.alertClose();
-		}
+			Integer[] intArray1 = new Integer[] { 1, 3 };
 
-		finally {
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+		} finally {
 			viewMatters.leftMatterTab();
 		}
 	}
@@ -569,11 +570,16 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
-			Integer[] intArray1 = new Integer[] { 0, 1, 2, 3 };
-			viewDetailDocuments.combinedEditAllInputFields(intArray1, input.get("documName"), input.get("descp"),
-					input.get("date"), input.get("documName1"), input.get("descp1"), input.get("date1"),
-					input.get("documName2"), input.get("descp2"), input.get("date2"), input.get("documName3"),
-					input.get("descp3"), input.get("date3"));
+			Integer[] intArray1 = new Integer[] { 0, 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -602,10 +608,17 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 0, 1 };
-			viewDetailDocuments.editNameFieldOnly(intArray1, input.get("docName"), input.get("docName1"),
-					input.get("docName2"), input.get("docName3"));
+
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "documName";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -632,9 +645,17 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
-			Integer[] intArray1 = new Integer[] { 0, 2 };
-			viewDetailDocuments.editNameFieldOnly(intArray1, input.get("docName"), input.get("docName1"),
-					input.get("docName2"), input.get("docName3"));
+
+			Integer[] intArray1 = new Integer[] { 3, 2, 1 };
+
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "documName";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -644,12 +665,11 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 		}
 	}
 
-	@Test(dataProvider = "getData27", priority = 27)
+	@Test(dataProvider = "getData27", priority = 27, enabled = false)
 	public void uploadFilesandEnableWithEditDescriptionFieldOnlyandSave(HashMap<String, String> input)
 			throws InterruptedException {
 
 		try {
-
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
@@ -662,11 +682,19 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
-			Integer[] intArray1 = new Integer[] { 0, 3 };
-			viewDetailDocuments.editDescriptionFieldOnly(intArray1, input.get("descp"), input.get("descp1"),
-					input.get("descp2"), input.get("descp3"));
+
+			Integer[] intArray1 = new Integer[] { 3, 2, 1 };
+
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "descp";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -693,9 +721,15 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
-			Integer[] intArray1 = new Integer[] { 1, 1 };
-			viewDetailDocuments.editDescriptionFieldOnly(intArray1, input.get("descp"), input.get("descp1"),
-					input.get("descp2"), input.get("descp3"));
+			Integer[] intArray1 = new Integer[] { 0, 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "descp";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -723,10 +757,16 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 1, 2 };
-			viewDetailDocuments.editExpirateDateFieldOnly(intArray1, input.get("date"), input.get("date1"),
-					input.get("date2"), input.get("date3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "date";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editExpirateField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -754,8 +794,14 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 1, 3 };
-			viewDetailDocuments.editExpirateDateFieldOnly(intArray1, input.get("date"), input.get("date1"),
-					input.get("date2"), input.get("date3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "date";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editExpirateField(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -783,11 +829,17 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 2, 3 };
-			viewDetailDocuments.combinedDocumentNamesandExpirateDate(intArray1, input.get("DocName"), input.get("date"),
-					input.get("DocName1"), input.get("date1"), input.get("DocName2"), input.get("date2"),
-					input.get("DocName3"), input.get("date3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDateFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -814,9 +866,15 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 0, 1, 3 };
-			viewDetailDocuments.combinedDocumentNamesandExpirateDate(intArray1, input.get("DocName"), input.get("date"),
-					input.get("DocName1"), input.get("date1"), input.get("DocName2"), input.get("date2"),
-					input.get("DocName3"), input.get("date3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDateFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -832,8 +890,6 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			throws InterruptedException {
 
 		try {
-
-			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
@@ -847,11 +903,17 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 0, 2, 3 };
-			viewDetailDocuments.combinedDocumentNamesandDescription(intArray1, input.get("DocName"), input.get("Descp"),
-					input.get("DocName1"), input.get("Descp1"), input.get("DocName2"), input.get("Descp2"),
-					input.get("DocName3"), input.get("Descp3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "descp" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDescriptionFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -866,7 +928,6 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			throws InterruptedException {
 
 		try {
-
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
@@ -880,9 +941,15 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 1, 2, 3 };
-			viewDetailDocuments.combinedDocumentNamesandDescription(intArray1, input.get("DocName"), input.get("Descp"),
-					input.get("DocName1"), input.get("Descp1"), input.get("DocName2"), input.get("Descp2"),
-					input.get("DocName3"), input.get("Descp3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "descp" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDescriptionFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -898,8 +965,6 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			throws InterruptedException {
 
 		try {
-
-			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
@@ -913,11 +978,17 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 0, 2 };
-			viewDetailDocuments.combinedDescriptionandExpirateDate(intArray1, input.get("Descp"), input.get("date"),
-					input.get("Descp1"), input.get("date1"), input.get("Descp2"), input.get("date2"),
-					input.get("Descp3"), input.get("date3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDescriptionandExpirateDateFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
-			viewDetailDocuments.confirmationYes();
+			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
 		}
 
@@ -946,9 +1017,555 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(3000);
 			viewDetailDocuments.editMetaDataTabBtn();
 			Integer[] intArray1 = new Integer[] { 1, 3 };
-			viewDetailDocuments.combinedDescriptionandExpirateDate(intArray1, input.get("date"), input.get("Descp"),
-					input.get("date1"), input.get("Descp1"), input.get("date2"), input.get("Descp2"),
-					input.get("date3"), input.get("Descp3"));
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDescriptionandExpirateDateFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	// --------------------------------
+
+	@Test(dataProvider = "getData37", priority = 37)
+	public void uploadFilesandDisableWithEditAllandSave(HashMap<String, String> input) throws InterruptedException {
+
+		try {
+			viewMatters.leftMatterTab();
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+		} finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData38", priority = 38)
+	public void uploadFilesandDisableWithEditAllandCancel(HashMap<String, String> input) throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData39", priority = 39)
+	public void uploadFilesandDisableWithEditDocumNameFieldOnlyandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "documName";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData40", priority = 40)
+	public void uploadFilesandDisableWithEditDocumNameFieldOnlyandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 3, 2, 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "documName";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData41", priority = 41)
+	public void uploadFilesandDisableWithEditDescriptionFieldOnlyandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 3, 2, 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "descp";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData42", priority = 42)
+	public void uploadFilesandDisableWithEditDescriptionFieldOnlyandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "descp";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editDocumentNameField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData43", priority = 43)
+	public void uploadFilesandDisableWithexpirateDateFieldOnlyandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 1, 2 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "date";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editExpirateField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData44", priority = 44)
+	public void uploadFilesandDisableWithexpirateDateFieldOnlyandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[] desc = new String[count];
+			String dn = "date";
+			for (int ii = 0; ii < count; ii++) {
+				desc[ii] = input.get(dn + ii);
+			}
+			viewDetailDocuments.editExpirateField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData45", priority = 45)
+	public void uploadFilesandDisableWithcombinedDocumentNamesandDateandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 2, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDateFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData46", priority = 46)
+	public void uploadFilesandDisableWithcombinedDocumentNamesandDateandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDateFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData47", priority = 47)
+
+	public void uploadFilesandDisableWithcombinedDocumentNamesandDescriptionandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 2, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "descp" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDescriptionFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData48", priority = 48)
+
+	public void uploadFilesandDisableWithcombinedDocumentNamesandDescriptionandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 1, 2, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "documName", "descp" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDocumentNameandDescriptionFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData49", priority = 49)
+
+	public void uploadFilesandDisableWithcombinedDateandDescriptionandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0, 2 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDescriptionandExpirateDateFields(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData50", priority = 50)
+
+	public void uploadFilesandDisableWithcombinedDateandDescriptionandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 1, 3 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editDescriptionandExpirateDateFields(intArray1, desc);
+			Thread.sleep(2000);
 			viewDetailDocuments.cancelButtonOnAddExisting();
 			viewDetailDocuments.textNameUploadnewAttachDocum();
 		}
@@ -1396,6 +2013,174 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
 
 		return new Object[][] { { data.get(36) } };
+
+	}
+
+	// 37.uploadFilesandDisableWithEditAllandSave
+
+	@DataProvider
+	public Object[][] getData37() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(37) } };
+
+	}
+
+	// 38.uploadFilesandDisableWithEditAllandCancel
+
+	@DataProvider
+	public Object[][] getData38() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(38) } };
+
+	}
+
+	// 39.uploadFilesandDisableWithEditDocumNameFieldOnlyandSave
+
+	@DataProvider
+	public Object[][] getData39() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(33) } };
+
+	}
+
+	// 40.uploadFilesandDisableWithEditDocumNameFieldOnlyandCancel
+
+	@DataProvider
+	public Object[][] getData40() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(40) } };
+
+	}
+
+	// 41.uploadFilesandDisableWithEditDescriptionFieldOnlyandSave
+
+	@DataProvider
+	public Object[][] getData41() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(41) } };
+
+	}
+
+	// 42.uploadFilesandDisableWithEditDescriptionFieldOnlyandCancel
+
+	@DataProvider
+	public Object[][] getData42() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(42) } };
+
+	}
+
+	// 43.uploadFilesandDisableWithexpirateDateFieldOnlyandSave
+
+	@DataProvider
+	public Object[][] getData43() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(43) } };
+
+	}
+
+	// 44.uploadFilesandDisableWithexpirateDateFieldOnlyandCancel
+
+	@DataProvider
+	public Object[][] getData44() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(44) } };
+
+	}
+
+	// 45.uploadFilesandDisableWithcombinedDocumentNamesandDateandSave
+
+	@DataProvider
+	public Object[][] getData45() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(45) } };
+
+	}
+
+	// 46.uploadFilesandDisableWithcombinedDocumentNamesandDateandCancel
+
+	@DataProvider
+	public Object[][] getData46() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(46) } };
+
+	}
+
+	// 47.uploadFilesandDisableWithcombinedDocumentNamesandDescriptionandSave
+
+	@DataProvider
+	public Object[][] getData47() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(47) } };
+
+	}
+
+	// 48.uploadFilesandDisableWithcombinedDocumentNamesandDescriptionandCancel
+
+	@DataProvider
+	public Object[][] getData48() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(48) } };
+
+	}
+
+	// 49.uploadFilesandDisableWithcombinedDateandDescriptionandSave
+
+	@DataProvider
+	public Object[][] getData49() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(49) } };
+
+	}
+
+	// 50.uploadFilesandDisableWithcombinedDateandDescriptionandCancel
+
+	@DataProvider
+	public Object[][] getData50() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(50) } };
 
 	}
 

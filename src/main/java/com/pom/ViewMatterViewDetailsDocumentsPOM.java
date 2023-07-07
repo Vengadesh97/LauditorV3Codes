@@ -125,7 +125,7 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement nextButton;
 
-	public void nextBtnOnlyEditScenario() {
+	public void saveButtonOnEditDetails() {
 		visibilityOfAllElements(nextButton);
 		nextButton.click();
 	}
@@ -248,7 +248,7 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 	@FindBy(id = "documentName")
 	WebElement documentNameInputBox;
 
-	public void documentNameInputFields(String name) {
+	public void editDocumentName(String name) {
 		visibilityOfAllElements(documentNameInputBox);
 		documentNameInputBox.clear();
 		visibilityOfAllElements(documentNameInputBox);
@@ -258,7 +258,7 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 	@FindBy(xpath = "//textarea[@name='description']")
 	WebElement descriptionInputBox;
 
-	public void descriptionInputFields(String names) {
+	public void editDescription(String names) {
 		visibilityOfAllElements(descriptionInputBox);
 		descriptionInputBox.clear();
 		visibilityOfAllElements(descriptionInputBox);
@@ -278,23 +278,22 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
 	}
 
-	public void combinationDocumentNameAndDescription(String names, String names1) throws InterruptedException {
-		documentNameInputFields(names);
-		descriptionInputFields(names1);
+	public void editDocumentNameandDescription(String names, String names1) throws InterruptedException {
+		editDocumentName(names);
+		editDescription(names1);
 		nextButton.click();
 	}
 
-	public void combinationDocumentNameAndExpirateDate(String names, String dates) throws InterruptedException {
-	
-		documentNameInputFields(names);
+	public void editDocumentNameandExpirateDate(String names, String date) throws InterruptedException {
+		editDocumentName(names);
 		expirateDate();
 		Thread.sleep(2000);
-		dateChose(dates);
+		dateChose(date);
 		nextButton.click();
 	}
 
-	public void combinationDescriptionAndExpirateDate(String names1, String dates) throws InterruptedException {
-		descriptionInputFields(names1);
+	public void editDescriptionandExpirateDate(String names, String dates) throws InterruptedException {
+		editDescription(names);
 		expirateDate();
 		Thread.sleep(3000);
 		dateChose(dates);
@@ -302,9 +301,9 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		nextButton.click();
 	}
 
-	public void allEditCombination(String names, String names1, String dates) throws InterruptedException {
-		documentNameInputFields(names);
-		descriptionInputFields(names1);
+	public void editAllFields(String names, String names1, String dates) throws InterruptedException {
+		editDocumentName(names);
+		editDescription(names1);
 		expirateDate();
 		Thread.sleep(2000);
 		dateChose(dates);
@@ -322,17 +321,9 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 	@FindBy(xpath = "//div[@aria-label='Close']")
 	WebElement closeDuplicteDocument;
 
-	public void confirmationYes() throws InterruptedException {
-		try {
-			Thread.sleep(2000);
-			confirmationYesBtn.click();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Thread.sleep(2000);
-			visibilityOfAllElements(closeDuplicteDocument);
-			closeDuplicteDocument.click();
-		}
+	public void confirmationYesBtn() throws InterruptedException {
+		Thread.sleep(2000);
+		confirmationYesBtn.click();
 	}
 
 	public void confirmationNo() throws InterruptedException {
@@ -363,322 +354,121 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 
 	// View Matter - Document Upload New
 
-	// Edit Name Field only
+	// Edit all Fields
 
-	public void editNameFieldOnly(Integer[] intArray, String names, String names1, String names2, String names3)
-			throws InterruptedException {
-		// Thread.sleep(2000);
-		// Integer[] intArray = new Integer[] { 0, 2,3 };
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
+	public void editAllField(Integer[] intArray, String[][] des) throws InterruptedException {
+		// int n= intArray.length;
+		int jj = 0;
+		for (jj = 0; jj < intArray.length; jj++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					documentNameInputFields(names);
-					nextBtnOnlyEditScenario();
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					documentNameInputFields(names1);
-					nextBtnOnlyEditScenario();
-				}
+			int eb = intArray[jj];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(1000);
+			editAllFields(des[eb][0], des[eb][1], des[eb][2]);
+		}
 
-				else if (i == 2)
+	}
 
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					documentNameInputFields(names2);
-					nextBtnOnlyEditScenario();
-				}
+	// Edit Document Name
 
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					documentNameInputFields(names3);
-					nextBtnOnlyEditScenario();
-				}
+	public void editDocumentNameField(Integer[] intArray, String[] des) throws InterruptedException {
 
-			}
+		for (int ii = 0; ii < intArray.length; ii++) {
+			Thread.sleep(2000);
+			int eb = intArray[ii];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(2000);
+			editDocumentName(des[eb]);
+			saveButtonOnEditDetails();
 		}
 	}
 
-//EditDescriptionFieldOnly
+	// Edit Description Field
 
-	public void editDescriptionFieldOnly(Integer[] intArray, String descp, String descp1, String descp2, String descp3)
-			throws InterruptedException {
+	public void editDescriptionField(Integer[] intArray, String[] des) throws InterruptedException {
 
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
+		for (int ii = 0; ii < intArray.length; ii++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					descriptionInputFields(descp);
-					nextBtnOnlyEditScenario();
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					descriptionInputFields(descp1);
-					nextBtnOnlyEditScenario();
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					descriptionInputFields(descp2);
-					nextBtnOnlyEditScenario();
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					descriptionInputFields(descp3);
-					nextBtnOnlyEditScenario();
-				}
-
-			}
+			int eb = intArray[ii];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(2000);
+			editDescription(des[eb]);
+			saveButtonOnEditDetails();
 		}
+
 	}
 
-//Edit ExpirateDate Field only
+	// Expirate Date Field
 
-	public void editExpirateDateFieldOnly(Integer[] intArray, String date, String date1, String date2, String date3)
-			throws InterruptedException {
+	public void editExpirateField(Integer[] intArray, String[] date) throws InterruptedException {
 
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
+		for (int ii = 0; ii < intArray.length; ii++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					expirateDate();
-					dateChose(date);
-					nextBtnOnlyEditScenario();
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					expirateDate();
-					dateChose(date1);
-					nextBtnOnlyEditScenario();
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					expirateDate();
-					dateChose(date2);
-					nextBtnOnlyEditScenario();
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					expirateDate();
-					dateChose(date3);
-					nextBtnOnlyEditScenario();
-				}
-
-			}
+			int eb = intArray[ii];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(2000);
+			expirateDate();
+			Thread.sleep(1000);
+			dateChose(date[eb]);
+			saveButtonOnEditDetails();
 		}
+
 	}
 
-	// View Matter - combinedDocumentNamesandDescription
+	// Edit DocumentName and Expirate Date Fields
 
-	public void combinedDocumentNamesandDescription(Integer[] intArray, String dname, String descp, String dname1,
-			String descp1, String dname2, String descp2, String dname3, String descp3) throws InterruptedException {
-		// Thread.sleep(2000);
-		// Integer[] intArray = new Integer[] { 0, 2,3 };
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
+	public void editDocumentNameandDateFields(Integer[] intArray, String[][] des) throws InterruptedException {
 
-		for (int i = 0; i <= editButton.size(); i++) {
+		int jj = 0;
+		for (jj = 0; jj < intArray.length; jj++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndDescription(dname, descp);
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndDescription(dname1, descp1);
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndDescription(dname2, descp2);
-
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndDescription(dname3, descp3);
-				}
-
-			}
+			int eb = intArray[jj];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(1000);
+			editDocumentNameandExpirateDate(des[eb][0], des[eb][1]);
 		}
+
 	}
 
-	// View Matter - combinedDocumentNamesandExpirateDate
+	// Edit DocumentName and Description Fields
 
-	public void combinedDocumentNamesandExpirateDate(Integer[] intArray, String dname, String date, String dname1,
-			String date1, String dname2, String date2, String dname3, String date3) throws InterruptedException {
+	public void editDocumentNameandDescriptionFields(Integer[] intArray, String[][] des) throws InterruptedException {
 
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
+		int jj = 0;
+		for (jj = 0; jj < intArray.length; jj++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndExpirateDate(dname, date);
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndExpirateDate(dname1, date1);
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndExpirateDate(dname2, date2);
-
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDocumentNameAndExpirateDate(dname3, date3);
-				}
-
-			}
+			int eb = intArray[jj];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(1000);
+			editDocumentNameandDescription(des[eb][0], des[eb][1]);
 		}
+
 	}
 
-	// View Matter - combinedDescriptionandExpirateDate
+	// Edit editDescription and ExpirateDate Fields
 
-	public void combinedDescriptionandExpirateDate(Integer[] intArray, String descp, String date, String descp1,
-			String date1, String descp2, String date2, String descp3, String date3) throws InterruptedException {
+	public void editDescriptionandExpirateDateFields(Integer[] intArray, String[][] des) throws InterruptedException {
 
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
+		int jj = 0;
+		for (jj = 0; jj < intArray.length; jj++) {
 			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDescriptionAndExpirateDate(descp,date);
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDescriptionAndExpirateDate(descp1,date1);
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDescriptionAndExpirateDate(descp2,date2);
-
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					combinationDescriptionAndExpirateDate(descp3,date3);
-				}
-
-			}
+			int eb = intArray[jj];
+			editButton.get(eb).click();
+			pageDown();
+			Thread.sleep(1000);
+			editDescriptionandExpirateDate(des[eb][0], des[eb][1]);
 		}
+
 	}
 
-	// View Matter - Document Upload New
+	// -------------------------------------------------------------------------------------------------------------------------------------
 
-	public void combinedEditAllInputFields(Integer[] intArray, String names, String descp, String date, String names1,
-			String descp1, String date1, String names2, String descp2, String date2, String names3, String descp3,
-			String date3) throws InterruptedException {
-		// Thread.sleep(2000);
-		// Integer[] intArray = new Integer[] { 0, 2,3 };
-		List<Integer> intList = new ArrayList<>(Arrays.asList(intArray));
-
-		for (int i = 0; i <= editButton.size(); i++) {
-			Thread.sleep(2000);
-			if (intList.contains(i)) {
-				if (i == 0) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					allEditCombination(names, descp, date);
-				} else if (i == 1) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					allEditCombination(names1, descp1, date1);
-				}
-
-				else if (i == 2)
-
-				{
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					allEditCombination(names2, descp2, date2);
-
-				}
-
-				else if (i == 3) {
-					editButton.get(i).click();
-					pageDown();
-					Thread.sleep(1000);
-					allEditCombination(names3, descp3, date3);
-				}
-
-			}
-		}
-	}
+	
 
 }
