@@ -172,6 +172,7 @@ public class Reusable {
 					visibilityOfAllElements(checkboxSelectedGroupName);
 					Thread.sleep(2000);
 					executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+					Thread.sleep(1000);
 					i--;
 				}
 		}

@@ -1,8 +1,13 @@
 package com.test;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
@@ -24,9 +29,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData1", priority = 1, enabled = false)
-	public void
-
-			descriptionTextinViewDetails(HashMap<String, String> input) throws InterruptedException {
+	public void descriptionTextinViewDetails(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -43,9 +46,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData2", priority = 2)
-	public void
-
-			documentNameCheckingOnDocuments(HashMap<String, String> input) throws InterruptedException {
+	public void documentNameCheckingOnDocuments(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -59,9 +60,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData3", priority = 3)
-	public void
-
-			documentRemoveOnDocuments(HashMap<String, String> input) throws InterruptedException {
+	public void documentRemoveOnDocuments(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -76,9 +75,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData4", priority = 4)
-	public void
-
-			removeDocumentOnLeftSideWithCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	removeDocumentOnLeftSideWithCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -96,9 +93,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData5", priority = 5)
-	public void
-
-			selectDocumentOnRightSideWithCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	selectDocumentOnRightSideWithCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -116,9 +111,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData6", priority = 6)
-	public void
-
-			selectDocumentOnRightSideWithSave(HashMap<String, String> input) throws InterruptedException {
+	public void	selectDocumentOnRightSideWithSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -136,9 +129,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData7", priority = 7)
-	public void
-
-			removeDocumentOnLeftSideWithSave(HashMap<String, String> input) throws InterruptedException {
+	public void	removeDocumentOnLeftSideWithSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -156,9 +147,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData8", priority = 8)
-	public void
-
-			selectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	selectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -176,9 +165,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData9", priority = 9)
-	public void
-
-			selectAllClickSave(HashMap<String, String> input) throws InterruptedException {
+	public void	selectAllClickSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -196,9 +183,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData10", priority = 10)
-	public void
-
-			unSelectAllClickSave(HashMap<String, String> input) throws InterruptedException {
+	public void unSelectAllClickSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -217,9 +202,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData11", priority = 11)
-	public void
-
-			unSelectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	unSelectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -237,9 +220,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData12", priority = 12)
-	public void
-
-			browseAndUploadFilesAndCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	browseAndUploadFilesAndCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -281,9 +262,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData14", priority = 14)
-	public void
-
-			browseandUploadFilesandRemoveDocumentWithNext(HashMap<String, String> input) throws InterruptedException {
+	public void	browseandUploadFilesandRemoveDocumentWithNext(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -332,9 +311,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData16", priority = 16)
-	public void
-
-			uploadFilestAndEnableWithCancel(HashMap<String, String> input) throws InterruptedException {
+	public void uploadFilestAndEnableWithCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -356,9 +333,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData17", priority = 17)
-	public void
-
-			uploadFilestAndDisableWithSave(HashMap<String, String> input) throws InterruptedException {
+	public void	uploadFilestAndDisableWithSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -383,9 +358,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData18", priority = 18)
-	public void
-
-			uploadFilestAndDisableWithCancel(HashMap<String, String> input) throws InterruptedException {
+	public void	uploadFilestAndDisableWithCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 
@@ -548,6 +521,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1035,8 +1009,6 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 		}
 	}
 
-	// --------------------------------
-
 	@Test(dataProvider = "getData37", priority = 37)
 	public void uploadFilesandDisableWithEditAllandSave(HashMap<String, String> input) throws InterruptedException {
 
@@ -1068,6 +1040,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			Thread.sleep(2000);
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1575,6 +1548,1074 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 		}
 	}
 
+	@Test(dataProvider = "getData51", priority = 51)
+	public void uploadFilesandEnableWithMultipleAddTagsandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData52", priority = 52)
+	public void uploadFilesandEnableWithMultipleAddTagsandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData53", priority = 53)
+	public void uploadFilesandEnableWithAddTagsSelectAllandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData54", priority = 54)
+	public void uploadFilesandEnableWithAddTagsSelectAllandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData55", priority = 55)
+	public void uploadFilesandEnableWithAddTagsSelectAllandRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.removedTags();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData56", priority = 56)
+	public void uploadFilesandEnableWithAddTagsSelectAllandRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.removedTags();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData57", priority = 57)
+	public void uploadFilesandEnableWithMultipleAddTagsandRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddAndRemove(intArray1, desc);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData58", priority = 58)
+	public void uploadFilesandEnableWithMultipleAddTagsandRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddAndRemove(intArray1, desc);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData59", priority = 59)
+	public void uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddandRemoveaddedText(intArray1, desc);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData60", priority = 60)
+	public void uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddandRemoveaddedText(intArray1, desc);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData61", priority = 61)
+	public void uploadFilesandDisableWithMultipleAddTagsandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.leftMatterTab();
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData62", priority = 62)
+	public void uploadFilesandDisableWithMultipleAddTagsandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData63", priority = 63)
+	public void uploadFilesandDisableWithAddTagsSelectAllandSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData64", priority = 64)
+	public void uploadFilesandDisableWithAddTagsSelectAllandCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData65", priority = 65)
+	public void uploadFilesandDisableWithAddTagsSelectAllandRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.removedTags();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData66", priority = 66)
+	public void uploadFilesandDisableWithAddTagsSelectAllandRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			viewDetailDocuments.selectAllClk();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.pageDown();
+			Thread.sleep(2000);
+			viewDetailDocuments.removedTags();
+			viewDetailDocuments.addButtonAddTags();
+			viewDetailDocuments.tagsFields(input.get("addtags0"), input.get("tags0"));
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData67", priority = 67)
+	public void uploadFilesandDisableWithMultipleAddTagsandRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddAndRemove(intArray1, desc);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData68", priority = 68)
+	public void uploadFilesandDisableWithMultipleAddTagsandRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddAndRemove(intArray1, desc);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData69", priority = 69)
+	public void uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndSave(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddandRemoveaddedText(intArray1, desc);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData70", priority = 70)
+	public void uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndCancel(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray1 = new Integer[] { 1 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][2];
+			String[] dn = { "addtags", "tags" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.tagsAddandRemoveaddedText(intArray1, desc);
+			viewDetailDocuments.cancelButtonOnAddExisting();
+			viewDetailDocuments.textNameUploadnewAttachDocum();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData71", priority = 71)
+	public void uploadFilesandEnableAndEditFirstDocumentsOnly(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData72", priority = 72)
+	public void uploadFilesandEnableAndEditSecondDocumentsOnly(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 2 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData73", priority = 73)
+	public void uploadFilesandDisableAndEditFirstDocumentsOnly(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData74", priority = 74)
+	public void uploadFilesandDisableAndEditSecondDocumentsOnly(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 2 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData75", priority = 75)
+	public void uploadFilesandEnableAndRemoveFiles(HashMap<String, String> input) throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			String[] numbers = { input.get("removeFile1"), input.get("removeFile2"), input.get("removeFile3") };
+			viewDetailDocuments.removeFiles(numbers);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+
+	@Test(dataProvider = "getData76", priority = 76)
+	public void uploadFilesandDisableAndRemoveFiles(HashMap<String, String> input) throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			String[] numbers = { input.get("removeFile1"), input.get("removeFile2"), input.get("removeFile3") };
+			viewDetailDocuments.removeFiles(numbers);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+	
+	
+	@Test(dataProvider = "getData77", priority = 77)
+	public void uploadFilesandEnableAndEditAllFieldsAndEditTags(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray2 = new Integer[] { 0 };
+			int count1 = Integer.parseInt(input.get("count1"));
+			String[][] desc1 = new String[count1][2];
+			String[] dn1 = { "addtags", "tags" };
+			for (int ii = 0; ii < count1; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc1[ii][jj] = input.get(dn1[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray2, desc1);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+			
+			
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+	
+	
+
+	@Test(dataProvider = "getData78", priority = 79)
+	public void uploadFilesandDisableAndEditAllFieldsAndEditTags(HashMap<String, String> input)
+			throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.pageMiddle();
+			viewDetailDocuments.uploadNewBtn();
+			viewDetailDocuments.browseAndUploadDoc();
+			viewDetailDocuments.fileUpload(input.get("filePath"));
+			Thread.sleep(3000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			Thread.sleep(3000);
+			viewDetailDocuments.disableTabBtn();
+			Thread.sleep(1000);
+			viewDetailDocuments.editMetaDataTabBtn();
+			Integer[] intArray1 = new Integer[] { 0 };
+			int count = Integer.parseInt(input.get("count"));
+			String[][] desc = new String[count][3];
+			String[] dn = { "documName", "descp", "date" };
+			for (int ii = 0; ii < count; ii++) {
+				for (int jj = 0; jj < 3; jj++)
+					desc[ii][jj] = input.get(dn[jj] + ii);
+			}
+			viewDetailDocuments.editAllField(intArray1, desc);
+			Thread.sleep(3000);
+			viewDetailDocuments.addTagsTabBtn();
+			Integer[] intArray2 = new Integer[] { 0 };
+			int count1 = Integer.parseInt(input.get("count1"));
+			String[][] desc1 = new String[count1][2];
+			String[] dn1 = { "addtags", "tags" };
+			for (int ii = 0; ii < count1; ii++) {
+				for (int jj = 0; jj < 2; jj++)
+					desc1[ii][jj] = input.get(dn1[jj] + ii);
+			}
+			viewDetailDocuments.tagsAdd(intArray2, desc1);
+			Thread.sleep(2000);
+			viewDetailDocuments.nextButtonOnAddExisting();
+			viewDetailDocuments.confirmationYesBtn();
+			viewDetailDocuments.alertClose();
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// 0. meetingNameAppearOrNot
 
 	@DataProvider
@@ -2184,4 +3225,338 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 
 	}
 
+	// 51.uploadFilesandEnableWithMultipleAddTagsandSave
+
+	@DataProvider
+	public Object[][] getData51() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(51) } };
+
+	}
+
+	// 52.uploadFilesandEnableWithMultipleAddTagsandCancel
+
+	@DataProvider
+	public Object[][] getData52() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(52) } };
+
+	}
+
+	// 53.uploadFilesandEnableWithAddTagsSelectAllandSave
+
+	@DataProvider
+	public Object[][] getData53() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(53) } };
+
+	}
+
+	// 54.uploadFilesandEnableWithAddTagsSelectAllandCancel
+
+	@DataProvider
+	public Object[][] getData54() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(54) } };
+
+	}
+
+	// 55.uploadFilesandEnableWithAddTagsSelectAllandRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData55() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(55) } };
+
+	}
+
+	// 56.uploadFilesandEnableWithAddTagsSelectAllandRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData56() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(56) } };
+
+	}
+
+	// 57.uploadFilesandEnableWithMultipleAddTagsandRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData57() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(57) } };
+
+	}
+
+	// 58.uploadFilesandEnableWithMultipleAddTagsandRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData58() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(58) } };
+
+	}
+
+	// 59.uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData59() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(59) } };
+
+	}
+
+	// 60.uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData60() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(60) } };
+
+	}
+
+	// 61.uploadFilesandDisableWithMultipleAddTagsandSave
+
+	@DataProvider
+	public Object[][] getData61() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(61) } };
+
+	}
+
+	// 62.uploadFilesandDisableWithMultipleAddTagsandCancel
+
+	@DataProvider
+	public Object[][] getData62() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(62) } };
+
+	}
+
+	// 63.uploadFilesandDisableWithAddTagsSelectAllandSave
+
+	@DataProvider
+	public Object[][] getData63() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(63) } };
+
+	}
+
+	// 64.uploadFilesandDisableWithAddTagsSelectAllandCancel
+
+	@DataProvider
+	public Object[][] getData64() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(64) } };
+
+	}
+
+	// 65.uploadFilesandDisableWithAddTagsSelectAllandRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData65() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(65) } };
+
+	}
+
+	// 66.uploadFilesandDisableWithAddTagsSelectAllandRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData66() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(66) } };
+
+	}
+
+	// 67.uploadFilesandDisableWithMultipleAddTagsandRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData67() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(67) } };
+
+	}
+
+	// 68.uploadFilesandDisableWithMultipleAddTagsandRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData68() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(68) } };
+
+	}
+
+	// 69.uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndSave
+
+	@DataProvider
+	public Object[][] getData69() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(69) } };
+
+	}
+
+	// 70.uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndCancel
+
+	@DataProvider
+	public Object[][] getData70() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(70) } };
+
+	}
+
+	// 71.uploadFilesandEnableAndUpdateTagsandEditFirstDocumentsOnly
+
+	@DataProvider
+	public Object[][] getData71() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(71) } };
+
+	}
+
+	// 72.uploadFilesandEnableAndUpdateTagsandEditSecondDocumentsOnly
+
+	@DataProvider
+	public Object[][] getData72() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(72) } };
+
+	}
+
+	// 73. uploadFilesandDisableAndUpdateTagsandEditFirstDocumentsOnly
+
+	@DataProvider
+	public Object[][] getData73() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(73) } };
+
+	}
+
+	// 74. uploadFilesandDisableAndUpdateTagsandEditSecondDocumentsOnly
+
+	@DataProvider
+	public Object[][] getData74() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(74) } };
+
+	}
+
+	// 75.uploadFilesandEnableAndRemoveFiles
+	@DataProvider
+	public Object[][] getData75() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(75) } };
+
+	}
+
+	// 76.uploadFilesandDisableAndRemoveFiles
+	@DataProvider
+	public Object[][] getData76() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(76) } };
+
+	}
+	
+
+	// 77.uploadFilesandEnableAndEditAllFieldsAndEditTags
+	@DataProvider
+	public Object[][] getData77() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(77) } };
+
+	}
+	
+
+	// 78.uploadFilesandDisableAndEditAllFieldsAndEditTags
+	@DataProvider
+	public Object[][] getData78() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData.json");
+
+		return new Object[][] { { data.get(78) } };
+
+	}
+	
 }

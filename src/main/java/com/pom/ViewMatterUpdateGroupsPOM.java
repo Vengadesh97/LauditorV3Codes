@@ -1,5 +1,7 @@
 package com.pom;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -12,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import com.abst.Reusable;
 
@@ -271,4 +274,17 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 
 	}
 
+	
+	
+	public void selectedNameMatch(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = listOfSelectedGroupNames.stream().anyMatch(documentVerifys-> documentVerifys.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
+	
+	
+	
 }

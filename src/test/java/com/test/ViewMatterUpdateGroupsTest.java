@@ -28,6 +28,10 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 			viewMatterUpdateGroups.submitUpdateGroup();
 			viewMatterUpdateGroups.alertYesButton();
 			viewMatterUpdateGroups.viewMatterSuccessPopup();
+			
+//			List<WebElement> documentVerify = driver.findElements(By.xpath("//div[@id='selectbx '] //div[@id='search']"));
+			//	documentVerify.stream().anyMatch(documentVerifys-> documentVerifys.getText().equalsIgnoreCase(documentSelect));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -37,17 +41,26 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 	@Test(dataProvider = "getData1", priority = 1)
 	public void selectMultipleGroups(HashMap<String, String> input) throws InterruptedException {
 		try {
+			viewMatters.leftMatterTab();
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
 			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
 			String[] selectGroupNames = { input.get("selectgroupName1"), input.get("selectgroupName2"),
 					input.get("selectgroupName3") };
 			viewMatterUpdateGroups.selectGrouponRightSide(selectGroupNames);
-			viewMatterUpdateGroups.selectedGroupNameIsDisplay(selectGroupNames);
+			//viewMatterUpdateGroups.selectedGroupNameIsDisplay(selectGroupNames);
 			viewMatterUpdateGroups.pageDown();
 			viewMatterUpdateGroups.submitUpdateGroup();
 			viewMatterUpdateGroups.alertYesButton();
 			viewMatterUpdateGroups.viewMatterSuccessPopup();
+			Thread.sleep(2000);
+			viewMatterUpdateGroups.pageUp();
+			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
+			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName1"));
+			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName2"));
+			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName3"));
+		
 		} finally {
 			viewMatters.leftMatterTab();
 		}

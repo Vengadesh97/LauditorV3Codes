@@ -216,10 +216,7 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 
 	@FindBy(xpath = "//label[@for='btnradio3']")
 	WebElement editMetaDataTab;
-
-	@FindBy(xpath = "//label[@for='btnradio4']")
-	WebElement addTagsTab;
-
+	
 	@FindBy(xpath = "//div //i[@class='fa fa-times-circle']")
 	List<WebElement> removeButton;
 
@@ -236,11 +233,6 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 	public void editMetaDataTabBtn() {
 		visibilityOfAllElements(editMetaDataTab);
 		editMetaDataTab.click();
-	}
-
-	public void addTagsTabBtn() {
-		visibilityOfAllElements(addTagsTab);
-		addTagsTab.click();
 	}
 
 	// Inside the Edit Metadata
@@ -278,38 +270,154 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
 	}
 
-	public void editDocumentNameandDescription(String names, String names1) throws InterruptedException {
-		editDocumentName(names);
-		editDescription(names1);
-		nextButton.click();
+	// Add Tags Scenario
+	
+	// Add tag Button
+	@FindBy(xpath = "//label[@for='btnradio4']")
+	WebElement addTagsTab;
+	
+	// Select All Button
+	@FindBy(xpath="(//input[@type='checkbox'])[2]")
+	WebElement selectAllAddTags;
+	
+	// Add Button
+	@FindBy(xpath="//button[@class='btn btn-primary']")
+	WebElement addButtonForAddTags;
+	
+	//Tag type
+	@FindBy(xpath="(//div //input[@id='caseType'])[1]")
+	WebElement tagTypeInputFields;
+	
+	//Tags
+	@FindBy(xpath="(//div //input[@id='caseType'])[2]")
+	WebElement tagsInputFields;
+	
+	public void addTagsTabBtn() {
+		visibilityOfAllElements(addTagsTab);
+		addTagsTab.click();
 	}
-
-	public void editDocumentNameandExpirateDate(String names, String date) throws InterruptedException {
-		editDocumentName(names);
-		expirateDate();
-		Thread.sleep(2000);
-		dateChose(date);
-		nextButton.click();
+	
+	public void selectAllClk()
+	{
+		visibilityOfAllElements(selectAllAddTags);
+		selectAllAddTags.click();
 	}
-
-	public void editDescriptionandExpirateDate(String names, String dates) throws InterruptedException {
-		editDescription(names);
-		expirateDate();
-		Thread.sleep(3000);
-		dateChose(dates);
-		Thread.sleep(1000);
-		nextButton.click();
+	
+	public void addButtonAddTags()
+	{
+		visibilityOfAllElements(addButtonForAddTags);
+		addButtonForAddTags.click();
 	}
-
-	public void editAllFields(String names, String names1, String dates) throws InterruptedException {
-		editDocumentName(names);
-		editDescription(names1);
-		expirateDate();
-		Thread.sleep(2000);
-		dateChose(dates);
-		nextButton.click();
+	
+	public void tagsFields(String names1,String names2) throws InterruptedException
+	{
+		visibilityOfAllElements(tagTypeInputFields);
+		tagTypeInputFields.sendKeys(names1);
+		visibilityOfAllElements(tagsInputFields);
+		tagsInputFields.sendKeys(names2);
+		visibilityOfAllElements(nextButton);
+		nextButtonOnAddExisting();
 	}
+	
+	
+	// Tags and select one or two tags adds
+	@FindBy(xpath="//div[@class='icon-list'] //div //input[@type='checkbox']")
+	List<WebElement> tagsSelect;
+	
+		public void tagsAdd(Integer[] intArray, String[][] des) throws InterruptedException {
 
+			int jj = 0;
+			for (jj = 0; jj < intArray.length; jj++) {
+				Thread.sleep(2000);
+				int eb = intArray[jj];
+				tagsSelect.get(eb).click();
+				pageDown();
+				Thread.sleep(1000);
+				addButtonAddTags();
+				pageDown();
+				Thread.sleep(1000);
+				tagsFields(des[eb][0], des[eb][1]);
+			}
+
+		}
+		
+		// Before adding the tags, remove the empty tags
+		public void tagsAddAndRemove(Integer[] intArray, String[][] des) throws InterruptedException {
+
+				int jj = 0;
+				for (jj = 0; jj < intArray.length; jj++) {
+					Thread.sleep(2000);
+					int eb = intArray[jj];
+					tagsSelect.get(eb).click();
+					pageDown();
+					addButtonAddTags();
+					pageDown();
+					removedTags();
+					addButtonAddTags();
+					pageDown();
+					tagsFields(des[eb][0], des[eb][1]);
+				}
+
+			}
+		
+		// Remove Scenario with tagsFields
+		
+		public void tagsFields1(String names1,String names2) throws InterruptedException
+		{
+			visibilityOfAllElements(tagTypeInputFields);
+			tagTypeInputFields.sendKeys(names1);
+			visibilityOfAllElements(tagsInputFields);
+			tagsInputFields.sendKeys(names2);
+			visibilityOfAllElements(nextButton);
+			removedTags();
+			nextButtonOnAddExisting();
+		}
+		
+
+		public void tagsAddandRemoveaddedText(Integer[] intArray, String[][] des) throws InterruptedException {
+
+			int jj = 0;
+			for (jj = 0; jj < intArray.length; jj++) {
+				Thread.sleep(2000);
+				int eb = intArray[jj];
+				tagsSelect.get(eb).click();
+				pageDown();
+				addButtonAddTags();
+				pageDown();
+				tagsFields1(des[eb][0], des[eb][1]);
+				
+			}
+
+		}
+		
+		
+		
+		// Remove button Tags
+		@FindBy(xpath="//div[@class='col-1'] //i[@class='fa fa-times-circle']")
+		List<WebElement> removeTags;
+		
+		public void removedTags()
+		{
+			for(int i=0;i<removeTags.size();i++)
+			{
+				removeTags.get(i).click();
+			}
+		}
+		
+		
+		@FindBy(xpath="//div //i[@class='fa fa-times-circle']")
+		List<WebElement> removeUploadDoc;
+		
+		@FindBy(xpath="//div[@class='documents-list ng-item']")
+		List<WebElement> allFileNames;
+		
+		public void removeFiles(String[] removeDocuments) throws InterruptedException
+		{
+			Thread.sleep(1000);
+			selectNameorRemoveName(removeDocuments, allFileNames, removeUploadDoc);
+		}
+	
+	
 	// Below Alert Yes and No and Next and Cancel Button
 
 	@FindBy(xpath = "//button[@class='btn btn-default alertbtn alertbtnyes']")
@@ -348,6 +456,39 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		boolean displayed = textNameUploadnewAttachDocum.isDisplayed();
 		Assert.assertTrue(displayed);
 	}
+	
+	public void editDocumentNameandDescription(String names, String names1) throws InterruptedException {
+		editDocumentName(names);
+		editDescription(names1);
+		nextButton.click();
+	}
+
+	public void editDocumentNameandExpirateDate(String names, String date) throws InterruptedException {
+		editDocumentName(names);
+		expirateDate();
+		Thread.sleep(2000);
+		dateChose(date);
+		nextButton.click();
+	}
+
+	public void editDescriptionandExpirateDate(String names, String dates) throws InterruptedException {
+		editDescription(names);
+		expirateDate();
+		Thread.sleep(3000);
+		dateChose(dates);
+		Thread.sleep(1000);
+		nextButton.click();
+	}
+
+	public void editAllFields(String names, String names1, String dates) throws InterruptedException {
+		editDocumentName(names);
+		editDescription(names1);
+		expirateDate();
+		Thread.sleep(2000);
+		dateChose(dates);
+		nextButton.click();
+	}
+
 
 	@FindBy(xpath = "//div //i[@class='fa fa-edit']")
 	List<WebElement> editButton;

@@ -487,5 +487,303 @@
 		"date2": " 12 ",
 		"descp3": "Files checking ",
 		"date3": " 17 "
+	},
+		{
+		"comment": "51.uploadFilesandEnableWithMultipleAddTagsandSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Year",
+		"tags0": " 1999 ",
+		"addtags1": "Month",
+		"tags1": " 07 "
+	},
+	{
+		"comment": "52.uploadFilesandEnableWithMultipleAddTagsandCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Year",
+		"tags0": " 2050 ",
+		"addtags1": "Month",
+		"tags1": " 07 "
+	},
+		{
+		"comment": "53.uploadFilesandEnableWithAddTagsSelectAllandSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Year",
+		"tags0": " 2000 "
+	},
+		{
+		"comment": "54.uploadFilesandEnableWithAddTagsSelectAllandCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Month",
+		"tags0": " 06 "
+	},
+	{
+		"comment": "55.uploadFilesandEnableWithAddTagsSelectAllandRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Month",
+		"tags0": " 06 "
+	},
+		{
+		"comment": "56.uploadFilesandEnableWithAddTagsSelectAllandRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Date",
+		"tags0": " 15 "
+	},
+	{
+		"comment": "57.uploadFilesandEnableWithMultipleAddTagsandRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+		{
+		"comment": "58.uploadFilesandEnableWithMultipleAddTagsandRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+			{
+		"comment": "59.uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+		{
+		"comment": "60.uploadFilesandEnableWithMultipleAddTagsandAddTagsAndRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+	{
+		"comment": "61.uploadFilesandDisableWithMultipleAddTagsandSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Year",
+		"tags1": " 5 "
+	},
+		{
+		"comment": "62.uploadFilesandDisableWithMultipleAddTagsandCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Year",
+		"tags0": " 2050 ",
+		"addtags1": "Month",
+		"tags1": " 07 "
+	},
+		{
+		"comment": "63.uploadFilesandDisableWithAddTagsSelectAllandSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Year",
+		"tags0": " 2000 "
+	},
+		{
+		"comment": "64.uploadFilesandDisableWithAddTagsSelectAllandCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Month",
+		"tags0": " 06 "
+	},
+	{
+		"comment": "65.uploadFilesandDisableWithAddTagsSelectAllandRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Month",
+		"tags0": " 06 "
+	},
+		{
+		"comment": "66.uploadFilesandDisableWithAddTagsSelectAllandRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"addtags0": "Date",
+		"tags0": " 15 "
+	},
+	{
+		"comment": "67.uploadFilesandDisableWithMultipleAddTagsandRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+		{
+		"comment": "68.uploadFilesandDisableWithMultipleAddTagsandRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+			{
+		"comment": "69.uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndSave",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+		{
+		"comment": "70.uploadFilesandDisableWithMultipleAddTagsandAddTagsAndRemoveAndCancel",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "2",
+		"addtags0": "Date",
+		"tags0": " 15 ",
+		"addtags1": "Month",
+		"tags1": " 5 "
+	},
+	{
+		"comment": "71.uploadFilesandEnableAndEditFirstDocumentsOnly",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 "
+
+	},
+		{
+		"comment": "72.uploadFilesandEnableAndEditSecondDocumentsOnly",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 "
+	},
+		{
+		"comment": "73.uploadFilesandDisableAndEditFirstDocumentsOnly",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 "
+	},
+		{
+		"comment": "74.uploadFilesandDisableAndEditSecondDocumentsOnly",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 "
+	},
+	{
+		"comment": "75.uploadFilesandEnableAndRemoveFiles",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"removeFile1":"LADPNG.png",
+		"removeFile2":"LADPPT.pptx",
+		"removeFile3":"LADText.txt"
+	},
+		{
+		"comment": "76.uploadFilesandDisableAndRemoveFiles",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"removeFile1":"PLCSV.csv",
+		"removeFile2":"PLPDF.pdf",
+		"removeFile3":"PLWORD.rtf"
+	},
+	
+		{
+		"comment": "77.uploadFilesandEnableAndEditAllFieldsAndEditTags",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 ",
+		"count1": "2",
+		"addtags0": "Year",
+		"tags0": " 2050 ",
+		"addtags1": "Month",
+		"tags1": " 07 "
+
+	},
+			{
+		"comment": "78.uploadFilesandDisableAndEditAllFieldsAndEditTags",
+		"matterName": "Criminal Case 15",
+		"filePath": "C:\\Users\\Vengadesh\\Documents\\Automate Image\\MultipleCheck",
+		"count": "3",
+		"documName0": "pdfFilesEdit1244",
+		"descp0": "Re edit the text",
+		"date0": " 1 ",
+		"documName1": "pdfFilesEdit1323",
+		"descp1": "Modify the test",
+		"date1": " 2 ",
+		"documName2": "pdfFilesEdit1424",
+		"descp2": "Add the document",
+		"date2": " 6 ",
+		"count1": "2",
+		"addtags0": "Year",
+		"tags0": " 2050 ",
+		"addtags1": "Month",
+		"tags1": " 07 "
+
 	}
+	
+	
 ]

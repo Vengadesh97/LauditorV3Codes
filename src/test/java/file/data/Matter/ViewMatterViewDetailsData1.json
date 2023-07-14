@@ -1,0 +1,170 @@
+[
+	{
+		"comment": "0.teamMemberSelectingAndSave",
+		"matterName": "Criminal Case 15",
+		"Member1": "Donald Carpenter",
+		"Member2": "Jason Gifford",
+		"Member3": "George Quinn"
+	},
+	{
+		"comment": "1.teamMemberSelectingAndCancel",
+		"matterName": "Criminal Case 15",
+		"Member1": "Christopher Cameron",
+		"Member2": "Matthew Riley"
+	},
+	{
+		"comment": "2.removeTeamMemberAndYes",
+		"matterName": "Criminal Case 15",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "3.removeTeamMemberAndNo",
+		"matterName": "Criminal Case 15",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "4.removeTeamMemberAndClose",
+		"matterName": "Criminal Case 15",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "5.removeTeamMemberAndYesAndSave",
+		"matterName": "Criminal Case 15",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "6.searchAndSelectNamesAndSave",
+		"matterName": "Criminal Case 15",
+		"names1": "Jason Gifford"
+	},
+	{
+		"comment": "7.searchAndSelectNamesAndCancel",
+		"matterName": "Criminal Case 15",
+		"names1": "Susan Walsh"
+	},
+	{
+		"comment": "8.selectAllTeamMemberAndSave",
+		"matterName": "Criminal Case 15"
+	},
+	{
+		"comment": "9.selectedNameisDisplayorNot",
+		"matterName": "Criminal Case 15",
+		"memberName1": "Donald Carpenter",
+		"memberName2": "George Quinn"
+	},
+	{
+		"comment": "10.editMatterInfoWithTeamMembers",
+		"matterName": "Criminal Case 15",
+		"caseTitle": "Adult Court Transfer",
+		"caseNumber": "AGHW64",
+		"dateofFilling": " 17 ",
+		"caseType": "Individuals",
+		"courtName": "Mumbai Court",
+		"description": "There are also other joint-custody arrangements",
+		"priority": "Medium",
+		"judges": "harish",
+		"name": "Vasanth",
+		"email": "kishore776@gm.com",
+		"number": "9584852200"
+	},
+	{
+		"comment": "11.clientSelectingAndSave",
+		"matterName": "Adult Court Transfer",
+		"Member1": "Benjamin B",
+		"Member2": "Grace G",
+		"Member3": "Oliver V"
+	},
+	{
+		"comment": "12.clientSelectingAndCancel",
+		"matterName": "Adult Court Transfer",
+		"Member1": "Michael M",
+		"Member2": "Henry G"
+	},
+	{
+		"comment": "13.removeClientsAndYes",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "14.removeClientsAndNo",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "15.removeClientsAndClose",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "16.removeClientsAndYesAndSave",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "17.searchAndSelectClientsNamesAndSave",
+		"matterName": "Adult Court Transfer",
+		"names1": "Apollo Healthcare"
+	},
+	{
+		"comment": "18.searchAndSelectClientsNamesAndCancel",
+		"matterName": "Adult Court Transfer",
+		"names1": "Dustin S"
+	},
+	{
+		"comment": "19.selectAllClientsAndSave",
+		"matterName": "Adult Court Transfer"
+	},
+	{
+		"comment": "20.unselectAllClientsAndSave",
+		"matterName": "Adult Court Transfer"
+	},
+	{
+		"comment": "21.selectedNameisDisplayorNotInClients",
+		"matterName": "Adult Court Transfer5",
+		"memberName1": "Donald Carpenter",
+		"memberName2": "George Quinn"
+	},
+	{
+		"comment": "22.editMatterInfoWithClients",
+		"matterName": "Adult Court Transfer",
+		"caseTitle": "Criminal Case 15",
+		"caseNumber": "FSWER2",
+		"dateofFilling": " 7 ",
+		"caseType": "Criminal Case",
+		"courtName": "Madras court",
+		"description": "documents",
+		"priority": "Low",
+		"judges": "harish",
+		"name": "Ramesh",
+		"email": "kishore7766@gm.com",
+		"number": "9584857474"
+	},
+	{
+		"comment": "23.leftAndRightArrow",
+		"matterName": "Criminal Case 15"
+	},	
+	{
+		"comment": "24.editMatterInfoWithViewDetails",
+		"matterName": "Criminal Case 15",
+		"caseTitle": "Adult Court Transfer",
+		"caseNumber": "FSWER2",
+		"dateofFilling": " 7 ",
+		"caseType": "Criminal Case",
+		"courtName": "Madras court",
+		"description": "documents",
+		"priority": "Low",
+		"judges": "harish",
+		"name": "RameshKumar",
+		"email": "kishore1245@gm.com",
+		"number": "9584850005"
+	}
+	
+]
