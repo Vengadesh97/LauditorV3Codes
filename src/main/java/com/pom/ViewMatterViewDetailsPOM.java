@@ -213,6 +213,16 @@ public class ViewMatterViewDetailsPOM extends Reusable {
 
 	}
 
+	//Assertion unselectNames appear 
+	
+	public void belowUnselectTeamMemberorClientVerify(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = listOfTMnames.stream().anyMatch(selectedAllName-> selectedAllName.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
 	// Select All
 	@FindBy(xpath = "//input[@id='selectAllMembers']")
 	WebElement selectAllbtn;
@@ -370,6 +380,16 @@ public class ViewMatterViewDetailsPOM extends Reusable {
 	@FindBy(xpath = "//img[@class='msgnotify1 delicocls']")
 	List<WebElement> deleteBtn;
 
+	// Assertion teamMemberVerify
+	public void teamMemberorClientVerify(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = selectedAllNames.stream().anyMatch(selectedAllName-> selectedAllName.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
+	
 	// Alert Yes
 
 	public void deleteTeamMember(String[] nameLists) throws InterruptedException {

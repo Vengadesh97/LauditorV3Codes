@@ -28,10 +28,15 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 			viewMatterUpdateGroups.submitUpdateGroup();
 			viewMatterUpdateGroups.alertYesButton();
 			viewMatterUpdateGroups.viewMatterSuccessPopup();
-			
-//			List<WebElement> documentVerify = driver.findElements(By.xpath("//div[@id='selectbx '] //div[@id='search']"));
-			//	documentVerify.stream().anyMatch(documentVerifys-> documentVerifys.getText().equalsIgnoreCase(documentSelect));
-			
+			//Assertion 
+			Thread.sleep(2000);
+			viewMatterUpdateGroups.pageUp();
+			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
+			Thread.sleep(1000);
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName1"));
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName2"));
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName3"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -57,9 +62,9 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
 			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
-			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName1"));
-			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName2"));
-			viewMatterUpdateGroups.selectedNameMatch(input.get("selectgroupName3"));
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName1"));
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName2"));
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName3"));
 		
 		} finally {
 			viewMatters.leftMatterTab();
@@ -84,6 +89,15 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 			viewMatterUpdateGroups.submitUpdateGroup();
 			viewMatterUpdateGroups.alertYesButton();
 			viewMatterUpdateGroups.viewMatterSuccessPopup();
+			Thread.sleep(2000);
+			viewMatterUpdateGroups.pageUp();
+			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName1"));
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName2"));
+			viewMatterUpdateGroups.leftselectedNameMatch(input.get("selectgroupName3"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -103,6 +117,16 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 			viewMatterUpdateGroups.submitUpdateGroup();
 			viewMatterUpdateGroups.alertYesButton();
 			viewMatterUpdateGroups.viewMatterSuccessPopup();
+			Thread.sleep(2000);
+			viewMatterUpdateGroups.pageUp();
+			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
+			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();
+			Thread.sleep(1000);
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName1"));
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName2"));
+			viewMatterUpdateGroups.rightNotselectedNameMatch(input.get("unSelectgroupName3"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}

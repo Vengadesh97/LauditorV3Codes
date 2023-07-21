@@ -276,7 +276,7 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 
 	
 	
-	public void selectedNameMatch(String names) throws InterruptedException
+	public void leftselectedNameMatch(String names) throws InterruptedException
 	{
 		Thread.sleep(2000);
 		boolean anyMatch = listOfSelectedGroupNames.stream().anyMatch(documentVerifys-> documentVerifys.getText().equalsIgnoreCase(names));
@@ -285,6 +285,14 @@ public class ViewMatterUpdateGroupsPOM extends Reusable {
 	}
 	
 	
+
+	public void rightNotselectedNameMatch(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = listOfGroupNames.stream().anyMatch(documentVerifys-> documentVerifys.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
 	
 	
 }

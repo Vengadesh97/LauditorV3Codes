@@ -22,8 +22,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.scrollDown();
+			Thread.sleep(2000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -43,6 +52,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(1000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -62,6 +81,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -81,6 +110,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -100,6 +138,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -119,6 +166,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -138,6 +194,13 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -158,6 +221,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -179,6 +252,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -199,6 +283,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -219,6 +312,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -239,6 +341,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -259,6 +371,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -279,6 +400,14 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -301,6 +430,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -322,6 +463,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -343,6 +496,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -364,6 +530,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -385,6 +563,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -406,6 +595,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -428,6 +629,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -448,6 +661,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -468,6 +691,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -489,6 +723,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -510,6 +753,14 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -532,6 +783,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -552,6 +815,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -572,6 +845,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -592,6 +874,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -614,6 +906,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -634,6 +939,15 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -654,6 +968,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -676,6 +1000,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -697,6 +1033,14 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -719,6 +1063,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -741,6 +1096,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -763,6 +1129,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -785,6 +1162,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -807,6 +1196,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -829,6 +1231,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -851,6 +1264,16 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -874,6 +1297,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -897,6 +1332,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+					
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -920,6 +1368,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+		
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -943,6 +1404,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -966,6 +1438,17 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -990,6 +1473,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1014,6 +1510,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1039,6 +1549,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1063,6 +1585,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1089,6 +1624,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1114,6 +1663,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1140,6 +1702,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1167,6 +1742,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1189,6 +1778,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1211,6 +1813,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1233,6 +1848,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1254,6 +1881,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1277,6 +1916,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1300,6 +1952,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1323,6 +1989,18 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1346,6 +2024,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1369,6 +2060,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1393,6 +2097,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1417,6 +2135,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1442,6 +2174,26 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+			
+			
+			
+			
+			
+			
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1468,6 +2220,19 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1494,6 +2259,20 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(1000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1503,7 +2282,8 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 	@Test(dataProvider = "getData68", priority = 68)
 	public void editMatterInfoAllFieldsEntered(HashMap<String, String> input) throws InterruptedException {
 		try {
-			viewMatters.scrollUp();
+			//viewMatters.scrollUp();
+			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatters.editMatterInfoPageBtn();
 			viewMatters.editCaseTitle(input.get("caseTitle"));
@@ -1520,6 +2300,21 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			//Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(2000);
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
+		
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1545,12 +2340,44 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.scrollDown();
 			viewMatters.editMatterCancel();
-			viewMatters.nameIsDisplay(input.get("verifyName"));
+	
 		} finally {
 			viewMatters.leftMatterTab();
 		}
 	}
 
+	// Mandatory Fields with Date of Filling
+
+	@Test()
+	public void editMatterInfoMandatoryWithDOF() throws InterruptedException {
+		try {
+			viewMatters.leftMatterTab();
+			viewMatters.searchBarFieldsandActionBtn("Register of Sessions cases");
+			viewMatters.editMatterInfoPageBtn();
+			Thread.sleep(2000);
+			viewMatters.caseTitleVerifyAssert("Register of Sessions cases");
+			viewMatters.caseNumberVerifyAssert("AGHW11");
+			viewMatters.caseTypeVerifyAssert("Criminal Case");
+			viewMatters.courtNameVerifyAssert("Madras court");
+			viewMatters.judgesVerifyAssert("harish");
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert("documents");
+			viewMatters.opponentAd("Sudhan");
+			
+		} finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Mandatory Fields with Date of Filling
 	@DataProvider
 	public Object[][] getData0() throws IOException {

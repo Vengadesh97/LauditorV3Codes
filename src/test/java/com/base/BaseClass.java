@@ -39,6 +39,7 @@ import com.pom.LoginPage;
 import com.pom.UploadDocumentPom;
 import com.pom.ViewGroups;
 import com.pom.ViewMatterDeleteMatterPOM;
+import com.pom.ViewMatterGeneralViewDetailsPOM;
 import com.pom.ViewMatterOpenCloseMatterPOM;
 import com.pom.ViewMatterPOM;
 import com.pom.ViewMatterUpdateGroupsPOM;
@@ -67,6 +68,7 @@ public class BaseClass {
 	public ViewMatterDeleteMatterPOM viewMatterDeleteMatter;
 	public ViewMatterViewDetailsPOM viewMatterViewDetail;
 	public ViewMatterViewDetailsDocumentsPOM viewDetailDocuments;
+	public ViewMatterGeneralViewDetailsPOM viewMatterGeneral;
 	
 	
 	public WebDriver initalize() throws IOException {
@@ -131,6 +133,7 @@ public class BaseClass {
 		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
 		viewMatterViewDetail = new ViewMatterViewDetailsPOM(driver);
 		viewDetailDocuments = new ViewMatterViewDetailsDocumentsPOM(driver);
+	    viewMatterGeneral = new ViewMatterGeneralViewDetailsPOM(driver); 
 		return loginPage;
 	}
 	

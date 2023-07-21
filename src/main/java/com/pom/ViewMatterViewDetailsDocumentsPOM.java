@@ -55,6 +55,16 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		documentNameDisplayCheck(nameChecked, nameElements);
 	}
 
+	// Existing Added Documents assertion
+	public void existingAddedDocumentVerifyAssert(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = nameElements.stream().anyMatch(documentVers-> documentVers.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
+	
 	public void pageMiddle() throws InterruptedException {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -95,6 +105,36 @@ public class ViewMatterViewDetailsDocumentsPOM extends Reusable {
 		selectNameorRemoveName(documentRemoveName, documentNames, removeSelectedDocumentBtn);
 	}
 
+	
+	// Left side Document Assertion once documents uploaded
+	
+	public void leftSideDocumentSelected(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = documentNames.stream().anyMatch(documentNameSelected-> documentNameSelected.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
+	
+	// Right side Document Assertion once documents uploaded
+	
+		public void rightSideDocumentSelected(String names) throws InterruptedException
+		{
+			Thread.sleep(2000);
+			boolean anyMatch = documentNamesRightSide.stream().anyMatch(documentNameSelected-> documentNameSelected.getText().equalsIgnoreCase(names));
+			Thread.sleep(1000);
+			Assert.assertTrue(anyMatch);
+		}
+		
+	
+	
+	
+	
+	
+	
+	
+	
 	// Right side Select the Document
 
 	// Document Name

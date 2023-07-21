@@ -9,7 +9,6 @@ import com.base.BaseClass;
 
 public class ViewMatterViewDetailsTest1 extends BaseClass {
 
-
 	@Test(dataProvider = "getData0", priority = 0)
 	public void teamMemberSelectingAndSave(HashMap<String, String> input) throws InterruptedException {
 
@@ -25,7 +24,16 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.selectTeamMembers(memberNames);
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
-			
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member2"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member3"));
+
 		}
 
 		finally {
@@ -46,6 +54,16 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			Thread.sleep(2000);
 			viewMatterViewDetail.selectTeamMembers(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("Member1"));
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("Member2"));
+
 		}
 
 		finally {
@@ -66,6 +84,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			Thread.sleep(2000);
 			viewMatterViewDetail.deleteTeamMember(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -86,6 +112,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			String[] memberNames = { input.get("removeMember1"), input.get("removeMember2") };
 			viewMatterViewDetail.deleteTeamMemberWithNo(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -106,6 +140,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			String[] memberNames = { input.get("removeMember1"), input.get("removeMember2") };
 			viewMatterViewDetail.deleteTeamMemberWithClose(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -127,6 +169,15 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.deleteTeamMember(memberNames);
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -148,6 +199,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.searchAndSelectTeamMember(input.get("names1"));
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("names1"));
+
 		}
 
 		finally {
@@ -168,6 +227,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.searchNames(input.get("names1"));
 			viewMatterViewDetail.searchAndSelectTeamMember(input.get("names1"));
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("names1"));
 
 		}
 
@@ -257,22 +324,33 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
-	// --------------------------
-	
+
+	// -------------------------- Clients
 
 	@Test(dataProvider = "getData11", priority = 12)
 	public void clientSelectingAndSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-			
+
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -283,14 +361,23 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.selectTeamMembers(memberNames);
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member2"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member3"));
+
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
+
 	@Test(dataProvider = "getData12", priority = 13)
 	public void clientSelectingAndCancel(HashMap<String, String> input) throws InterruptedException {
 
@@ -304,14 +391,23 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			Thread.sleep(2000);
 			viewMatterViewDetail.selectTeamMembers(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("Member1"));
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("Member2"));
+
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
+
 	@Test(dataProvider = "getData13", priority = 14)
 	public void removeClientsAndYes(HashMap<String, String> input) throws InterruptedException {
 
@@ -325,14 +421,21 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			Thread.sleep(2000);
 			viewMatterViewDetail.deleteTeamMember(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
+
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
 
 	@Test(dataProvider = "getData14", priority = 15)
 	public void removeClientsAndNo(HashMap<String, String> input) throws InterruptedException {
@@ -347,6 +450,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			String[] memberNames = { input.get("removeMember1"), input.get("removeMember2") };
 			viewMatterViewDetail.deleteTeamMemberWithNo(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -367,14 +478,21 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			String[] memberNames = { input.get("removeMember1"), input.get("removeMember2") };
 			viewMatterViewDetail.deleteTeamMemberWithClose(memberNames);
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
+
 	@Test(dataProvider = "getData16", priority = 17)
 	public void removeClientsAndYesAndSave(HashMap<String, String> input) throws InterruptedException {
 
@@ -389,6 +507,15 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.deleteTeamMember(memberNames);
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("removeMember1"));
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("removeMember2"));
 		}
 
 		finally {
@@ -410,6 +537,13 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.searchAndSelectTeamMember(input.get("names1"));
 			viewMatterViewDetail.saveButtonOnAddMembers();
 			viewMatterViewDetail.closeButtonSuccess();
+			Thread.sleep(2000);
+			// Assertion
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("names1"));
 		}
 
 		finally {
@@ -430,6 +564,14 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.searchClientNames(input.get("names1"));
 			viewMatterViewDetail.searchAndSelectTeamMember(input.get("names1"));
 			viewMatterViewDetail.cancelButtonOnAddMembers();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.clientBtn();
+			viewMatterViewDetail.scrolldownTeamMemberSelect();
+			viewMatterViewDetail.belowUnselectTeamMemberorClientVerify(input.get("names1"));
 
 		}
 
@@ -437,8 +579,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
+
 	@Test(dataProvider = "getData19", priority = 20)
 	public void selectAllClientsAndSave(HashMap<String, String> input) throws InterruptedException {
 
@@ -498,7 +639,6 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 	}
 
-	
 	@Test(dataProvider = "getData22", priority = 23)
 	public void editMatterInfoWithClients(HashMap<String, String> input) throws InterruptedException {
 
@@ -522,13 +662,26 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
+
 	@Test(dataProvider = "getData23", priority = 24)
 	public void leftAndRightArrow(HashMap<String, String> input) throws InterruptedException {
 
@@ -546,7 +699,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
+
 	@Test(dataProvider = "getData23", priority = 25)
 	public void eyeCheckinViewDetail(HashMap<String, String> input) throws InterruptedException {
 
@@ -565,7 +718,6 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 	}
 
-	
 	@Test(dataProvider = "getData24", priority = 26)
 	public void editMatterInfoWithViewDetails(HashMap<String, String> input) throws InterruptedException {
 
@@ -588,24 +740,46 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
+			// Assertion
+			Thread.sleep(2000);
+			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
+			viewMatters.editMatterInfoPageBtn();
+			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
+			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
+			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
+			viewMatters.courtNameVerifyAssert(input.get("courtName"));
+			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatters.descriptionVerifyAssert(input.get("description"));
+			viewMatters.opponentAd(input.get("name"));
 		}
 
 		finally {
 			viewMatters.leftMatterTab();
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	@Test()
+	public void testMembers() throws InterruptedException {
+
+		try {
+			viewMatters.leftMatterTab();
+			viewMatters.searchBarFieldsandActionBtn("Contract Breach");
+			viewMatterViewDetail.viewDetailsBtn();
+			viewMatterViewDetail.teamMemberAndClientsBtn();
+			viewMatterViewDetail.scrollUpnearbyMattername();
+			Thread.sleep(2000);
+			viewMatterViewDetail.teamMemberBtn();
+			// viewMatterViewDetail.teamMemberVerify("Donald Carpenter");
+			// viewMatterViewDetail.teamMemberVerify("Susan Walsh");
+			// viewMatterViewDetail.teamMemberVerify("Jason Gifford");
+		}
+
+		finally {
+			viewMatters.leftMatterTab();
+		}
+	}
 
 	// 0. teamMemberSelectingAndSave
 
@@ -738,9 +912,9 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		return new Object[][] { { data.get(10) } };
 
 	}
-	
+
 	// -------------
-	
+
 	// 11.clientSelectingAndSave
 
 	@DataProvider
@@ -752,7 +926,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		return new Object[][] { { data.get(11) } };
 
 	}
-	
+
 	// 12.clientSelectingAndCancel
 
 	@DataProvider
@@ -797,6 +971,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		return new Object[][] { { data.get(15) } };
 
 	}
+
 	// 16.removeClientsAndYesAndSave
 	@DataProvider
 	public Object[][] getData16() throws IOException {
@@ -873,7 +1048,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		return new Object[][] { { data.get(22) } };
 
 	}
-	
+
 	// 23.leftAndRightArrow
 
 	@DataProvider
@@ -885,8 +1060,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		return new Object[][] { { data.get(23) } };
 
 	}
-	
-	
+
 	// 24.editMatterInfoWithViewDetails
 
 	@DataProvider

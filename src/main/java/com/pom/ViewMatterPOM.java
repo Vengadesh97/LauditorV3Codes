@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.abst.Reusable;
 
@@ -41,7 +42,7 @@ public class ViewMatterPOM extends Reusable {
 	@FindBy(xpath = "//div //button[@data-bs-toggle='dropdown']")
 	WebElement actionBtnViewLegal;
 
-	@FindBy(xpath = "//ul[@class='dropdown-menu show'] //li[2]")
+	@FindBy(xpath = "//ul[@class='dropdown-menu custom-dropdown show'] //li[2]")
 	WebElement editMatterInfoPage;
 	
 	
@@ -63,7 +64,16 @@ public class ViewMatterPOM extends Reusable {
 		reEditCaseTitleField.clear();
 		reEditCaseTitleField.sendKeys(caseTitle);
 	}
-
+	
+	//Assertion CaseTitleVerify 
+	
+	public void caseTitleVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditCaseTitleField);
+		String caseTitleVerify1 = reEditCaseTitleField.getAttribute("value");
+		Assert.assertEquals(text, caseTitleVerify1,"caseTitleVerify");
+	}
+	
 	// Case Number
 	@FindBy(name = "case_number")
 	WebElement reEditCaseNumberField;
@@ -75,6 +85,14 @@ public class ViewMatterPOM extends Reusable {
 		reEditCaseNumberField.sendKeys(caseNumber);
 	}
 
+	public void caseNumberVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditCaseNumberField);
+		String caseNumberVerifyAssert1 = reEditCaseNumberField.getAttribute("value");
+		Assert.assertEquals(text, caseNumberVerifyAssert1,"caseNumberVerify");
+	}
+	
+	
 	// Description
 	@FindBy(name = "description")
 	WebElement reEditDescriptionField;
@@ -86,6 +104,15 @@ public class ViewMatterPOM extends Reusable {
 		reEditDescriptionField.sendKeys(editDescription);
 	}
 
+
+	public void descriptionVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditDescriptionField);
+		String descriptionVerifyAssert1 = reEditDescriptionField.getAttribute("value");
+		Assert.assertEquals(text, descriptionVerifyAssert1,"descriptionVerify");
+	}
+	
+	
 	// Case Type
 	@FindBy(id = "case_type")
 	WebElement reEditCaseTypeField;
@@ -95,6 +122,13 @@ public class ViewMatterPOM extends Reusable {
 		visibilityOfElementWait(reEditCaseTypeField);
 		reEditCaseTypeField.clear();
 		reEditCaseTypeField.sendKeys(editCaseType);
+	}
+	
+	public void caseTypeVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditCaseTypeField);
+		String caseTypeVerifyAssert1 = reEditCaseTypeField.getAttribute("value");
+		Assert.assertEquals(text, caseTypeVerifyAssert1,"caseTypeVerify");
 	}
 
 	// Court name
@@ -107,7 +141,14 @@ public class ViewMatterPOM extends Reusable {
 		reEditCourtNameField.clear();
 		reEditCourtNameField.sendKeys(editCourtName);
 	}
-
+	
+	public void courtNameVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditCourtNameField);
+		String courtNameVerifyAssert1 = reEditCourtNameField.getAttribute("value");
+		Assert.assertEquals(text, courtNameVerifyAssert1,"courtNameVerify");
+	}
+	
 	// Judges
 	@FindBy(name = "judges")
 	WebElement reEditJudgesField;
@@ -117,6 +158,13 @@ public class ViewMatterPOM extends Reusable {
 		visibilityOfElementWait(reEditJudgesField);
 		reEditJudgesField.clear();
 		reEditJudgesField.sendKeys(editJudges);
+	}
+	
+	public void judgesVerifyAssert(String text) throws InterruptedException
+	{
+		visibilityOfAllElements(reEditJudgesField);
+		String judgesVerifyAssert1 = reEditJudgesField.getAttribute("value");
+		Assert.assertEquals(text, judgesVerifyAssert1,"judgesVerify");
 	}
 
 	// Opponent Advocates [Add] Buttons
@@ -155,6 +203,19 @@ public class ViewMatterPOM extends Reusable {
 		opponentAdvocatesSavebtn.click();
 		}
 
+	
+	
+	@FindBy(xpath="//div[@class='opponent']")
+	List<WebElement> opponentAdv;
+	
+	public void opponentAd(String names) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		boolean anyMatch = opponentAdv.stream().anyMatch(documentVer-> documentVer.getText().equalsIgnoreCase(names));
+		Thread.sleep(1000);
+		Assert.assertTrue(anyMatch);
+	}
+	
 	// Date of Filling
 	@FindBy(xpath = "//*[@class='mat-mdc-button-touch-target']")
 	WebElement addDateOfFillingClick;
@@ -168,6 +229,19 @@ public class ViewMatterPOM extends Reusable {
 		driver.findElement(By.xpath("//div[text()='" + date + "']")).click();
 	}
 
+	@FindBy(xpath="//input[@name='date_of_filling']")
+	WebElement dof;
+	
+	public void dateOfFillingVerifyAssert(String text)
+	{
+		visibilityOfAllElements(dof);
+		String dateOfFillingVerifyAssert1 = dof.getAttribute("value");
+		Assert.assertEquals(text, dateOfFillingVerifyAssert1);
+	}
+	
+	
+	
+	
 	// Priority
 	public void priorityChange(String prioritySelect) throws InterruptedException {
 		Thread.sleep(3000);
@@ -264,7 +338,7 @@ public class ViewMatterPOM extends Reusable {
 		searchInputFields.sendKeys(MatterName);
 		
 		pageDown();
-		
+		Thread.sleep(10000);
 		Actions action = new Actions(driver);
 		
 		for(int i=0;i<allMatterNamesText.size();i++)
