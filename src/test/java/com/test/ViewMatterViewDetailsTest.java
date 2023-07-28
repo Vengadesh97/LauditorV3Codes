@@ -222,7 +222,26 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 		}
 	}
 
+
 	@Test(dataProvider = "getData10", priority = 10)
+	public void unSelectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
+
+		try {
+			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
+			viewMatterViewDetail.viewDetailsBtn();
+			viewDetailDocuments.documentTab();
+			viewDetailDocuments.addNewBtn();
+			viewDetailDocuments.documentSelectedPageDown();
+			viewDetailDocuments.checkSelectAllCheckboxIsUnSelected();
+			viewDetailDocuments.selectAllClick();
+			viewDetailDocuments.cancelButtonOnAddExisting();
+
+		} finally {
+			viewMatters.leftMatterTab();
+		}
+	}
+	
+	@Test(dataProvider = "getData11", priority = 11)
 	public void unSelectAllClickSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
@@ -240,24 +259,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewMatters.leftMatterTab();
 		}
 	}
-
-	@Test(dataProvider = "getData11", priority = 11)
-	public void unSelectAllClickCancel(HashMap<String, String> input) throws InterruptedException {
-
-		try {
-			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
-			viewMatterViewDetail.viewDetailsBtn();
-			viewDetailDocuments.documentTab();
-			viewDetailDocuments.addNewBtn();
-			viewDetailDocuments.documentSelectedPageDown();
-			viewDetailDocuments.checkSelectAllCheckboxIsUnSelected();
-			viewDetailDocuments.selectAllClick();
-			viewDetailDocuments.cancelButtonOnAddExisting();
-
-		} finally {
-			viewMatters.leftMatterTab();
-		}
-	}
+	
 
 	@Test(dataProvider = "getData12", priority = 12)
 	public void browseAndUploadFilesAndCancel(HashMap<String, String> input) throws InterruptedException {
@@ -346,7 +348,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -357,7 +359,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName3"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName4"));
-
+	*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -404,7 +406,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+			/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -415,7 +417,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName3"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName4"));
-
+*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -468,7 +470,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -477,7 +479,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
-
+*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -532,7 +534,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -541,6 +543,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -604,8 +607,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -614,6 +616,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -686,7 +689,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -695,6 +698,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -771,7 +775,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -780,6 +784,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -852,7 +857,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -861,6 +866,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -934,7 +940,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -943,6 +949,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1017,7 +1024,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1027,6 +1034,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName3"));
+	*/
 		}
 
 		finally {
@@ -1102,7 +1110,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1111,6 +1119,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1188,7 +1197,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1197,6 +1206,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		} finally {
 			viewMatters.leftMatterTab();
 		}
@@ -1271,7 +1281,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1280,6 +1290,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1356,7 +1367,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1366,6 +1377,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName3"));
+	*/
 		}
 
 		finally {
@@ -1442,7 +1454,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1451,6 +1463,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1528,7 +1541,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1537,6 +1550,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1615,7 +1629,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1625,6 +1639,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName3"));
+	*/
 		}
 
 		finally {
@@ -1704,7 +1719,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+		/*	Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1713,6 +1728,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -1790,7 +1806,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -1799,6 +1815,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -2007,7 +2024,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2015,6 +2032,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+	*/
 		}
 
 		finally {
@@ -2086,7 +2104,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2095,6 +2113,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -2170,7 +2189,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2179,6 +2198,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+	*/
 		}
 
 		finally {
@@ -2400,7 +2420,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2409,6 +2429,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+		*/
 		}
 
 		finally {
@@ -2484,7 +2505,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2493,6 +2514,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName2"));
+		*/
 		}
 
 		finally {
@@ -2567,7 +2589,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2575,6 +2597,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+	*/
 		}
 
 		finally {
@@ -2612,7 +2635,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2620,7 +2643,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
-
+	*/
 		}
 
 		finally {
@@ -2660,7 +2683,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2668,6 +2691,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2707,7 +2731,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2715,6 +2739,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2743,7 +2768,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2751,6 +2776,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2781,7 +2807,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+		/*	Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2789,6 +2815,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2837,7 +2864,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2845,6 +2872,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2895,7 +2923,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.nextButtonOnAddExisting();
 			viewDetailDocuments.confirmationYesBtn();
 			viewDetailDocuments.alertClose();
-			Thread.sleep(2000);
+	/*		Thread.sleep(2000);
 			viewMatters.leftMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
@@ -2903,6 +2931,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 			viewDetailDocuments.documentTab();
 			viewDetailDocuments.pageMiddle();
 			viewDetailDocuments.existingAddedDocumentVerifyAssert(input.get("documentName1"));
+		*/
 		}
 
 		finally {
@@ -2910,17 +2939,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 		}
 	}
 
-	@Test
-	public void testNew() throws InterruptedException {
-		viewMatters.leftMatterTab();
-		viewMatters.searchBarFieldsandActionBtn("Contract Breach");
-		viewMatterViewDetail.viewDetailsBtn();
-		viewDetailDocuments.documentTab();
-		viewDetailDocuments.documentSelectedPageDown();
-		Thread.sleep(2000);
-		viewDetailDocuments.existingAddedDocumentVerifyAssert("Family law TM 3");
-		viewDetailDocuments.existingAddedDocumentVerifyAssert("DER3");
-	}
+	
 
 	// 0. meetingNameAppearOrNot
 

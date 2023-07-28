@@ -1,0 +1,155 @@
+[
+	{
+		"comment": "0.teamMemberSelectingAndSave",
+		"matterName": "Matter Team Test",
+		"Member1": "Donald Carpenter",
+		"Member2": "Jason Gifford",
+		"Member3": "George Quinn"
+	},
+	{
+		"comment": "1.teamMemberSelectingAndCancel",
+		"matterName": "Matter Team Test",
+		"Member1": "Christopher Cameron",
+		"Member2": "Matthew Riley"
+	},
+	{
+		"comment": "2.removeTeamMemberAndYes",
+		"matterName": "Matter Team Test",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "3.removeTeamMemberAndNo",
+		"matterName": "Matter Team Test",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "4.removeTeamMemberAndClose",
+		"matterName": "Matter Team Test",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "5.removeTeamMemberAndYesAndSave",
+		"matterName": "Matter Team Test",
+		"removeMember1": "Jason Gifford",
+		"removeMember2": "George Quinn"
+	},
+	{
+		"comment": "6.searchAndSelectNamesAndSave",
+		"matterName": "Matter Team Test",
+		"names1": "Jason Gifford"
+	},
+	{
+		"comment": "7.searchAndSelectNamesAndCancel",
+		"matterName": "Matter Team Test",
+		"names1": "Susan Walsh"
+	},
+	{
+		"comment": "8.selectAllTeamMemberAndSave",
+		"matterName": "Matter Team Test"
+	},
+	{
+		"comment": "9.selectedNameisDisplayorNot",
+		"matterName": "Matter Team Test",
+		"memberName1": "Donald Carpenter",
+		"memberName2": "George Quinn"
+	},
+	{
+		"comment": "10.editMatterInfoWithTeamMembers",
+		"matterName": "Matter Team Test",
+		"caseTitle": "Adult Court Transfer",
+		"matterNumber": "AGHW64",
+		"startDate": " 17 ",
+		"matterType": "Individuals",
+		"endDate": " 25 ",
+		"description": "There are also other joint-custody arrangements"
+	},
+	{
+		"comment": "11.clientSelectingAndSave",
+		"matterName": "Adult Court Transfer",
+		"Member1": "Benjamin B",
+		"Member2": "Grace G",
+		"Member3": "Oliver V"
+	},
+	{
+		"comment": "12.clientSelectingAndCancel",
+		"matterName": "Adult Court Transfer",
+		"Member1": "Michael M",
+		"Member2": "Henry G"
+	},
+	{
+		"comment": "13.removeClientsAndYes",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "14.removeClientsAndNo",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "15.removeClientsAndClose",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "16.removeClientsAndYesAndSave",
+		"matterName": "Adult Court Transfer",
+		"removeMember1": "Benjamin",
+		"removeMember2": "Grace"
+	},
+	{
+		"comment": "17.searchAndSelectClientsNamesAndSave",
+		"matterName": "Adult Court Transfer",
+		"names1": "Apollo Healthcare"
+	},
+	{
+		"comment": "18.searchAndSelectClientsNamesAndCancel",
+		"matterName": "Adult Court Transfer",
+		"names1": "Dustin S"
+	},
+	{
+		"comment": "19.selectAllClientsAndSave",
+		"matterName": "Adult Court Transfer"
+	},
+	{
+		"comment": "20.unselectAllClientsAndSave",
+		"matterName": "Adult Court Transfer"
+	},
+	{
+		"comment": "21.selectedNameisDisplayorNotInClients",
+		"matterName": "Adult Court Transfer",
+		"memberName1": "Charlie",
+		"memberName2": "Richard"
+	},
+	{
+		"comment": "22.editMatterInfoWithClients",
+		"matterName": "Adult Court Transfer",
+		"caseTitle": "Matter Team Test",
+		"matterNumber": "FGERWE3",
+		"startDate": " 15 ",
+		"matterType": "Lawyers",
+		"endDate": " 22 ",
+		"description": "Existing case"
+	},
+	{
+		"comment": "23.leftAndRightArrow",
+		"matterName": "Matter Team Test"
+	},	
+	{
+		"comment": "24.editMatterInfoWithViewDetails",
+		"matterName": "Matter Team Test",
+		"caseTitle": "Adult Court Transfer",
+		"matterNumber": "SER23",
+		"startDate": " 5 ",
+		"matterType": "Client Information",
+		"endDate": " 26 ",
+		"description": "All document maintainces"
+	}
+	
+]

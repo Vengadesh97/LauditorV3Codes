@@ -7,13 +7,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
 
-public class ViewMatterViewDetailsTest1 extends BaseClass {
+public class ViewMatterGeneralViewDetailTest1 extends BaseClass {
 
 	@Test(dataProvider = "getData0", priority = 0)
 	public void teamMemberSelectingAndSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -25,12 +25,11 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
-			viewMatterViewDetail.teamMemberBtn();
+			viewMatterViewDetail.scrollUpnearbyMattername();
 			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member1"));
 			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member2"));
 			viewMatterViewDetail.teamMemberorClientVerify(input.get("Member3"));
@@ -38,7 +37,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -56,8 +55,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -69,7 +67,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -87,8 +85,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -98,7 +95,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -116,8 +113,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -127,7 +123,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -145,8 +141,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -156,7 +151,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -175,8 +170,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -187,7 +181,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -206,8 +200,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -217,7 +210,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -235,8 +228,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -247,7 +239,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -266,7 +258,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -285,11 +277,12 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
-	@Test(dataProvider = "getData9", priority = 10, enabled = false)
+// Re edit the test case
+	@Test(dataProvider = "getData9", priority = 10)
 	public void selectedNameisDisplayorNot(HashMap<String, String> input) throws InterruptedException {
 
 		try {
@@ -297,16 +290,17 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
 			viewMatterViewDetail.scrollUpnearbyMattername();
-			viewMatterViewDetail.teamMemberBtn();
-			String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
-			viewMatterViewDetail.checkSelectedNameAppear(memberNames);
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("memberName1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("memberName2"));
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
+	//Change the text
+	
 	@Test(dataProvider = "getData10", priority = 11)
 	public void editMatterInfoWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
@@ -316,38 +310,32 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.teamMemberAndClientsBtn();
 			viewMatterViewDetail.scrollUpnearbyMattername();
 			viewMatterViewDetail.editBtn();
-			viewMatters.editCaseTitle(input.get("caseTitle"));
-			viewMatters.editCaseNumber(input.get("caseNumber"));
-			viewMatters.editCaseType(input.get("caseType"));
-			viewMatters.editCourtName(input.get("courtName"));
-			viewMatters.editJudges(input.get("judges"));
-			viewMatters.priorityChange(input.get("priority"));
-			viewMatters.statusPending();
-			viewMatters.dateOfFilling(input.get("dateofFilling"));
-			viewMatters.scrollDown();
-			viewMatters.editDescription(input.get("description"));
-			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
-			viewMatters.editMatterSave();
-			viewMatters.successPopupEditMatterInfo();
+			viewMatterGeneral.casetitle(input.get("caseTitle"));
+			viewMatterGeneral.matternumber(input.get("matterNumber"));
+			viewMatterGeneral.mattertype(input.get("matterType"));
+			viewMatterGeneral.startDate(input.get("startDate"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatterGeneral.endDate(input.get("endDate"));
+			viewMatterGeneral.description(input.get("description"));
+			viewMatterGeneral.editMatterInfoSave();
+			viewMatterGeneral.editMatterViewChangesSuccess();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
 			viewMatters.editMatterInfoPageBtn();
-			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
-			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
-			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
-			viewMatters.courtNameVerifyAssert(input.get("courtName"));
-			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatterGeneral.caseTitleGeneralVerifyAssert(input.get("caseTitle"));
+			viewMatterGeneral.matterNumberGeneralVerifyAssert(input.get("matterNumber"));
+			viewMatterGeneral.matterTypeGeneralVerifyAssert(input.get("matterType"));
 			viewMatters.pageDown();
 			Thread.sleep(2000);
-			viewMatters.descriptionVerifyAssert(input.get("description"));
-			viewMatters.opponentAd(input.get("name"));
+			viewMatterGeneral.descriptionGeneralVerifyAssert(input.get("description"));
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -370,8 +358,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -383,7 +370,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -402,8 +389,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -415,7 +401,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -434,8 +420,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -446,7 +431,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -465,8 +450,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -476,7 +460,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -495,8 +479,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -506,7 +489,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -526,8 +509,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -538,7 +520,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -558,8 +540,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.closeButtonSuccess();
 			Thread.sleep(2000);
 			// Assertion
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -568,7 +549,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -587,8 +568,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.cancelButtonOnAddMembers();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
-			Thread.sleep(2000);
+			viewMatterGeneral.generalMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
@@ -599,7 +579,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
@@ -620,11 +600,11 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
-	@Test(dataProvider = "getData20", priority = 21)
+	@Test(dataProvider = "getData20", priority = 22)
 	public void unselectAllClientsAndSave(HashMap<String, String> input) throws InterruptedException {
 
 		try {
@@ -640,28 +620,30 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
-
-	@Test(dataProvider = "getData21", priority = 22, enabled = false)
+	
+	@Test(dataProvider = "getData21", priority = 21)
 	public void selectedNameisDisplayorNotInClients(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.teamMemberAndClientsBtn();
-			viewMatterViewDetail.scrollUpnearbyMattername();
 			viewMatterViewDetail.clientBtn();
-			String[] memberNames = { input.get("memberName1"), input.get("memberName2") };
-			viewMatterViewDetail.checkSelectedNameAppear(memberNames);
+			viewMatterViewDetail.scrollUpnearbyMattername();
+			Thread.sleep(2000);
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("memberName1"));
+			viewMatterViewDetail.teamMemberorClientVerify(input.get("memberName2"));
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
+	//Change the text
 	@Test(dataProvider = "getData22", priority = 23)
 	public void editMatterInfoWithClients(HashMap<String, String> input) throws InterruptedException {
 
@@ -672,40 +654,35 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			viewMatterViewDetail.scrollUpnearbyMattername();
 			viewMatterViewDetail.clientBtn();
 			viewMatterViewDetail.editBtn();
-			viewMatters.editCaseTitle(input.get("caseTitle"));
-			viewMatters.editCaseNumber(input.get("caseNumber"));
-			viewMatters.editCaseType(input.get("caseType"));
-			viewMatters.editCourtName(input.get("courtName"));
-			viewMatters.editJudges(input.get("judges"));
-			viewMatters.priorityChange(input.get("priority"));
-			viewMatters.statusPending();
-			viewMatters.dateOfFilling(input.get("dateofFilling"));
-			viewMatters.scrollDown();
-			viewMatters.editDescription(input.get("description"));
-			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
-			viewMatters.editMatterSave();
-			viewMatters.successPopupEditMatterInfo();
+			viewMatterGeneral.casetitle(input.get("caseTitle"));
+			viewMatterGeneral.matternumber(input.get("matterNumber"));
+			viewMatterGeneral.mattertype(input.get("matterType"));
+			viewMatterGeneral.startDate(input.get("startDate"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatterGeneral.endDate(input.get("endDate"));
+			viewMatterGeneral.description(input.get("description"));
+			viewMatterGeneral.editMatterInfoSave();
+			viewMatterGeneral.editMatterViewChangesSuccess();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
 			viewMatters.editMatterInfoPageBtn();
-			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
-			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
-			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
-			viewMatters.courtNameVerifyAssert(input.get("courtName"));
-			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatterGeneral.caseTitleGeneralVerifyAssert(input.get("caseTitle"));
+			viewMatterGeneral.matterNumberGeneralVerifyAssert(input.get("matterNumber"));
+			viewMatterGeneral.matterTypeGeneralVerifyAssert(input.get("matterType"));
 			viewMatters.pageDown();
 			Thread.sleep(2000);
-			viewMatters.descriptionVerifyAssert(input.get("description"));
-			viewMatters.opponentAd(input.get("name"));
+			viewMatterGeneral.descriptionGeneralVerifyAssert(input.get("description"));
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
+	
 
 	@Test(dataProvider = "getData23", priority = 24)
 	public void leftAndRightArrow(HashMap<String, String> input) throws InterruptedException {
@@ -721,10 +698,11 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
+	
 	@Test(dataProvider = "getData23", priority = 25)
 	public void eyeCheckinViewDetail(HashMap<String, String> input) throws InterruptedException {
 
@@ -735,57 +713,51 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 			Thread.sleep(3000);
 			viewMatterViewDetail.eyes();
 			viewMatterViewDetail.eyesActives();
-
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
 
+	//Change the text
 	@Test(dataProvider = "getData24", priority = 26)
 	public void editMatterInfoWithViewDetails(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewMatterViewDetail.scrollUpnearbyMattername();
 			viewMatterViewDetail.editBtn();
-			viewMatters.editCaseTitle(input.get("caseTitle"));
-			viewMatters.editCaseNumber(input.get("caseNumber"));
-			viewMatters.editCaseType(input.get("caseType"));
-			viewMatters.editCourtName(input.get("courtName"));
-			viewMatters.editJudges(input.get("judges"));
-			viewMatters.priorityChange(input.get("priority"));
-			viewMatters.statusPending();
-			viewMatters.dateOfFilling(input.get("dateofFilling"));
-			viewMatters.scrollDown();
-			viewMatters.editDescription(input.get("description"));
-			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
-			viewMatters.editMatterSave();
-			viewMatters.successPopupEditMatterInfo();
+			viewMatterGeneral.casetitle(input.get("caseTitle"));
+			viewMatterGeneral.matternumber(input.get("matterNumber"));
+			viewMatterGeneral.mattertype(input.get("matterType"));
+			viewMatterGeneral.startDate(input.get("startDate"));
+			viewMatters.pageDown();
+			Thread.sleep(2000);
+			viewMatterGeneral.endDate(input.get("endDate"));
+			viewMatterGeneral.description(input.get("description"));
+			viewMatterGeneral.editMatterInfoSave();
+			viewMatterGeneral.editMatterViewChangesSuccess();
 			// Assertion
 			Thread.sleep(2000);
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 			Thread.sleep(2000);
 			viewMatters.searchBarFieldsandActionBtn(input.get("caseTitle"));
 			viewMatters.editMatterInfoPageBtn();
-			viewMatters.caseTitleVerifyAssert(input.get("caseTitle"));
-			viewMatters.caseNumberVerifyAssert(input.get("caseNumber"));
-			viewMatters.caseTypeVerifyAssert(input.get("caseType"));
-			viewMatters.courtNameVerifyAssert(input.get("courtName"));
-			viewMatters.judgesVerifyAssert(input.get("judges"));
+			viewMatterGeneral.caseTitleGeneralVerifyAssert(input.get("caseTitle"));
+			viewMatterGeneral.matterNumberGeneralVerifyAssert(input.get("matterNumber"));
+			viewMatterGeneral.matterTypeGeneralVerifyAssert(input.get("matterType"));
 			viewMatters.pageDown();
 			Thread.sleep(2000);
-			viewMatters.descriptionVerifyAssert(input.get("description"));
-			viewMatters.opponentAd(input.get("name"));
+			viewMatterGeneral.descriptionGeneralVerifyAssert(input.get("description"));
 		}
 
 		finally {
-			viewMatters.leftMatterTab();
+			viewMatterGeneral.generalMatterTab();
 		}
 	}
+
 
 	// 0. teamMemberSelectingAndSave
 
@@ -793,7 +765,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData0() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(0) } };
 
@@ -805,7 +777,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData1() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(1) } };
 
@@ -817,7 +789,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData2() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(2) } };
 
@@ -829,7 +801,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData3() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(3) } };
 
@@ -841,7 +813,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData4() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(4) } };
 
@@ -853,7 +825,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData5() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(5) } };
 
@@ -865,7 +837,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData6() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(6) } };
 
@@ -877,7 +849,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData7() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(7) } };
 
@@ -889,7 +861,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData8() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(8) } };
 
@@ -901,7 +873,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData9() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(9) } };
 
@@ -913,7 +885,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData10() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(10) } };
 
@@ -927,7 +899,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData11() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(11) } };
 
@@ -939,7 +911,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData12() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(12) } };
 
@@ -950,7 +922,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData13() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(13) } };
 
@@ -961,7 +933,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData14() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(14) } };
 
@@ -972,7 +944,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData15() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(15) } };
 
@@ -983,7 +955,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData16() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(16) } };
 
@@ -994,7 +966,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData17() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(17) } };
 
@@ -1005,7 +977,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData18() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(18) } };
 
@@ -1016,7 +988,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData19() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(19) } };
 
@@ -1027,7 +999,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData20() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(20) } };
 
@@ -1038,7 +1010,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData21() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(21) } };
 
@@ -1049,7 +1021,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData22() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(22) } };
 
@@ -1061,7 +1033,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData23() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(23) } };
 
@@ -1073,7 +1045,7 @@ public class ViewMatterViewDetailsTest1 extends BaseClass {
 	public Object[][] getData24() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterViewDetailsData1.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterGeneralViewDetailsData1.json");
 
 		return new Object[][] { { data.get(24) } };
 
