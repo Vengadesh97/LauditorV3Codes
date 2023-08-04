@@ -6,18 +6,38 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.CreateMatterNegative2Test">
+      <class name="com.test.ViewMatterOpenCloseMatter">
         <methods>
-          <include name="selectGroupsandClickCancel" invocation-numbers="0"/>
-          <include name="selectClientsSeletAllandClickCancel" invocation-numbers="0"/>
-          <include name="selectDocumentsSeletAllandClickCancel" invocation-numbers="0"/>
-          <include name="selectGroupSeletAllandClickCancel" invocation-numbers="0"/>
+          <include name="closeMattersTest" invocation-numbers="0"/>
+          <include name="reOpenMatterTest" invocation-numbers="0"/>
           <include name="down"/>
-          <include name="enterDetailsandClickCancel" invocation-numbers="0"/>
-          <include name="selectTeamMeberSeletAllandClickCancel" invocation-numbers="0"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.CreateMatterNegative2Test -->
+      </class> <!-- com.test.ViewMatterOpenCloseMatter -->
+      <class name="com.test.ViewMatterEditMatterInfoTest">
+        <methods>
+          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus" invocation-numbers="0"/>
+          <include name="editMatterInfoAllFieldsEntered" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandPriority" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandStatus" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+          <include name="editMatterInfoAllFieldEnteredandCancel" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandJudge" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionandOpponentAdvocates" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent" invocation-numbers="0"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandCourt" invocation-numbers="0"/>
+          <include name="down"/>
+          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandPriority" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.test.ViewMatterEditMatterInfoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

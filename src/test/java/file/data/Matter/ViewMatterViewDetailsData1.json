@@ -1,64 +1,64 @@
 [
 	{
 		"comment": "0.teamMemberSelectingAndSave",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"Member1": "Donald Carpenter",
 		"Member2": "Jason Gifford",
 		"Member3": "George Quinn"
 	},
 	{
 		"comment": "1.teamMemberSelectingAndCancel",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"Member1": "Christopher Cameron",
 		"Member2": "Matthew Riley"
 	},
 	{
 		"comment": "2.removeTeamMemberAndYes",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"removeMember1": "Jason Gifford",
 		"removeMember2": "George Quinn"
 	},
 	{
 		"comment": "3.removeTeamMemberAndNo",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"removeMember1": "Jason Gifford",
 		"removeMember2": "George Quinn"
 	},
 	{
 		"comment": "4.removeTeamMemberAndClose",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"removeMember1": "Jason Gifford",
 		"removeMember2": "George Quinn"
 	},
 	{
 		"comment": "5.removeTeamMemberAndYesAndSave",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"removeMember1": "Jason Gifford",
 		"removeMember2": "George Quinn"
 	},
 	{
 		"comment": "6.searchAndSelectNamesAndSave",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"names1": "Jason Gifford"
 	},
 	{
 		"comment": "7.searchAndSelectNamesAndCancel",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"names1": "Susan Walsh"
 	},
 	{
 		"comment": "8.selectAllTeamMemberAndSave",
-		"matterName": "Criminal Case 15"
+		"matterName": "MatterInfo"
 	},
 	{
 		"comment": "9.selectedNameisDisplayorNot",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"memberName1": "Donald Carpenter",
 		"memberName2": "George Quinn"
 	},
 	{
 		"comment": "10.editMatterInfoWithTeamMembers",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"caseTitle": "Adult Court Transfer",
 		"caseNumber": "AGHW64",
 		"dateofFilling": " 17 ",
@@ -135,7 +135,7 @@
 	{
 		"comment": "22.editMatterInfoWithClients",
 		"matterName": "Adult Court Transfer",
-		"caseTitle": "Criminal Case 15",
+		"caseTitle": "MatterInfo",
 		"caseNumber": "FSWER2",
 		"dateofFilling": " 7 ",
 		"caseType": "Criminal Case",
@@ -149,11 +149,11 @@
 	},
 	{
 		"comment": "23.leftAndRightArrow",
-		"matterName": "Criminal Case 15"
+		"matterName": "MatterInfo"
 	},	
 	{
 		"comment": "24.editMatterInfoWithViewDetails",
-		"matterName": "Criminal Case 15",
+		"matterName": "MatterInfo",
 		"caseTitle": "Adult Court Transfer",
 		"caseNumber": "FSWER2",
 		"dateofFilling": " 7 ",

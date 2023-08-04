@@ -76,42 +76,5 @@ public class ViewMatterOpenCloseMatter extends BaseClass {
 	}
 	
 	
-	/*
-	 * 
-	 * // closeMattersTest
-	 * 
-	 * @DataProvider public Object[][] getData1() throws IOException {
-	 * 
-	 * List<HashMap<String, String>> data = getJsonDataToMap(
-	 * "C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterOpenCloseMatterData.json"
-	 * );
-	 * 
-	 * return new Object[][] { { data.get(0) } };
-	 * 
-	 * }
-	 * 
-	 * // reOpenMatterwithCancelTest
-	 * 
-	 * @DataProvider public Object[][] getData2() throws IOException {
-	 * 
-	 * List<HashMap<String, String>> data = getJsonDataToMap(
-	 * "C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterOpenCloseMatterData.json"
-	 * );
-	 * 
-	 * return new Object[][] { { data.get(0) } };
-	 * 
-	 * }
-	 * 
-	 * // reOpenMatterTest
-	 * 
-	 * @DataProvider public Object[][] getData3() throws IOException {
-	 * 
-	 * List<HashMap<String, String>> data = getJsonDataToMap(
-	 * "C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Matter\\ViewMatterOpenCloseMatterData.json"
-	 * );
-	 * 
-	 * return new Object[][] { { data.get(0) } };
-	 * 
-	 * }
-	 */
+	
 }

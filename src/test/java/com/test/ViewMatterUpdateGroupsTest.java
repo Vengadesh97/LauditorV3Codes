@@ -46,7 +46,6 @@ public class ViewMatterUpdateGroupsTest extends BaseClass {
 	@Test(dataProvider = "getData1", priority = 1)
 	public void selectMultipleGroups(HashMap<String, String> input) throws InterruptedException {
 		try {
-			viewMatters.leftMatterTab();
 			viewMatterUpdateGroups.pageUp();
 			viewMatterUpdateGroups.searchInputandUpdateGroupsMatter(input.get("CaseName"));
 			viewMatterUpdateGroups.pageDownUpdateGroupSearchbar();

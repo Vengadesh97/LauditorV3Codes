@@ -278,6 +278,7 @@ public class ViewMatterPOM extends Reusable {
 	WebElement matterInfoCancel;
 
 	public void editMatterSave() throws InterruptedException {
+		Thread.sleep(2000);
 		visibilityOfElementWait(editMatterInfoSave);
 		editMatterInfoSave.click();
 	}
@@ -294,6 +295,7 @@ public class ViewMatterPOM extends Reusable {
 
 	// Success Popup
 	public void successPopupEditMatterInfo() throws InterruptedException {
+		Thread.sleep(3000);
 		visibilityOfElementWait(successPopupOk);
 		successPopupOk.click();
 	}
@@ -338,7 +340,7 @@ public class ViewMatterPOM extends Reusable {
 		searchInputFields.sendKeys(MatterName);
 		
 		pageDown();
-		Thread.sleep(10000);
+		Thread.sleep(7000);
 		Actions action = new Actions(driver);
 		
 		for(int i=0;i<allMatterNamesText.size();i++)

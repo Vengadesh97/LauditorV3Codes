@@ -34,7 +34,7 @@ public class CreateMatterTest extends BaseClass {
 		}
 	}
 
-	@Test(dataProvider = "getData2", priority = 1, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getData2", priority = 1)
 	public void clientsIndividualsWithTeamMembers(HashMap<String, String> input) throws InterruptedException {
 
 		try {

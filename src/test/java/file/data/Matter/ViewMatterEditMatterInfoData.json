@@ -9,27 +9,27 @@
 	{	
 		"_comment":"1.editMatterInfoMandatoryWithDescription",
 		"matterName":"Register of Sessions cases",
-		"caseTitle":"Register of Appeal Cases received",
+		"caseTitle":"Register of Appeal",
 		"caseNumber":"AGHW12",
 		"description":"At the time of acceptance the surety the signature"
 	},
 	{
 		"_comment":"2.editMatterInfoMandatoryWithCaseType",
-		"matterName":"Register of Appeal Cases received",
-		"caseTitle":"Register of Revision Cases Entertained",
+		"matterName":"Register of Appeal",
+		"caseTitle":"Register of Revision",
 		"caseNumber":"AGHW13",
 		"caseType":"Individuals"
 	},
 	{
 		"_comment":"3.editMatterInfoMandatoryWithCourt",
-		"matterName":"Register of Revision Cases Entertained",
-		"caseTitle":"Register of calender and Preliminary",
+		"matterName":"Register of Revision",
+		"caseTitle":"Register of calender",
 		"caseNumber":"AGHW14",
 		"courtName":"High Court"
 	},
 	{
 		"_comment":"4.editMatterInfoMandatoryWithJudge",
-		"matterName":"Register of calender and Preliminary",
+		"matterName":"Register of calender",
 		"caseTitle":"Register cases received",
 		"caseNumber":"AGHW15",
 		"judges":"Vimal"
@@ -37,20 +37,20 @@
 	{
 		"_comment":"5.editMatterInfoMandatoryWithPriority",
 		"matterName":"Register cases received",
-		"caseTitle":"Register of Miscellaneous and Maintenance",
+		"caseTitle":"Register of Miscellaneous",
 		"caseNumber":"AGHW16",
 		"priority":"Medium"
 	},
 	{
 		"_comment":"6.editMatterInfoMandatoryWithStatus",
-		"matterName":"Register of Miscellaneous and Maintenance",
-		"caseTitle":"Register of applications under Section",
+		"matterName":"Register of Miscellaneous",
+		"caseTitle":"Register applications",
 		"caseNumber":"AGHW17"
 	},
 	{
 		"_comment":"7.editMatterInfoMandatoryWithOpponentAdvocate",
-		"matterName":"Register of applications under Section",
-		"caseTitle":"Register Results of Inquiries and Trials",
+		"matterName":"Register applications",
+		"caseTitle":"Register Results",
 		"caseNumber":"AGHW18",
 		"name":"Scott",
 		"email":"scott@gm.com",
@@ -58,8 +58,8 @@
 	},
 	{
 		"_comment":"8.editMatterInfoMandatoryWithDOFandDescription",
-		"matterName":"Register Results of Inquiries and Trials",
-		"caseTitle":"Register of Punishments",
+		"matterName":"Register Results",
+		"caseTitle":"Register Punishments",
 		"caseNumber":"AGHW19",
 		"dateofFilling":" 12 ",
 		"description":"The sureties shall produce Bank Pass Books or Ration Cards or some"
@@ -67,23 +67,23 @@
 	
 	{
 		"_comment":"9.editMatterInfoMandatoryWithDOFandCasetype",
-		"matterName":"Register of Punishments",
-		"caseTitle":"Register of Appeal Cases disposed",
+		"matterName":"Register Punishments",
+		"caseTitle":"Register Appeal",
 		"caseNumber":"AGHW20",
 		"dateofFilling":" 15 ",
 		"caseType":"Criminal Case"
 	},
 	{
 		"_comment":"10.editMatterInfoMandatoryWithDOFandCourt",
-		"matterName":"Register of Appeal Cases disposed",
-		"caseTitle":"Register of Revision Cases disposed",
+		"matterName":"Register Appeal",
+		"caseTitle":"Register of Revision",
 		"caseNumber":"AGHW21",
 		"dateofFilling":" 8 ",
 		"courtName":"Madras high Court"
 	},
 	{
 		"_comment":"11.editMatterInfoMandatoryWithDOFandJudge",
-		"matterName":"Register of Revision Cases disposed",
+		"matterName":"Register of Revision",
 		"caseTitle":"Diary Register",
 		"caseNumber":"AGHW22",
 		"dateofFilling":" 18 ",
@@ -92,14 +92,14 @@
 	{
 		"_comment":"12.editMatterInfoMandatoryWithDOFandPriority",
 		"matterName":"Diary Register",
-		"caseTitle":"The Various types of child custody",
+		"caseTitle":"The Various types",
 		"caseNumber":"AGHW23",
 		"dateofFilling":" 25 ",
 		"priority":"Low"
 	},
 	{
 		"_comment":"13.editMatterInfoMandatoryWithDOFandStatus",
-		"matterName":"The Various types of child custody",
+		"matterName":"The Various types",
 		"caseTitle":"Legal Custody",
 		"caseNumber":"AGHW24",
 		"dateofFilling":" 16 "
@@ -133,30 +133,30 @@
 	{
 		"_comment":"17.editMatterInfoMandatoryWithDescriptionandJudge",
 		"matterName":"Joint Custody",
-		"caseTitle":"Legal Custody in Joint Custody Arrangements",
+		"caseTitle":"Legal Custody Joint",
 		"caseNumber":"AGHW28",
 		"description":"Distinctions between joint custody and sole custody",
 		"judges":"Ram"
 	},
 	{
 		"_comment":"18.editMatterInfoMandatoryWithDescriptionandPriority",
-		"matterName":"Legal Custody in Joint Custody Arrangements",
-		"caseTitle":"Official Terminology with Child",
+		"matterName":"Legal Custody Joint",
+		"caseTitle":"Official Child",
 		"caseNumber":"AGHW29",
 		"priority":"High",
-		"description":"In joint custody arrangements, parents share rights to make the major decisions"
+		"description":"In joint custody arrangements"
 	},
 	{
 		"_comment":"19.editMatterInfoMandatoryWithDescriptionandStatus",
-		"matterName":"Official Terminology with Child",
-		"caseTitle":"One Common Custody Arrangement",
+		"matterName":"Official Child",
+		"caseTitle":"One Common",
 		"caseNumber":"AGHW30",
-		"description":"Definition and explanation of physical custody, "
+		"description":"Definition and explanation of physical custody"
 	},
 	{
 		"_comment":"20.editMatterInfoMandatoryWithDescriptionandOpponentAdvocates",
-		"matterName":"One Common Custody Arrangement",
-		"caseTitle":"Other Forms of Joint Custody",
+		"matterName":"One Common",
+		"caseTitle":"Other Forms",
 		"caseNumber":"AGHW31",
 		"description":"There are also other joint-custody arrangements ",
 		"name":"Ashok",
@@ -166,39 +166,39 @@
 	},
 	{
 		"_comment":"21.editMatterInfoMandatoryWithCaseTypeandCourt",
-		"matterName":"Other Forms of Joint Custody",
-		"caseTitle":"Get Professional Legal Help",
+		"matterName":"Other Forms",
+		"caseTitle":"Professional Legal",
 		"caseNumber":"AGHW32",
 		"caseType":"Child custody",
 		"courtName":"Delhi high Court"
 	},
 	{
 		"_comment":"22.editMatterInfoMandatoryWithCaseTypeandJudge",
-		"matterName":"Get Professional Legal Help",
-		"caseTitle":"The child's relationship with each parent",
+		"matterName":"Professional Legal",
+		"caseTitle":"Child relationship",
 		"caseNumber":"AGHW33",
 		"caseType":"Criminal",
 		"judges":"Rocky"
 	},
 	{
 		"_comment":"23.editMatterInfoMandatoryWithCaseTypeandPriority",
-		"matterName":"The child's relationship with each parent",
-		"caseTitle":"The child's preference",
+		"matterName":"Child relationship",
+		"caseTitle":"Child preference",
 		"caseNumber":"AGHW34",
 		"caseType":"Civil",
 		"priority":"Medium"
 	},
 	{
 		"_comment":"24.editMatterInfoMandatoryWithCaseTypeandStatus",
-		"matterName":"The child's preference",
-		"caseTitle":"A history of substance abuse",
+		"matterName":"Child preference",
+		"caseTitle":"History substance",
 		"caseNumber":"AGHW35",
 		"caseType":"Lawyer"
 	},
 	{
 		"_comment":"25.editMatterInfoMandatoryWithCaseTypeandOpponentAdvocates",
-		"matterName":"A history of substance abuse",
-		"caseTitle":"The child's well-being",
+		"matterName":"History substance",
+		"caseTitle":"The child",
 		"caseNumber":"AGHW36",
 		"caseType":"Bike Case",
 		"name":"Arvind",
@@ -208,22 +208,22 @@
 	{
 		"_comment":"26.editMatterInfoMandatoryWithCourtandJudge",
 		"matterName":"Child Case",
-		"caseTitle":"The child's school location",
+		"caseTitle":"Child school",
 		"caseNumber":"AGHW37",
 		"courtName":"High Court",
 		"judges":"Madesh"
 	},
 	{
 		"_comment":"27.editMatterInfoMandatoryWithCourtandPriority",
-		"matterName":"The child's school location",
-		"caseTitle":"The Best Interest of the Child Standard",
+		"matterName":"Child school",
+		"caseTitle":"Best Interest",
 		"caseNumber":"AGHW38",
 		"courtName":"High Court",
 		"priority":"Low"
 	},
 	{
 		"_comment":"28.editMatterInfoMandatoryWithCourtandStatus",
-		"matterName":"The Best Interest of the Child Standard",
+		"matterName":"Best Interest",
 		"caseTitle":"Visitation Rights",
 		"caseNumber":"AGHW39",
 		"courtName":"Child Custody Court"
@@ -241,21 +241,21 @@
 	{
 		"_comment":"30.editMatterInfoMandatoryWithJudgeandPriority",
 		"matterName":"Sole Custody",
-		"caseTitle":"Legal Consumer Matter",
+		"caseTitle":"Legal Consumer",
 		"caseNumber":"AGHW41",
 		"judges":"Deepan",
 		"priority":"High"
 	},
 	{
 		"_comment":"31.editMatterInfoMandatoryWithJudgeandStatus",
-		"matterName":"Legal Consumer Matter",
-		"caseTitle":"Administrative Law Reports",
+		"matterName":"Legal Consumer",
+		"caseTitle":"Administrative Law",
 		"caseNumber":"AGHW42",
 		"judges":"Micheal"
 	},
 	{
 		"_comment":"32.editMatterInfoMandatoryWithJudgeandOpponentAdvocates",
-		"matterName":"Administrative Law Reports",
+		"matterName":"Administrative Law",
 		"caseTitle":"Alberta Reports",
 		"caseNumber":"AGHW43",
 		"judges":"Vamsi",
@@ -267,13 +267,13 @@
 	{
 		"_comment":"33.editMatterInfoMandatoryWithPriorityandStatus",
 		"matterName":"Alberta Reports",
-		"caseTitle":"Legality of Use of Force",
+		"caseTitle":"Legality Use",
 		"caseNumber":"AGHW44",
 		"priority":"Medium"
 	},
 	{
 		"_comment":"34.editMatterInfoMandatoryWithPriorityandOpponentAdvocates",
-		"matterName":"Legality of Use of Force",
+		"matterName":"Legality Use",
 		"caseTitle":"Certain Property",
 		"caseNumber":"AGHW45",
 		"priority":"Low",
@@ -293,7 +293,7 @@
 	{
 		"_comment":"36.editMatterInfoMandatoryWithDOFDescriptionandCaseType",
 		"matterName":"Frontier Dispute",
-		"caseTitle":"Federal Court Reports",
+		"caseTitle":"Federal Court",
 		"caseNumber":"AGHW47",
 		"dateofFilling":" 28 ",
 		"caseType":"Lawyer",
@@ -301,12 +301,12 @@
 	},
 	{
 		"_comment":"37.editMatterInfoMandatoryWithDOFDescriptionandCourt",
-		"matterName":"Federal Court Reports",
+		"matterName":"Federal Court",
 		"caseTitle":"Criminal Cases",
 		"caseNumber":"AGHW48",
 		"dateofFilling":" 15 ",
 		"courtName":"Madras high Court",
-		"description":"There are also other joint-custody arrangements"
+		"description":"There are also other joint"
 	},
 	{
 		"_comment":"38.editMatterInfoMandatoryWithDOFDescriptionandJudge",
@@ -320,15 +320,15 @@
 	{
 		"_comment":"39.editMatterInfoMandatoryWithDOFDescriptionandPriority",
 		"matterName":"Civil cases",
-		"caseTitle":"Personal Injury Tort Claims",
+		"caseTitle":"Personal Injury",
 		"caseNumber":"AGHW50",
 		"dateofFilling":" 10 ",
 		"priority":"Low",
-		"description":"The sureties shall produce Bank Pass Books or Ration Cards or some"
+		"description":"The sureties shall produce Bank Pass"
 	},
 	{
 		"_comment":"40.editMatterInfoMandatoryWithDOFDescriptionandStatus",
-		"matterName":"Personal Injury Tort Claims",
+		"matterName":"Personal Injury",
 		"caseTitle":"Contract Disputes",
 		"caseNumber":"AGHW51",
 		"dateofFilling":" 22 ",
@@ -349,7 +349,7 @@
 	{
 		"_comment":"42.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandCourt",
 		"matterName":"Equitable Claims",
-		"caseTitle":"Class Action Suits",
+		"caseTitle":"Class Action",
 		"caseNumber":"AGHW53",
 		"dateofFilling":" 26 ",
 		"caseType":"Individuals",
@@ -358,8 +358,8 @@
 	},
 	{
 		"_comment":"43.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandJudge",
-		"matterName":"Class Action Suits",
-		"caseTitle":"Divorce and Family Law Disputes",
+		"matterName":"Class Action",
+		"caseTitle":"Divorce Family",
 		"caseNumber":"AGHW54",
 		"dateofFilling":" 24 ",
 		"caseType":"Child",
@@ -368,7 +368,7 @@
 	},
 	{
 		"_comment":"44.editMatterInfoMandatoryWithCaseTypeandPriority",
-		"matterName":"Divorce and Family Law Disputes",
+		"matterName":"Divorce Family",
 		"caseTitle":"Property Disputes",
 		"caseNumber":"AGHW55",
 		"dateofFilling":" 29 ",
@@ -388,7 +388,7 @@
 	{
 		"_comment":"46.editMatterInfoMandatoryWithDOFDescriptionCaseTypeandOpponent",
 		"matterName":"Tort Claims",
-		"caseTitle":"Breach of Contract Claims",
+		"caseTitle":"Breach Contract",
 		"caseNumber":"AGHW57",
 		"dateofFilling":" 19 ",
 		"caseType":"Bike Case",
@@ -399,7 +399,7 @@
 	},
 	{
 		"_comment":"47.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandJudge",
-		"matterName":"Breach of Contract Claims",
+		"matterName":"Breach Contract",
 		"caseTitle":"Tenant issues",
 		"caseNumber":"AGHW58",
 		"dateofFilling":" 17 ",
@@ -444,7 +444,7 @@
 	},
 	{
 		"_comment":"51.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandPriority",
-		"matterName":"Criminal case",
+		"matterName":"Criminal case109",
 		"caseTitle":"Accelerated Rehabilitation",
 		"caseNumber":"AGHW62",
 		"dateofFilling":" 12 ",
@@ -468,12 +468,12 @@
 		{
 		"_comment":"53.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJugeandOpponent",
 		"matterName":"Adjudicatory Hearing",
-		"caseTitle":"Adult Court Transfer",
+		"caseTitle":"Adult Court",
 		"caseNumber":"AGHW64",
 		"dateofFilling":" 17 ",
 		"caseType":"Individuals",
 		"courtName":"Mumbai Court",
-		"description":"There are also other joint-custody arrangements",
+		"description":"There joint-custody arrangements",
 		"judges":"harish",
 		"name":"kishore",
 		"email":"kishore@gm.com",
@@ -481,8 +481,8 @@
 	},
 		{
 		"_comment":"54.editMatterInfoMandatoryWithDescriptionCaseTypeandCourt",
-		"matterName":"Adult Court Transfer",
-		"caseTitle":"Alcohol Education Program",
+		"matterName":"Adult Court",
+		"caseTitle":"Alcohol Education",
 		"caseNumber":"AGHW65",
 		"caseType":"Custody case",
 		"courtName":"Supreme Court",
@@ -490,8 +490,8 @@
 	},
 		{
 		"_comment":"55.editMatterInfoMandatoryWithDescriptionCaseTypeandJudge",
-		"matterName":"Alcohol Education Program",
-		"caseTitle":"Alternative Detention Program",
+		"matterName":"Alcohol Education",
+		"caseTitle":"Alternative Detention",
 		"caseNumber":"AGHW66",
 		"caseType":"crime case",
 		"judges":"Thirumalai",
@@ -499,8 +499,8 @@
 	},
 		{
 		"_comment":"56.editMatterInfoMandatoryWithDescriptionCaseTypeandPriority",
-		"matterName":"Alternative Detention Program",
-		"caseTitle":"Alternative Dispute Resolution",
+		"matterName":"Alternative Detention",
+		"caseTitle":"Dispute Resolution",
 		"caseNumber":"AGHW67",
 		"caseType":"Individuals",
 		"priority":"High",
@@ -508,16 +508,16 @@
 	},
 		{
 		"_comment":"57.editMatterInfoMandatoryWithDescriptionCaseTypeandStatus",
-		"matterName":"Alternative Dispute Resolution",
-		"caseTitle":"Alternative Incarceration Center",
+		"matterName":"Dispute Resolution",
+		"caseTitle":"Incarceration Center",
 		"caseNumber":"AGHW68",
 		"caseType":"Lawyer",
 		"description":"Document attached"
 	},
 		{
 		"_comment":"58.editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent",
-		"matterName":"Alternative Incarceration Center",
-		"caseTitle":"Amicus Curiae brief",
+		"matterName":"Incarceration Center",
+		"caseTitle":"Amicus Curiae",
 		"caseNumber":"AGHW69",
 		"caseType":"Lawyer handle cases",
 		"description":"Civil courts handle disputes",
@@ -527,8 +527,8 @@
 	},
 		{
 		"_comment":"59.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge",
-		"matterName":"Amicus Curiae brief",
-		"caseTitle":"Assistant Attorney General",
+		"matterName":"Amicus Curiae",
+		"caseTitle":"Assistant Attorney",
 		"caseNumber":"AGHW70",
 		"caseType":"Senior Lawyer cases",
 		"courtName":"High Court",
@@ -537,7 +537,7 @@
 	},
 	{
 		"_comment":"60.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority",
-		"matterName":"Assistant Attorney General",
+		"matterName":"Assistant Attorney",
 		"caseTitle":"Bail Bondsperson",
 		"caseNumber":"AGHW71",
 		"caseType":"Individuals",
@@ -548,7 +548,7 @@
 	{
 		"_comment":"61.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus",
 		"matterName":"Bail Bondsperson",
-		"caseTitle":"Best Interest of the Child",
+		"caseTitle":"Best Interest",
 		"caseNumber":"AGHW72",
 		"caseType":"Senior Lawyer cases",
 		"courtName":"Madurai High court",
@@ -556,7 +556,7 @@
 	},
 		{
 		"_comment":"62.editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent",
-		"matterName":"Best Interest of the Child",
+		"matterName":"Best Interest",
 		"caseTitle":"Bail Commissioner",
 		"caseNumber":"AGHW73",
 		"caseType":"Child custody Case",
@@ -581,7 +581,7 @@
 		{
 		"_comment":"64.editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus",
 		"matterName":"Bench Warrant",
-		"caseTitle":"Broken Down Irretrievably",
+		"caseTitle":"Broken Down",
 		"caseNumber":"AGHW75",
 		"caseType":"Child custody",
 		"courtName":"Mumbai High Court",
@@ -590,8 +590,8 @@
 	},
 		{
 		"_comment":"65.editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent",
-		"matterName":"Broken Down Irretrievably",
-		"caseTitle":"Case Flow Coordinator",
+		"matterName":"Broken Down",
+		"caseTitle":"Case Flow",
 		"caseNumber":"AGHW76",
 		"caseType":"Car accident",
 		"courtName":"Coimbatore high court",
@@ -603,8 +603,8 @@
 	},
 		{
 		"_comment":"66.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus",
-		"matterName":"Case Flow Coordinator",
-		"caseTitle":"Central Transportation Unit",
+		"matterName":"Case Flow",
+		"caseTitle":"Central Transportation",
 		"caseNumber":"AGHW77",
 		"caseType":"Individuals",
 		"courtName":"High Court",
@@ -615,8 +615,8 @@
 	},
 		{
 		"_comment":"67.editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent",
-		"matterName":"Central Transportation Unit",
-		"caseTitle":"Lisa Child Custody Case",
+		"matterName":"Central Transportation",
+		"caseTitle":"Lisa Child",
 		"caseNumber":"AGHW78",
 		"caseType":"Senior Lawyer cases",
 		"courtName":"Supreme Court",
@@ -630,8 +630,8 @@
 	},
 		{
 		"_comment":"68.editMatterInfoAllFieldsEntered",
-		"matterName":"Lisa Child Custody Case",
-		"caseTitle":"Contract Breach",
+		"matterName":"Lisa Child",
+		"caseTitle":"Contract15",
 		"caseNumber":"AGHW79",
 		"caseType":"Individuals",
 		"courtName":"Madras high Court",
@@ -646,7 +646,7 @@
 	},
 			{
 		"_comment":"69.editMatterInfoAllFieldEnteredandCancel",
-		"matterName":"Contract Breach",
+		"matterName":"Contract15",
 		"caseTitle":"IP Dispute - Copyright",
 		"caseNumber":"AGHW80",
 		"caseType":"Criminal Case",

@@ -79,6 +79,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.editCaseType(input.get("caseType"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -108,6 +109,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.editCourtName(input.get("courtName"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -137,6 +139,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editJudges(input.get("judges"));
 			viewMatters.scrollDown();
 			viewMatters.editMatterSave();
+			Thread.sleep(1000);
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
 			Thread.sleep(2000);
@@ -164,6 +167,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.priorityChange(input.get("priority"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -192,6 +196,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.statusPending();
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -217,8 +222,10 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseTitle(input.get("caseTitle"));
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -249,6 +256,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseNumber(input.get("caseNumber"));
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
@@ -281,6 +289,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.editCaseType(input.get("caseType"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -310,6 +319,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.editCourtName(input.get("courtName"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -339,6 +349,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.editJudges(input.get("judges"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -369,6 +380,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.dateOfFilling(input.get("dateofFilling"));
 			viewMatters.priorityChange(input.get("priority"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -805,7 +817,10 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 	@Test(dataProvider = "getData26", priority = 26)
 	public void editMatterInfoMandatoryWithCourtandJudge(HashMap<String, String> input) throws InterruptedException {
 		try {
+			
 			viewMatters.scrollUp();
+			Thread.sleep(2000);
+			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatters.editMatterInfoPageBtn();
 			viewMatters.editCaseTitle(input.get("caseTitle"));
@@ -1737,9 +1752,11 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCourtName(input.get("courtName"));
 			viewMatters.editJudges(input.get("judges"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.addOpponentAdv(input.get("name"), input.get("email"), input.get("number"));
 			viewMatters.scrollDown();
+			Thread.sleep(1000);
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
 			//Assertion
@@ -1775,6 +1792,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 			viewMatters.editCaseType(input.get("caseType"));
 			viewMatters.editCourtName(input.get("courtName"));
 			viewMatters.scrollDown();
+			Thread.sleep(2000);
 			viewMatters.editDescription(input.get("description"));
 			viewMatters.editMatterSave();
 			viewMatters.successPopupEditMatterInfo();
@@ -2282,8 +2300,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 	@Test(dataProvider = "getData68", priority = 68)
 	public void editMatterInfoAllFieldsEntered(HashMap<String, String> input) throws InterruptedException {
 		try {
-			//viewMatters.scrollUp();
-			viewMatters.leftMatterTab();
+			viewMatters.scrollUp();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatters.editMatterInfoPageBtn();
 			viewMatters.editCaseTitle(input.get("caseTitle"));
@@ -2324,7 +2341,7 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 	@Test(dataProvider = "getData69", priority = 69)
 	public void editMatterInfoAllFieldEnteredandCancel(HashMap<String, String> input) throws InterruptedException {
 		try {
-			viewMatters.leftMatterTab();
+			viewMatters.scrollUp();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatters.editMatterInfoPageBtn();
 			viewMatters.editCaseTitle(input.get("caseTitle"));
@@ -2346,35 +2363,8 @@ public class ViewMatterEditMatterInfoTest extends BaseClass {
 		}
 	}
 
-	// Mandatory Fields with Date of Filling
 
-	@Test()
-	public void editMatterInfoMandatoryWithDOF() throws InterruptedException {
-		try {
-			viewMatters.leftMatterTab();
-			viewMatters.searchBarFieldsandActionBtn("Register of Sessions cases");
-			viewMatters.editMatterInfoPageBtn();
-			Thread.sleep(2000);
-			viewMatters.caseTitleVerifyAssert("Register of Sessions cases");
-			viewMatters.caseNumberVerifyAssert("AGHW11");
-			viewMatters.caseTypeVerifyAssert("Criminal Case");
-			viewMatters.courtNameVerifyAssert("Madras court");
-			viewMatters.judgesVerifyAssert("harish");
-			viewMatters.pageDown();
-			Thread.sleep(2000);
-			viewMatters.descriptionVerifyAssert("documents");
-			viewMatters.opponentAd("Sudhan");
-			
-		} finally {
-			viewMatters.leftMatterTab();
-		}
-	}
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

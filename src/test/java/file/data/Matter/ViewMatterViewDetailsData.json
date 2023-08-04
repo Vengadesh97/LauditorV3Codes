@@ -2,7 +2,7 @@
 	{
 		"comment": "0.meetingNameAppearOrNot",
 		"matterName": "Contract Breach",
-		"meetingName": "Criminal Case 15 - Consultation"
+		"meetingName": "Contract Breach - Consultation"
 	},
 	{
 		"comment": "1.descriptionTextinViewDetails",
@@ -15,10 +15,10 @@
 		"documentName": "AnathKumar GH 1"
 	},
 	{
-		"comment": "3.documentRemoveOnDocuments",
+		"comment": "3.documentRemoveOnDocumentsandSave",
 		"matterName": "Contract Breach",
-		"documentRemove1": "AnathKumar GH 1",
-		"documentRemove2": "Family law GH 1"
+		"documentRemove1": "Alliance TM 2",
+		"documentRemove2": "Apollo TM 2"
 	},
 	{
 		"comment": "4.removeDocumentOnLeftSideWithCancel",
@@ -30,19 +30,19 @@
 		"comment": "5.selectDocumentOnRightSideWithCancel",
 		"matterName": "Contract Breach",
 		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Dustin GH 1"
+		"documentSelect2": "Apollo TM 2"
 	},
 	{
 		"comment": "6.selectDocumentOnRightSideWithSave",
 		"matterName": "Contract Breach",
 		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Dustin GH 1"
+		"documentSelect2": "Apollo TM 2"
 	},
 	{
 		"comment": "7.removeDocumentOnLeftSideWithSave",
 		"matterName": "Contract Breach",
 		"documentRemove1": "Neela GH 1",
-		"documentRemove2": "Dustin GH 1"
+		"documentRemove2": "Apollo TM 2"
 	},
 	{
 		"comment": "8.selectAllClickCancel",

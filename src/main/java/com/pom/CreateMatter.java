@@ -265,7 +265,7 @@ public class CreateMatter extends Reusable {
 	WebElement addTemporaryBtn;
 
 	public void addTemporaryButton() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		visibilityOfAllElements(addTemporaryBtn);
 		addTemporaryBtn.click();
 	}
@@ -275,7 +275,7 @@ public class CreateMatter extends Reusable {
 	WebElement addTeamMembersBtnTempClients;
 
 	public void addTeamMembersTempClientsBtn() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		visibilityOfAllElements(addTeamMembersBtnTempClients);
 		addTeamMembersBtnTempClients.click();
 	}

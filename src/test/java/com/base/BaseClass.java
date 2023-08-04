@@ -36,6 +36,7 @@ import com.pom.CreateMatter;
 import com.pom.CreateMember;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
+import com.pom.TimesheetPOM;
 import com.pom.UploadDocumentPom;
 import com.pom.ViewGroups;
 import com.pom.ViewMatterDeleteMatterPOM;
@@ -69,7 +70,7 @@ public class BaseClass {
 	public ViewMatterViewDetailsPOM viewMatterViewDetail;
 	public ViewMatterViewDetailsDocumentsPOM viewDetailDocuments;
 	public ViewMatterGeneralViewDetailsPOM viewMatterGeneral;
-	
+	public TimesheetPOM timesheets;
 	
 	public WebDriver initalize() throws IOException {
 
@@ -133,7 +134,8 @@ public class BaseClass {
 		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
 		viewMatterViewDetail = new ViewMatterViewDetailsPOM(driver);
 		viewDetailDocuments = new ViewMatterViewDetailsDocumentsPOM(driver);
-	    viewMatterGeneral = new ViewMatterGeneralViewDetailsPOM(driver); 
+	    viewMatterGeneral = new ViewMatterGeneralViewDetailsPOM(driver);
+	    timesheets = new TimesheetPOM(driver);
 		return loginPage;
 	}
 	
@@ -141,7 +143,7 @@ public class BaseClass {
 	@AfterClass
 	public void down()
 	{
-		driver.close();
+		//driver.close();
 	}
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

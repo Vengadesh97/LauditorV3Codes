@@ -107,6 +107,7 @@ public class ViewMatterViewDetailsTest extends BaseClass {
 	public void selectDocumentOnRightSideWithCancel(HashMap<String, String> input) throws InterruptedException {
 
 		try {
+			viewMatters.leftMatterTab();
 			viewMatters.searchBarFieldsandActionBtn(input.get("matterName"));
 			viewMatterViewDetail.viewDetailsBtn();
 			viewDetailDocuments.documentTab();
