@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.TimesheetNotSubmittedTest">
+      <class name="com.test.CreateMeetingTest">
         <methods>
-          <include name="legalWithBillableEmptyFieldUpdate" invocation-numbers="0"/>
           <include name="down"/>
+          <include name="mandatoryFieldsOnly" invocation-numbers="0"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.TimesheetNotSubmittedTest -->
+      </class> <!-- com.test.CreateMeetingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

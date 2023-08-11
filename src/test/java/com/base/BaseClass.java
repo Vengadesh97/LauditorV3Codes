@@ -33,6 +33,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pom.CreateGroup;
 import com.pom.CreateMatter;
+import com.pom.CreateMeetingsPOM;
 import com.pom.CreateMember;
 import com.pom.Dashboard;
 import com.pom.LoginPage;
@@ -46,6 +47,7 @@ import com.pom.ViewMatterPOM;
 import com.pom.ViewMatterUpdateGroupsPOM;
 import com.pom.ViewMatterViewDetailsDocumentsPOM;
 import com.pom.ViewMatterViewDetailsPOM;
+import com.pom.ViewMeetingsPOM;
 import com.pom.ViewMembers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -71,7 +73,9 @@ public class BaseClass {
 	public ViewMatterViewDetailsDocumentsPOM viewDetailDocuments;
 	public ViewMatterGeneralViewDetailsPOM viewMatterGeneral;
 	public TimesheetPOM timesheets;
-	
+	public CreateMeetingsPOM createMeeting;
+	public ViewMeetingsPOM viewMeeting;
+
 	public WebDriver initalize() throws IOException {
 
 		prop = new Properties();
@@ -93,7 +97,7 @@ public class BaseClass {
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 
 		return driver;
@@ -134,16 +138,16 @@ public class BaseClass {
 		viewMatterDeleteMatter = new ViewMatterDeleteMatterPOM(driver);
 		viewMatterViewDetail = new ViewMatterViewDetailsPOM(driver);
 		viewDetailDocuments = new ViewMatterViewDetailsDocumentsPOM(driver);
-	    viewMatterGeneral = new ViewMatterGeneralViewDetailsPOM(driver);
-	    timesheets = new TimesheetPOM(driver);
+		viewMatterGeneral = new ViewMatterGeneralViewDetailsPOM(driver);
+		timesheets = new TimesheetPOM(driver);
+		createMeeting = new CreateMeetingsPOM(driver);
+		viewMeeting = new ViewMeetingsPOM(driver);
 		return loginPage;
 	}
-	
-	
+
 	@AfterClass
-	public void down()
-	{
-		//driver.close();
+	public void down() {
+		// driver.close();
 	}
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
@@ -154,39 +158,28 @@ public class BaseClass {
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 
 	}
-	
-	
+
 	DataFormatter formatter = new DataFormatter();
-	
-	@DataProvider(name="driveTest")
-	public Object[][] getData() throws IOException
-	{
+
+	@DataProvider(name = "driveTest")
+	public Object[][] getData() throws IOException {
 		FileInputStream fis = new FileInputStream("C:\\users.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheetAt(0);
-		int rowCount =sheet.getPhysicalNumberOfRows();
+		int rowCount = sheet.getPhysicalNumberOfRows();
 		XSSFRow row = sheet.getRow(0);
 		int colCount = row.getLastCellNum();
-		Object data[][] = new Object[rowCount-1][colCount];
-		for(int i=0;i<rowCount-1;i++)
-		{
-			row = sheet.getRow(i+1);
-			for(int j=0;j<colCount;j++)
-			{
+		Object data[][] = new Object[rowCount - 1][colCount];
+		for (int i = 0; i < rowCount - 1; i++) {
+			row = sheet.getRow(i + 1);
+			for (int j = 0; j < colCount; j++) {
 				XSSFCell cell = row.getCell(j);
-				data[i][j] =formatter.formatCellValue(cell); 
+				data[i][j] = formatter.formatCellValue(cell);
 			}
 		}
-		
-		return data;		
-	
+
+		return data;
+
 	}
-	
-	
-	
-	
+
 }
-
-	
-
-

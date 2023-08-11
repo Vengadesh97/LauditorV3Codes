@@ -1,75 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="45" total="46" passed="0" failed="1" skipped="0">
+<testng-results ignored="46" total="47" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-03T11:25:18 IST" name="Default suite" finished-at="2023-08-03T11:26:51 IST" duration-ms="92889">
+  <suite started-at="2023-08-11T12:55:54 IST" name="Default suite" finished-at="2023-08-11T12:56:45 IST" duration-ms="50205">
     <groups>
     </groups>
-    <test started-at="2023-08-03T11:25:18 IST" name="Default test" finished-at="2023-08-03T11:26:51 IST" duration-ms="92889">
-      <class name="com.test.TimesheetNotSubmittedTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.TimesheetNotSubmittedTest@61322f9d]" started-at="2023-08-03T11:25:18 IST" name="launchApplication" finished-at="2023-08-03T11:25:27 IST" duration-ms="9405" status="PASS">
+    <test started-at="2023-08-11T12:55:54 IST" name="Default test" finished-at="2023-08-11T12:56:45 IST" duration-ms="50205">
+      <class name="com.test.CreateMeetingTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.test.CreateMeetingTest@2925bf5b]" started-at="2023-08-11T12:55:54 IST" name="launchApplication" finished-at="2023-08-11T12:56:03 IST" duration-ms="8887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="legalWithBillableEmptyFieldUpdate(java.util.HashMap)[pri:45, instance:com.test.TimesheetNotSubmittedTest@61322f9d]" started-at="2023-08-03T11:25:28 IST" name="legalWithBillableEmptyFieldUpdate" data-provider="getData45" finished-at="2023-08-03T11:26:51 IST" duration-ms="82657" status="FAIL">
+        <test-method signature="mandatoryFieldsOnly(java.util.HashMap)[pri:0, instance:com.test.CreateMeetingTest@2925bf5b]" started-at="2023-08-11T12:56:04 IST" name="mandatoryFieldsOnly" data-provider="getData0" finished-at="2023-08-11T12:56:45 IST" duration-ms="40483" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{date=Aug 09, 2023, hour=5, comment=45., taskName=Consultation, projectName=Legal Case 1- legal, minute= 30 }]]>
+                <![CDATA[{date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 - Creating legal briefs, scrollTime=14, comment=0.mandatoryFieldsOnly, taskName=Creating legal briefs , startTime= 11:00 , endTime= 11:30 , matterName=Legal Case 5 , monthAndTime=Aug 11 2023 : 11:00 AM - 11:30 AM}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.171)
-Build info: version: '4.7.0', revision: '0a5b49d16f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7859db70866cd168c244152159382ca9, findElement {using=xpath, value=//span[text()='Timesheets']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62448}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62448/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7859db70866cd168c244152159382ca9]]>
+              <![CDATA[expected [ Aug 11 2023 : 11:00 AM - 11:30 AM] but found [Aug 11 2023 : 11:00 AM - 11:30 AM]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=115.0.5790.171)
-Build info: version: '4.7.0', revision: '0a5b49d16f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7859db70866cd168c244152159382ca9, findElement {using=xpath, value=//span[text()='Timesheets']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\VENGAD~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62448}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62448/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7859db70866cd168c244152159382ca9
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy17.toString(Unknown Source)
-at java.base/java.lang.String.valueOf(String.java:4213)
-at java.base/java.lang.StringBuilder.append(StringBuilder.java:173)
-at java.base/java.util.AbstractCollection.toString(AbstractCollection.java:457)
-at java.base/java.lang.String.valueOf(String.java:4213)
-at java.base/java.lang.StringBuilder.append(StringBuilder.java:173)
-at org.openqa.selenium.support.ui.ExpectedConditions$9.toString(ExpectedConditions.java:276)
-at java.base/java.lang.String.valueOf(String.java:4213)
-at java.base/java.lang.StringBuilder.append(StringBuilder.java:173)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-at com.abst.Reusable.visibilityOfAllElements(Reusable.java:132)
-at com.pom.TimesheetPOM.leftTimesheetsTab(TimesheetPOM.java:34)
-at com.test.TimesheetNotSubmittedTest.legalWithBillableEmptyFieldUpdate(TimesheetNotSubmittedTest.java:1144)
+              <![CDATA[java.lang.AssertionError: expected [ Aug 11 2023 : 11:00 AM - 11:30 AM] but found [Aug 11 2023 : 11:00 AM - 11:30 AM]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.pom.ViewMeetingsPOM.assertMonthandTime(ViewMeetingsPOM.java:163)
+at com.test.CreateMeetingTest.mandatoryFieldsOnly(CreateMeetingTest.java:38)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -98,15 +61,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- legalWithBillableEmptyFieldUpdate -->
-        <test-method is-config="true" signature="down()[pri:0, instance:com.test.TimesheetNotSubmittedTest@61322f9d]" started-at="2023-08-03T11:26:51 IST" name="down" finished-at="2023-08-03T11:26:51 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- mandatoryFieldsOnly -->
+        <test-method is-config="true" signature="down()[pri:0, instance:com.test.CreateMeetingTest@2925bf5b]" started-at="2023-08-11T12:56:45 IST" name="down" finished-at="2023-08-11T12:56:45 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- down -->
-      </class> <!-- com.test.TimesheetNotSubmittedTest -->
+      </class> <!-- com.test.CreateMeetingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

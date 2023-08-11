@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -218,7 +219,13 @@ public class Reusable {
 
 		}
 
-	
+	//Select Class
+		public void selectingNames(WebElement nameTasks,String name) throws InterruptedException
+		{
+			Thread.sleep(3000);
+			Select selectList = new Select(nameTasks);
+			selectList.selectByVisibleText(name);
+		}
 	
 
 }
