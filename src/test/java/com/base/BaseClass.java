@@ -86,14 +86,14 @@ public class BaseClass {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions ops = new ChromeOptions();
 			ops.addArguments("--remote-allow-origins=*");
-			WebDriverManager.chromedriver().setup();
+		//	WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(ops);
 		} else if (browserName.equalsIgnoreCase("Firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		//	WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 		} else if (browserName.equalsIgnoreCase("Edge")) {
-			WebDriverManager.edgedriver().setup();
+		//	WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
@@ -119,7 +119,7 @@ public class BaseClass {
 	}
 
 	@BeforeClass
-	public LoginPage launchApplication() throws IOException {
+	public LoginPage launchApplication() throws IOException, InterruptedException {
 		driver = initalize();
 		// driver.get("https://app.lauditor.com/login");
 		loginPage = new LoginPage(driver);

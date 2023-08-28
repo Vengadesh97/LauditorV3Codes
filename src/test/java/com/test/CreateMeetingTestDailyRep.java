@@ -3,20 +3,19 @@ package com.test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.base.BaseClass;
 
-public class CreateMeetingTest extends BaseClass {
+public class CreateMeetingTestDailyRep extends BaseClass {
 
 	@Test(dataProvider = "getData0", priority = 0)
-	public void mandatoryFieldsOnly(HashMap<String, String> input) throws InterruptedException {
+	public void mandatoryFieldsWithRepetition(HashMap<String, String> input) throws InterruptedException {
 
+		// For the first scenario need to change the data 
 		try {
 			createMeeting.leftMeetingTab();
-		/*	createMeeting.createTab();
+	/*		createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
 			Thread.sleep(2000);
@@ -24,31 +23,33 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
-			createMeeting.viewChangesButton();
-			
-		*/	
-			viewMeeting.viewDay(input.get("date1"));
-	
-		//	viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-		//	viewMeeting.scrollUp();
-		//	Thread.sleep(2000);
-		//	viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-		//	viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+		    createMeeting.viewChangesButton();
+			createMeeting.scrollUp();
+	*/		Thread.sleep(2000);
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
 
 	}
-
+/*
 	@Test(dataProvider = "getData1", priority = 1)
 	public void mandatoryFieldsWithAllDays(HashMap<String, String> input) throws InterruptedException {
 
 		try {
+			createMeeting.leftMeetingTab();
 			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
@@ -57,14 +58,21 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.assertMeetingName(input.get("meetingName"));
+			createMeeting.scrollUp();
+			Thread.sleep(2000);
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -76,6 +84,7 @@ public class CreateMeetingTest extends BaseClass {
 	public void mandatoryFieldsWithMeetingLink(HashMap<String, String> input) throws InterruptedException {
 
 		try {
+			
 			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
@@ -84,21 +93,24 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -117,6 +129,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -125,19 +138,21 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
 	}
-
+	
 	@Test(dataProvider = "getData4", priority = 4)
 	public void mandatoryFieldsWithLocation(HashMap<String, String> input) throws InterruptedException {
 
@@ -150,6 +165,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -158,12 +174,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -182,21 +201,24 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -207,7 +229,6 @@ public class CreateMeetingTest extends BaseClass {
 	public void mandatoryFieldsWithAddTeamMember(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-			createMeeting.leftMeetingTab();
 			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
@@ -216,22 +237,24 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
-			createMeeting.addTeamMember(input.get("teamMember2"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -250,6 +273,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -259,14 +283,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -285,6 +310,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -293,13 +319,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -318,6 +346,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addIndividuals(input.get("individualMember1"));
@@ -326,13 +355,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -351,16 +382,21 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -379,21 +415,24 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -411,6 +450,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -419,13 +459,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -443,6 +485,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -451,12 +494,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -474,21 +520,24 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -506,6 +555,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -514,13 +564,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -538,6 +590,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -547,14 +600,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -572,6 +626,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -580,13 +635,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertDocuments(input.get("document1"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -604,6 +661,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addIndividuals(input.get("individualMember1"));
@@ -612,13 +670,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -636,23 +696,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.dialNumber(input.get("dialNumber"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -671,22 +733,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.location(input.get("location"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -706,23 +771,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingLink(input.get("meetingLink"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -742,9 +809,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -753,14 +821,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -779,9 +848,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -791,15 +861,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -819,9 +889,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -830,14 +901,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -857,9 +929,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addIndividuals(input.get("individualMember1"));
@@ -868,14 +941,16 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
+		
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -894,6 +969,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -903,13 +979,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -928,23 +1006,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -963,6 +1043,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -974,14 +1055,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1000,6 +1082,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -1012,15 +1095,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1039,6 +1122,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -1050,14 +1134,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1076,6 +1161,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -1087,14 +1173,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1113,22 +1200,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1147,6 +1237,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -1158,13 +1249,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1183,6 +1276,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -1195,14 +1289,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1221,6 +1316,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -1232,13 +1328,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1258,6 +1356,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.location(input.get("location"));
@@ -1269,13 +1368,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1295,9 +1396,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -1306,14 +1408,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1333,9 +1436,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -1345,15 +1449,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -1372,9 +1476,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -1383,14 +1488,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1410,9 +1516,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addIndividuals(input.get("individualMember1"));
@@ -1421,14 +1528,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1448,6 +1556,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -1459,15 +1568,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1487,6 +1596,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -1497,14 +1607,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -1523,6 +1634,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -1533,14 +1645,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 
 			createMeeting.leftMeetingTab();
@@ -1559,6 +1672,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -1571,15 +1685,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -1598,6 +1712,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -1610,15 +1725,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1638,6 +1753,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -1647,14 +1763,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-			viewMeeting.assertDocuments(input.get("document1"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
-			viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -1673,22 +1790,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.dialNumber(input.get("dialNumber"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1708,21 +1828,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.location(input.get("location"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1742,22 +1866,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingLink(input.get("meetingLink"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1776,9 +1903,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addTeamMember(input.get("teamMember1"));
@@ -1787,13 +1915,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1813,9 +1943,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addEntityFirmSelect(input.get("entityFirmName"));
@@ -1825,14 +1956,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1852,9 +1984,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addDocument(input.get("document1"));
@@ -1863,13 +1996,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertDocuments(input.get("document1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1889,9 +2024,10 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
-			createMeeting.meetingLink(input.get("meetingLinks"));
+			createMeeting.meetingLink(input.get("meetingLink"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.addIndividuals(input.get("individualMember1"));
@@ -1900,13 +2036,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertMeetingLink(input.get("meetingLinks"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1926,6 +2064,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -1935,13 +2074,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
@@ -1960,22 +2101,25 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
-			createMeeting.meetingAgenda(input.get("meetingAgenda"));
+			createMeeting.meetingAgenda(input.get("meetingagenda"));
 			createMeeting.scrollDown3();
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertMeetingAgenda(input.get("meetingAgenda"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -1994,6 +2138,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -2005,13 +2150,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertTeamMember(input.get("teamMember1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -2031,6 +2178,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -2043,14 +2191,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert"));
-			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -2070,6 +2219,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -2081,13 +2231,15 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertDocuments(input.get("document1"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -2107,6 +2259,7 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.allDays();
+			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.dialNumber(input.get("dialNumber"));
@@ -2118,26 +2271,28 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			viewMeeting.viewDay(input.get("date"));
-			viewMeeting.alldaysMeetingCheck(input.get("scrollTime"), input.get("meetingName"));
-			viewMeeting.scrollUp();
+			createMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.assertMeetingName(input.get("meetingName"));
-			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
-			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
+			viewMeeting.monthTab();
+			Thread.sleep(2000);
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
+					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
+					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
+					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
 	}
-
+	*/
 	// 0.mandatoryFieldsOnly
 
 	@DataProvider
 	public Object[][] getData0() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(0) } };
 
@@ -2148,7 +2303,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData1() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(1) } };
 
@@ -2159,7 +2314,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData2() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(2) } };
 
@@ -2170,7 +2325,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData3() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(3) } };
 
@@ -2181,7 +2336,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData4() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(4) } };
 
@@ -2192,7 +2347,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData5() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(5) } };
 
@@ -2203,7 +2358,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData6() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(6) } };
 
@@ -2214,7 +2369,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData7() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(7) } };
 
@@ -2225,7 +2380,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData8() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(8) } };
 
@@ -2236,7 +2391,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData9() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(9) } };
 
@@ -2247,7 +2402,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData10() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(10) } };
 
@@ -2258,7 +2413,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData11() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(11) } };
 
@@ -2269,7 +2424,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData12() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(12) } };
 
@@ -2280,7 +2435,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData13() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(13) } };
 
@@ -2291,7 +2446,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData14() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(14) } };
 
@@ -2302,7 +2457,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData15() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(15) } };
 
@@ -2313,7 +2468,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData16() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(16) } };
 
@@ -2324,7 +2479,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData17() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(17) } };
 
@@ -2335,7 +2490,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData18() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(18) } };
 
@@ -2346,7 +2501,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData19() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(19) } };
 
@@ -2357,7 +2512,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData20() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(20) } };
 
@@ -2368,7 +2523,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData21() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(21) } };
 
@@ -2379,7 +2534,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData22() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(22) } };
 
@@ -2390,7 +2545,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData23() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(23) } };
 
@@ -2401,7 +2556,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData24() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(24) } };
 
@@ -2412,7 +2567,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData25() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(25) } };
 
@@ -2423,7 +2578,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData26() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(26) } };
 
@@ -2434,7 +2589,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData27() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(27) } };
 
@@ -2445,7 +2600,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData28() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(28) } };
 
@@ -2456,7 +2611,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData29() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(29) } };
 
@@ -2467,7 +2622,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData30() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(30) } };
 
@@ -2478,7 +2633,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData31() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(31) } };
 
@@ -2489,7 +2644,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData32() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(32) } };
 
@@ -2500,7 +2655,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData33() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(33) } };
 
@@ -2511,7 +2666,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData34() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(34) } };
 
@@ -2522,7 +2677,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData35() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(35) } };
 
@@ -2533,7 +2688,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData36() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(36) } };
 
@@ -2544,7 +2699,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData37() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(37) } };
 
@@ -2555,7 +2710,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData38() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(38) } };
 
@@ -2566,7 +2721,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData39() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(39) } };
 
@@ -2577,7 +2732,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData40() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(40) } };
 
@@ -2588,7 +2743,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData41() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(41) } };
 
@@ -2599,7 +2754,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData42() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(42) } };
 
@@ -2610,7 +2765,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData43() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(43) } };
 
@@ -2621,7 +2776,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData44() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(44) } };
 
@@ -2632,7 +2787,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData45() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(45) } };
 
@@ -2643,7 +2798,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData46() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(46) } };
 
@@ -2654,7 +2809,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData47() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(47) } };
 
@@ -2665,7 +2820,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData48() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(48) } };
 
@@ -2676,7 +2831,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData49() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(49) } };
 
@@ -2687,7 +2842,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData50() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(50) } };
 
@@ -2698,7 +2853,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData51() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(51) } };
 
@@ -2709,7 +2864,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData52() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(52) } };
 
@@ -2720,7 +2875,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData53() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(53) } };
 
@@ -2731,7 +2886,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData54() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(54) } };
 
@@ -2742,7 +2897,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData55() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(55) } };
 
@@ -2753,7 +2908,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData56() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(56) } };
 
@@ -2764,7 +2919,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData57() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(57) } };
 
@@ -2775,7 +2930,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData58() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(58) } };
 
@@ -2786,7 +2941,7 @@ public class CreateMeetingTest extends BaseClass {
 	public Object[][] getData59() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdata.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataDaily.json");
 
 		return new Object[][] { { data.get(59) } };
 

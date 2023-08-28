@@ -30,14 +30,14 @@ public class LoginPage extends Reusable{
 	WebElement login;
 	
 
-	public void loginApplication(String emailId,String pass)
+	public void loginApplication(String emailId,String pass) throws InterruptedException
 	{
 		email.sendKeys(emailId);
 		password.sendKeys(pass);
 		login.click();
 	}
 	
-	public void goTo()
+	public void goTo() throws InterruptedException
 	{
 		driver.get("https://staging.lauditor.com/login");
 	}

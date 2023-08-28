@@ -146,57 +146,71 @@ public class CreateMeetingsPOM extends Reusable {
 
 	// Matter Name Method
 	public void matterName(String name) throws InterruptedException {
-		visibilityOfAllElements(listLegalNames);
-		listLegalNames.click();
-		selectingNames(listLegalNames, name);
-		listLegalNames.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(listLegalNames);
+			listLegalNames.click();
+			selectingNames(listLegalNames, name);
+			listLegalNames.click();
+		}
 	}
 
 	// Subject/Task Method
 	public void taskName(String name) throws InterruptedException {
-		visibilityOfAllElements(taskList);
-		taskList.click();
-		selectingNames(taskList, name);
-		taskList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(taskList);
+			taskList.click();
+			selectingNames(taskList, name);
+			taskList.click();
+		}
 	}
 
 	// TimeZone
 	public void timeZone(String name) throws InterruptedException {
-		visibilityOfAllElements(timeZoneList);
-		timeZoneList.click();
-		selectingNames(timeZoneList, name);
-		timeZoneList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(timeZoneList);
+			timeZoneList.click();
+			selectingNames(timeZoneList, name);
+			timeZoneList.click();
+		}
 	}
 
 	// StartDate
 	public void startTime(String name) throws InterruptedException {
-		visibilityOfAllElements(startTimeList);
-		startTimeList.click();
-		selectingNames(startTimeList, name);
-		startTimeList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(startTimeList);
+			startTimeList.click();
+			selectingNames(startTimeList, name);
+			startTimeList.click();
+		}
 	}
 
 	// EndDate
 	public void endTime(String name) throws InterruptedException {
-		visibilityOfAllElements(endTimeList);
-		endTimeList.click();
-		selectingNames(endTimeList, name);
-		endTimeList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(endTimeList);
+			endTimeList.click();
+			selectingNames(endTimeList, name);
+			endTimeList.click();
+		}
 	}
 
 	// Date
 	public void dateChoosen(String date) throws InterruptedException {
-		dates.click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[text()='" + date + "']")).click();
+		if (!date.equals("")) {
+			dates.click();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[text()='" + date + "']")).click();
+		}
 	}
 
 	// Repetition
 	public void repetition(String name) throws InterruptedException {
-		visibilityOfAllElements(repetitionList);
-		repetitionList.click();
-		selectingNames(repetitionList, name);
-		repetitionList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(repetitionList);
+			repetitionList.click();
+			selectingNames(repetitionList, name);
+			repetitionList.click();
+		}
 	}
 
 	// All Days
@@ -207,69 +221,87 @@ public class CreateMeetingsPOM extends Reusable {
 
 	// Meeting Link
 	public void meetingLink(String text) {
-		visibilityOfAllElements(meetingLinkInput);
-		meetingLinkInput.sendKeys(text);
+		if (!text.equals("")) {
+			visibilityOfAllElements(meetingLinkInput);
+			meetingLinkInput.sendKeys(text);
+		}
 	}
 
 	// Dial-in Number
 	public void dialNumber(String text) {
-		visibilityOfAllElements(dialNumberInput);
-		dialNumberInput.sendKeys(text);
+		if (!text.equals("")) {
+			visibilityOfAllElements(dialNumberInput);
+			dialNumberInput.sendKeys(text);
+		}
 	}
 
 	// Location
 	public void location(String text) {
-		visibilityOfAllElements(locationInput);
-		locationInput.sendKeys(text);
+		if (!text.equals("")) {
+			visibilityOfAllElements(locationInput);
+			locationInput.sendKeys(text);
+		}
 	}
 
 	// Meeting Agenda
 	public void meetingAgenda(String text) {
-		visibilityOfAllElements(meetingAgendaInput);
-		meetingAgendaInput.sendKeys(text);
+		if (!text.equals("")) {
+			visibilityOfAllElements(meetingAgendaInput);
+			meetingAgendaInput.sendKeys(text);
+		}
 	}
 
 	// Add Team Member
 	public void addTeamMember(String text) {
-		visibilityOfAllElements(searchBoxTeamMemberInput);
-		searchBoxTeamMemberInput.click();
-		searchBoxTeamMemberInput.sendKeys(text);
-		visibilityOfAllElements(addTMbutton);
-		addTMbutton.click();
+		if (!text.equals("")) {
+			visibilityOfAllElements(searchBoxTeamMemberInput);
+			searchBoxTeamMemberInput.click();
+			searchBoxTeamMemberInput.sendKeys(text);
+			visibilityOfAllElements(addTMbutton);
+			addTMbutton.click();
+		}
 	}
 
 	// Add Entity
 	public void addEntityFirmSelect(String name) throws InterruptedException {
-		visibilityOfAllElements(addEntityList);
-		addEntityList.click();
-		selectingNames(addEntityList, name);
-		addEntityList.click();
+		if (!name.equals("")) {
+			visibilityOfAllElements(addEntityList);
+			addEntityList.click();
+			selectingNames(addEntityList, name);
+			addEntityList.click();
+		}
 	}
 
 	public void addEntityMemberSelect(String text) {
-		visibilityOfAllElements(searchBoxEntityInput);
-		searchBoxEntityInput.click();
-		searchBoxEntityInput.sendKeys(text);
-		visibilityOfAllElements(addEntityButton);
-		addEntityButton.click();
+		if (!text.equals("")) {
+			visibilityOfAllElements(searchBoxEntityInput);
+			searchBoxEntityInput.click();
+			searchBoxEntityInput.sendKeys(text);
+			visibilityOfAllElements(addEntityButton);
+			addEntityButton.click();
+		}
 	}
 
 	// Add document
 	public void addDocument(String text) {
-		visibilityOfAllElements(searchBoxDocumentInput);
-		searchBoxDocumentInput.click();
-		searchBoxDocumentInput.sendKeys(text);
-		visibilityOfAllElements(attachDocumentbutton);
-		attachDocumentbutton.click();
+		if (!text.equals("")) {
+			visibilityOfAllElements(searchBoxDocumentInput);
+			searchBoxDocumentInput.click();
+			searchBoxDocumentInput.sendKeys(text);
+			visibilityOfAllElements(attachDocumentbutton);
+			attachDocumentbutton.click();
+		}
 	}
 
 	// Add Individual
 	public void addIndividuals(String text) {
-		visibilityOfAllElements(searchBoxIndividualsInput);
-		searchBoxIndividualsInput.click();
-		searchBoxIndividualsInput.sendKeys(text);
-		visibilityOfAllElements(addIndividualsbutton);
-		addIndividualsbutton.click();
+		if (!text.equals("")) {
+			visibilityOfAllElements(searchBoxIndividualsInput);
+			searchBoxIndividualsInput.click();
+			searchBoxIndividualsInput.sendKeys(text);
+			visibilityOfAllElements(addIndividualsbutton);
+			addIndividualsbutton.click();
+		}
 	}
 
 	// save
@@ -306,12 +338,10 @@ public class CreateMeetingsPOM extends Reusable {
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
-	public void scrollUp() throws InterruptedException
-	{
+	public void scrollUp() throws InterruptedException {
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,0)");
 	}
-	
-	
+
 }

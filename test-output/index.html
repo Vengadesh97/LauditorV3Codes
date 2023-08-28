@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse-323658864\testng-customsuite.xml</span>
+                    <span>C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse-1610119950\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.test.CreateMeetingTest" class="method navigator-link" hash-for-method="mandatoryFieldsOnly({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 ...)">mandatoryFieldsOnly({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 ...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.test.CreateMeetingTestDailyRep" class="method navigator-link" hash-for-method="mandatoryFieldsWithRepetition({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, ...)">mandatoryFieldsWithRepetition({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,63 +119,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.test.CreateMeetingTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.test.CreateMeetingTestDailyRep</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="mandatoryFieldsOnly({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 ...)">
-                  </a> <!-- mandatoryFieldsOnly({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 ...) -->
-                  <span class="method-name">mandatoryFieldsOnly</span>
-                  <span class="parameters">({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 - Creating legal briefs, scrollTime=14, comment=0.mandatoryFieldsOnly, taskName=Creating legal briefs , startTime= 11:00 , endTime= 11:30 , matterName=Legal Case 5 , monthAndTime=Aug 11 2023 : 11:00 AM - 11:30 AM})</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [ Aug 11 2023 : 11:00 AM - 11:30 AM] but found [Aug 11 2023 : 11:00 AM - 11:30 AM]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.pom.ViewMeetingsPOM.assertMonthandTime(ViewMeetingsPOM.java:163)
-	at com.test.CreateMeetingTest.mandatoryFieldsOnly(CreateMeetingTest.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
+                  <a name="mandatoryFieldsWithRepetition({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, ...)">
+                  </a> <!-- mandatoryFieldsWithRepetition({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, ...) -->
+                  <span class="method-name">mandatoryFieldsWithRepetition</span>
+                  <span class="parameters">({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, document1=, repetition=Monthly , currentYear=2023, monthAndTime= : 5:15 AM - 5:45 AM, meetingagenda=, meetingName=5:15 AM Legal Case 13 - Case filling, meetingName1=Legal Case 13 - Case filling, entityFirmAssert=, repetationCount=3, comment=0.mandatoryFieldsWithRepetition, taskName=Case filling , startTime= 05:15 , location=, individualMember1=, individualsAssert=, matterName=Legal Case 13 })</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse-323658864\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Vengadesh\AppData\Local\Temp\testng-eclipse-1610119950\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,11 +147,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.CreateMeetingTest&quot;&gt;
+      &lt;class name=&quot;com.test.CreateMeetingTestDailyRep&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;mandatoryFieldsOnly&quot;/&gt;
+          &lt;include name=&quot;mandatoryFieldsWithRepetition&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.test.CreateMeetingTest --&gt;
+      &lt;/class&gt; &lt;!-- com.test.CreateMeetingTestDailyRep --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -230,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mandatoryFieldsOnly')
-data.setCell(0, 2, 'com.test.CreateMeetingTest')
-data.setCell(0, 3, 40483);
+data.setCell(0, 1, 'mandatoryFieldsWithRepetition')
+data.setCell(0, 2, 'com.test.CreateMeetingTestDailyRep')
+data.setCell(0, 3, 148796);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,106 +215,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">46 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.test.CreateMeetingTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">mandatoryFieldsAndLocationWithMeetingAgenda</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithMeetingAgenda</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithMeetingAgenda</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithMeetingAgenda</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddTeamMemberWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithAddTeamMember</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithLocation</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithDialNum</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddEntityWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithLocation</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddTeamMemberWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndLocationWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingAgendaWithAddTeamMember</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingAgendaWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithMeetingLink</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithAllDays</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndLocationWithAddTeamMember</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithMeetingLink</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddDocumentWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsWithAddTeamMember</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddTeamMemberWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingAgendaWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithLocation</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingAgendaWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithLocation</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithAddTeamMember</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndLocationWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndAddEntityWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithAddDocument</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndLocationWithAddEntity</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithAddIndividuals</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndMeetingLinkWithDialNum</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithMeetingAgenda</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithNotify</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsandAllDaysWithDialNum</span>
-                <br/>
-                <span class="ignored-method-name">mandatoryFieldsAndDialNumWithAddTeamMember</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -360,20 +226,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.CreateMeetingTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.CreateMeetingTestDailyRep</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">mandatoryFieldsOnly({date=11, meetingnameAssert=Legal Case 5 - Creating legal briefs, meetingName=11:00 AM Legal Case 5 ...)</span>
-                <span class="method-start">9640 ms</span>
+                <span class="method-name">mandatoryFieldsWithRepetition({date=31, meetingLink=, teamMember1=, entityMember1=, currentMonth=8, dialNumber=, entityFirmName=, ...)</span>
+                <span class="method-start">10825 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">down</span>
-                <span class="method-start">50143 ms</span>
+                <span class="method-start">159633 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
