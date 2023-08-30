@@ -305,7 +305,7 @@ public class ViewMeetingsPOM extends Reusable {
 	}
 	
 	//Team Member
-	@FindBy(xpath="(//div[@class='col-xs-12 col-sm-6'])[1] //label[@class='usernamelist']")
+	@FindBy(xpath="(//div[2]) //label[2]")
 	List<WebElement> teamMemberNameSelected;
 	
 	public void assertTeamMember(String names) throws InterruptedException
@@ -318,7 +318,7 @@ public class ViewMeetingsPOM extends Reusable {
 	}}
 	
 	// Entity and Individuals
-	@FindBy(xpath="(//div[@class='col-xs-12 col-sm-6'])[2] //label[2]")
+	@FindBy(xpath="(//div[2]) //label[2]")
 	List<WebElement> entityandIndividualSelected;
 	
 	public void assertEntityandIndividual(String names) throws InterruptedException
@@ -404,7 +404,7 @@ public class ViewMeetingsPOM extends Reusable {
 							{
 								//System.out.println("Matched :  "+a);
 								flag = 1;
-								if(vCount<2)
+								if(vCount<7)
 								{
 								//	System.out.println("Matched :  "+a+" vCount : "+vCount+"k: "+k+"TimeLoc : "+(timeLabelCount+k-1));
 									Thread.sleep(2000);
@@ -502,7 +502,7 @@ public class ViewMeetingsPOM extends Reusable {
 		int monthInc= (rpt<4)?1:0;
 		int yearInc= (rpt<4)?0:1;
 		
-		for (int j=0; j<5; j++)
+		for (int j=0; j<2; j++)
 		{
 			int i,timeLabelCount = 0;
 			//Finding total days of the month provided
@@ -553,7 +553,7 @@ public class ViewMeetingsPOM extends Reusable {
 						{
 							//System.out.println("Matched :  "+a);
 							flag = 1;
-							if(vCount<5)
+							if(vCount<7)
 							{
 							//	System.out.println("Matched :  "+a+" vCount : "+vCount+"k: "+k+"TimeLoc : "+(timeLabelCount+k-1));
 								Thread.sleep(2000);

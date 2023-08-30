@@ -12,10 +12,10 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 	@Test(dataProvider = "getData0", priority = 0)
 	public void mandatoryFieldsWithRepetition(HashMap<String, String> input) throws InterruptedException {
 
-		// For the first scenario need to change the data 
+		
 		try {
 			createMeeting.leftMeetingTab();
-	/*		createMeeting.createTab();
+			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
 			Thread.sleep(2000);
@@ -28,13 +28,13 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			createMeeting.saveButton();
 			Thread.sleep(2000);
-		    createMeeting.viewChangesButton();
+			createMeeting.viewChangesButton();
 			createMeeting.scrollUp();
-	*/		Thread.sleep(2000);
+			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -44,7 +44,7 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 		}
 
 	}
-/*
+
 	@Test(dataProvider = "getData1", priority = 1)
 	public void mandatoryFieldsWithAllDays(HashMap<String, String> input) throws InterruptedException {
 
@@ -68,8 +68,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -84,7 +84,7 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 	public void mandatoryFieldsWithMeetingLink(HashMap<String, String> input) throws InterruptedException {
 
 		try {
-			
+			createMeeting.leftMeetingTab();
 			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
@@ -106,8 +106,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -142,8 +142,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -152,7 +152,7 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			createMeeting.leftMeetingTab();
 		}
 	}
-	
+
 	@Test(dataProvider = "getData4", priority = 4)
 	public void mandatoryFieldsWithLocation(HashMap<String, String> input) throws InterruptedException {
 
@@ -178,8 +178,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -214,8 +214,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -250,8 +250,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -287,8 +287,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -323,8 +323,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -359,8 +359,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -392,8 +392,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -428,8 +428,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -463,8 +463,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -498,8 +498,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -533,8 +533,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -568,8 +568,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -604,8 +604,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -639,8 +639,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -674,8 +674,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -710,8 +710,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -747,8 +747,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -785,8 +785,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -825,8 +825,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -865,8 +865,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -905,8 +905,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -945,12 +945,11 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
-		
 
 		} finally {
 			createMeeting.leftMeetingTab();
@@ -983,8 +982,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1020,8 +1019,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1059,8 +1058,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1099,8 +1098,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1138,8 +1137,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1177,8 +1176,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1214,8 +1213,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1253,8 +1252,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1293,8 +1292,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1332,8 +1331,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1372,8 +1371,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1412,8 +1411,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1453,8 +1452,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1492,8 +1491,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1532,8 +1531,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1572,8 +1571,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1611,8 +1610,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1649,8 +1648,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1689,8 +1688,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1729,8 +1728,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1767,8 +1766,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1804,8 +1803,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1842,8 +1841,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1880,8 +1879,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1919,8 +1918,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -1960,8 +1959,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2000,8 +1999,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2040,8 +2039,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2078,8 +2077,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2115,8 +2114,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2154,8 +2153,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2195,8 +2194,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2235,8 +2234,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2275,8 +2274,8 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"),
-					input.get("currentMonth"), input.get("repetationCount"),input.get("meetingName"), input.get("meetingName1"),
+			viewMeeting.reptitionTextVerify1(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
+					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
 					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
 					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
 					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
@@ -2285,7 +2284,7 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			createMeeting.leftMeetingTab();
 		}
 	}
-	*/
+
 	// 0.mandatoryFieldsOnly
 
 	@DataProvider

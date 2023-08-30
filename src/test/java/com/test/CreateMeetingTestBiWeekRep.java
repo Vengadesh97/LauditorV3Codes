@@ -7,10 +7,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
 
-public class CreateMeetingTestWeekRep extends BaseClass {
+public class CreateMeetingTestBiWeekRep extends BaseClass {
 
+	
 	@Test(dataProvider = "getData0", priority = 0)
-	public void repetitionWeekly(HashMap<String, String> input) throws InterruptedException {
+	public void repetitionBiWeekly(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			createMeeting.leftMeetingTab();
@@ -56,12 +57,13 @@ public class CreateMeetingTestWeekRep extends BaseClass {
 		}
 	}
 
+	
 	//
 	@DataProvider
 	public Object[][] getData0() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataWeekly.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataBiWeekly.json");
 
 		return new Object[][] { { data.get(0) }, { data.get(1) }, { data.get(2) }, { data.get(3) }, { data.get(4) },
 				{ data.get(5) }, { data.get(6) }, { data.get(7) }, { data.get(8) }, { data.get(9) }, { data.get(10) },
@@ -77,5 +79,8 @@ public class CreateMeetingTestWeekRep extends BaseClass {
 				{ data.get(56) }, { data.get(57) }, { data.get(58) }, { data.get(59) } };
 
 	}
-
+	
+	
+	
+	
 }
