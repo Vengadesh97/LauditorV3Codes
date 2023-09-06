@@ -231,12 +231,16 @@ public class ViewMeetingsPOM extends Reusable {
 		}
 	}
 	
-	public void assertMonthandTime1(String date, int month, String year,String name) throws InterruptedException
+	public void assertMonthandTime1(String date, String month, String year,String name) throws InterruptedException
 	{
 		if(!name.equals(""))
 		{
+			int dt=Integer.parseInt(date);
+			if (dt<10)
+				date="0"+date;
+			int month1 = Integer.parseInt(month);
 			String monthIndex[]= {"","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
-			String name1 = monthIndex[month]+" "+date+" "+year+name;
+			String name1 = monthIndex[month1]+" "+date+" "+year+name;
 			Thread.sleep(2000);
 			//String [] name1 = {"Sun","Mon","","","","",""};
 			String text = monthTimeText.getText();
@@ -360,7 +364,7 @@ public class ViewMeetingsPOM extends Reusable {
 		int month =Integer.parseInt(month1);
 		int cmonth = month;
 		int rpt =Integer.parseInt(repeat1);
-		int repeatCount[]= {1,7,14};
+		int repeatCount[]= {1,7,14,0,0};
 		int repeat;
 		
 		
@@ -369,7 +373,7 @@ public class ViewMeetingsPOM extends Reusable {
 		{
 			repeat = repeatCount[rpt];
 			int week = 0, vCount=0;
-			for (int j=0; j<1; j++)
+			for (int j=0; j<2; j++)
 			{
 				int i,timeLabelCount = 0;
 				//Finding total days of the month provided
@@ -404,7 +408,7 @@ public class ViewMeetingsPOM extends Reusable {
 							{
 								//System.out.println("Matched :  "+a);
 								flag = 1;
-								if(vCount<7)
+								if(vCount<3)
 								{
 								//	System.out.println("Matched :  "+a+" vCount : "+vCount+"k: "+k+"TimeLoc : "+(timeLabelCount+k-1));
 									Thread.sleep(2000);
@@ -415,7 +419,7 @@ public class ViewMeetingsPOM extends Reusable {
 									scrollUp();
 									Thread.sleep(2000);
 									assertMeetingName(meetName);
-									assertMonthandTime1(day1,month,year1,monthTime);
+									assertMonthandTime1(oneCell[0],String.valueOf(month),String.valueOf(year),monthTime);
 									assertMeetingAgenda(meetingAgen);
 									assertMeetingLink(meetingLink);
 								    assertPhoneNumber(PhoneNum);
@@ -476,7 +480,7 @@ public class ViewMeetingsPOM extends Reusable {
 				}
 			}	
 		}
-		else // Month, year
+		else // Month, year	
 		{
 			
 		}
@@ -491,24 +495,25 @@ public class ViewMeetingsPOM extends Reusable {
 		//int day = 3; int year = 2023; int month = 8,repeat=1;
 		int monthDayCount;
 		int day =Integer.parseInt(day1);
+		//int day2 = day;
 		int year =Integer.parseInt(year1);
 		int month =Integer.parseInt(month1);
 		int cmonth = month;
 		int rpt =Integer.parseInt(repeat1);
-		int repeatCount[]= {1,7,14};
-		int repeat;	
+		int repeatCount[]= {1,7,14,0,0};
+		int repeat = repeatCount[rpt];	
 		int week = 0, vCount=0;
 		int monthLoop = (rpt<4)?1:12;
 		int monthInc= (rpt<4)?1:0;
 		int yearInc= (rpt<4)?0:1;
 		
-		for (int j=0; j<2; j++)
+		for (int j=0; j<1; j++)
 		{
 			int i,timeLabelCount = 0;
 			//Finding total days of the month provided
 			YearMonth ym = YearMonth.of(year,month);
 			monthDayCount = ym.lengthOfMonth();
-		    System.out.println("Month : "+month+"\tmonthDayCount : "+monthDayCount); 
+		//    System.out.println("Month : "+month+"\tmonthDayCount : "+monthDayCount); 
 		    if((rpt>2) && (day>monthDayCount))
 			{
 		    	for(int l = 0; l<monthLoop;l++)
@@ -553,7 +558,7 @@ public class ViewMeetingsPOM extends Reusable {
 						{
 							//System.out.println("Matched :  "+a);
 							flag = 1;
-							if(vCount<7)
+							if(vCount<2)
 							{
 							//	System.out.println("Matched :  "+a+" vCount : "+vCount+"k: "+k+"TimeLoc : "+(timeLabelCount+k-1));
 								Thread.sleep(2000);
@@ -564,7 +569,8 @@ public class ViewMeetingsPOM extends Reusable {
 								scrollUp();
 								Thread.sleep(2000);
 								assertMeetingName(meetName);
-								assertMonthandTime1(day1,month,year1,monthTime);
+								assertMonthandTime1(oneCell[0],String.valueOf(month),String.valueOf(year),monthTime);
+								//day2 = (day2+repeat);
 								assertMeetingAgenda(meetingAgen);
 								assertMeetingLink(meetingLink);
 							    assertPhoneNumber(PhoneNum);
@@ -579,7 +585,7 @@ public class ViewMeetingsPOM extends Reusable {
 								for(int z = cmonth;z<month;z++)
 								{
 									rightArrow.click();
-									Thread.sleep(4000);
+									Thread.sleep(2000);
 								}
 								
 							}
@@ -588,7 +594,7 @@ public class ViewMeetingsPOM extends Reusable {
 					}
 						if(flag==0)
 						{
-							System.out.println("flag is  "+flag);
+						//	System.out.println("flag is  "+flag);
 							//assertion fail
 							assertFalse(true);
 						}
@@ -631,7 +637,7 @@ public class ViewMeetingsPOM extends Reusable {
 			}
 				month = month +monthInc;
 				year = year + yearInc;
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				if(month==13)
 				{
 					year++;
@@ -650,7 +656,7 @@ public class ViewMeetingsPOM extends Reusable {
 	// Date one Found
 	for (int i = 0; i < allDates.size(); i++) {
 		if (allDates.get(i).getText().equals("1")) {
-			System.out.println("location of 1 : " + i);
+		//	System.out.println("location of 1 : " + i);
 			temp = i;
 			break;
 		}

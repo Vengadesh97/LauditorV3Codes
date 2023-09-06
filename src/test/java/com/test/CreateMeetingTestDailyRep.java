@@ -11,11 +11,10 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 
 	@Test(dataProvider = "getData0", priority = 0)
 	public void mandatoryFieldsWithRepetition(HashMap<String, String> input) throws InterruptedException {
-
 		
 		try {
 			createMeeting.leftMeetingTab();
-			createMeeting.createTab();
+		/*	createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
 			Thread.sleep(2000);
@@ -30,7 +29,7 @@ public class CreateMeetingTestDailyRep extends BaseClass {
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
 			createMeeting.scrollUp();
-			Thread.sleep(2000);
+		*/	Thread.sleep(2000);
 			viewMeeting.monthTab();
 			Thread.sleep(2000);
 			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"), input.get("currentMonth"),

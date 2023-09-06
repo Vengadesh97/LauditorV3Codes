@@ -6,38 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.ViewMatterOpenCloseMatter">
+      <class name="com.test.CreateMeetingTestWeekRep">
         <methods>
-          <include name="closeMattersTest" invocation-numbers="0"/>
-          <include name="reOpenMatterTest" invocation-numbers="0"/>
+          <include name="repetitionWeekly" invocation-numbers="21 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59"/>
           <include name="down"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.ViewMatterOpenCloseMatter -->
-      <class name="com.test.ViewMatterEditMatterInfoTest">
-        <methods>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandOpponent" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtJudgePriorityandStatus" invocation-numbers="0"/>
-          <include name="editMatterInfoAllFieldsEntered" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandStatus" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandPriority" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandStatus" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDOFDescriptionCaseTypeCourtandOpponent" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtJudgeandOpponent" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-          <include name="editMatterInfoAllFieldEnteredandCancel" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandOpponent" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandJudge" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandJudge" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandPriority" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionandOpponentAdvocates" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeCourtandStatus" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandOpponent" invocation-numbers="0"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandCourt" invocation-numbers="0"/>
-          <include name="down"/>
-          <include name="editMatterInfoMandatoryWithDescriptionCaseTypeandPriority" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.test.ViewMatterEditMatterInfoTest -->
+      </class> <!-- com.test.CreateMeetingTestWeekRep -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

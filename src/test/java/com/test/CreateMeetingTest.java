@@ -16,7 +16,7 @@ public class CreateMeetingTest extends BaseClass {
 
 		try {
 			createMeeting.leftMeetingTab();
-		/*	createMeeting.createTab();
+			createMeeting.createTab();
 			createMeeting.legalEvent();
 			createMeeting.scrollDown1();
 			Thread.sleep(2000);
@@ -29,15 +29,12 @@ public class CreateMeetingTest extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			
-		*/	
 			viewMeeting.viewDay(input.get("date1"));
-	
-		//	viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
-		//	viewMeeting.scrollUp();
-		//	Thread.sleep(2000);
-		//	viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
-		//	viewMeeting.assertMonthandTime(input.get("monthAndTime"));
+			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
+			viewMeeting.scrollUp();
+			Thread.sleep(2000);
+			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
+			viewMeeting.assertMonthandTime1(input.get("date"),input.get("month"),input.get("year"),input.get("monthAndTime"));
 
 		} finally {
 			createMeeting.leftMeetingTab();

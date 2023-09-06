@@ -7,10 +7,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
 
-public class CreateMeetingTestBiWeekRep extends BaseClass {
+public class CreateMeetingTestNew extends BaseClass {
 
+	
 	@Test(dataProvider = "getData0", priority = 0)
-	public void repetitionBiWeekly(HashMap<String, String> input) throws InterruptedException {
+	public void createNewMeeting(HashMap<String, String> input) throws InterruptedException {
 
 		try {
 			createMeeting.leftMeetingTab();
@@ -22,7 +23,6 @@ public class CreateMeetingTestBiWeekRep extends BaseClass {
 			createMeeting.taskName(input.get("taskName"));
 			createMeeting.dateChoosen(input.get("date"));
 			createMeeting.startTime(input.get("startTime"));
-			createMeeting.repetition(input.get("repetition"));
 			createMeeting.scrollDown2();
 			Thread.sleep(2000);
 			createMeeting.meetingLink(input.get("meetingLink"));
@@ -41,27 +41,33 @@ public class CreateMeetingTestBiWeekRep extends BaseClass {
 			createMeeting.saveButton();
 			Thread.sleep(2000);
 			createMeeting.viewChangesButton();
-			createMeeting.scrollUp();
+			viewMeeting.viewDay(input.get("date1"));
+			viewMeeting.meetingCheck(input.get("scrollTime"), input.get("meetingName"));
+			viewMeeting.scrollUp();
 			Thread.sleep(2000);
-			viewMeeting.monthTab();
-			Thread.sleep(2000);
-			viewMeeting.reptitionTextVerify2(input.get("date"), input.get("currentYear"), input.get("currentMonth"),
-					input.get("repetationCount"), input.get("meetingName"), input.get("meetingName1"),
-					input.get("monthAndTime"), input.get("meetingagenda"), input.get("meetingLink"),
-					input.get("dialNumber"), input.get("document1"), input.get("teamMember1"),
-					input.get("entityFirmAssert"), input.get("entityMember1"), input.get("individualsAssert"));
+			viewMeeting.assertMeetingName(input.get("meetingnameAssert"));
+			viewMeeting.assertMonthandTime1(input.get("date"),input.get("month"),input.get("year"),input.get("monthAndTime"));
+			viewMeeting.assertMeetingLink(input.get("meetingLink"));
+			viewMeeting.assertPhoneNumber(input.get("dialNumber"));
+			viewMeeting.assertMeetingAgenda(input.get("meetingagenda"));
+			viewMeeting.assertTeamMember(input.get("teamMember1"));
+			viewMeeting.assertEntityandIndividual(input.get("entityFirmAssert1"));
+			viewMeeting.assertEntityandIndividual(input.get("entityMember1"));
+			viewMeeting.assertDocuments(input.get("document1"));
+			viewMeeting.assertEntityandIndividual(input.get("individualsAssert"));
 
 		} finally {
 			createMeeting.leftMeetingTab();
 		}
 	}
 
+	
 	//
 	@DataProvider
 	public Object[][] getData0() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataBiWeekly.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\meeting\\createMeetingdataNew.json");
 
 		return new Object[][] { { data.get(0) }, { data.get(1) }, { data.get(2) }, { data.get(3) }, { data.get(4) },
 				{ data.get(5) }, { data.get(6) }, { data.get(7) }, { data.get(8) }, { data.get(9) }, { data.get(10) },
@@ -77,5 +83,16 @@ public class CreateMeetingTestBiWeekRep extends BaseClass {
 				{ data.get(56) }, { data.get(57) }, { data.get(58) }, { data.get(59) } };
 
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
