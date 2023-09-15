@@ -121,6 +121,8 @@ public class CreateMeetingsPOM extends Reusable {
 	@FindBy(xpath = "//button[text()='View Changes']")
 	WebElement viewChangesButton;
 
+	@FindBy(xpath="//a[text()='Day']")
+	WebElement viewdayTab;
 //----------------------------------------------------------------------------------------------------------
 
 	// Left side Meeting Tab
@@ -131,6 +133,14 @@ public class CreateMeetingsPOM extends Reusable {
 		scrollUp();
 		Thread.sleep(2000);
 	}
+	
+	public void viewDayTab() throws InterruptedException
+	{
+		visibilityOfAllElements(viewdayTab);
+		Thread.sleep(3000);
+		viewdayTab.click();
+	}
+	
 
 	// CreateTab
 	public void createTab() {
@@ -223,6 +233,7 @@ public class CreateMeetingsPOM extends Reusable {
 	public void meetingLink(String text) {
 		if (!text.equals("")) {
 			visibilityOfAllElements(meetingLinkInput);
+			meetingLinkInput.clear();
 			meetingLinkInput.sendKeys(text);
 		}
 	}
@@ -231,6 +242,7 @@ public class CreateMeetingsPOM extends Reusable {
 	public void dialNumber(String text) {
 		if (!text.equals("")) {
 			visibilityOfAllElements(dialNumberInput);
+			dialNumberInput.clear();
 			dialNumberInput.sendKeys(text);
 		}
 	}
@@ -239,6 +251,7 @@ public class CreateMeetingsPOM extends Reusable {
 	public void location(String text) {
 		if (!text.equals("")) {
 			visibilityOfAllElements(locationInput);
+			locationInput.clear();
 			locationInput.sendKeys(text);
 		}
 	}
@@ -247,6 +260,7 @@ public class CreateMeetingsPOM extends Reusable {
 	public void meetingAgenda(String text) {
 		if (!text.equals("")) {
 			visibilityOfAllElements(meetingAgendaInput);
+			meetingAgendaInput.clear();
 			meetingAgendaInput.sendKeys(text);
 		}
 	}
@@ -344,4 +358,15 @@ public class CreateMeetingsPOM extends Reusable {
 		js.executeScript("window.scrollTo(0,0)");
 	}
 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
