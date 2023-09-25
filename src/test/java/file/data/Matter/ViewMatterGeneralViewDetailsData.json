@@ -12,37 +12,37 @@
 	{
 		"comment": "2.documentNameCheckingOnDocuments",
 		"matterName": "General Matter Test",
-		"documentName": "File2.png"
+		"documentName": "Files 1"
 	},
 	{
 		"comment": "3.documentRemoveOnDocuments",
 		"matterName": "General Matter Test",
-		"documentRemove1": "File3.pdf",
-		"documentRemove2": "File2.png"
+		"documentRemove1": "Files 2",
+		"documentRemove2": "Files 3"
 	},
 	{
 		"comment": "4.removeDocumentOnLeftSideWithCancel",
 		"matterName": "General Matter Test",
-		"documentRemove1": "D2.gif",
-		"documentRemove2": "D26.png"
+		"documentRemove1": "Files 4",
+		"documentRemove2": "Files 5"
 	},
 	{
 		"comment": "5.selectDocumentOnRightSideWithCancel",
 		"matterName": "General Matter Test",
-		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Dustin GH 1"
+		"documentSelect1": "Files 2",
+		"documentSelect2": "Files 3"
 	},
 	{
 		"comment": "6.selectDocumentOnRightSideWithSave",
 		"matterName": "General Matter Test",
-		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Dustin GH 1"
+		"documentSelect1": "Files 2",
+		"documentSelect2": "Files 3"
 	},
 	{
 		"comment": "7.removeDocumentOnLeftSideWithSave",
 		"matterName": "General Matter Test",
-		"documentRemove1": "Neela GH 1",
-		"documentRemove2": "Dustin GH 1"
+		"documentRemove1": "Files 4",
+		"documentRemove2": "Files 5"
 	},
 	{
 		"comment": "8.selectAllClickCancel",

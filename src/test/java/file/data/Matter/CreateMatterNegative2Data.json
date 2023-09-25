@@ -8,7 +8,7 @@
 		"judges": "Kannan",
 		"date": " 5 ",
 		"prioritySelect": "Medium",
-		"description": " Auditors might inspect the accounts of the company they work for or those of other organizations.",
+		"description": " Auditors might inspect the accounts",
 		"advocateName": "Vimal",
 		"advocateEmail": "vimal@gm.com",
 		"advocatePhone": "9876543210"
@@ -22,7 +22,7 @@
 		"judges": "Vasanth",
 		"date": " 8 ",
 		"prioritySelect": "Low",
-		"description": "Examining company accounts and financial control systems.",
+		"description": "Examining company accounts",
 		"advocateName": "Raj",
 		"advocateEmail": "Rajkumar@gm.com",
 		"advocatePhone": "7744774411",
@@ -38,7 +38,7 @@
 		"judges": "RajKumar",
 		"date": " 2 ",
 		"prioritySelect": "High",
-		"description": "Verifies assets and liabilities by comparing items to documentation",
+		"description": "Verifies assets and liabilities",
 		"advocateName": "Ashok",
 		"advocateEmail": "AshokK@gm.com",
 		"advocatePhone": "9696858555"
@@ -52,7 +52,7 @@
 		"judges": "Deepan",
 		"date": " 8 ",
 		"prioritySelect": "Medium",
-		"description": " Completes audit workpapers by documenting audit tests and findings.",
+		"description": " Completes audit workpapers",
 		"advocateName": "Ram",
 		"advocateEmail": "RamLaksh@gm.com",
 		"advocatePhone": "7744885522",
@@ -70,7 +70,7 @@
 		"judges": "Pradeep",
 		"date": " 12 ",
 		"prioritySelect": "Low",
-		"description": "Auditing skills are innate or acquired abilities that help.",
+		"description": "Auditing skills are innate",
 		"advocateName": "Gopi",
 		"advocateEmail": "Gopi98@gm.com",
 		"advocatePhone": "9629139447",
@@ -86,7 +86,7 @@
 		"judges": "Kavin",
 		"date": " 15 ",
 		"prioritySelect": "High",
-		"description": "Some auditors may also hold a master's degree in accounting or business",
+		"description": "Some auditors hold",
 		"advocateName": "Kevin",
 		"advocateEmail": "Kevin@gm.com",
 		"advocatePhone": "9876543210",
@@ -107,7 +107,7 @@
 		"judges": "Rishi",
 		"date": " 18 ",
 		"prioritySelect": "Medium",
-		"description": "Which can enhance their knowledge and expertise in the field.",
+		"description": "Which can enhance their knowledge",
 		"advocateName": "Rithish",
 		"advocateEmail": "Rithish@gm.com",
 		"advocatePhone": "6868787822",
@@ -136,8 +136,8 @@
 		"individualsClientName2": "Apollo Healthcare",
 		"memberName1": "Donald Carpenter",
 		"memberName2": "Jason Gifford",
-		"documentName1": "Alliance TM 2",
-		"documentName2": "Apollo TM 2"
+		"documentName1": "Document 1",
+		"documentName2": "Document 2"
 		
 		},
 				{
@@ -149,7 +149,7 @@
 		"judges": "Arvind",
 		"date": " 24 ",
 		"prioritySelect": "High",
-		"description": "Make sure that all departments are following documented system of recording transactions.",
+		"description": "Make sure departments",
 		"advocateName": "Sivakumar",
 		"advocateEmail": "sivakumar@gm.com",
 		"advocatePhone": "9966996633",
@@ -170,7 +170,7 @@
 		"judges": "Rajesh",
 		"date": " 23 ",
 		"prioritySelect": "Medium",
-		"description": " validating the integrity of an organization's processes, systems and information, both financial and non-financial. ",
+		"description": " validating the integrity",
 		"advocateName": "Ranjith",
 		"advocateEmail": "Ranjith@gm.com",
 		"advocatePhone": "6858487822",
@@ -180,8 +180,8 @@
 		"individualsClientName2": "Apollo Healthcare",
 		"memberName1": "Donald Carpenter",
 		"memberName2": "Jason Gifford",
-		"documentName1": "Alliance TM 2",
-		"documentName2": "Apollo TM 2"
+		"documentName1": "Document 1",
+		"documentName2": "Document 2"
 		},
 		
 		{
@@ -193,7 +193,7 @@
 		"judges": "Madhan",
 		"date": " 21 ",
 		"prioritySelect": "Low",
-		"description": "Professional auditors also provide advice and consultation to business leaders",
+		"description": "Professional auditors also provide",
 		"advocateName": "kishore",
 		"advocateEmail": "kishore12@gm.com",
 		"advocatePhone": "9524281515",
@@ -203,8 +203,8 @@
 		"individualsClientName2": "Apollo Healthcare",
 		"memberName1": "Donald Carpenter",
 		"memberName2": "Jason Gifford",
-		"documentName1": "Alliance TM 2",
-		"documentName2": "Apollo TM 2"
+		"documentName1": "Document 1",
+		"documentName2": "Document 2"
 		},
 		
 				{
@@ -216,7 +216,7 @@
 		"judges": "Mani",
 		"date": " 11 ",
 		"prioritySelect": "High",
-		"description": "how to better manage and control risks within an organization.",
+		"description": "Better manage and control",
 		"advocateName": "Madesh",
 		"advocateEmail": "madesh921@gm.com",
 		"advocatePhone": "9876543210",
@@ -224,8 +224,8 @@
 		"groupName2": "Immigration Law",
 		"individualsClientName1": "Alliance Law Group",
 		"individualsClientName2": "Apollo Healthcare",
-		"documentName1": "Alliance TM 2",
-		"documentName2": "Apollo TM 2"
+		"documentName1": "Document 1",
+		"documentName2": "Document 2"
 		},
 		
 				{
@@ -237,7 +237,7 @@
 		"judges": "dheena",
 		"date": " 17 ",
 		"prioritySelect": "Medium",
-		"description": "An auditor is a person authorized to review and verify the accuracy",
+		"description": "An auditor person authorized",
 		"advocateName": "Arun",
 		"advocateEmail": "Arunkumar@gm.com",
 		"advocatePhone": "7711223355",
@@ -258,7 +258,7 @@
 		"judges": "Surya",
 		"date": " 19 ",
 		"prioritySelect": "Low",
-		"description": "Complete a bachelor's degree in a recognized field, such as accounting or business administration",
+		"description": "Complete a bachelor's degree",
 		"advocateName": "prakash",
 		"advocateEmail": "prakash22@gm.com",
 		"advocatePhone": "9891919566",
@@ -277,7 +277,7 @@
 		"judges": "Guna",
 		"date": " 25 ",
 		"prioritySelect": "High",
-		"description": "provide reports of all the accounts and financial statements audited by them and presented to the company.",
+		"description": "provide reports of all the accounts",
 		"advocateName": "Sekaran",
 		"advocateEmail": "sekaran@gm.com",
 		"advocatePhone": "8838785522"
@@ -292,7 +292,7 @@
 		"judges":"Frank",
 		"date":" 13 ",
 		"prioritySelect":"Medium",
-		"description":"Such audits give credibility to the financial information.",
+		"description":"Such audits give credibility",
 		"advocateName":"Nitesh",
 		"advocateEmail":"Nitesh@gm.com",
 		"advocatePhone":"6633221144",
@@ -315,7 +315,7 @@
 		"judges":"Msskin",
 		"date":" 16 ",
 		"prioritySelect":"Low",
-		"description":"External auditors are brought in to audit an organization from the outside.",
+		"description":"External auditors are brought",
 		"advocateName":"Vasu",
 		"advocateEmail":"Vasu@gm.com",
 		"advocatePhone":"8527418521",

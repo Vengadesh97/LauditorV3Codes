@@ -12,37 +12,37 @@
 	{
 		"comment": "2.documentNameCheckingOnDocuments",
 		"matterName": "Contract Breach",
-		"documentName": "AnathKumar GH 1"
+		"documentName": "Files 1"
 	},
 	{
 		"comment": "3.documentRemoveOnDocumentsandSave",
 		"matterName": "Contract Breach",
-		"documentRemove1": "Alliance TM 2",
-		"documentRemove2": "Apollo TM 2"
+		"documentRemove1": "Files 2",
+		"documentRemove2": "Files 3"
 	},
 	{
 		"comment": "4.removeDocumentOnLeftSideWithCancel",
 		"matterName": "Contract Breach",
-		"documentRemove1": "AnathKumar GH 1",
-		"documentRemove2": "Family law GH 1"
+		"documentRemove1": "Files 4",
+		"documentRemove2": "Files 5"
 	},
 	{
 		"comment": "5.selectDocumentOnRightSideWithCancel",
 		"matterName": "Contract Breach",
-		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Apollo TM 2"
+		"documentSelect1": "Files 2",
+		"documentSelect2": "Files 3"
 	},
 	{
 		"comment": "6.selectDocumentOnRightSideWithSave",
 		"matterName": "Contract Breach",
-		"documentSelect1": "Neela GH 1",
-		"documentSelect2": "Apollo TM 2"
+		"documentSelect1": "Files 2",
+		"documentSelect2": "Files 3"
 	},
 	{
 		"comment": "7.removeDocumentOnLeftSideWithSave",
 		"matterName": "Contract Breach",
-		"documentRemove1": "Neela GH 1",
-		"documentRemove2": "Apollo TM 2"
+		"documentRemove1": "Files 4",
+		"documentRemove2": "Files 5"
 	},
 	{
 		"comment": "8.selectAllClickCancel",

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.base.Retry;
 
-public class CreateMatterNegativeScenarioTest extends BaseClass {
+public class CreateMatterTest1 extends BaseClass {
 
 	// Mandatory Fields with Groups and Clients [Individuals]
 

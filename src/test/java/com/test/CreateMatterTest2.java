@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.base.BaseClass;
 
-public class CreateMatterNegative2Test extends BaseClass {
+public class CreateMatterTest2 extends BaseClass {
 
 	// Enter the All Details and Click on Cancel button
 
