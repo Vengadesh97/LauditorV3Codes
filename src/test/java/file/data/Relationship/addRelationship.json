@@ -1,0 +1,346 @@
+[
+	{
+		"Comment": "0.individualEnterAllDetailsWithCancelAndRequest",
+		"text": "vengadesh@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "",
+		"lastName": "",
+		"confirmEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "1.individualEnterAllDetailsWithCancelAndInvite",
+		"text": "vengadesh123@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "Mani",
+		"lastName": "S",
+		"confirmEmail": "vengadesh123@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "2.individualEnterAllDetailsWithConfirmNoAndRequest",
+		"text": "vengadesh@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "",
+		"lastName": "",
+		"confirmEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "3.individualEnterAllDetailsWithConfirmNoAndInvite",
+		"text": "vengadesh123@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "Mani",
+		"lastName": "S",
+		"confirmEmail": "vengadesh123@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "4.individualEnterAllDetailsWithConfirmYesAndAddRelationshipsAndRequest",
+		"text": "vengadesh.r@digicoffer.com",
+		"groupName1": "Family Law",
+		"groupName2": "Immigration Law",
+		"firstName": "",
+		"lastName": "",
+		"confirmEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "5.individualEnterAllDetailsWithConfirmYesAndAddRelationshipsAndInvite",
+		"text": "vengadeshw12@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "Joe",
+		"lastName": "S",
+		"confirmEmail": "vengadeshw12@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "6.individualEnterAllDetailsWithConfirmYesAndViewChangesAndRequest",
+		"text": "us.ananthakumar@gmail.com",
+		"groupName1": "Family Law",
+		"groupName2": "Immigration Law",
+		"firstName": "",
+		"lastName": "",
+		"confirmEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "7.individualEnterAllDetailsWithConfirmYesAndViewChangesAndInvite",
+		"text": "vengadeshw1234@gm.com",
+		"groupName1": "Test1",
+		"groupName2": "Test2",
+		"firstName": "Rishi",
+		"lastName": "M",
+		"confirmEmail": "vengadeshw1234@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "8.entityEnterAllDetailsWithCancelAndRequest",
+		"text": "the",
+		"firmName": "The Speier Law Firm",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "",
+		"contactPerson": "",
+		"email": "",
+		"contactNumber": "",
+		"cEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "9.entityEnterAllDetailsWithCancelAndInvite",
+		"text": "names",
+		"firmName": "names",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "names",
+		"contactPerson": "hello",
+		"email": "kms@gm.com",
+		"contactNumber": "1234567890",
+		"cEmail": "kms@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "10.entityEnterAllDetailsWithConfirmNoAndRequest",
+		"text": "Alliance",
+		"firmName": "Alliance Law Group",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "",
+		"contactPerson": "",
+		"email": "",
+		"contactNumber": "",
+		"cEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "11.entityEnterAllDetailsWithConfirmNoAndInvite",
+		"text": "names",
+		"firmName": "names",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "names",
+		"contactPerson": "hello",
+		"email": "kms@gm.com",
+		"contactNumber": "1234567890",
+		"cEmail": "kms@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "12.entityEnterAllDetailsWithConfirmYesAndAddRelationshipsAndRequest",
+		"text": "Alliance",
+		"firmName": "Alliance Law Group",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "",
+		"contactPerson": "",
+		"email": "",
+		"contactNumber": "",
+		"cEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "13.entityEnterAllDetailsWithConfirmYesAndAddRelationshipsAndInvite",
+		"text": "names",
+		"firmName": "names",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "names",
+		"contactPerson": "hello",
+		"email": "kms@gm.com",
+		"contactNumber": "1234567890",
+		"cEmail": "kms@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "14.entityEnterAllDetailsWithConfirmYesAndViewChangesAndRequest",
+		"text": "Apollo Healthcare",
+		"firmName": "Apollo Healthcare",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "",
+		"contactPerson": "",
+		"email": "",
+		"contactNumber": "",
+		"cEmail": "",
+		"country": ""
+	},
+	{
+		"Comment": "15.entityEnterAllDetailsWithConfirmYesAndViewChangesAndInvite",
+		"text": "Digi Firm",
+		"firmName": "DigiCof",
+		"groupName1": "Dev Environmental Testing",
+		"groupName2": "Staging Testing",
+		"entityName": "Aathi",
+		"contactPerson": "AathiRaj",
+		"email": "aathirajkum@gm.com",
+		"contactNumber": "9638527410",
+		"cEmail": "aathirajkum@gm.com",
+		"country": "India"
+	},
+	{
+		"Comment": "16.individualSelectGroupAndCancel",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "17.individualSelectGroupAndClickSaveAndAlertNo",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "18.individualSelectGroupAndClickSaveAndAlertYes",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "19.individualUnSelectGroupAndCancel",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "20.individualUnSelectGroupAndClickSaveAndAlertNo",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "21.individualUnSelectGroupAndClickSaveAndAlertYes",
+		"name": "Neela",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "22.businessesSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "23.businessesSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "24.businessesSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "25.businessesUnSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "26.businessesUnSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "27.businessesUnSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "28.corporateSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "29.corporateSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "30.corporateSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "31.corporateUnSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "32.corporateUnSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "33.corporateUnSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "34.tempClientSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "35.tempClientSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "36.tempClientSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "37.tempClientUnSelectGroupAndCancel",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "38.tempClientUnSelectGroupAndClickSaveAndAlertNo",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "39.tempClientUnSelectGroupAndClickSaveAndAlertYes",
+		"name": "",
+		"groupName1": "Test1",
+		"groupName2": "Test2"
+	},
+	{
+		"Comment": "40.tempClientSendInviteAndAlertNoIndividuals",
+		"name": ""
+	},
+	{
+		"Comment": "41.tempClientSendInviteAndAlertYesIndividuals",
+		"name": ""
+	},
+	{
+		"Comment": "42.tempClientSendInviteAndAlertNoEntity",
+		"name": ""
+	},
+	{
+		"Comment": "43.tempClientSendInviteAndAlertYesEntity",
+		"name": ""
+	}
+]

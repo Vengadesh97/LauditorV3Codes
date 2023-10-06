@@ -22,19 +22,20 @@ public class Dashboard extends Reusable {
 	}
 
 	@FindBy(xpath = "//span[text()='Groups']")
-	WebElement texts;
+	WebElement groupLeft;
 
-	public void groupsMenuClick() throws InterruptedException {
+	public void groupLeftSide() throws InterruptedException {
 		// Scroll Down
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		WebElement scol = driver.findElement(By.cssSelector("html"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,350)", scol);
 
 		// Group Select on Left Side
-		Thread.sleep(10000);
-		texts.click();
-
+		Thread.sleep(4000);
+		visibilityOfAllElements(groupLeft);
+		groupLeft.click();
+		Thread.sleep(2000);
 		Actions a = new Actions(driver);
 		a.sendKeys(Keys.PAGE_UP).build().perform();
 		a.sendKeys(Keys.PAGE_UP).build().perform();

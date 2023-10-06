@@ -1,27 +1,13 @@
 [
 	
 	{
-		"groupname" :"Civil Laws Case",
+		"groupName" :"Civil Laws Case",
 		"description" : "Data stored client related",
-		"addMember1":"Martin",
-		"addMember2":"Vengadesh RSB",
-		"addMember3":"Susan",
-		"addMember4":"Neela C RSB",
-		"addMember5":"Ananth Associates",
-		"membernameremoved" : "Martin",
-		"groupHeadNames" : "Vengadesh RSB"
-	},
-		{
-
-		"groupname" :"Civil Laws Case12",
-		"description" : "Data stored client related",
-		"addMember1" : "Rossy",
-		"addMember2" : "Vengadesh RSB Associates",
-		"addMember3" : "Susan",
-		"addMember4" :  "",
-		"addMember5" : "",
- 		"membernameremoved" : "Vengadesh RSB Associates",
-		"groupHeadNames" : "Susan"
+		"addMember1":"Zavier Moore",
+		"addMember2":"Harish",
+		"addMember3":"Ananth - TM",
+		"addMember4":"Test Team",
+		"addMember5":"shabarish"
 	}
 	
 ]

@@ -179,6 +179,30 @@ public class Reusable {
 		}
 
 	}
+	
+	
+	
+	//Name select and Remove			
+		public void selectNameorRemoveName1(String[] NameList,List<WebElement> allNamesText,List<WebElement> removeOrSelectBtn) throws InterruptedException {
+			Thread.sleep(2000);
+				List<String> groupNames = Arrays.asList(NameList);
+				String textGroup = new String();
+				
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				WebElement checkboxSelectedGroupName;
+				for (int i = 0; i <allNamesText.size(); i++) {
+					textGroup = allNamesText.get(i).getText();
+					// System.out.println("All Group Name Text "+textGroup);
+					if (groupNames.contains(textGroup)) {
+						//Thread.sleep(2000);
+						checkboxSelectedGroupName = removeOrSelectBtn.get(i);
+						visibilityOfAllElements(checkboxSelectedGroupName);
+						Thread.sleep(2000);
+						executor.executeScript("arguments[0].click();", checkboxSelectedGroupName);
+					}
+			}
+
+		}
 
 	
 	public void mouseClassPerform(WebElement element) throws InterruptedException

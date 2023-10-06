@@ -24,27 +24,120 @@ public class CreateGroup extends Reusable {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//div[@class='button-class create-group']")
-	WebElement createGroupTab;
+	@FindBy(xpath = "(//div //button[@type='button'])[1]")
+	WebElement creategroupTab;
+
+	public void createGroupTab() throws InterruptedException {
+		Thread.sleep(2000);
+		pageUp();
+		Thread.sleep(2000);
+		visibilityOfAllElements(creategroupTab);
+		creategroupTab.click();
+	}
 
 	@FindBy(id = "caseTitle")
-	WebElement groupName;
+	WebElement groupNametxt;
+
+	public void groupName(String text) {
+		visibilityOfAllElements(groupNametxt);
+		groupNametxt.sendKeys(text);
+	}
 
 	@FindBy(name = "description")
-	WebElement groupDescription;
+	WebElement groupDescriptiontxt;
+
+	public void groupDescription(String text) {
+		visibilityOfAllElements(groupDescriptiontxt);
+		groupDescriptiontxt.sendKeys(text);
+	}
 
 	@FindBy(xpath = "//i[@class='fa fa-solid fa-plus calimg calitem input-group-append sgroup']")
 	WebElement addGroupMem;
 
-	// Add Member
+	public void addGroupMemberButton() {
+		visibilityOfAllElements(addGroupMem);
+		addGroupMem.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Next']")
+	WebElement nextBtn;
+
+	public void nextButton() {
+		visibilityOfAllElements(nextBtn);
+		nextBtn.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Cancel']")
+	WebElement cancelBtn;
+
+	public void cancelButton() {
+		visibilityOfAllElements(cancelBtn);
+		cancelBtn.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Back']")
+	WebElement backBtn;
+
+	public void backButton() {
+		visibilityOfAllElements(backBtn);
+		backBtn.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Save']")
+	WebElement saveBtn;
+
+	public void saveButton() {
+		visibilityOfAllElements(saveBtn);
+		saveBtn.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='No']")
+	WebElement confirmPopupNo;
+
+	public void confirmNoButton() throws InterruptedException {
+		Thread.sleep(2000);
+		visibilityOfAllElements(confirmPopupNo);
+		confirmPopupNo.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Yes']")
+	WebElement confirmPopupYes;
+
+	public void confirmYesButton() throws InterruptedException {
+		Thread.sleep(2000);
+		visibilityOfAllElements(confirmPopupYes);
+		confirmPopupYes.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='Add Groups']")
+	WebElement successPopupAddGroups;
+
+	public void successAddGroups() throws InterruptedException {
+		Thread.sleep(2000);
+		visibilityOfAllElements(successPopupAddGroups);
+		successPopupAddGroups.click();
+	}
+
+	@FindBy(xpath = "//div //button[text()='View Changes']")
+	WebElement successPopupViewChanges;
+
+	public void successViewChanges() throws InterruptedException {
+		Thread.sleep(2000);
+		visibilityOfAllElements(successPopupViewChanges);
+		successPopupViewChanges.click();
+	}
+
+	// Add Groups Member
 	@FindBy(xpath = "//div[@class='callselect']")
 	List<WebElement> membersName;
 
 	@FindBy(xpath = "//div /input[@type='checkbox']")
 	List<WebElement> memberSelectCheckbox;
 
-	@FindBy(xpath = "//button[@class='btn btn-default btnsave']")
-	WebElement addmemberNext;
+	public void selectMemberInGroups(String[] names) throws InterruptedException {
+		Thread.sleep(2000);
+		selectNameorRemoveName1(names, membersName, memberSelectCheckbox);
+	}
 
 	// Remove Member
 	@FindBy(xpath = "//div[@class='input-group multicheck court']")
@@ -53,129 +146,27 @@ public class CreateGroup extends Reusable {
 	@FindBy(xpath = "//div /i")
 	List<WebElement> clickRemovebtn;
 
-	@FindBy(xpath = "//button[@class='btn btn-default btnsave']")
-	WebElement selectedDoneBtn;
+	public void removeMemberInGroups(String[] names) throws InterruptedException {
+		Thread.sleep(2000);
+		selectNameorRemoveName(names, removeMemberName, clickRemovebtn);
+
+	}
 
 	// GroupHead
 	@FindBy(xpath = "//div[@class='multicheck form-control textbox']")
-	List<WebElement> groupheadLabel;
+	List<WebElement> groupHeadListofNames;
 
 	@FindBy(xpath = "//div /input[@name='member']")
-	List<WebElement> selectGroupHeadCheckbox;
+	List<WebElement> selectOneGroupHead;
 
-	@FindBy(xpath = "(//button[@class='btn btn-default btnsave'])[2]")
-	WebElement groupheadSave;
-
-	@FindBy(xpath = "(//button[@class='btn btn-default alertbtn'])[2]")
-	WebElement alertViewChanges;
+	public void selectOneGroupHead(String[] names) throws InterruptedException {
+		Thread.sleep(2000);
+		selectNameorRemoveName(names, groupHeadListofNames, selectOneGroupHead);
+	}
 
 	// View Groups
 
 	@FindBy(xpath = "driver.findElements(By.xpath(\"//tr /td[1]\"))")
 	List<WebElement> groupNameCheck;
-
-	public void createGroups(String gName, String gDesc, String[] addMembers, String removedMembers, String groupHead)
-			throws InterruptedException {
-		
-		Thread.sleep(5000);
-		createGroupTab.click();
-		groupName.sendKeys(gName);
-		groupDescription.sendKeys(gDesc);
-		addGroupMem.click();
-		// String[] teams = {"Rossy","Vengadesh RSB Associates","Susan","Miranda
-		// Williams","Ananth-Admin"};
-
-		// Add Team Member
-		Thread.sleep(3000);
-		List<String> nameSelect = Arrays.asList(addMembers);
-
-		int j = 0;
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-		for (int i = 0; i < membersName.size(); i++) {
-			String name = membersName.get(i).getText();
-
-			Thread.sleep(200);
-			if (nameSelect.contains(name)) {
-			j++;
-				Thread.sleep(2000);
-
-				WebElement selectMember = memberSelectCheckbox.get(i);
-
-				executor.executeScript("arguments[0].click();", selectMember);
-
-				if (j == nameSelect.size()) {
-					break;
-
-			}
-			}
-		}
-		Thread.sleep(200);
-		executor.executeScript("arguments[0].click();", addmemberNext);
-
-		// Remove Team member Name
-
-		int y = 0;
-
-		for (int k = 0; k < removeMemberName.size(); k++) {
-			String removename = removeMemberName.get(k).getText();
-			Thread.sleep(2000);
-			if (removedMembers.contains(removename)) {
-				y++;
-
-				Thread.sleep(2000);
-
-				WebElement namesremove = clickRemovebtn.get(k);
-
-				executor.executeScript("arguments[0].click();", namesremove);
-
-				if (y == removedMembers.length()) {
-					break;
-
-				}
-			}
-
-		}
-
-		// SelectedGroupMember - Done Button
-
-		executor.executeScript("arguments[0].click();", selectedDoneBtn);
-
-		// SelectGroupHead
-
-		int z = 0;
-		for (int h = 0; h < groupheadLabel.size(); h++) {
-
-			String groupheadName = groupheadLabel.get(h).getText();
-			Thread.sleep(2000);
-			if (groupHead.contains(groupheadName)) {
-				z++;
-				Thread.sleep(2000);
-
-				WebElement selectGroupHead = selectGroupHeadCheckbox.get(h);
-
-				executor.executeScript("arguments[0].click();", selectGroupHead);
-				if (z == groupHead.length()) {
-					break;
-
-				}
-
-			}
-
-		}
-
-		Thread.sleep(1000);
-		// Group Head - Done
-
-		executor.executeScript("arguments[0].click();", groupheadSave);
-
-		Thread.sleep(1000);
-
-		// View Changes
-		alertViewChanges.click();
-
-	}
-	
-	
 
 }

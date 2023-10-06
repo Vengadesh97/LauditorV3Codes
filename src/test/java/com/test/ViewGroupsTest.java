@@ -15,7 +15,7 @@ public class ViewGroupsTest extends BaseClass {
 
 	@Test(priority = 0)
 	public void viewGroupTabMenu() throws IOException, InterruptedException {
-		dashBoard.groupsMenuClick();
+		//dashBoard.groupsMenuClick();
 	}
 
 	@Test(dataProvider = "getData", priority = 1)

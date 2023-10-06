@@ -18,9 +18,10 @@ import com.pom.ViewGroups;
 
 public class CreatedGroupTest extends BaseClass {
 
-	@Test(dataProvider = "getData")
+	/*
+	@Test(dataProvider = "getData",enabled=false)
 	public void createdGroup(HashMap<String, String> input) throws InterruptedException {
-		dashBoard.groupsMenuClick();
+		dashBoard.groupLeftSide();
 		String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
 				input.get("addMember4"), input.get("addMember5") };
 		createGroup.createGroups(input.get("groupname"), input.get("description"), addMembers,
@@ -30,13 +31,56 @@ public class CreatedGroupTest extends BaseClass {
 	
 		//Boolean match1 = viewGroups.textVerifyGroupHeadName(input.get("groupHeadNames"));
 		//Assert.assertTrue(match1);
+	} 
+	
+	*/
+	
+	@Test(dataProvider = "getData")
+	public void createdGroup(HashMap<String, String> input) throws InterruptedException {
+		
+		
+		try {
+			dashBoard.groupLeftSide();
+			createGroup.createGroupTab();
+			createGroup.groupName(input.get("groupName"));
+			createGroup.groupDescription(input.get("description"));
+			createGroup.addGroupMemberButton();
+			Thread.sleep(1000);
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
+					input.get("addMember4"), input.get("addMember5") };
+			createGroup.selectMemberInGroups(addMembers);
+			createGroup.pageDown();
+			Thread.sleep(1000);
+			createGroup.nextButton();
+			Thread.sleep(1000);
+			String[] removeMembers = { input.get("addMember3"), input.get("addMember5")};
+			createGroup.removeMemberInGroups(removeMembers);
+			Thread.sleep(1000);
+			createGroup.nextButton();
+			Thread.sleep(1000);
+			String[] groupHead = { input.get("addMember2")};
+			createGroup.selectOneGroupHead(groupHead);
+			createGroup.saveButton();
+			Thread.sleep(2000);
+			createGroup.successViewChanges();
+			
+			
+		} finally {
+			// TODO: handle finally clause
+		}
+		
+	
+		
 	}
+	
+	
+	
 
 	@DataProvider
 	public Object[][] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\CreateGroupData.json");
+				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
 
 		return new Object[][] { { data.get(0) } };
 

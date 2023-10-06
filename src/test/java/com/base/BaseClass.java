@@ -31,6 +31,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pom.AddRelationshipsPOM;
 import com.pom.CreateGroup;
 import com.pom.CreateMatter;
 import com.pom.CreateMeetingsPOM;
@@ -75,7 +76,9 @@ public class BaseClass {
 	public TimesheetPOM timesheets;
 	public CreateMeetingsPOM createMeeting;
 	public ViewMeetingsPOM viewMeeting;
-
+	public AddRelationshipsPOM addRelationship;
+	
+	
 	public WebDriver initalize() throws IOException {
 
 		prop = new Properties();
@@ -142,6 +145,7 @@ public class BaseClass {
 		timesheets = new TimesheetPOM(driver);
 		createMeeting = new CreateMeetingsPOM(driver);
 		viewMeeting = new ViewMeetingsPOM(driver);
+		addRelationship = new AddRelationshipsPOM(driver);
 		return loginPage;
 	}
 

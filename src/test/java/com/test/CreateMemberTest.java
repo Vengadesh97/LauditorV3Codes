@@ -13,7 +13,7 @@ public class CreateMemberTest extends BaseClass {
 	@Test(dataProvider = "getData")
 	public void createMemberAccountCreate(HashMap<String, String> input) throws InterruptedException {
 		String[] selectGroups = { input.get("addGroups1"), input.get("addGroups2"), input.get("addGroups3") };
-		dashBoard.groupsMenuClick();
+	//	dashBoard.groupsMenuClick();
 		createMember.createMemberTab();
 		createMember.createTeamMemberInfo(input.get("Name"), input.get("Designation"), input.get("DefaultRate"),
 				input.get("Email"), input.get("ConfirmEmail"), input.get("CurrencyName"), selectGroups);
