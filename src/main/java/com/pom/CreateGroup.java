@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.abst.Reusable;
 
@@ -164,6 +165,53 @@ public class CreateGroup extends Reusable {
 		selectNameorRemoveName(names, groupHeadListofNames, selectOneGroupHead);
 	}
 
+	
+	
+	//-----------------------Asserting----------------
+	
+	//First page
+	
+	@FindBy(xpath="//label[text()='Group Name:']")
+	WebElement firstPageVerify;
+	
+	public void verifyCreatePageHeading() throws InterruptedException {
+		Thread.sleep(2000);
+		visibilityOfAllElements(firstPageVerify);
+		boolean displayed = firstPageVerify.isDisplayed();
+		Assert.assertTrue(displayed);
+	}
+	
+	// Second Page
+	
+	@FindBy(xpath="//label[text()='Add Members to Group']")
+	WebElement secondPageVerify;
+	
+	public void verifySelectPageHeading() throws InterruptedException {
+		Thread.sleep(2000);
+		pageUp1();
+		Thread.sleep(2000);
+		visibilityOfAllElements(secondPageVerify);
+		boolean displayed = secondPageVerify.isDisplayed();
+		Assert.assertTrue(displayed);
+	}
+	
+	// Third Page
+	
+	@FindBy(xpath="//label[text()='Assign Group Head']")
+	WebElement thirdPageVerify;
+	
+	public void verifyGroupHeadPage() throws InterruptedException {
+		Thread.sleep(2000);
+		pageUp1();
+		Thread.sleep(2000);
+		visibilityOfAllElements(thirdPageVerify);
+		boolean displayed = thirdPageVerify.isDisplayed();
+		Assert.assertTrue(displayed);
+	}
+	
+	
+	
+	
 	// View Groups
 
 	@FindBy(xpath = "driver.findElements(By.xpath(\"//tr /td[1]\"))")

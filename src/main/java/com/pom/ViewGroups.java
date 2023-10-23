@@ -88,7 +88,7 @@ public class ViewGroups extends Reusable {
 	private List<WebElement> groupNamesTextVerify;
 
 	public boolean textVerifyGroupName(String groupsName) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		Boolean match = groupNamesTextVerify.stream()
 				.anyMatch(groupNameCheck -> groupNameCheck.getText().equalsIgnoreCase(groupsName));
 		return match;
@@ -100,7 +100,7 @@ public class ViewGroups extends Reusable {
 	private List<WebElement> groupHeadNameTextVerify;
 	
 	public boolean textVerifyGroupHeadName(String groupHeadName) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		Boolean match1 = groupHeadNameTextVerify.stream()
 				.anyMatch(groupHeadNameCheck -> groupHeadNameCheck.getText().equalsIgnoreCase(groupHeadName));
 		return match1;

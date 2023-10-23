@@ -215,6 +215,8 @@ public class AddRelationshipTest extends BaseClass {
 			Thread.sleep(2000);
 			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
 			addRelationship.updateAndModifyGroupAccess(groupNames);
+			addRelationship.pageDown();
+			Thread.sleep(2000);
 			addRelationship.saveBtnModifyGroup();
 			addRelationship.alertNoUpdate();
 		} finally {
@@ -275,6 +277,8 @@ public class AddRelationshipTest extends BaseClass {
 			Thread.sleep(2000);
 			String[] groupNames = { input.get("groupName1"), input.get("groupName2") };
 			addRelationship.updateAndModifyGroupAccess(groupNames);
+			addRelationship.pageDown();
+			Thread.sleep(2000);
 			addRelationship.saveBtnModifyGroup();
 			addRelationship.alertNoUpdate();
 		} finally {

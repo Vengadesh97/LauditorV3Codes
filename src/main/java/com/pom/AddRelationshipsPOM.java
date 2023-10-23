@@ -386,7 +386,7 @@ public class AddRelationshipsPOM extends Reusable {
 	List<WebElement> actionBtn;
 
 	// ModifygroupAccess
-	@FindBy(xpath = "//ul[@data-popper-placement='top-start'] //li[2]")
+	@FindBy(xpath = "//ul //li //a[text()='Modify Group Access']")
 	WebElement modifyGroupAccessBtn;
 
 	public void searchInput(String searchCaseName) throws InterruptedException {
@@ -395,19 +395,19 @@ public class AddRelationshipsPOM extends Reusable {
 		searchBar.clear();
 		searchBar.sendKeys(searchCaseName);
 
-		pageDown();
+	//	pageDown();
 		Thread.sleep(3000);
 		Actions action = new Actions(driver);
 
 		for (int i = 0; i < allClientNamesText.size(); i++) {
 			String textNames = allClientNamesText.get(i).getText();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			if (searchCaseName.contains(textNames)) {
 				// visibilityOfAllElements(actionBtn);
 
 				WebElement actionClicked = actionBtn.get(i);
 				// visibilityOfAllElements(actionBtn);
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				action.moveToElement(actionClicked).click().perform();
 
 			}
@@ -417,7 +417,7 @@ public class AddRelationshipsPOM extends Reusable {
 
 	public void individualsModifyGroupAccessBtn() throws InterruptedException {
 		Thread.sleep(3000);
-		visibilityOfElementWait(modifyGroupAccessBtn);
+	//	visibilityOfElementWait(modifyGroupAccessBtn);
 		Actions action = new Actions(driver);
 		action.moveToElement(modifyGroupAccessBtn).click().perform();
 	}
@@ -434,7 +434,7 @@ public class AddRelationshipsPOM extends Reusable {
 
 	public void updateAndModifyGroupAccess(String[] name) throws InterruptedException {
 		Thread.sleep(3000);
-		selectNameorRemoveName(name, allGroupNamesUpdate, checkAndUncheckBox);
+		selectNameorRemoveName1(name, allGroupNamesUpdate, checkAndUncheckBox);
 	}
 
 	// Cancel
@@ -462,7 +462,8 @@ public class AddRelationshipsPOM extends Reusable {
 	@FindBy(xpath = "(//div //button[@aria-label='Close'])[2]")
 	WebElement alertNoUpdate;
 
-	public void alertNoUpdate() {
+	public void alertNoUpdate() throws InterruptedException {
+		Thread.sleep(2000);
 		visibilityOfAllElements(alertNoUpdate);
 		alertNoUpdate.click();
 	}
@@ -472,7 +473,8 @@ public class AddRelationshipsPOM extends Reusable {
 	@FindBy(xpath = "(//div //button[@aria-label='Close'])[3]")
 	WebElement alertYesUpdate;
 
-	public void alertYesUpdate() {
+	public void alertYesUpdate() throws InterruptedException {
+		Thread.sleep(2000);
 		visibilityOfAllElements(alertYesUpdate);
 		alertYesUpdate.click();
 	}

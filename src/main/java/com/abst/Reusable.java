@@ -190,9 +190,11 @@ public class Reusable {
 				
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
 				WebElement checkboxSelectedGroupName;
+				Thread.sleep(2000);
 				for (int i = 0; i <allNamesText.size(); i++) {
 					textGroup = allNamesText.get(i).getText();
 					// System.out.println("All Group Name Text "+textGroup);
+					Thread.sleep(2000);
 					if (groupNames.contains(textGroup)) {
 						//Thread.sleep(2000);
 						checkboxSelectedGroupName = removeOrSelectBtn.get(i);

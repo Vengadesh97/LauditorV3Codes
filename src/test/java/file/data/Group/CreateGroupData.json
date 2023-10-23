@@ -1,13 +1,55 @@
 [
 	
 	{
+		"comment":"0.createGroupWithCancelandAlertNo",
 		"groupName" :"Civil Laws Case",
+		"description" : "Data stored client related"
+	},
+	{
+		"comment":"1.createGroupWithCancelandAlertYes",
+		"groupName" :"Civil Laws Case",
+		"description" : "Data stored client related"
+	},
+	{
+		"comment":"2.createGroupWithSaveandAddGroups",
+		"groupName" :"Civil Laws Case",
+		"description" : "Data stored client related"
+	},
+	{
+		"comment":"3.createGroupWithSaveandViewChanges",
+		"groupName" :"Civil Laws Case1",
+		"description" : "Data stored"
+	},
+	{
+		"comment":"4.createGroupWithCheckMemberNamesAreList",
+		"groupName" :"Civil Laws Case2",
+		"description" : "Data stored client related"
+	},
+	{
+		"comment":"5.createGroupWithoutAddAnyMemberClickonBack",
+		"groupName" :"Civil Laws Case3",
+		"description" : "Data stored client related"
+	},
+	{
+		"comment":"6.createGroupWithSelectTMandCancelandAlertNo",
+		"groupName" :"Civil Laws Case4",
 		"description" : "Data stored client related",
-		"addMember1":"Zavier Moore",
-		"addMember2":"Harish",
-		"addMember3":"Ananth - TM",
-		"addMember4":"Test Team",
-		"addMember5":"shabarish"
+		"addMember1":"User member",
+		"addMember2":"soundarya"
+	},
+	{
+		"comment":"7.createGroupWithSelectTMandCancelandAlertYes",
+		"groupName" :"Civil Laws Case5",
+		"description" : "Data stored client related",
+		"addMember1":"User member",
+		"addMember2":"soundarya"
+	},
+	{
+		"comment":"8.createGroupWithSelectTMandNextVerify",
+		"groupName" :"Civil Laws Case5",
+		"description" : "Data stored client related",
+		"addMember1":"User member",
+		"addMember2":"soundarya"
 	}
 	
 ]

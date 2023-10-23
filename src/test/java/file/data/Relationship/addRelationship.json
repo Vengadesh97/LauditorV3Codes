@@ -191,9 +191,9 @@
 	},
 	{
 		"Comment": "17.individualSelectGroupAndClickSaveAndAlertNo",
-		"name": "Neela",
-		"groupName1": "Test1",
-		"groupName2": "Test2"
+		"name": "Neela Chinnappa",
+		"groupName1": "Staging Testing",
+		"groupName2": "ActionTest"
 	},
 	{
 		"Comment": "18.individualSelectGroupAndClickSaveAndAlertYes",
