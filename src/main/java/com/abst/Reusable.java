@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -253,5 +254,33 @@ public class Reusable {
 			selectList.selectByVisibleText(name);
 		}
 	
+		public void selectAction(WebElement name,WebElement name1) throws InterruptedException
+		{
+			Thread.sleep(2000);
+			Actions action = new Actions(driver);
+
+			action.moveToElement(name).build().perform();
+
+			Thread.sleep(2000);
+			action.moveToElement(name1).click().perform();
+		}
+		
+		
+		public void actionPageUp() throws InterruptedException
+		{
+			Thread.sleep(1000);
+			Actions action = new Actions(driver);
+			action.sendKeys(Keys.PAGE_UP).build().perform();
+		}
+		
+		public void actionPageDown() throws InterruptedException
+		{
+			Thread.sleep(1000);
+			Actions action = new Actions(driver);
+			action.sendKeys(Keys.PAGE_DOWN).build().perform();
+			Thread.sleep(1000);
+			action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		}
+		
 
 }

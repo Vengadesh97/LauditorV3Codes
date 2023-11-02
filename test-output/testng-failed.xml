@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.AddRelationshipTest">
+      <class name="com.test.ViewGroupsTest">
         <methods>
-          <include name="individualSelectGroupAndClickSaveAndAlertNo" invocation-numbers="0"/>
+          <include name="updateGroupMembers" invocation-numbers="0"/>
           <include name="down"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.test.AddRelationshipTest -->
+      </class> <!-- com.test.ViewGroupsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

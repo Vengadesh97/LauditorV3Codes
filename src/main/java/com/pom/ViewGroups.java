@@ -74,11 +74,11 @@ public class ViewGroups extends Reusable {
 	WebElement actionbtn1;
 
 	public void viewgroupSearchbar(String GroupName) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		viewgroupSearchbar.clear();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		viewgroupSearchbar.sendKeys(GroupName);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		actionbtn1.click();
 
 	}
@@ -127,34 +127,50 @@ public class ViewGroups extends Reusable {
 
 	@FindBy(xpath = "(//button[@class='btn btn-primary'])[4]")
 	WebElement editgroupinfoAlertOk;
-
-	public void editGroupInfo(String RenameGroup, String Descp) throws InterruptedException {
-		Thread.sleep(5000);
-		Actions action = new Actions(driver);
-
-		action.moveToElement(actionAllBoxSize).build().perform();
-
-		Thread.sleep(5000);
-		action.moveToElement(editGroupinfoBtn).click().perform();
-
+		
+	@FindBy(xpath="//div//button[@type='reset']")
+	WebElement editgroupCancel;
+	
+	public void editGroupInfoBtn() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectAction(actionAllBoxSize, editGroupinfoBtn);
+	}
+	
+	
+	public void editGroupName(String RenameGroup) throws InterruptedException {
 		// Rename groupName
+		visibilityOfAllElements(reNameGroup);
 		reNameGroup.clear();
 		reNameGroup.sendKeys(RenameGroup);
-
-		// Rename Description
-		reNameDescp.clear();
-		reNameDescp.sendKeys(Descp);
-
-		editgroupinfoSave.click();
-
-		Thread.sleep(1000);
-		editgroupinfoAlertOk.click();
-
 	}
 
+	
+	public void editDescp(String Descp) throws InterruptedException {
+		// Rename Description
+		visibilityOfAllElements(reNameDescp);
+		reNameDescp.clear();
+		reNameDescp.sendKeys(Descp);
+	}
+	
+	public void editGroupInfoSave() throws InterruptedException {
+
+		visibilityOfAllElements(editgroupinfoSave);
+		editgroupinfoSave.click();
+		visibilityOfAllElements(editgroupinfoAlertOk);
+		Thread.sleep(1000);
+		editgroupinfoAlertOk.click();
+	}
+	
+	public void editGroupCancel()
+	{
+		visibilityOfAllElements(editgroupCancel);
+		editgroupCancel.click();
+	}
+	
 	// Update Group Members List
 
-	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[2]")
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[2]")
 	WebElement updategroupMemberlistBtn;
 
 	// LeftSide Selected TeamMember Name text
@@ -181,76 +197,96 @@ public class ViewGroups extends Reusable {
 	@FindBy(xpath = "(//div[@class='center'])[3]")
 	WebElement updateGroupMemberalertOk;
 
-	public void updateGroupMemberList(String[] removeNameGroupMember, String[] MembernamedAdd)
-			throws InterruptedException {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-		Thread.sleep(5000);
-		Actions action = new Actions(driver);
-
-		action.moveToElement(actionAllBoxSize).build().perform();
-
-		Thread.sleep(5000);
-		action.moveToElement(updategroupMemberlistBtn).click().perform();
-
-		Thread.sleep(3000);
-		action.sendKeys(Keys.PAGE_UP).build().perform();
-
-		// Remove listname
-		// String[] removeNameGroupMember= {"Miranda Williams","Susan"};
-		Thread.sleep(5000);
-		List<String> removeNameUpdateGroupMember = Arrays.asList(removeNameGroupMember);
-
-		// Left Side Remove Member Scenario
-		Thread.sleep(5000);
-		for (int i = 0; i < selectedMemberNameText.size(); i++) {
-			String removedname = selectedMemberNameText.get(i).getText();
-
-			Thread.sleep(2000);
-			if (removeNameUpdateGroupMember.contains(removedname)) {
-				Thread.sleep(2000);
-
-				WebElement removeMembclick = removeButtonMember.get(i);
-
-				executor.executeScript("arguments[0].click();", removeMembclick);
-			}
-		}
-
-		// Right Side Select Member Scenario
-
-		// Add member
-		// String[] MembernamedAdd = {"Neela C RSB Associates","Ananth-TM"};
-
-		Thread.sleep(8000);
-		List<String> memberNameAdded = Arrays.asList(MembernamedAdd);
-
-		for (int j = 0; j < selectMemberNameText.size(); j++) {
-			String nameSelect = selectMemberNameText.get(j).getText();
-			Thread.sleep(2000);
-			if (memberNameAdded.contains(nameSelect)) {
-				Thread.sleep(2000);
-
-				WebElement memberSelect = selectMemberButton.get(j);
-
-				executor.executeScript("arguments[0].click();", memberSelect);
-			}
-
-		}
-
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		// Save
-		Thread.sleep(5000);
-		updateGroupMemberSaveBtn.click();
-		Thread.sleep(3000);
-		updateGroupMemberalertOk.click();
-
-		Thread.sleep(5000);
-		action.sendKeys(Keys.PAGE_UP).build().perform();
+	// Cancel Button
+	@FindBy(xpath="//div[@class='btnbox'] //button[1]")
+	WebElement cancelButtonUpdateGroupMember;
+	
+	//Remove all 
+	@FindBy(xpath="//div //button[text()='Remove All']")
+	WebElement removeAllBtn;
+	
+	public void removeAllButton()
+	{
+		visibilityOfAllElements(removeAllBtn);
+		removeAllBtn.click();
 	}
+	
+	public void updateGroupMembersList() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectAction(actionAllBoxSize, updategroupMemberlistBtn);
+	}
+	
+	public void selectTeamMember(String[] names) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectNameorRemoveName(names, selectMemberNameText, selectMemberButton);
+	}
+	
+	public void removeTeamMember(String[] names) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectNameorRemoveName(names, selectedMemberNameText, removeButtonMember);
+	}
+	
+	public void saveButtonUpdateGroupMembers() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		visibilityOfAllElements(updateGroupMemberSaveBtn);
+		updateGroupMemberSaveBtn.click();
+	}
+	
+	public void cancelButtonUpdateGroupMembers() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		visibilityOfAllElements(cancelButtonUpdateGroupMember);
+		cancelButtonUpdateGroupMember.click();
+	}
+	
+	
+	public void okButtonSuccessPopupUpdateGroupMembers() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		visibilityOfAllElements(updateGroupMemberalertOk);
+		updateGroupMemberalertOk.click();
+	}
+	
+	
+	public void pageUpViewGroups() throws InterruptedException
+	{
+		actionPageUp();
+	}
+	
+	public void pageDownViewGroups() throws InterruptedException
+	{
+		actionPageDown();
+	}
+	
+	// Alert Yes
+	
+	@FindBy(xpath="//div //button[text()='Yes']")
+	WebElement alertYesBtn;
+	
+	@FindBy(xpath="//div //button[text()='No']")
+	WebElement alertNoBtn;
+	
+	public void alertYesButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		visibilityOfAllElements(alertYesBtn);
+		alertYesBtn.click();
+	}
+	
+	public void alertNoButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		visibilityOfAllElements(alertNoBtn);
+		alertNoBtn.click();
+	}
+	
 
 	// UpdateGroupHead
-	@FindBy(xpath = "(//ul[@class=\"dropdown-menu custom-dropdown show\"])//li[3]")
+	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[3]")
 	WebElement updategroupheadBtn;
 
 	// Searchbox
@@ -277,49 +313,21 @@ public class ViewGroups extends Reusable {
 	@FindBy(xpath = "(//button[@class='btn btn-primary'])[2]")
 	WebElement okButton;
 
-	// UpdateGroupHead Scenario
-	public void updateGroupHead(String groupheadname) throws InterruptedException {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-		Thread.sleep(5000);
-		Actions action = new Actions(driver);
-
-		action.moveToElement(actionAllBoxSize).build().perform();
-		Thread.sleep(5000);
-		action.moveToElement(updategroupheadBtn).click().perform();
-
+	
+	
+	public void updateGroupHeadButton() throws InterruptedException
+	{
 		Thread.sleep(1000);
-		action.sendKeys(Keys.PAGE_UP).build().perform();
-		Thread.sleep(1000);
-		searchBoxGH.sendKeys(groupheadname);
-
-		Thread.sleep(5000);
-		for (int i = 0; i < groupheadNameText.size(); i++) {
-			String totalGroupheadname = groupheadNameText.get(i).getText();
-
-			if (groupheadname.contains(totalGroupheadname)) {
-				Thread.sleep(4000);
-
-				WebElement selectedGroupHead = selectbuttonGroupHead.get(i);
-
-				executor.executeScript("arguments[0].click();", selectedGroupHead);
-			}
-		}
-
-		// save
-		groupHeadSaveBtn.click();
-		Thread.sleep(1000);
-		// Yes
-		alertYesButton.click();
-
-		Thread.sleep(1000);
-		// ok
-		okButton.click();
-		Thread.sleep(5000);
-		action.sendKeys(Keys.PAGE_UP).build().perform();
-
+		selectAction(actionAllBoxSize, updategroupheadBtn);
 	}
-
+	
+	public void selectGroupHeads(String[] names) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectNameorRemoveName(names, groupheadNameText, selectbuttonGroupHead);
+	}
+	
+	
 	@FindBy(xpath = "(//ul[@class='dropdown-menu custom-dropdown show'])//li[4]")
 	WebElement deleteBtn;
 
@@ -338,8 +346,6 @@ public class ViewGroups extends Reusable {
 	@FindBy(xpath = "(//button[@aria-label='Close'])[3]")
 	WebElement assignAlertYesBtn;
 
-	@FindBy(xpath = "(//button[@class='btn btn-primary'])[1]")
-	WebElement successOkbtn;
 	// SearchBox
 	@FindBy(xpath = "//input[@placeholder='Search group']")
 	WebElement searchboxName;
@@ -347,59 +353,29 @@ public class ViewGroups extends Reusable {
 	// Single Name Select Button
 	@FindBy(xpath = "//div[@class='multicheck form-control textbox']")
 	WebElement assignGroupBtn;
-
-	// DeleteComplete Group
-	public void deleteAssigntoAnotherGroup(String assignGroupname) throws InterruptedException {
-
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-		Thread.sleep(5000);
-		Actions action = new Actions(driver);
-		Thread.sleep(5000);
-		action.moveToElement(actionAllBoxSize).build().perform();
-		Thread.sleep(5000);
-		action.moveToElement(deleteBtn).click().perform();
-
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-
-		Thread.sleep(5000);
-
-		searchboxName.sendKeys(assignGroupname);
-
-		Thread.sleep(5000);
-
-		for (int i = 0; i < assignGroupNameText.size(); i++) {
-
-			String selectAssignGroup = assignGroupNameText.get(i).getText();
-			if (assignGroupname.contains(selectAssignGroup)) {
-				Thread.sleep(2000);
-
-				WebElement selectedAssignGroup = selectBtnAssignGroup.get(i);
-
-				executor.executeScript("arguments[0].click();", selectedAssignGroup);
-			}
-		}
-
-		// assignGroupBtn.click();
-
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-
-		Thread.sleep(2000);
-		// Delete
-		assigndeleteBtn.click();
-
-		// Yes
+	
+	
+	@FindBy(xpath="(//div//button[text()='OK'])[1]")
+	WebElement successOK;
+	
+	public void deleteGroupButton() throws InterruptedException
+	{
 		Thread.sleep(1000);
-		assignAlertYesBtn.click();
-
-		// ok
-		Thread.sleep(1000);
-		successOkbtn.click();
-
-		Thread.sleep(5000);
-		// action.sendKeys(Keys.PAGE_UP).build().perform();
-
+		selectAction(actionAllBoxSize, deleteBtn);
 	}
+	
+	public void selectDeleteGroup(String[] names) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		selectNameorRemoveName(names, assignGroupNameText, selectBtnAssignGroup);
+	}
+	
+	public void successPopUpOK() throws InterruptedException
+	{
+		Thread.sleep(1000);
+		successOK.click();
+	}
+	
+	
 
 }

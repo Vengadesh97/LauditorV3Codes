@@ -1,0 +1,114 @@
+[
+	{
+		"Comment": "Edit Group Info",
+		"comment": "0.editGroupInfoChangeGroupNameWithCancel",
+		"GroupNameText": "Test1",
+		"RenameGroupName": "Test2"
+	},
+	{
+		"comment": "1.editGroupInfoChangeDescpWithCancel",
+		"GroupNameText": "Test1",
+		"RenameDescriptionChange": "VerifyText"
+	},
+	{
+		"comment": "2.editGroupInfoChangeBothNameWithCancel",
+		"GroupNameText": "Test1",
+		"RenameGroupName": "Test2",
+		"RenameDescriptionChange": "VerifyText"
+	},
+	{
+		"comment": "3.editGroupInfoChangeGroupNameWithSave",
+		"GroupNameText": "Test1",
+		"RenameGroupName": "Test23"
+	},
+	{
+		"comment": "4.editGroupInfoChangeDescpWithSave",
+		"GroupNameText": "Test23",
+		"RenameDescriptionChange": "VerifyText"
+	},
+	{
+		"comment": "5.editGroupInfoChangeBothNameWithSave",
+		"GroupNameText": "Test23",
+		"RenameGroupName": "Test1",
+		"RenameDescriptionChange": "Hello"
+	},
+	{
+		"comment": "Update Group Member List",
+		"Comment": "6.updateGroupMembersListAndRemoveAllClickCancel",
+		"GroupNameText": ""
+	},
+	{
+		"Comment": "7.updateGroupMembersListAndRemoveAllClickSave",
+		"GroupNameText": ""
+	},
+	{
+		"Comment": "8.updateGroupMembersListAndRemoveLeftSideOneTMClickCancel",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": ""
+	},
+	{
+		"Comment": "9.updateGroupMembersListAndRemoveLeftSideOneTMClickSave",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": ""
+	},
+	{
+		"Comment": "10.updateGroupMembersListAndSelectRightSideOneTMClickCancel",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": ""
+	},
+	{
+		"Comment": "11.updateGroupMembersListAndSelectRightSideOneTMClickSave",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": ""
+	},
+	{
+		"Comment": "12.updateGroupMembersListAndSelectRightSideAndRemoveOneTMClickCancel",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": "",
+		"removeMember1": "",
+		"removeMember2": ""
+	},
+	{
+		"Comment": "13.updateGroupMembersListAndSelectRightSideAndRemoveOneTMClickSave",
+		"GroupNameText": "",
+		"AddMember1": "",
+		"AddMember2": "",
+		"removeMember1": "",
+		"removeMember2": ""
+	},
+	{
+		"Comment": "Update Group Head",
+		"comment": "14.updateGroupHeadAndCancelAndAlertNo",
+		"SelectGroupHead": ""
+	},
+	{
+		"comment": "15.updateGroupHeadAndCancelAndAlertYes",
+		"SelectGroupHead": ""
+	},
+	{
+		"comment": "16.updateGroupHeadAndSaveAndAlertNo",
+		"SelectGroupHead": ""
+	},
+	{
+		"comment": "17.updateGroupHeadAndSaveAndAlertYes",
+		"SelectGroupHead": ""
+	},
+	{
+		"Comment": "DeleteGroup",
+		"comment": "18.deleteGroupSelectGroupAndClickCancel",
+		"SelectAnotherGroup": ""
+	},
+	{
+		"comment": "19.deleteGroupSelectGroupAndClickSaveClickNo",
+		"SelectAnotherGroup": ""
+	},
+	{
+		"comment": "20.deleteGroupSelectGroupAndClickSaveClickYes",
+		"SelectAnotherGroup": ""
+	}
+]
