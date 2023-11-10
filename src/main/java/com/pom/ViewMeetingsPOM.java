@@ -119,8 +119,9 @@ public class ViewMeetingsPOM extends Reusable {
 				rightArrow.click();
 			}
 		}
-	
 	}
+	
+	
 	
 	@FindBy(xpath="//div //div[@role='application']")
 	List<WebElement> allCalendarName; 
