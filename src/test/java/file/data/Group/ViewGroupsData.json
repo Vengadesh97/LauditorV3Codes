@@ -2,113 +2,118 @@
 	{
 		"Comment": "Edit Group Info",
 		"comment": "0.editGroupInfoChangeGroupNameWithCancel",
-		"GroupNameText": "Test1",
-		"RenameGroupName": "Test2"
+		"GroupNameText": "Defense On Demand",
+		"RenameGroupName": "Defense On Demand7"
 	},
 	{
 		"comment": "1.editGroupInfoChangeDescpWithCancel",
-		"GroupNameText": "Test1",
+		"GroupNameText": "Defense On Demand",
 		"RenameDescriptionChange": "VerifyText"
 	},
 	{
 		"comment": "2.editGroupInfoChangeBothNameWithCancel",
-		"GroupNameText": "Test1",
+		"GroupNameText": "Defense On Demand",
 		"RenameGroupName": "Test2",
 		"RenameDescriptionChange": "VerifyText"
 	},
 	{
 		"comment": "3.editGroupInfoChangeGroupNameWithSave",
-		"GroupNameText": "Test1",
-		"RenameGroupName": "Test23"
+		"GroupNameText": "Defense On Demand",
+		"RenameGroupName": "Defense On Demand7"
 	},
 	{
 		"comment": "4.editGroupInfoChangeDescpWithSave",
-		"GroupNameText": "Test23",
+		"GroupNameText": "Defense On Demand7",
 		"RenameDescriptionChange": "VerifyText"
 	},
 	{
 		"comment": "5.editGroupInfoChangeBothNameWithSave",
-		"GroupNameText": "Test23",
-		"RenameGroupName": "Test1",
+		"GroupNameText": "Defense On Demand7",
+		"RenameGroupName": "Defense On Demand8",
 		"RenameDescriptionChange": "Hello"
 	},
 	{
 		"comment": "Update Group Member List",
 		"Comment": "6.updateGroupMembersListAndRemoveAllClickCancel",
-		"GroupNameText": ""
+		"GroupNameText": "Defense On Demand2"
 	},
 	{
 		"Comment": "7.updateGroupMembersListAndRemoveAllClickSave",
-		"GroupNameText": ""
+		"GroupNameText": "Defense On Demand2"
 	},
 	{
 		"Comment": "8.updateGroupMembersListAndRemoveLeftSideOneTMClickCancel",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": ""
+		"GroupNameText": "Defense On Demand3",
+		"AddMember1": "Harish",
+		"AddMember2": "Gopi"
 	},
 	{
 		"Comment": "9.updateGroupMembersListAndRemoveLeftSideOneTMClickSave",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": ""
+		"GroupNameText": "Defense On Demand3",
+		"AddMember1": "Harish"
 	},
 	{
 		"Comment": "10.updateGroupMembersListAndSelectRightSideOneTMClickCancel",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": ""
+		"GroupNameText": "Defense On Demand3",
+		"AddMember1": "Harish"
 	},
 	{
 		"Comment": "11.updateGroupMembersListAndSelectRightSideOneTMClickSave",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": ""
+		"GroupNameText": "Defense On Demand",
+		"AddMember1": "Harish",
+		"AddMember2": "Gopi"
 	},
 	{
 		"Comment": "12.updateGroupMembersListAndSelectRightSideAndRemoveOneTMClickCancel",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": "",
-		"removeMember1": "",
-		"removeMember2": ""
+		"GroupNameText": "Defense On Demand2",
+		"AddMember1": "Harish",
+		"AddMember2": "Gopi",
+		"removeMember1": "Harish",
+		"removeMember2": "Gopi"
 	},
 	{
 		"Comment": "13.updateGroupMembersListAndSelectRightSideAndRemoveOneTMClickSave",
-		"GroupNameText": "",
-		"AddMember1": "",
-		"AddMember2": "",
-		"removeMember1": "",
-		"removeMember2": ""
+		"GroupNameText": "Defense On Demand2",
+		"AddMember1": "Harish",
+		"AddMember2": "Gopi",
+		"removeMember1": "Harish",
+		"removeMember2": "Gopi"
 	},
 	{
 		"Comment": "Update Group Head",
 		"comment": "14.updateGroupHeadAndCancelAndAlertNo",
-		"SelectGroupHead": ""
+		"GroupNameText": "Defense On Demand3",
+		"SelectGroupHead": "Harish"
 	},
 	{
 		"comment": "15.updateGroupHeadAndCancelAndAlertYes",
-		"SelectGroupHead": ""
+		"GroupNameText": "Defense On Demand3",
+		"SelectGroupHead": "Harish"
 	},
 	{
 		"comment": "16.updateGroupHeadAndSaveAndAlertNo",
-		"SelectGroupHead": ""
+		"GroupNameText": "Defense On Demand3",
+		"SelectGroupHead": "Harish"
 	},
 	{
 		"comment": "17.updateGroupHeadAndSaveAndAlertYes",
-		"SelectGroupHead": ""
+		"GroupNameText": "Defense On Demand3",
+		"SelectGroupHead": "Harish"
 	},
 	{
 		"Comment": "DeleteGroup",
 		"comment": "18.deleteGroupSelectGroupAndClickCancel",
-		"SelectAnotherGroup": ""
+		"GroupNameText": "Defense On Demand2",
+		"SelectAnotherGroup": "Defense On Demand3"
 	},
 	{
 		"comment": "19.deleteGroupSelectGroupAndClickSaveClickNo",
-		"SelectAnotherGroup": ""
+		"GroupNameText": "Defense On Demand2",
+		"SelectAnotherGroup": "Defense On Demand3"
 	},
 	{
 		"comment": "20.deleteGroupSelectGroupAndClickSaveClickYes",
-		"SelectAnotherGroup": ""
+		"GroupNameText": "Defense On Demand2",
+		"SelectAnotherGroup": "Defense On Demand3"
 	}
 ]

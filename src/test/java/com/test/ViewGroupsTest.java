@@ -146,7 +146,7 @@ public class ViewGroupsTest extends BaseClass {
 			dashBoard.groupLeftSide();
 			viewGroups.viewgroupSearchbar(input.get("GroupNameText"));
 			viewGroups.updateGroupMembersList();
-			String[] removeMemberNames = { input.get("AddMember1"), input.get("AddMember2") };
+			String[] removeMemberNames = { input.get("AddMember1")};
 			viewGroups.removeTeamMember(removeMemberNames);
 			viewGroups.pageDown();
 			Thread.sleep(2000);
@@ -367,7 +367,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(0) } };
 
@@ -377,7 +377,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData1() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(1) } };
 
@@ -387,7 +387,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData2() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(2) } };
 
@@ -397,7 +397,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData3() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(3) } };
 
@@ -407,7 +407,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData4() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(4) } };
 
@@ -417,7 +417,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData5() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(5) } };
 
@@ -429,7 +429,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData6() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(6) } };
 
@@ -439,7 +439,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData7() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(7) } };
 
@@ -449,7 +449,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData8() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(8) } };
 
@@ -459,7 +459,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData9() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(9) } };
 
@@ -469,7 +469,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData10() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(10) } };
 
@@ -479,7 +479,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData11() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(11) } };
 
@@ -489,7 +489,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData12() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(12) } };
 
@@ -499,7 +499,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData13() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(13) } };
 
@@ -511,7 +511,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData14() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(14) } };
 
@@ -521,7 +521,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData15() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(15) } };
 
@@ -531,7 +531,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData16() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(16) } };
 
@@ -541,7 +541,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData17() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(17) } };
 
@@ -553,7 +553,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData18() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(18) } };
 
@@ -563,7 +563,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData19() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(19) } };
 
@@ -573,7 +573,7 @@ public class ViewGroupsTest extends BaseClass {
 	public Object[][] getData20() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\ViewGroupsData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/ViewGroupsData.json");
 
 		return new Object[][] { { data.get(20) } };
 
