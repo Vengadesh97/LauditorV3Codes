@@ -1,55 +1,129 @@
 [
-	
 	{
-		"comment":"0.createGroupWithCancelandAlertNo",
-		"groupName" :"Civil Laws Case",
-		"description" : "Data stored client related"
+		"comment": "0.createGroupWithCancelandAlertNo",
+		"groupName": "Defense On Demand",
+		"description": "Data stored client related"
 	},
 	{
-		"comment":"1.createGroupWithCancelandAlertYes",
-		"groupName" :"Civil Laws Case",
-		"description" : "Data stored client related"
+		"comment": "1.createGroupWithCancelandAlertYes",
+		"groupName": "Defense On Demand",
+		"description": "Data stored client related"
 	},
 	{
-		"comment":"2.createGroupWithSaveandAddGroups",
-		"groupName" :"Civil Laws Case",
-		"description" : "Data stored client related"
+		"comment": "2.createGroupWithSaveandAddGroups",
+		"groupName": "Defense On Demand",
+		"description": "Data stored client related"
 	},
 	{
-		"comment":"3.createGroupWithSaveandViewChanges",
-		"groupName" :"Civil Laws Case1",
-		"description" : "Data stored"
+		"comment": "3.createGroupWithSaveandViewChanges",
+		"groupName": "Defense On Demand1",
+		"description": "Data stored"
 	},
 	{
-		"comment":"4.createGroupWithCheckMemberNamesAreList",
-		"groupName" :"Civil Laws Case2",
-		"description" : "Data stored client related"
+		"comment": "4.createGroupWithCheckMemberNamesAreList",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related"
 	},
 	{
-		"comment":"5.createGroupWithoutAddAnyMemberClickonBack",
-		"groupName" :"Civil Laws Case3",
-		"description" : "Data stored client related"
+		"comment": "5.createGroupWithoutAddAnyMemberClickonBack",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related"
 	},
 	{
-		"comment":"6.createGroupWithSelectTMandCancelandAlertNo",
-		"groupName" :"Civil Laws Case4",
-		"description" : "Data stored client related",
-		"addMember1":"User member",
-		"addMember2":"soundarya"
+		"comment": "6.createGroupWithSelectTMandCancelandAlertNo",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi"
 	},
 	{
-		"comment":"7.createGroupWithSelectTMandCancelandAlertYes",
-		"groupName" :"Civil Laws Case5",
-		"description" : "Data stored client related",
-		"addMember1":"User member",
-		"addMember2":"soundarya"
+		"comment": "7.createGroupWithSelectTMandCancelandAlertYes",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi"
 	},
 	{
-		"comment":"8.createGroupWithSelectTMandNextVerify",
-		"groupName" :"Civil Laws Case5",
-		"description" : "Data stored client related",
-		"addMember1":"User member",
-		"addMember2":"soundarya"
+		"comment": "8.createGroupWithSelectTMandNextVerify",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi"
+	},
+	{
+		"comment": "9.createGroupWithSelectTMandNextandBackVerify",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi"
+	},
+	{
+		"comment": "10.createGroupWithSelectTMandRemoveandCancelandAlertNo",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "11.createGroupWithSelectTMandRemoveandCancelandAlertYes",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "12.createGroupWithAddRemoveandBackandVerify",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "13.createGroupWithAddRemoveandCancelandAlertNo",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "14.createGroupWithAddRemoveandCancelandAlertYes",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "15.createGroupWithoneMemberWithAddGroups",
+		"groupName": "Defense On Demand2",
+		"description": "Data stored client related",
+		"addMember1": "Gopi"
+	},
+	{
+		"comment": "16.createGroupWithTwoMemberWithAddGroups",
+		"groupName": "Defense On Demand3",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi"
+	},
+	{
+		"comment": "17.createGroupWithThreeMemberWithViewChanges",
+		"groupName": "Defense On Demand4",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
+	},
+	{
+		"comment": "18.createGroupWithMemberRemoved",
+		"groupName": "Defense On Demand5",
+		"description": "Data stored client related",
+		"addMember1": "Harish",
+		"addMember2": "Gopi",
+		"addMember3": "Deepan"
 	}
-	
 ]

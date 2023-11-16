@@ -253,8 +253,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
-					input.get("addMember4") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -280,8 +279,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
-					input.get("addMember4") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -309,8 +307,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
-					input.get("addMember4") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -336,7 +333,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2") };
+			String[] addMembers = { input.get("addMember1") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -344,7 +341,7 @@ public class CreatedGroupTest extends BaseClass {
 			Thread.sleep(1000);
 			createGroup.nextButton();
 			Thread.sleep(1000);
-			String[] groupHead = { input.get("addMember2") };
+			String[] groupHead = { input.get("addMember1") };
 			createGroup.selectOneGroupHead(groupHead);
 			createGroup.saveButton();
 			Thread.sleep(2000);
@@ -363,7 +360,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -390,8 +387,7 @@ public class CreatedGroupTest extends BaseClass {
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
-					input.get("addMember4") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
@@ -411,26 +407,25 @@ public class CreatedGroupTest extends BaseClass {
 	}
 
 	@Test(dataProvider = "getData18", priority = 18)
-	public void createGroupWithNoMemberRemoved(HashMap<String, String> input) throws InterruptedException {
+	public void createGroupWithMemberRemoved(HashMap<String, String> input) throws InterruptedException {
 		try {
 			createGroup.createGroupTab();
 			createGroup.groupName(input.get("groupName"));
 			createGroup.groupDescription(input.get("description"));
 			createGroup.addGroupMemberButton();
 			Thread.sleep(1000);
-			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3"),
-					input.get("addMember4") };
+			String[] addMembers = { input.get("addMember1"), input.get("addMember2"), input.get("addMember3") };
 			createGroup.selectMemberInGroups(addMembers);
 			createGroup.pageDown();
 			Thread.sleep(1000);
 			createGroup.nextButton();
 			Thread.sleep(1000);
-			String[] removeMembers = { input.get("addMember2"), input.get("addMember3") };
+			String[] removeMembers = { input.get("addMember3") };
 			createGroup.removeMemberInGroups(removeMembers);
 			Thread.sleep(1000);
 			createGroup.nextButton();
 			Thread.sleep(1000);
-			String[] groupHead = { input.get("addMember4") };
+			String[] groupHead = { input.get("addMember2") };
 			createGroup.selectOneGroupHead(groupHead);
 			createGroup.saveButton();
 			Thread.sleep(2000);
@@ -443,12 +438,11 @@ public class CreatedGroupTest extends BaseClass {
 
 	// ----------------
 
-
 	@DataProvider
 	public Object[][] getData0() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(0) } };
 	}
@@ -457,7 +451,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData1() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(1) } };
 	}
@@ -466,7 +460,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData2() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(2) } };
 	}
@@ -475,7 +469,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData3() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(3) } };
 	}
@@ -484,7 +478,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData4() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(4) } };
 	}
@@ -493,7 +487,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData5() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(5) } };
 	}
@@ -502,7 +496,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData6() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(6) } };
 	}
@@ -511,7 +505,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData7() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(7) } };
 	}
@@ -520,7 +514,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData8() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(8) } };
 	}
@@ -529,7 +523,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData9() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(9) } };
 	}
@@ -538,7 +532,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData10() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(10) } };
 	}
@@ -547,7 +541,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData11() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(11) } };
 	}
@@ -556,7 +550,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData12() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(12) } };
 	}
@@ -565,7 +559,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData13() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(13) } };
 	}
@@ -574,7 +568,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData14() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(14) } };
 	}
@@ -583,7 +577,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData15() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(15) } };
 	}
@@ -592,7 +586,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData16() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(16) } };
 	}
@@ -601,7 +595,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData17() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(17) } };
 	}
@@ -610,7 +604,7 @@ public class CreatedGroupTest extends BaseClass {
 	public Object[][] getData18() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				"C:\\Users\\Vengadesh\\git\\LauditorV3Codes\\Lauditor\\src\\test\\java\\file\\data\\Group\\CreateGroupData.json");
+				"/Users/vengadeshwaran/git/LauditorV3Codes/src/test/java/file/data/Group/CreateGroupData.json");
 
 		return new Object[][] { { data.get(18) } };
 	}
